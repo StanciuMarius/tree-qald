@@ -16,6 +16,7 @@
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+import settings
 
 # CONSTANTS
 TASK = 'tacred'
@@ -23,12 +24,13 @@ DATA_DIR = 'datasets/'
 BERT_MODEL = 'bert-base-uncased'
 DO_LOWERCASE = True
 OUTPUT_DIR = 'models'
-DO_TRAIN = True # False for evaluation
+DO_TRAIN = False # False for evaluation
 # OUTPUT_MODEL_FILENAME = 'sq_trained_model.bin'
 OUTPUT_MODEL_FILENAME = TASK + '_trained_model.bin'
 MAX_SEQ_LENGTH = 96
 NUM_EPOCHS = 4.0
 BATCH_SIZE = 5
+
 """BERT finetuning runner."""
 import csv
 import os

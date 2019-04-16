@@ -1,0 +1,215 @@
+0|When was the Battle of Gettysburg?
+1|List all the musicals with music by Elton John.
+2|How high is the lighthouse in Colombo?
+3|Who was the wife of U.S. president Lincoln?
+4|Who is the host of the BBC Wildlife Specials?
+5|How much did Pulp Fiction cost?
+6|In what city is the Heineken brewery?
+7|When did Operation Overlord commence?
+8|In which city does the Chile Route 68 end?
+9|Who developed Slack?
+10|Who was married to president Chirac?
+11|What did Bruce Carver die from?
+12|Who painted The Storm on the Sea of Galilee?
+13|Which cities does the Weser flow through?
+14|How many seats does the home stadium of FC Porto have?
+15|Who is the daughter of Robert Kennedy married to?
+16|Which books by Kerouac were published by Viking Press?
+17|How tall is Amazon Eve?
+18|Which museum exhibits The Scream by Munch?
+19|Who wrote the book Les Piliers de la terre?
+20|Is James Bond married?
+21|Who discovered Ceres?
+22|Which river does the Brooklyn Bridge cross?
+23|Who was called Frank The Tank?
+24|What is the largest country in the world?
+25|Who is the mayor of Paris?
+26|Who is the coach of Ankara's ice hockey team?
+27|Who is the mayor of the capital of French Polynesia?
+28|Which awards did Douglas Hofstadter win?
+29|How much did the Lego Movie cost?
+30|Where does Piccadilly start?
+31|Do Prince Harry and Prince William have the same parents?
+32|Who played Agent Smith in Matrix?
+33|How many languages are spoken in Turkmenistan?
+34|In which films did Julia Roberts as well as Richard Gere play?
+35|In which country does the Ganges start?
+36|In which year was Rachel Stevens born?
+37|Is Barack Obama a democrat?
+38|Where was Bach born?
+39|How often did Jane Fonda marry?
+40|Who was the first to climb Mount Everest?
+41|How many people live in Poland?
+42|What is the location of the Houses of Parliament?
+43|Is Christian Bale starring in Batman Begins?
+44|In which country is the Limerick Lake?
+45|What was the last movie with Alec Guinness?
+46|What is the highest mountain in Australia?
+47|Is Frank Herbert still alive?
+48|Who created Family Guy?
+49|What is the official language of Suriname?
+50|Who wrote the song Hotel California?
+51|Give me all actors starring in movies directed by William Shatner.
+52|What is in a chocolate chip cookie?
+53|Give me all professional skateboarders from Sweden.
+54|Which ingredients do I need for carrot cake?
+55|Does Neymar play for Real Madrid?
+56|Which computer scientist won an oscar?
+57|How many companies were founded in the same year as Google?
+58|In which UK city are the headquarters of the MI6?
+59|Was the Cuban Missile Crisis earlier than the Bay of Pigs Invasion?
+60|What does IYCM stand for?
+61|When did the Ming dynasty dissolve?
+62|List all episodes of the first season of the HBO television series The Sopranos!
+63|What is the total population of Melbourne, Florida?
+64|Did Arnold Schwarzenegger attend a university?
+65|What country is Mount Everest in?
+66|What is the largest city in Australia?
+67|Give me all launch pads operated by NASA.
+68|Who is the mayor of Tel Aviv?
+69|List all episodes of the first season of the HBO television series The Sopranos.
+70|Who created Batman?
+71|Who played Gus Fring in Breaking Bad?
+72|In which programming language is GIMP written?
+73|In which ancient empire could you pay with cocoa beans?
+74|Who is the editor of Forbes?
+75|How many people live in the capital of Australia?
+76|Which professional surfers were born in Australia?
+77|Which electronics companies were founded in Beijing?
+78|Give me all video games published by Mean Hamster Software.
+79|How many Aldi stores are there?
+80|What is the capital of Cameroon?
+81|Is there a video game called Battle Chess?
+82|Was the wife of president Lincoln called Mary?
+83|Give me all movies directed by Francis Ford Coppola.
+84|Which of Tim Burton's films had the highest budget?
+85|Does Breaking Bad have more episodes than Game of Thrones?
+86|Who was called Rodzilla?
+87|Was Natalie Portman born in the United States?
+88|Give me the grandchildren of Elvis Presley.
+89|Which movies starring Mickey Rourke were directed by Guy Ritchie?
+90|When did Dracula's creator die?
+91|Which country does the creator of Miffy come from?
+92|What is Batman's real name?
+93|What form of government does Russia have?
+94|How many companies were founded by the founder of Facebook?
+95|Give me all Canadian Grunge record labels.
+96|How many children did Benjamin Franklin have?
+97|List the children of Margaret Thatcher.
+98|From which region is the Melon de Bourgogne?
+99|Who is the oldest child of Meryl Streep?
+100|Are tree frogs a type of amphibian?
+101|Is Christian Bale starring in Velvet Goldmine?
+102|List all games by GMT.
+103|Does the Isar flow into a lake?
+104|Which airports does Yeti Airlines serve?
+105|Which Indian company has the most employees?
+106|What color expresses loyalty?
+107|Which city has the most inhabitants?
+108|Who created Wikipedia?
+109|Is Rita Wilson the wife of Tom Hanks?
+110|Is the wife of president Obama called Michelle?
+111|How many ethnic groups live in Slovenia?
+112|Who is the president of Eritrea?
+113|Which films did Stanley Kubrick direct?
+114|When was the Titanic completed?
+115|How many pages does War and Peace have?
+116|Who is the youngest player in the Premier League?
+117|What is the highest mountain in Italy?
+118|How tall is Claudia Schiffer?
+119|Who was John F. Kennedy's vice president?
+120|Which subsidiary of Lufthansa serves both Dortmund and Berlin Tegel?
+121|Who was the successor of John F. Kennedy?
+122|Who composed the soundtrack for Cameron's Titanic?
+123|Which movies did Kurosawa direct?
+124|For which label did Elvis record his first album?
+125|In which time zone is Rome?
+126|Give me the currency of China.
+127|Who are the developers of DBpedia?
+128|Does Abraham Lincoln's death place have a website?
+129|Who is the king of the Netherlands?
+130|In which city did Nikos Kazantzakis die?
+131|Who was the father of Queen Elizabeth II?
+132|Give me a list of all critically endangered birds.
+133|How many inhabitants does the largest city in Canada have?
+134|In which military conflicts did Lawrence of Arabia participate?
+135|Which book has the most pages?
+136|In which country does the Nile start?
+137|Who is the Formula 1 race driver with the most races?
+138|Which companies produce hovercrafts?
+139|Did Elvis Presley have children?
+140|In which city was the president of Montenegro born?
+141|Which country was Bill Gates born in?
+142|In which countries do people speak Japanese?
+143|Show me the book that Muhammad Ali wrote.
+144|Is Michelle Obama the wife of Barack Obama?
+145|What is the area code of Berlin?
+146|Give me all actors starring in Last Action Hero.
+147|What are the nicknames of San Francisco?
+148|What was the first Queen album?
+149|Through which countries does the Yenisei river flow?
+150|Which television shows were created by Walt Disney?
+151|What is the bridge with the longest span?
+152|What country is Sitecore from?
+153|Whom did Lance Bass marry?
+154|What is the capital of Canada?
+155|Who was Vincent van Gogh inspired by?
+156|In which city did John F. Kennedy die?
+157|Was U.S. president Jackson involved in a war?
+158|Who wrote the Game of Thrones theme?
+159|Who designed the Brooklyn Bridge?
+160|When did Boris Becker end his active career?
+161|Which types of grapes grow in Oregon?
+162|How tall is Michael Jordan?
+163|To which party does the mayor of Paris belong?
+164|Who wrote the book The Pillars of the Earth?
+165|Who was the 16th president of the United States?
+166|How high is the Mount Everest?
+167|Who was the doctoral supervisor of Albert Einstein?
+168|In which city does Sylvester Stallone live?
+169|What is the currency of the Czech Republic?
+170|Did Socrates influence Aristotle?
+171|What is the time zone of Salt Lake City?
+172|Who is the son of Sonny and Cher?
+173|In which city are the headquarters of the United Nations?
+174|Who is the founder of Penguin Books?
+175|When was Jack Wolfskin founded?
+176|Who is the mayor of Rotterdam?
+177|Give me all Swedish oceanographers.
+178|Show me Hemingway's autobiography.
+179|Who are the parents of the wife of Juan Carlos I?
+180|Did Tesla win a nobel prize in physics?
+181|Who is the tallest basketball player?
+182|Which city has the least inhabitants?
+183|Is proinsulin a protein?
+184|Who were the parents of Queen Victoria?
+185|Did Che Guevara have children?
+186|Is Lake Baikal bigger than the Great Bear Lake?
+187|Did Kaurismäki ever win the Grand Prix at Cannes?
+188|Give me all books by William Goldman with more than 300 pages.
+189|Where is Fort Knox located?
+190|In which U.S. state is Fort Knox located?
+191|Where is Syngman Rhee buried?
+192|What is the timezone in San Pedro de Atacama?
+193|To which artistic movement did the painter of The Three Dancers belong?
+194|Which scientist is known for the Manhattan Project and the Nobel Peace Prize?
+195|Show me all books in Asimov's Foundation series.
+196|Give me all cities in New Jersey with more than 100000 inhabitants.
+197|Which museum in New York has the most visitors?
+198|How high is the Yokohama Marine Tower?
+199|Does the new Battlestar Galactica series have more episodes than the old one?
+200|Who is the youngest Darts player?
+201|Who developed the video game World of Warcraft?
+202|Who was the pope that founded the Vatican Television?
+203|Who composed the music for Harold and Maude?
+204|Give me all members of Prodigy.
+205|Who is starring in Spanish movies produced by Benicio del Toro?
+206|Which subsidiary of TUI Travel serves both Glasgow and Dublin?
+207|In which country is Mecca located?
+208|How many languages are spoken in Colombia?
+209|What is the biggest stadium in Spain?
+210|Which professional surfers were born on the Philippines?
+211|What are the five boroughs of New York?
+212|Is Cola a beverage?
+213|When did princess Diana die?
+214|Where in France is sparkling wine produced?

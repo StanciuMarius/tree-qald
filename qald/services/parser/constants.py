@@ -1,0 +1,1 @@
+GRAMMAR_FILE_PATH = 'services/parser/static_files/grammar'

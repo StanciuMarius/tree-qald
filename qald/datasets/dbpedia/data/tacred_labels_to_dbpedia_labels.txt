@@ -1,0 +1,42 @@
+per:date_of_death http://dbpedia.org/ontology/deathDate http://dbpedia.org/ontology/deathYear
+org:dissolved http://dbpedia.org/ontology/dissolved
+per:date_of_birth http://dbpedia.org/ontology/birthDate http://dbpedia.org/ontology/birthYear
+per:schools_attended http://dbpedia.org/ontology/almaMater http://dbpedia.org/property/education 
+per:age http://dbpedia.org/ontology/age
+per:city_of_birth http://dbpedia.org/ontology/birthPlace http://dbpedia.org/property/birthPlace
+org:website http://dbpedia.org/ontology/wikiPageExternalLink http://dbpedia.org/property/url
+org:parents http://dbpedia.org/ontology/parentCompany _http://dbpedia.org/ontology/subsidiary
+org:member_of _http://dbpedia.org/ontology/parentCompany
+org:founded http://dbpedia.org/property/date
+per:alternate_names 
+per:stateorprovince_of_death http://dbpedia.org/ontology/deathPlace http://dbpedia.org/property/deathPlace
+org:founded_by http://dbpedia.org/ontology/foundedBy
+per:title http://dbpedia.org/ontology/title http://dbpedia.org/property/title http://dbpedia.org/ontology/award
+org:shareholders
+per:siblings http://dbpedia.org/property/siblings
+per:countries_of_residence http://dbpedia.org/ontology/residence
+org:top_members/employees
+per:other_family
+per:religion http://dbpedia.org/ontology/religion
+per:stateorprovinces_of_residence http://dbpedia.org/ontology/residence
+no_relation
+per:city_of_death http://dbpedia.org/ontology/deathPlace http://dbpedia.org/property/deathPlace
+per:country_of_death http://dbpedia.org/ontology/deathPlace http://dbpedia.org/property/deathPlace
+per:origin http://dbpedia.org/ontology/origin http://dbpedia.org/property/ethnicity
+org:number_of_employees/members http://dbpedia.org/ontology/numberOfEmployees
+org:political/religious_affiliation http://dbpedia.org/property/politicalAffiliation http://dbpedia.org/property/religiousAffiliation http://dbpedia.org/ontology/ideology
+per:charges
+org:members 
+per:cities_of_residence http://dbpedia.org/ontology/residence
+per:stateorprovince_of_birth http://dbpedia.org/ontology/birthPlace http://dbpedia.org/property/birthPlace
+per:children http://dbpedia.org/property/children
+org:alternate_names
+org:subsidiaries http://dbpedia.org/ontology/subsidiary
+per:country_of_birth http://dbpedia.org/ontology/birthPlace http://dbpedia.org/property/birthPlace
+per:parents http://dbpedia.org/property/parents _http://dbpedia.org/ontology/child
+org:stateorprovince_of_headquarters http://dbpedia.org/ontology/locationCity
+org:country_of_headquarters http://dbpedia.org/ontology/locationCountry
+per:spouse http://dbpedia.org/ontology/spouse
+per:cause_of_death http://dbpedia.org/ontology/deathCause
+org:city_of_headquarters http://dbpedia.org/ontology/locationCity
+per:employee_of http://dbpedia.org/property/workplaces

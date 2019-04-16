@@ -1,0 +1,8 @@
+datasets.zip
+qald/datasets/ontology_tagger/*
+qald/datasets/simplequestions/*
+qald/datasets/tacred/*
+*.pyc
+__pycache__/*
+*.ipch
+*.bin
