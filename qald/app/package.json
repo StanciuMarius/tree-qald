@@ -5,8 +5,7 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hierarchy-tree": "^1.12.5",
-    "react-hierarchy-tree-graph": "^1.0.3",
+    "react-graph-vis": "^1.0.2",
     "react-scripts": "2.1.8",
     "vis-react": "^0.4.3"
   },

@@ -1,13 +1,15 @@
 import os
 import sys
+from typing import List
 
 sys.path.insert(0, os.getcwd())
 from common.query_tree import QueryTree
 from common.query_tree import SerializationFormat
 
-
-
-def parse(question_text: str) -> QueryTree:
+def parse(tokens: List[str]) -> QueryTree:
+    '''
+    Not implemented yet. Returns dummy tree
+    '''
     tree_dict = {
         'type': 'ROOT',
         'children': [
@@ -21,8 +23,12 @@ def parse(question_text: str) -> QueryTree:
                                 'type': 'ENTITY',
                                 'children': [
                                     {
-                                        'type': 'TOKENS',
-                                        'tokens': [1, 2]
+                                        'type': 'TOKEN',
+                                        'index': 1
+                                    },
+                                    {
+                                        'type': 'TOKEN',
+                                        'index': 2
                                     }
                                 ]
                             }
@@ -32,8 +38,12 @@ def parse(question_text: str) -> QueryTree:
                         'type': 'RELATION',
                         'children': [
                             {
-                                'type': 'TOKENS',
-                                'tokens': [2, 3]
+                                'type': 'TOKEN',
+                                'index': 4
+                            },
+                            {
+                                'type': 'TOKEN',
+                                'index': 5
                             }
                         ]
                     }
@@ -41,7 +51,9 @@ def parse(question_text: str) -> QueryTree:
             }
         ]
     }
-
-    tree = QueryTree.from_dict(tree_dict)
+    tree = QueryTree.from_dict(tree_dict, tokens)
     return tree
 
+
+EXAMPLE_FILE = open()
+def example(index: int):

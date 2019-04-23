@@ -17,7 +17,7 @@ def run_task(task: Task, input):
     URL = URL_ROOT + ':' + str(PORTS[TASKS[task.value]]) + '/' + task.value + '?input=' + json_input
     try:
         response = requests.get(URL)
-    except requests.exceptions.RequestException as e:  # This is the correct syntax
+    except requests.exceptions.RequestException as e:
         print(e)
         sys.exit(1)
 

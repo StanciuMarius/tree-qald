@@ -30,9 +30,10 @@ class NodeType(Enum):
     CONDITION = "CONDITION"
     GREATER = "GREATER"
 
+    UNUSED = "UNUSED"
+
 class SerializationFormat(Enum):
-    OBJECT_ORIENTED = "OBJECT_ORIENTED"
-    ADJECENCY = "ADJECENCY"
+    HIERARCHICAL_DICT = "HIERARCHICAL_DICT"
 
 def enum_for_str(key: str):
     for member in NodeType:
@@ -42,81 +43,74 @@ def enum_for_str(key: str):
 
 class QueryTree:
     class Node:
-        def __init__(self, type: NodeType, tokens: List[int] = []):
+        def __init__(self, type: NodeType, id: int = None):
             self.type: NodeType = type
-            self.tokens: List[int] = tokens
             self.children: List[QueryTree.Node] = []
-            self.id: int = -1
-    def __init__(self, root: Node):
-        self.last_id = 0
-        def generate_unique_ids(node):
-            node.id = self.last_id
-            self.last_id += 1
-            for child in node.children:
-                generate_unique_ids(child)
+            self.id: int = id
 
-        generate_unique_ids(root)
+    def __init__(self, root: Node):
+        self.last_id = -1
+        def assign_unique_id(node):
+            if not node.id:
+                node.id = self.last_id
+                self.last_id -= 1
+
+            for child in node.children:
+                assign_unique_id(child)
+
+        assign_unique_id(root)
 
         self.root: Node = root
    
 
     def to_serializable(self, format: SerializationFormat):
-        if format == SerializationFormat.OBJECT_ORIENTED:
+        if format == SerializationFormat.HIERARCHICAL_DICT:
             return self.to_dict()
-        elif format == SerializationFormat.ADJECENCY:
-            def to_dict_recursive(node: QueryTree.Node, nodes: List[dict], edges: List[dict]):
 
-                nodes.append({
-                    'id': node.id,
-                    'label': node.type.value
-                })
-
-                for child in node.children:
-                    to_dict_recursive(child, nodes, edges)
-                    edges.append({
-                        'from': node.id,
-                        'to': child.id
-                    })
-
-            nodes = []
-            edges = []
-
-            to_dict_recursive(self.root, nodes, edges)
-
-            tree = {
-                'nodes': nodes,
-                'edges': edges
-            }
-
-            return tree
             
     def to_dict(self) -> dict:
-        def to_dict_recursive(node: QueryTree.Node):
+        def node_to_dict(node):
             node_dict = {}
             node_dict['type'] = node.type.value
-            if node.tokens:
-                node_dict['tokens'] = node.tokens
+            node_dict['id'] = node.id
             if node.children:
-                node_dict['children'] = [to_dict_recursive(child) for child in node.children]
-            
+                node_dict['children'] = [node_to_dict(child) for child in node.children]
+                
             return node_dict
         
-        return to_dict_recursive(self.root)
-
-
+        return node_to_dict(self.root)
+        
     @classmethod
-    def from_dict(cls, tree_dict: dict):
+    def from_dict(cls, tree_dict: dict, tokens: List[str]):
+        token_nodes = [QueryTree.Node(NodeType.TOKEN, id) for id in range(len(tokens))]
+        used_nodes = set()
+        
         def node_from_dict(tree_dict):
             node_type = enum_for_str(tree_dict['type'])
-            node = QueryTree.Node(node_type)
-            if node_type == NodeType.TOKENS:
-                node.tokens = tree_dict['tokens']
-            
+
+            if node_type == NodeType.TOKEN:
+                node = token_nodes[tree_dict['index']]
+                used_nodes.add(node)
+            else:
+                node = QueryTree.Node(node_type)
+
             if 'children' in tree_dict:
                 for child in tree_dict['children']:
                     node.children.append(node_from_dict(child))
             
             return node
+
+        root = node_from_dict(tree_dict)
+
+        # Aggregate unused tokens 
+        if len(used_nodes) < len(token_nodes):
+            unused_container_node = QueryTree.Node(NodeType.UNUSED)
+            root.children.append(unused_container_node)
+
+            for node in token_nodes:
+                if node not in used_nodes:
+                    unused_container_node.children.append(node)
+        
             
-        tree = QueryTree(node_from_dict(tree_dict))
+        tree = QueryTree(root)
         return tree

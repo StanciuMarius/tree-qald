@@ -1,5 +1,5 @@
 """
-    Desktop app for manually annotation of questions as trees
+    Desktop app for manual annotation of questions with constituency trees
 """
 from tkinter import *
 import json
@@ -14,6 +14,39 @@ from services.parser.constants import GRAMMAR_FILE_PATH
 from common.query_tree import QueryTree, NodeType
 
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
+settings = {
+    '''
+    Key bindings for selecting the node type
+    '''
+    'symbol_vs_node_type': {
+        'f3': NodeType.GREATER,
+        'f2': NodeType.FILTER,
+        'f1': NodeType.CONDITION,
+        '9':  NodeType.ISA,
+        '8':  NodeType.EXISTS,
+        '7':  NodeType.COMPARE,
+        '6':  NodeType.RELATION_EXISTS,
+        '5':  NodeType.INTERSECTION,
+        '4':  NodeType.UNION,
+        '3':  NodeType.COUNT,
+        '2':  NodeType.EQUAL,
+        '1':  NodeType.ARGNTH,
+        'q':  NodeType.QUERY,
+        'e':  NodeType.ENTITY,
+        't':  NodeType.TYPE,
+        'r':  NodeType.RELATION
+    },
+    '''
+    Key bindings for commands
+    '''
+    'symbol_vs_command': {
+        'z': "UNDO",
+        'x': "SAVE_AND_NEXT",
+        'c': "REDO",
+    },
+    'window_width': 1000,
+    'window_height': 500,
+}
 
 class Node:
     def __init__(self, type, widget, token=None):
@@ -38,33 +71,7 @@ class Edge:
             'destination': hex(id(self.destination)),
             }
 
-settings = {
-    'symbol_vs_node_type': {
-        'f3': NodeType.GREATER,
-        'f2': NodeType.FILTER,
-        'f1': NodeType.CONDITION,
-        '9':  NodeType.ISA,
-        '8':  NodeType.EXISTS,
-        '7':  NodeType.COMPARE,
-        '6':  NodeType.RELATION_EXISTS,
-        '5':  NodeType.INTERSECTION,
-        '4':  NodeType.UNION,
-        '3':  NodeType.COUNT,
-        '2':  NodeType.EQUAL,
-        '1':  NodeType.ARGNTH,
-        'q':  NodeType.QUERY,
-        'e':  NodeType.ENTITY,
-        't':  NodeType.TYPE,
-        'r':  NodeType.RELATION
-    },
-    'symbol_vs_command': {
-        'z': "UNDO",
-        'x': "SAVE_AND_NEXT",
-        'c': "REDO",
-    },
-    'window_width': 1000,
-    'window_height': 500,
-}
+
 
 state = {
     'node_type': 'QUERY',
