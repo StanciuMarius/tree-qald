@@ -6,4 +6,4 @@ qald/datasets/tacred/*
 __pycache__/*
 *.ipch
 *.bin
-.vscode/*
+qald/.vscode/*

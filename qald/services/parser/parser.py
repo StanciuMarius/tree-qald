@@ -53,7 +53,3 @@ def parse(tokens: List[str]) -> QueryTree:
     }
     tree = QueryTree.from_dict(tree_dict, tokens)
     return tree
-
-
-EXAMPLE_FILE = open()
-def example(index: int):

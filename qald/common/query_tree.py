@@ -34,6 +34,7 @@ class NodeType(Enum):
 
 class SerializationFormat(Enum):
     HIERARCHICAL_DICT = "HIERARCHICAL_DICT"
+    PREFIX_PARANTHESES = "PREFIX_PARANTHESES"
 
 def enum_for_str(key: str):
     for member in NodeType:
@@ -48,7 +49,7 @@ class QueryTree:
             self.children: List[QueryTree.Node] = []
             self.id: int = id
 
-    def __init__(self, root: Node):
+    def __init__(self, root: Node, tokens: List[str]):
         self.last_id = -1
         def assign_unique_id(node):
             if not node.id:
@@ -59,14 +60,25 @@ class QueryTree:
                 assign_unique_id(child)
 
         assign_unique_id(root)
-
+        self.tokens = tokens
         self.root: Node = root
    
 
     def to_serializable(self, format: SerializationFormat):
         if format == SerializationFormat.HIERARCHICAL_DICT:
             return self.to_dict()
-
+        if format == SerializationFormat.PREFIX_PARANTHESES:
+            def node2prefix(node):
+                result = '(' + node.type.value
+                for child in node.children:
+                    result += ' ' + node2prefix(child)
+                
+                if node.type == NodeType.TOKEN:
+                    result += ' ' + self.tokens[node.id] 
+                result += ')'
+                return result
+            return node2prefix(self.root)
+    
             
     def to_dict(self) -> dict:
         def node_to_dict(node):
@@ -112,5 +124,5 @@ class QueryTree:
                     unused_container_node.children.append(node)
         
             
-        tree = QueryTree(root)
+        tree = QueryTree(root, tokens)
         return tree

@@ -14,7 +14,7 @@ var onProcessed = function(response) {
 }
 
 ReactDOM.render(
-    <QueryInput handleResponse={onProcessed}/>,
+  <TreeRenderer tree={response}/>,
     document.getElementById('root')
   );
   

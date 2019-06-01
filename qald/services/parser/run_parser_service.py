@@ -7,7 +7,6 @@ from flask_cors import CORS, cross_origin
 
 sys.path.insert(0, os.getcwd())
 from services.parser.parser import parse as internal_parse
-from services.parser.parser import example as internal_example
 
 from services.constants import PORTS
 from services.tasks import run_task, Task
