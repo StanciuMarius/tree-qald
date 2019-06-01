@@ -7,3 +7,9 @@ __pycache__/*
 *.ipch
 *.bin
 qald/.vscode/*
+qald/datasets/relation_extraction/NYT10/test_normalized.json
+qald/datasets/relation_extraction/NYT10/entity2id.txt
+qald/datasets/relation_extraction/NYT10/relation2id.txt
+qald/datasets/relation_extraction/NYT10/test.txt
+qald/datasets/relation_extraction/NYT10/train.txt
+qald/datasets/relation_extraction/NYT10/train_normalized.json

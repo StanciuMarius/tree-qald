@@ -1,0 +1,29 @@
+# ===================== Wikidata =========================
+PREFIX       wdt:  <http://www.wikidata.org/prop/direct/>
+PREFIX  wikibase:  <http://wikiba.se/ontology#>
+PREFIX        bd:  <http://www.bigdata.com/rdf#>
+
+SELECT ?WikidataProp ?itemLabel ?DBpediaProp
+WHERE
+  {
+    ?WikidataProp  wdt:P1628  ?DBpediaProp .
+    FILTER ( CONTAINS ( str(?DBpediaProp) , 'dbpedia' ) ) .
+    SERVICE wikibase:label
+      { bd:serviceParam  wikibase:language  "en" } .
+  }
+# =========================================================
+
+# ===================== DBpedia ===========================
+PREFIX       owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX      rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?DBpediaProp ?itemLabel ?WikidataProp
+WHERE
+  {
+    ?DBpediaProp  owl:equivalentProperty  ?WikidataProp .
+                  FILTER ( CONTAINS ( str(?WikidataProp) , 'wikidata' ) ) .
+    ?DBpediaProp  rdfs:label              ?itemLabel .
+                  FILTER (lang(?itemLabel) = 'en')
+  }
+ORDER BY  ?DBpediaProp
+# =========================================================
