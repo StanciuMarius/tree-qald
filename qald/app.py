@@ -18,4 +18,6 @@ def main():
     
 
 if __name__ == '__main__':
-    main()
+    app = connexion.App(__name__, 1000, specification_dir='swagger/')
+    app.add_api('qald.yaml', resolver=RestyResolver('api'))
+    app.run()
