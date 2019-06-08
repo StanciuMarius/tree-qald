@@ -27,7 +27,7 @@
     {
         "label": "education",
         "description": "Organization where a person studies.",
-        "dbpedia": ["http://dbpedia.org/ontology/almaMater", "http://dbpedia.org/property/education"],
+        "dbpedia": ["http://dbpedia.org/ontology/almaMater", "http://dbpedia.org/property/education", "http://dbpedia.org/ontology/college"],
         "wikidata": ["http://www.wikidata.org/entity/P69"],
         "tacred": ["tacred:per:schools_attended"]
     },
@@ -78,10 +78,6 @@
         "wikidata": ["http://www.wikidata.org/entity/P1086"]
     },
     {
-        "dbpedia": ["http://dbpedia.org/ontology/author"],
-        "wikidata": ["http://www.wikidata.org/entity/P50"]
-    },
-    {
         "label": "numberOfEmployees",
         "description": "The number of employees or members of an organization.",
         "dbpedia": ["http://dbpedia.org/ontology/numberOfEmployees"],
@@ -94,6 +90,12 @@
         "dbpedia": ["http://dbpedia.org/ontology/award", "http://dbpedia.org/ontology/title", "http://dbpedia.org/property/title"],
         "wikidata": ["http://www.wikidata.org/entity/P166", "http://www.wikidata.org/entity/P4444"],
         "tacred": ["tacred:per:title"]
+    },
+    {
+        "label": "profession",
+        "description": "The profession of a person.",
+        "dbpedia": ["http://dbpedia.org/ontology/profession", "http://dbpedia.org/ontology/notableWork", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"],
+        "wikidata": ["http://www.wikidata.org/entity/P106", "http://www.wikidata.org/entity/P241"]
     },
     {
         "dbpedia": ["http://dbpedia.org/ontology/bSide"],
@@ -147,6 +149,18 @@
         "tacred": ["tacred:per:children", "_tacred:per:parents"]
     },
     {
+        "label": "startLocation",
+        "description": "The location where a linear thing (road, river, border, etc.) starts.",
+        "dbpedia": ["http://dbpedia.org/ontology/routeStart", "http://dbpedia.org/ontology/source", "http://dbpedia.org/ontology/sourceCountry", "http://dbpedia.org/ontology/sourcePlace", "http://dbpedia.org/ontology/sourceRegion"],
+        "wikidata": ["http://www.wikidata.org/entity/P885"]
+    },
+    {
+        "label": "endLocation",
+        "description": "The location where a linear thing (road, river, border, etc.) starts.",
+        "dbpedia": ["http://dbpedia.org/ontology/routeEnd", "http://dbpedia.org/ontology/riverMouth", "http://dbpedia.org/ontology/mouthCountry"],
+        "wikidata": ["http://www.wikidata.org/entity/P403"]
+    },
+    {
         "dbpedia": ["http://dbpedia.org/ontology/chromosome"],
         "wikidata": ["http://www.wikidata.org/entity/P1057"]
     },
@@ -156,6 +170,12 @@
         "dbpedia": ["http://dbpedia.org/property/siblings"],
         "wikidata": ["http://www.wikidata.org/entity/P3373"],
         "tacred": ["tacred:per:siblings"]
+    },
+    {
+        "label": "coach",
+        "description": "Coach of a player or organization.",
+        "dbpedia": ["http://dbpedia.org/ontology/formerCoach", "http://dbpedia.org/ontology/manager"],
+        "wikidata": ["http://www.wikidata.org/entity/P286"]
     },
     {
         "dbpedia": ["http://dbpedia.org/ontology/cinematography"],
@@ -186,8 +206,10 @@
         "wikidata": ["http://www.wikidata.org/entity/P462"]
     },
     {
-        "dbpedia": ["http://dbpedia.org/ontology/composer"],
-        "wikidata": ["http://www.wikidata.org/entity/P86"]
+        "label": "author",
+        "description": "Author of a piece of work.",
+        "dbpedia": ["http://dbpedia.org/ontology/author", "http://dbpedia.org/ontology/composer", "http://dbpedia.org/ontology/musicComposer", "http://dbpedia.org/ontology/builder"],
+        "wikidata": ["http://www.wikidata.org/entity/P50", "http://www.wikidata.org/entity/P86", "http://www.wikidata.org/entity/P676", "http://www.wikidata.org/entity/P170", "http://www.wikidata.org/entity/P176"]
     },
     {
         "dbpedia": ["http://dbpedia.org/ontology/compressionRatio"],
@@ -418,6 +440,12 @@
         "tacred": ["tacred:org:founded_by"]
     },
     {
+        "label": "portrayer",
+        "description": "The portrayer of a fictional character.",
+        "dbpedia": ["http://dbpedia.org/ontology/portrayer"],
+        "wikidata": ["http://www.wikidata.org/entity/P175"]
+    },
+    {
         "dbpedia": ["http://dbpedia.org/ontology/founder"],
         "wikidata": ["http://www.wikidata.org/entity/P112"]
     },
@@ -505,9 +533,16 @@
         "wikidata": ["http://www.wikidata.org/entity/P345"]
     },
     {
+        "label": "partner",
+        "description": "Professional partner (not married)",
+        "dbpedia": ["http://dbpedia.org/ontology/partner"],
+        "wikidata": ["http://www.wikidata.org/entity/P451"]
+    },
+    {
         "dbpedia": ["http://dbpedia.org/ontology/individualisedGnd"],
         "wikidata": ["http://www.wikidata.org/entity/P227"]
     },
+
     {
         "dbpedia": ["http://dbpedia.org/ontology/industry"],
         "wikidata": ["http://www.wikidata.org/entity/P452"]
@@ -697,6 +732,8 @@
         "wikidata": ["http://www.wikidata.org/entity/P127"]
     },
     {
+        "label": "party",
+        "description": "Political party affiliation.",
         "dbpedia": ["http://dbpedia.org/ontology/party"],
         "wikidata": ["http://www.wikidata.org/entity/P102"]
     },
@@ -793,7 +830,9 @@
         "wikidata": ["http://www.wikidata.org/entity/P6"]
     },
     {
-        "dbpedia": ["http://dbpedia.org/ontology/team"],
+        "label": "team",
+        "description": "The team of a player.",
+        "dbpedia": ["http://dbpedia.org/ontology/team", "http://dbpedia.org/ontology/prospectTeam", "http://dbpedia.org/ontology/draftTeam", "http://dbpedia.org/ontology/formerTeam"],
         "wikidata": ["http://www.wikidata.org/entity/P54"]
     },
     {
@@ -904,6 +943,12 @@
     {
         "wikidata": ["http://www.wikidata.org/entity/P162"],
         "dbpedia": ["http://dbpedia.org/ontology/producer"]
+    },    
+    {
+        "label": "leader",
+        "description": "Leader of an organization.",
+        "wikidata": ["http://www.wikidata.org/entity/P35", "http://www.wikidata.org/entity/P169"],
+        "dbpedia": ["http://dbpedia.org/ontology/president", "http://dbpedia.org/ontology/leader", "http://dbpedia.org/ontology/manager", "http://dbpedia.org/ontology/chairman", "http://dbpedia.org/ontology/owner"]
     },
     {
         "wikidata": ["http://www.wikidata.org/entity/P1083"],
