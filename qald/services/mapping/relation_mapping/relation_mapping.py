@@ -3,6 +3,7 @@ import sys
 import spacy
 import re
 import base64
+from tqdm import tqdm
 from typing import List
 
 sys.path.insert(0, os.getcwd())
@@ -40,7 +41,7 @@ class PattyPatternTrie:
         with open(pattern_file_path, 'r', encoding='utf-8') as file:
             lines = file.readlines()[1:]
 
-        for line in lines:
+        for line in tqdm(lines, desc='Loading PATTY pattern trie'):
             relation, pattern_string = line.split('\t')
             pattern_string = pattern_string.strip()
             if pattern_string[-1] == ';':
@@ -131,7 +132,3 @@ class RelationPatternMatcher:
     def __tokens_in_range(self, tokens, lower_bound, upper_bound, idx):
         return [i for i in range(len(tokens)) if idx[i] >= lower_bound and idx[i] < upper_bound]
 
-MATCHER = RelationPatternMatcher(PATTY_DBPEDIA_PARAPHRASES_FILE_PATH)
-def map_relation(text: str, subject_begin: int, subject_end: int, object_begin: int, object_end: int):
-    pattern_candidate = MATCHER.find_relation(text, subject_begin, subject_end, object_begin, object_end)
-    return [pattern_candidate]

@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+        },
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "NLP service",
+            "program": "${workspaceFolder}\\services\\nlp\\run_nlp_serivce.py",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "Mapping Service",
+            "program": "${workspaceFolder}\\services\\mapping\\run_mapping_service.py",
+            "cwd": "${workspaceFolder}"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Services",
+            "configurations": [
+                "NLP service",
+                "Mapping Service"
+            ]
+        }
+    ]
+}
