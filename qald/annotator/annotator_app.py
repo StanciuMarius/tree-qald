@@ -2,6 +2,8 @@
     Desktop app for manual annotation of questions with constituency trees
 """
 from tkinter import *
+from tkinter import simpledialog
+
 import json
 import os
 import sys
@@ -13,32 +15,31 @@ from services.parser.syntax_checker import SyntaxChecker
 from services.parser.constants import GRAMMAR_FILE_PATH
 from common.query_tree import QueryTree, NodeType
 
+ASK_FOR_RELATION = False
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 settings = {
-    '''
-    Key bindings for selecting the node type
-    '''
     'symbol_vs_node_type': {
-        'f3': NodeType.GREATER,
-        'f2': NodeType.FILTER,
-        'f1': NodeType.CONDITION,
-        '9':  NodeType.ISA,
-        '8':  NodeType.EXISTS,
-        '7':  NodeType.COMPARE,
-        '6':  NodeType.RELATION_EXISTS,
-        '5':  NodeType.INTERSECTION,
-        '4':  NodeType.UNION,
+        'f3':  NodeType.ARGNTH,
+        'f2':  NodeType.ARGMAX,
+        'f1':  NodeType.ARGMIN,
+        
+        '8': NodeType.LESS,
+        '7': NodeType.GREATER,
+        
+        '6':  NodeType.ISA,
+        '5':  NodeType.EXISTS,
+        '4':  NodeType.COMPARE,
         '3':  NodeType.COUNT,
-        '2':  NodeType.EQUAL,
-        '1':  NodeType.ARGNTH,
-        'q':  NodeType.QUERY,
+
+        '2':  NodeType.OBJECT,
+        '1':  NodeType.SUBJECT,
+
+        'w':  NodeType.VARIABLE,
         'e':  NodeType.ENTITY,
+        'r':  NodeType.LITERAL,
         't':  NodeType.TYPE,
-        'r':  NodeType.RELATION
     },
-    '''
-    Key bindings for commands
-    '''
+
     'symbol_vs_command': {
         'z': "UNDO",
         'x': "SAVE_AND_NEXT",
@@ -53,6 +54,7 @@ class Node:
         self.type = type
         self.token = token
         self.widget = widget
+        self.relation = None
     def export(self):
         return {
             'type': self.type,
@@ -82,6 +84,7 @@ state = {
     'widgets_vs_nodes': {},
     'ids_vs_edges': {},
     'current_example_index': 0,
+    'node_vs_relation': {}
 }
 
 root = Tk()
@@ -133,16 +136,11 @@ def to_tree(node):
     result = {}
     result['type'] = node.type.value
     if children:
-        result['children'] = [to_tree(child) for child in children if child.type != NodeType.TOKEN]
-        tokens = [child for child in children if child.type == NodeType.TOKEN]
-        if tokens:
-            tokens_node = {
-                'type': NodeType.TOKENS.value,
-                'tokens': [node.token for node in tokens]
-            }
-            result['children'].append(tokens_node)
-            
-
+        result['children'] = [to_tree(child) for child in children]
+    if node.type == NodeType.TOKEN:
+        result['index'] = node.token
+    if node.relation:
+        result['relation'] = node.relation
     return result
 
 def save(tree):
@@ -156,13 +154,14 @@ def save(tree):
         data = {
             'dataset': 'qald-8',
             'index': state['example_index'],
-            'tree': tree
+            'tree': tree,
+            'tokens': state['tokens']
         }
 
         example_array.append(data)
 
     with open(OUTPUT_FILE_PATH, 'w', encoding='utf-8') as output_file:
-        json.dump(example_array, output_file)
+        json.dump(example_array, output_file,indent=4)
 
 
 def reset():
@@ -208,7 +207,7 @@ def select(btn):
     canvas.focus_set()
 
 def validate(tree):
-    return SYNTAX_CHECKER.validate(QueryTree.from_dict(tree))
+    return SYNTAX_CHECKER.validate(QueryTree.from_dict(tree, state['tokens']))
 
 def on_key(event):
     key = event.keysym.lower()
@@ -251,6 +250,7 @@ def create_edge(source_btn, destination_btn):
     state['actions'].append('create_edge')    
 
 def create_node(x, y, node_type, token=None):
+
     btn_text = state['tokens'][token] if node_type == NodeType.TOKEN else node_type.value
     btn = Button(frame, text=btn_text)
     btn.place(x=x, y=y)
@@ -260,11 +260,23 @@ def create_node(x, y, node_type, token=None):
     state['nodes'].append(node)
     state['widgets_vs_nodes'][btn] = node
     state['actions'].append('create_node')
+    return node
 
+
+def user_create_node(x, y, node_type):
+    if ASK_FOR_RELATION and node_type in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.GREATER, NodeType.LESS, NodeType.COMPARE, NodeType.SUBJECT, NodeType.OBJECT}:
+        relation = simpledialog.askstring('Relation for node', root)
+        if relation:
+            node = create_node(x, y, node_type)
+            node.relation = relation
+    else:
+        create_node(x, y, node_type)
+    
 def init(index, text):
     state['tokens'] = tokens = run_task(Task.TOKENIZE, text)
     state['example_index'] = index
-    canvas.bind("<Button-1>", lambda event: create_node(event.x, event.y, state['node_type']))
+
+    canvas.bind("<Button-1>", lambda event: user_create_node(event.x, event.y, state['node_type']))
     canvas.bind("<Key>", on_key)
 
     for index, token in enumerate(tokens):
@@ -272,7 +284,6 @@ def init(index, text):
 
     create_node(x=settings['window_width'] // 2, y=100, node_type=NodeType.ROOT)
     canvas.focus_set()
-
 
 def main():
     state['examples'] = [line.split('|') for line in open(INPUT_FILE_PATH, 'r', encoding='utf-8').readlines()]

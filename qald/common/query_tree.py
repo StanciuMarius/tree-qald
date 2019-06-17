@@ -5,32 +5,67 @@ sys.path.insert(0, os.getcwd())
 from enum import Enum
 from typing import List
 
-
 class NodeType(Enum):
-    ROOT = "ROOT"
-    QUERY = "QUERY"
-    COMPARE = "COMPARE"
-    RELATION_EXISTS = "RELATION_EXISTS"
-    INTERSECTION = "INTERSECTION"
-    EXISTS = "EXISTS"
-    UNION = "UNION"
-    COUNT = "COUNT"
-    EQUAL = "EQUAL"
-    ARGMAX = "ARGMAX"
-    ENTITY = "ENTITY"
-    TYPE = "TYPE"
-    RELATION = "RELATION"
-    TOKENS = "TOKENS"
-    TOKEN = "TOKEN"
-    VOID = "VOID"
-    ARGNTH = "ARGNTH"
-    ISA = "ISA"
+    # The answer of a query
+    ROOT = 'ROOT'
     
-    FILTER = "FILTER"
-    CONDITION = "CONDITION"
-    GREATER = "GREATER"
+    # Compares two entities. The order is given by the token order in the questions.
+    COMPARE = 'COMPARE'
 
-    UNUSED = "UNUSED"
+    # Computes the cardinal of a set of entities
+    COUNT = 'COUNT'
+
+    # Picks the entity from a set with the highest value for a particular relation (to be extracted)
+    ARGMAX = 'ARGMAX'
+
+    # Picks the entity from a set with the lowest value for a particular relation (to be extracted)
+    ARGMIN = 'ARGMIN'
+
+    # Picks the entity from a set with the n-th lowest value (to be extracted)
+    ARGNTH = 'ARGNTH'
+
+    # Returns true if the given set is not empty
+    EXISTS = 'EXISTS'
+
+    # Returns true if the type of the given entity matches the given type
+    ISA = 'ISA'
+
+    # Filters the entities with a relation value (to be extracted) greater than a given value
+    GREATER = 'GREATER'
+
+    # Filters the entities with a relation value (to be extracted) less than a given value
+    LESS = 'LESS'
+
+    # The subject of a triple. Has at least an object associated with it. Can have TYPE+. Can have a variable (for relation extraction purposes)
+    SUBJECT = 'SUBJECT'
+
+    # The object of a triple. Has at least a subject associated with it. Can have TYPE+. Can have a variable (for relation extraction purposes)
+    OBJECT = 'OBJECT'
+
+    # Tokens that represent knowledge base TYPE+. E.g. "comonauts" "writer" 
+    TYPE = 'TYPE'
+
+    # Tokens that represent knowledge base entities. E.g. "Barack Obama", "Titanic"
+    ENTITY = 'ENTITY'
+
+    # Tokens that represent literals. E.g. "100", "15th of June", "1999", "1.0", "Frank the Tank"
+    LITERAL = 'LITERAL'
+    
+    # Unused tokens
+    UNUSED = 'UNUSED'
+
+    # WH-words
+    VARIABLE = 'VARIABLE'
+
+    # A token
+    TOKEN = 'TOKEN'
+    
+    # Lists
+    TYPES = 'TYPE+'
+    ENTITIES = 'ENTITY+'
+    SUBJECTS = 'SUBJECT+'
+    OBJECTS = 'OBJECT+'
+    TOKENS = 'TOKEN+'
 
 class SerializationFormat(Enum):
     HIERARCHICAL_DICT = "HIERARCHICAL_DICT"
@@ -62,6 +97,7 @@ class QueryTree:
         assign_unique_id(root)
         self.tokens = tokens
         self.root: Node = root
+        self.unused_tokens = []
    
 
     def to_serializable(self, format: SerializationFormat):
@@ -114,15 +150,17 @@ class QueryTree:
 
         root = node_from_dict(tree_dict)
 
+            
+        tree = QueryTree(root, tokens)
         # Aggregate unused tokens 
         if len(used_nodes) < len(token_nodes):
-            unused_container_node = QueryTree.Node(NodeType.UNUSED)
-            root.children.append(unused_container_node)
+            # unused_container_node = QueryTree.Node(NodeType.UNUSED)
+            # root.children.append(unused_container_node)
 
             for node in token_nodes:
                 if node not in used_nodes:
-                    unused_container_node.children.append(node)
+                    tree.unused_tokens.append(node)
+
+                    # unused_container_node.children.append(node)
         
-            
-        tree = QueryTree(root, tokens)
         return tree
