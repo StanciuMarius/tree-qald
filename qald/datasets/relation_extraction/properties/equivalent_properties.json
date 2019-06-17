@@ -140,9 +140,7 @@
             ]
         },
         {
-            "label": [
-                "movement"
-            ],
+            "label": "movement",
             "description": "The movement or style associated with something or someone.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/architecturalStyle",
@@ -170,6 +168,7 @@
             ]
         },
         {
+            "label": "atomicNumber",
             "dbpedia": [
                 "http://dbpedia.org/ontology/atomicNumber"
             ],
@@ -255,6 +254,7 @@
             ]
         },
         {
+            "label": "basedOn",
             "dbpedia": [
                 "http://dbpedia.org/ontology/basedOn"
             ],
@@ -263,6 +263,7 @@
             ]
         },
         {
+            "label": "battle",
             "dbpedia": [
                 "http://dbpedia.org/ontology/battle"
             ],
@@ -271,6 +272,7 @@
             ]
         },
         {
+            "label": "birthName",
             "dbpedia": [
                 "http://dbpedia.org/ontology/birthName"
             ],
@@ -312,7 +314,6 @@
             ],
             "wikidata": [
                 "http://www.wikidata.org/entity/P40",
-                "_http://www.wikidata.org/entity/P40",
                 "_http://www.wikidata.org/entity/P22",
                 "_http://www.wikidata.org/entity/P25"
             ],
@@ -359,6 +360,7 @@
             ]
         },
         {
+            "label": "chromosome",
             "dbpedia": [
                 "http://dbpedia.org/ontology/chromosome"
             ],
@@ -394,6 +396,7 @@
             ]
         },
         {
+            "label": "cinematography",
             "dbpedia": [
                 "http://dbpedia.org/ontology/cinematography"
             ],
@@ -402,6 +405,7 @@
             ]
         },
         {
+            "label": "citizenship",
             "dbpedia": [
                 "http://dbpedia.org/ontology/citizenship"
             ],
@@ -410,6 +414,7 @@
             ]
         },
         {
+            "label": "classis",
             "dbpedia": [
                 "http://dbpedia.org/ontology/classis"
             ],
@@ -418,6 +423,7 @@
             ]
         },
         {
+            "label": "coatOfArms",
             "dbpedia": [
                 "http://dbpedia.org/ontology/coatOfArms"
             ],
@@ -426,6 +432,7 @@
             ]
         },
         {
+            "label": "colour",
             "dbpedia": [
                 "http://dbpedia.org/ontology/colour"
             ],
@@ -473,6 +480,7 @@
             ]
         },
         {
+            "label": "compressionRatio",
             "dbpedia": [
                 "http://dbpedia.org/ontology/compressionRatio"
             ],
@@ -481,6 +489,7 @@
             ]
         },
         {
+            "label": "computingPlatform",
             "dbpedia": [
                 "http://dbpedia.org/ontology/computingPlatform"
             ],
@@ -502,6 +511,7 @@
             ]
         },
         {
+            "label": "constructionMaterial",
             "dbpedia": [
                 "http://dbpedia.org/ontology/constructionMaterial"
             ],
@@ -522,6 +532,7 @@
             ]
         },
         {
+            "label": "coverArtist",
             "dbpedia": [
                 "http://dbpedia.org/ontology/coverArtist"
             ],
@@ -530,6 +541,7 @@
             ]
         },
         {
+            "label": "cpu",
             "dbpedia": [
                 "http://dbpedia.org/ontology/cpu"
             ],
@@ -538,6 +550,7 @@
             ]
         },
         {
+            "label": "crosses",
             "dbpedia": [
                 "http://dbpedia.org/ontology/crosses"
             ],
@@ -561,6 +574,7 @@
             ]
         },
         {
+            "label": "currencyCode",
             "dbpedia": [
                 "http://dbpedia.org/ontology/currencyCode"
             ],
@@ -736,6 +750,7 @@
             ]
         },
         {
+            "label": "distributor",
             "dbpedia": [
                 "http://dbpedia.org/ontology/distributor"
             ],
@@ -760,6 +775,7 @@
             ]
         },
         {
+            "label": "elo",
             "dbpedia": [
                 "http://dbpedia.org/ontology/elo"
             ],
@@ -768,6 +784,7 @@
             ]
         },
         {
+            "label": "emblem",
             "dbpedia": [
                 "http://dbpedia.org/ontology/emblem"
             ],
@@ -776,6 +793,7 @@
             ]
         },
         {
+            "label": "endDate",
             "dbpedia": [
                 "http://dbpedia.org/ontology/endDate"
             ],
@@ -798,6 +816,7 @@
             ]
         },
         {
+            "label": "eyeColor",
             "dbpedia": [
                 "http://dbpedia.org/ontology/eyeColor"
             ],
@@ -806,6 +825,7 @@
             ]
         },
         {
+            "label": "flag",
             "dbpedia": [
                 "http://dbpedia.org/ontology/flag"
             ],
@@ -814,6 +834,7 @@
             ]
         },
         {
+            "label": "followedBy",
             "dbpedia": [
                 "http://dbpedia.org/ontology/followedBy"
             ],
@@ -822,6 +843,7 @@
             ]
         },
         {
+            "label": "follows",
             "dbpedia": [
                 "http://dbpedia.org/ontology/follows"
             ],
@@ -830,6 +852,7 @@
             ]
         },
         {
+            "label": "formationDate",
             "dbpedia": [
                 "http://dbpedia.org/ontology/formationDate"
             ],
@@ -881,6 +904,7 @@
             ]
         },
         {
+            "label": "fuelSystem",
             "dbpedia": [
                 "http://dbpedia.org/ontology/fuelSystem"
             ],
@@ -889,6 +913,7 @@
             ]
         },
         {
+            "label": "gameEngine",
             "dbpedia": [
                 "http://dbpedia.org/ontology/gameEngine"
             ],
@@ -897,6 +922,7 @@
             ]
         },
         {
+            "label": "generalManager",
             "dbpedia": [
                 "http://dbpedia.org/ontology/generalManager"
             ],
@@ -925,6 +951,7 @@
             ]
         },
         {
+            "label": "genus",
             "dbpedia": [
                 "http://dbpedia.org/ontology/genus"
             ],
@@ -933,6 +960,7 @@
             ]
         },
         {
+            "label": "handedness",
             "dbpedia": [
                 "http://dbpedia.org/ontology/handedness"
             ],
@@ -958,6 +986,7 @@
             ]
         },
         {
+            "label": "highestPoint",
             "dbpedia": [
                 "http://dbpedia.org/ontology/highestPoint"
             ],
@@ -966,6 +995,7 @@
             ]
         },
         {
+            "label": "highwaySystem",
             "dbpedia": [
                 "http://dbpedia.org/ontology/highwaySystem"
             ],
@@ -974,6 +1004,7 @@
             ]
         },
         {
+            "label": "homeport",
             "dbpedia": [
                 "http://dbpedia.org/ontology/homeport"
             ],
@@ -982,6 +1013,7 @@
             ]
         },
         {
+            "label": "iataAirlineCode",
             "dbpedia": [
                 "http://dbpedia.org/ontology/iataAirlineCode"
             ],
@@ -990,6 +1022,7 @@
             ]
         },
         {
+            "label": "icaoAirlineCode",
             "dbpedia": [
                 "http://dbpedia.org/ontology/icaoAirlineCode"
             ],
@@ -998,6 +1031,7 @@
             ]
         },
         {
+            "label": "illustrator",
             "dbpedia": [
                 "http://dbpedia.org/ontology/illustrator"
             ],
@@ -1006,6 +1040,7 @@
             ]
         },
         {
+            "label": "imdbId",
             "dbpedia": [
                 "http://dbpedia.org/ontology/imdbId"
             ],
@@ -1024,6 +1059,7 @@
             ]
         },
         {
+            "label": "individualisedGnd",
             "dbpedia": [
                 "http://dbpedia.org/ontology/individualisedGnd"
             ],
@@ -1044,6 +1080,7 @@
             ]
         },
         {
+            "label": "inflow",
             "dbpedia": [
                 "http://dbpedia.org/ontology/inflow"
             ],
@@ -1052,6 +1089,7 @@
             ]
         },
         {
+            "label": "inseeCode",
             "dbpedia": [
                 "http://dbpedia.org/ontology/inseeCode"
             ],
@@ -1073,6 +1111,7 @@
             ]
         },
         {
+            "label": "isPartOf",
             "dbpedia": [
                 "http://dbpedia.org/ontology/isPartOf"
             ],
@@ -1081,6 +1120,7 @@
             ]
         },
         {
+            "label": "isbn",
             "dbpedia": [
                 "http://dbpedia.org/ontology/isbn"
             ],
@@ -1111,6 +1151,7 @@
             ]
         },
         {
+            "label": "launchSite",
             "dbpedia": [
                 "http://dbpedia.org/ontology/launchSite"
             ],
@@ -1119,6 +1160,7 @@
             ]
         },
         {
+            "label": "launchVehicle",
             "dbpedia": [
                 "http://dbpedia.org/ontology/launchVehicle"
             ],
@@ -1127,6 +1169,7 @@
             ]
         },
         {
+            "label": "league",
             "dbpedia": [
                 "http://dbpedia.org/ontology/league"
             ],
@@ -1135,6 +1178,7 @@
             ]
         },
         {
+            "label": "license",
             "dbpedia": [
                 "http://dbpedia.org/ontology/license"
             ],
@@ -1143,6 +1187,7 @@
             ]
         },
         {
+            "label": "maintainedBy",
             "dbpedia": [
                 "http://dbpedia.org/ontology/maintainedBy"
             ],
@@ -1151,6 +1196,7 @@
             ]
         },
         {
+            "label": "musicBy",
             "dbpedia": [
                 "http://dbpedia.org/ontology/musicBy"
             ],
@@ -1159,6 +1205,7 @@
             ]
         },
         {
+            "label": "namedAfter",
             "dbpedia": [
                 "http://dbpedia.org/ontology/namedAfter"
             ],
@@ -1167,6 +1214,7 @@
             ]
         },
         {
+            "label": "order",
             "dbpedia": [
                 "http://dbpedia.org/ontology/order"
             ],
@@ -1175,6 +1223,7 @@
             ]
         },
         {
+            "label": "orientation",
             "dbpedia": [
                 "http://dbpedia.org/ontology/orientation"
             ],
@@ -1228,6 +1277,7 @@
             ]
         },
         {
+            "label": "populationTotal",
             "dbpedia": [
                 "http://dbpedia.org/ontology/populationTotal"
             ],
@@ -1236,6 +1286,7 @@
             ]
         },
         {
+            "label": "primeMinister",
             "dbpedia": [
                 "http://dbpedia.org/ontology/primeMinister"
             ],
@@ -1323,6 +1374,7 @@
             ]
         },
         {
+            "label": "selibrId",
             "dbpedia": [
                 "http://dbpedia.org/ontology/selibrId"
             ],
@@ -1331,6 +1383,7 @@
             ]
         },
         {
+            "label": "settlement",
             "dbpedia": [
                 "http://dbpedia.org/ontology/settlement"
             ],
@@ -1356,6 +1409,7 @@
             ]
         },
         {
+            "label": "signature",
             "dbpedia": [
                 "http://dbpedia.org/ontology/signature"
             ],
@@ -1432,6 +1486,7 @@
             ]
         },
         {
+            "label": "inflow",
             "wikidata": [
                 "http://www.wikidata.org/entity/P200"
             ],
@@ -1440,6 +1495,7 @@
             ]
         },
         {
+            "label": "présentateur",
             "wikidata": [
                 "http://www.wikidata.org/entity/P371"
             ],
@@ -1460,6 +1516,7 @@
             ]
         },
         {
+            "label": "recordLabel",
             "wikidata": [
                 "http://www.wikidata.org/entity/P264"
             ],
@@ -1468,14 +1525,7 @@
             ]
         },
         {
-            "wikidata": [
-                "http://www.wikidata.org/entity/P1082"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/populationTotal"
-            ]
-        },
-        {
+            "label": "outflow",
             "wikidata": [
                 "http://www.wikidata.org/entity/P201"
             ],
@@ -1484,6 +1534,7 @@
             ]
         },
         {
+            "label": "runtime",
             "wikidata": [
                 "http://www.wikidata.org/entity/P2047"
             ],
@@ -1492,6 +1543,7 @@
             ]
         },
         {
+            "label": "name",
             "wikidata": [
                 "http://www.wikidata.org/entity/P2561"
             ],
@@ -1613,6 +1665,7 @@
             ]
         },
         {
+            "label": "seatingCapacity",
             "wikidata": [
                 "http://www.wikidata.org/entity/P1083"
             ],
@@ -1633,6 +1686,7 @@
             ]
         },
         {
+            "label": "presenter",
             "wikidata": [
                 "http://www.wikidata.org/entity/P371"
             ],
