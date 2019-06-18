@@ -1,0 +1,103 @@
+Who is the oldest actor in Berlin?
+What is the largest country by population?
+What is the largest country by area?
+What is the biggest country?
+Which country is the largest?
+Which country has the largest area?
+Which country has the largest population?
+Give me the country with the largest area.
+Give me the country with the smallest area.
+What country in Europe has the smallest area?
+Give me the country with the largest population in Asia.
+What country has the largest gdp per capita?
+What country in Asia has the largest gdp per capita?
+What European country has the largest area?
+What is the largest North American state?
+What is the most populated North American state?
+Give me the 2nd largest country.
+What is the 5th most populated country.
+List all countries with an area smaller than 20000 square kilometers.
+How many countries with less than 10000 inhabitants are there?
+How many countries in Europe are there?
+How many European countries are there?
+List all European countries.
+What country has the largest capital?
+What is the largest capital?
+Is Germany larger than Europe?
+Does Germany have a larger surface size than Europe?
+Does Germany have a larger area than Europe?
+Does Europe have more inhabitants than Europe?
+Which is larger, Europe or Germany?
+Give me the larger of Europe and Germany?
+What is the most populated of Switzerland and Romania?
+How many countries larger than China are there?
+How many countries cities are in China?
+How many regions are there in Romania?
+How many states are there in United States of America?
+How many states larger than Romania are there?
+Is there any country larger than Indonesia?
+How many lakes are bigger than Brazil?
+Is the Atlantic Ocean bigger than the Pacific Ocean?
+Which has a larger surface, the Atlantic Ocean or the Pacific Ocean?
+Is Monaco in Europe?
+Give me all countries.
+Give me all countries that have French as an official language.
+Give me all countries that speak Indian.
+What countries have Christianity as an official religion?
+Is Catholicism a Christian religion?
+Is Japan an European country?
+Is India an Asian country?
+Does Europe contain Luxembourg?
+What river crosses more than 5 countries?
+What rivers cross Hungary?
+What rivers cross both Ukraine and Greece?
+What rivers flow through the Philippines?
+Give me all rivers longer than the Amazon.
+Give me all rivers that flow into the Nile.
+Does the Nile flow into the Amazon?
+What sea does the Danube flow into?
+How many rivers flow into the Black Sea?
+How many rivers cross Russia?
+How many rivers flow through Burma?
+Are there any lakes in Luxembourg?
+How many people live in the largest country?
+How big is the largest country in Europe by population size?
+How big is the largest country in Europe?
+How tall is the tallest mountain?
+What is the tallest mountain in Brazil?
+What is the highest mountain?
+What Italian mountain is taller than the highest Indian mountain?
+Give me all the mountains taller than Burj Khalifa.
+How many countries flow through at least 5 African countries?
+How many actors are born after 1995?
+How many cosmonauts are from Indonesia?
+Which Moldavian city is the largest?
+What country has the most cities?
+What continent is larger than the Pacific Ocean?
+What is the southernmost point of the U.S.?
+What roads cross New York?
+What companies are based in Sri Lanka?
+What IT companies have their headquarters in Silicon Valley?
+What technology companies were founded in Seatle?
+Does Silicon Valley have more companies the Hong Kong?
+Are there more companies in France than in Spain?
+What islands are located in the Bering Sea?
+What is tha largest island of the Pacific Ocean?
+Give me all islands larger tha 10000 squared km in the Mediterranean Sea.
+What is the smallest island?
+What is the oldest cosmonaut?
+What is the 5th President of Ukraine?
+What kind of head of state does Bulgaria have?
+What is the 100th country by size?
+Give me all actors older than Morgan Freeman?
+Is Jim Carrey older than Wesley Snipes?
+Is the Queen of England younger than Pope Francis?
+Which is older, Simon Baker or Keanu Reeves?
+What is the oldest actor starring in The Matrix?
+What is the movie with the largest budget?
+Who directed the movie with the largest budget?
+Who published It?
+Who is the oldest of Metallica's members?
+Where are AC/DC's members born in?
+Does Game of Thrones have the largest budget of all series?
+
