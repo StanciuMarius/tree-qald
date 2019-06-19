@@ -24,6 +24,12 @@ class NodeType(Enum):
     # Returns true if the given set is not empty
     EXISTS = 'EXISTS'
 
+    # Returns true if the first entity has a property value greater than the second's
+    IS_GREATER = 'IS_GREATER'
+    
+    # Returns true if the first entity has a property value less than the second's
+    IS_LESS = 'IS_LESS'
+
     # Returns true if the type of the given entity matches the given type
     ISA = 'ISA'
 

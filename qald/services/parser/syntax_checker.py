@@ -118,7 +118,7 @@ class SyntaxChecker:
         collapsed_children_symbols = tuple(sorted(set([child.type for child in node.children]), key=self.sorting_rule))
         collapsed_children_symbols = tuple([COLLAPSABLE_NODES[node_type] if node_type in COLLAPSABLE_NODES else node_type for node_type in collapsed_children_symbols])
 
-        allowed_alternatives = self.grammar[node.type]
+        allowed_alternatives = {tuple(sorted(alternative, key=self.sorting_rule)) for alternative in self.grammar[node.type]}
         
         # Node childrens match the rule for that particular type
         if children_symbols in allowed_alternatives:

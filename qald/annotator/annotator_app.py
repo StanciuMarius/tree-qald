@@ -23,6 +23,9 @@ settings = {
         'f2':  NodeType.ARGMAX,
         'f1':  NodeType.ARGMIN,
         
+        '9': NodeType.IS_LESS,
+        '8': NodeType.IS_GREATER,
+
         '7': NodeType.ENUMERATE,
         '6': NodeType.LESS,
         '5': NodeType.GREATER,
@@ -127,8 +130,6 @@ def delete(btn):
         
     state['edges'] = edges_to_keep
 
-
-    state['selection'] = None
 
 def to_tree(node):
     children = [edge.destination for edge in state['edges'] if edge.source == node]
@@ -266,8 +267,10 @@ def create_node(x, y, node_type, token=None):
 
 
 def user_create_node(x, y, node_type):
-    if ASK_FOR_RELATION and node_type in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.GREATER, NodeType.LESS, NodeType.COMPARE, NodeType.SUBJECT, NodeType.OBJECT}:
+    if ASK_FOR_RELATION and node_type in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.GREATER, NodeType.LESS, NodeType.PROPERTY, NodeType.IS_GREATER, NodeType.IS_LESS}:
         relation = simpledialog.askstring('Relation for node', root)
+        canvas.focus_set()
+
         if relation:
             node = create_node(x, y, node_type)
             node.relation = relation
