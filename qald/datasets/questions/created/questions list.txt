@@ -1,3 +1,7 @@
+How many children does Daniel Day Lewis have
+Which is larger, Europe or Germany?
+Is the oldest son of Barack Obama a singer?
+Is the Sun a star?
 Who is the oldest actor in Berlin?
 What is the largest country by population?
 What is the largest country by area?
@@ -35,7 +39,6 @@ How many countries cities are in China?
 How many regions are there in Romania?
 How many states are there in United States of America?
 How many states larger than Romania are there?
-Is there any country larger than Indonesia?
 How many lakes are bigger than Brazil?
 Is the Atlantic Ocean bigger than the Pacific Ocean?
 Which has a larger surface, the Atlantic Ocean or the Pacific Ocean?
@@ -167,8 +170,7 @@ What scientists were part of the Manhattan Project?
 Where was Little Boy deployed in?
 Who designed the bomb that exploded in Hiroshima?
 What ideology does the ruling party in the U.S. have?
-How much did Little Boy weigh?
-Is the Sun a star?
+How much did Little Boy weigh
 Is the circumference of Earth larger than Mars's?
 Which is densest, the Mars or Jupiter?
 Is there any desert in the United Arab Emirates?

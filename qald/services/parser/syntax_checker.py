@@ -11,27 +11,54 @@ COLLAPSABLE_NODES = {
     NodeType.ENTITY: NodeType.ENTITIES,
     NodeType.TOKEN: NodeType.TOKENS,
     NodeType.TYPE: NodeType.TYPES,
-    NodeType.SUBJECT: NodeType.SUBJECTS,
-    NodeType.OBJECT: NodeType.OBJECTS,
 }
 class SyntaxChecker:
     """ Tool for checking the syntax of QueryTrees against a context free grammar file """
     def __init__(self, grammar_file_path: str):
         # Baseline tree-like dict for syntax checking
         self.grammar = {}
+        self.class_vs_instances = {}
+
         self.sorting_rule = key=lambda t: t.value # for pattern matching
 
         with open(grammar_file_path, 'r') as grammar_file:
-            for line in grammar_file.readlines():
+            lines = grammar_file.readlines()
+            # =========================================Parse classes
+            for line in lines:
                 trimmed = line.strip()
                 
                 # Skip comment
                 if len(trimmed) > 1 and trimmed[0] == '#':
                     continue
-                
+
                 if len(line) > 2:
+
+                    non_terminal, _ = line.split(":")
+                    non_terminal = non_terminal.replace(' ',  '').replace('\n', '').split('$')
+                    base_class = None
+                    if len(non_terminal) > 1:
+                        non_terminal, base_class = non_terminal
+                    else:
+                        non_terminal = non_terminal[0]
+
+                    if base_class:
+                        if base_class not in self.class_vs_instances:
+                            self.class_vs_instances[base_class] = [non_terminal]
+                        else:
+                            self.class_vs_instances[base_class].append(non_terminal)
+            # =======================================
+        
+            for line in lines:
+                trimmed = line.strip()
+                
+                # Skip comment
+                if len(trimmed) > 1 and trimmed[0] == '#':
+                    continue
+
+                if len(line) > 2:
+
                     non_terminal, alternatives = line.split(":")
-                    non_terminal = non_terminal.replace(' ',  '').replace('\n', '')
+                    non_terminal = non_terminal.replace(' ',  '').replace('\n', '').split('$')[0]
 
                     # Parsin' trimmin' validatin'
                     alternatives = alternatives.split("|")
@@ -47,12 +74,17 @@ class SyntaxChecker:
                         expanded_symbols = []
                         alternatives = expand_backtrack(symbols[1:])
 
-                        if symbols[0][-1] == '?':
+                        symbol = symbols[0]
+                        if symbol[-1] == '?':
+                            symbol = symbol[:-1]
                             # if optional, skip
                             expanded_symbols.extend(alternatives)
-                            expanded_symbols.extend([[symbols[0][:-1]] + alternative for alternative in alternatives])
+                        
+                        if symbol in self.class_vs_instances:
+                            for instance in self.class_vs_instances[symbol]:
+                                expanded_symbols.extend([[instance] + alternative for alternative in alternatives])           
                         else:
-                            expanded_symbols.extend([[symbols[0]] + alternative for alternative in alternatives])
+                            expanded_symbols.extend([[symbol] + alternative for alternative in alternatives])
 
                         return deepcopy(expanded_symbols)
                         

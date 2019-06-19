@@ -4,17 +4,22 @@ import time
 import re
 import spacy
 from typing import List
-from pytorch_pretrained_bert.tokenization import BertTokenizer
+# from pytorch_pretrained_bert.tokenization import BertTokenizer
 
 sys.path.insert(0, os.getcwd())
 from services.nlp.constants import BERT_MODEL
 from common.constants import DO_LOWERCASE
 
-TOKENIZER = BertTokenizer.from_pretrained(BERT_MODEL, do_lower_case=DO_LOWERCASE)
+# TOKENIZER = BertTokenizer.from_pretrained(BERT_MODEL, do_lower_case=DO_LOWERCASE)
 SPACY_NLP = spacy.load('en_core_web_lg')
 
+# def tokenize(text: str) -> List[str]:
+#     return TOKENIZER.tokenize(text)
+
 def tokenize(text: str) -> List[str]:
-    return TOKENIZER.tokenize(text)
+    doc = SPACY_NLP(text)
+    tokens = [token.text for token in doc]
+    return tokens
 
 def spacy_process(text: str) -> dict:
     doc = SPACY_NLP(text)

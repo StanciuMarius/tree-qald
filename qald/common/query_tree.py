@@ -9,9 +9,6 @@ class NodeType(Enum):
     # The answer of a query
     ROOT = 'ROOT'
     
-    # Compares two entities. The order is given by the token order in the questions.
-    COMPARE = 'COMPARE'
-
     # Computes the cardinal of a set of entities
     COUNT = 'COUNT'
 
@@ -36,11 +33,8 @@ class NodeType(Enum):
     # Filters the entities with a relation value (to be extracted) less than a given value
     LESS = 'LESS'
 
-    # The subject of a triple. Has at least an object associated with it. Can have TYPE+. Can have a variable (for relation extraction purposes)
-    SUBJECT = 'SUBJECT'
-
-    # The object of a triple. Has at least a subject associated with it. Can have TYPE+. Can have a variable (for relation extraction purposes)
-    OBJECT = 'OBJECT'
+    # Property of a set of a entities
+    PROPERTY = 'PROPERTY'
 
     # Tokens that represent knowledge base TYPE+. E.g. "comonauts" "writer" 
     TYPE = 'TYPE'
@@ -50,6 +44,10 @@ class NodeType(Enum):
 
     # Tokens that represent literals. E.g. "100", "15th of June", "1999", "1.0", "Frank the Tank"
     LITERAL = 'LITERAL'
+    
+    # All entities of a particular type
+
+    ENUMERATE = 'ENUMERATE'
     
     # Unused tokens
     UNUSED = 'UNUSED'

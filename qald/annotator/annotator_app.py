@@ -23,16 +23,14 @@ settings = {
         'f2':  NodeType.ARGMAX,
         'f1':  NodeType.ARGMIN,
         
-        '8': NodeType.LESS,
-        '7': NodeType.GREATER,
+        '7': NodeType.ENUMERATE,
+        '6': NodeType.LESS,
+        '5': NodeType.GREATER,
         
-        '6':  NodeType.ISA,
-        '5':  NodeType.EXISTS,
-        '4':  NodeType.COMPARE,
-        '3':  NodeType.COUNT,
-
-        '2':  NodeType.OBJECT,
-        '1':  NodeType.SUBJECT,
+        '4':  NodeType.ISA,
+        '3':  NodeType.EXISTS,
+        '2':  NodeType.COUNT,
+        '1':  NodeType.PROPERTY,
 
         'w':  NodeType.VARIABLE,
         'e':  NodeType.ENTITY,
@@ -43,6 +41,7 @@ settings = {
     'symbol_vs_command': {
         'z': "UNDO",
         'x': "SAVE_AND_NEXT",
+        'v': "SKIP",
         'c': "REDO",
     },
     'window_width': 1000,
@@ -225,6 +224,9 @@ def on_key(event):
                 error()
         elif command == 'REDO':
             redo()
+        elif command == 'SKIP':
+            save(None)
+            next()
 
     elif key in settings['symbol_vs_node_type']:
         node_type = settings['symbol_vs_node_type'][key]
