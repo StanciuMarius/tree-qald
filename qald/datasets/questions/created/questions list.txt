@@ -1,202 +1,203 @@
-How many children does Daniel Day Lewis have
-Which is larger, Europe or Germany?
-Is the oldest son of Barack Obama a singer?
-Is the Sun a star?
-Who is the oldest actor in Berlin?
-What is the largest country by population?
-What is the largest country by area?
-What is the biggest country?
-Which country is the largest?
-Which country has the largest area?
-Which country has the largest population?
-Give me the country with the largest area.
-Give me the country with the smallest area.
-What country in Europe has the smallest area?
-Give me the country with the largest population in Asia.
-What country has the largest gdp per capita?
-What country in Asia has the largest gdp per capita?
-What European country has the largest area?
-What is the largest North American state?
-What is the most populated North American state?
-Give me the 2nd largest country.
-What is the 5th most populated country.
-List all countries with an area smaller than 20000 square kilometers.
-How many countries with less than 10000 inhabitants are there?
-How many countries in Europe are there?
-How many European countries are there?
-List all European countries.
-What country has the largest capital?
-What is the largest capital?
-Is Germany larger than Europe?
-Does Germany have a larger surface size than Europe?
-Does Germany have a larger area than Europe?
-Does Europe have more inhabitants than Europe?
-Which is larger, Europe or Germany?
-Give me the larger of Europe and Germany?
-What is the most populated of Switzerland and Romania?
-How many countries larger than China are there?
-How many countries cities are in China?
-How many regions are there in Romania?
-How many states are there in United States of America?
-How many states larger than Romania are there?
-How many lakes are bigger than Brazil?
-Is the Atlantic Ocean bigger than the Pacific Ocean?
-Which has a larger surface, the Atlantic Ocean or the Pacific Ocean?
-Is Monaco in Europe?
-Give me all countries.
-Give me all countries that have French as an official language.
-Give me all countries that speak Indian.
-What countries have Christianity as an official religion?
-Is Catholicism a Christian religion?
-Is Japan an European country?
-Is India an Asian country?
-Does Europe contain Luxembourg?
-What river crosses more than 5 countries?
-What rivers cross Hungary?
-What rivers cross both Ukraine and Greece?
-What rivers flow through the Philippines?
-Give me all rivers longer than the Amazon.
-Give me all rivers that flow into the Nile.
-Does the Nile flow into the Amazon?
-What sea does the Danube flow into?
-How many rivers flow into the Black Sea?
-How many rivers cross Russia?
-How many rivers flow through Burma?
-Are there any lakes in Luxembourg?
-How many people live in the largest country?
-How big is the largest country in Europe by population size?
-How big is the largest country in Europe?
-How tall is the tallest mountain?
-What is the tallest mountain in Brazil?
-What is the highest mountain?
-What Italian mountain is taller than the highest Indian mountain?
-Give me all the mountains taller than Burj Khalifa.
-How many countries flow through at least 5 African countries?
-How many actors are born after 1995?
-How many cosmonauts are from Indonesia?
-Which Moldavian city is the largest?
-What country has the most cities?
-What continent is larger than the Pacific Ocean?
-What is the southernmost point of the U.S.?
-What roads cross New York?
-What companies are based in Sri Lanka?
-What IT companies have their headquarters in Silicon Valley?
-What technology companies were founded in Seatle?
-Does Silicon Valley have more companies the Hong Kong?
-Are there more companies in France than in Spain?
-What islands are located in the Bering Sea?
-What is tha largest island of the Pacific Ocean?
-Give me all islands larger tha 10000 squared km in the Mediterranean Sea.
-What is the smallest island?
-What is the oldest cosmonaut?
-What is the 5th President of Ukraine?
-What kind of head of state does Bulgaria have?
-What is the 100th country by size?
-Give me all actors older than Morgan Freeman?
-Is Jim Carrey older than Wesley Snipes?
-Is the Queen of England younger than Pope Francis?
-Which is older, Simon Baker or Keanu Reeves?
-What is the oldest actor starring in The Matrix?
-What is the movie with the largest budget?
-Who directed the movie with the largest budget?
-Who published It?
-Who is the oldest of Metallica's members?
-Where are AC/DC's members born in?
-Does Game of Thrones have the largest budget of all series?
-In how many countries does the river Thames flow through?
-How many movies did Stanley Kubrik direct?
-In how many movies star both Morgand Freeman and Brad Pitt?
-In what country is Paris located?
-What country is Zurich located in?
-How many people live in the capital of Ethiopia?
-Where is Ethiopia?
-Where is the largest country?
-Does Samuel L. Jackson star in any movie directed by Quentin Tarantino?
-Give me all the actors that played in Pulp Fiction?
-What producers do Steven Spielberg movies have?
-Is Orson Welles a movie director?
-Did Ridley Scott direct more movies than Alfred Hitchcock?
-What is the youngest actor that played in Titanic.
-What is the profession of Martin Scorsese?
-What does Francis Ford Coppola do?
-Where does IBM have headquarters?
-What city is the headquarters of Amazon in?
-Is there any movie filmed in Panama?
-Does Simon Baker play in The Mentalist?
-How many episodes does The Young and the Restless have?
-Is Tom Hanks dead?
-Does Robert De Niro still live?
-Is Christian Bale born before Jack Nicholson?
-Who directed Gary Oldman's latest movie?
-Did Robert Downey Jr. and Brad Pitt play in any common movie?
-Is Will Smith married?
-How many children does Daniel Day Lewis have?
-What awards has Spielberg's latest movie won?
-How much was invested to create Shawshank Redemption?
-Who played the role of God?
-Is Johnny Depp Batman?
-Is Wonderwoman played by Meryl Streep?
-Is Clint Eastwood related to Robert De Niro?
-Give me all movies starring Matthew McConaughey with a budget of over 1 000 000 dollars.
-Is Jamie Fox American?
-Edward Horton played what roles?
-Where is Bose based in?
-What companies does George Clooney own?
-Is there any president that plays tennis?
-Give me all presidents that also play footbal.
-What professor had mentored the most students?
-Give me all the students are mentored by Albert Einstein.
-How many official languages are spoken in Ethiopia?
-What is the densest country in Africa?
-Do Spain and Italy use the same currency?
-What money do they use in Zimbabwe?
-How wide is the Ethiopian bank note?
-What is the population of the largest country?
-What is the area of the most populated country?
-What side of the road do they drive in Ethiopia?
-Do they drive on the right in England?
-Does Marlyn Manson play guitar?
-What instruments did George Enescu play?
-How many pieces did Bach compose?
-Who wrote the music for Star Wars Return of the Jedi?
-What famous people died because of the bubonic plague?
-Did any king die of the plague?
-When was Hubble deployed?
-Was Hubble launched in the U.S.?
-How many programs were ran by NASA?
-What's the easiest route on K2?
-Who was in charge of the Manhattan Project?
-What scientists were part of the Manhattan Project?
-Where was Little Boy deployed in?
-Who designed the bomb that exploded in Hiroshima?
-What ideology does the ruling party in the U.S. have?
-How much did Little Boy weigh
-Is the circumference of Earth larger than Mars's?
-Which is densest, the Mars or Jupiter?
-Is there any desert in the United Arab Emirates?
-Do Greenland and Iceland have the same climate?
-Is The Black Goat related to Cthulu?
-From what book is Palantir?
-Did J. R. R. Tolkien write more books than J. K. Rolling?
-What book followed The Hobbit?
-Give me all fantasy books written by George RR Martin.
-What healthcare companies were founded in the United Kingdom?
-What country has the most healthcare companies?
-What is the 150th country by population density?
-At what temperature does iron melt?
-What is the largest producer of Tungsten?
-What chemicals are there in the atmosphere of Venus?
-Is there Helium in the atmosphere of Mercury?
-Did Michael Jackson have any children?
-Is Michael Jackson burried in Los Angeles?
-Is Michael Jackson richer than Brad Pitt?
-How many siblings did Jason Statham have?
-Is Krakow the largest city in Poland?
-Are there any actors born in 1994?
-Give me all artists that play the saxophone.
-What is Albert Einstein known for?
-Who is the first wife of Einstein?
-What is the tiniest city in Bulgaria?
-Do more people live in Berlin than in London?
-What is the largest company with headquarters in Moscow?
-How many continents does Russia span in?
+1|How many children does Daniel Day Lewis have
+2|Which is larger, Europe or Germany?
+3|Is the oldest son of Barack Obama a singer?
+4|Is the Sun a star?
+5|Who is the oldest actor in Berlin?
+6|What is the largest country by population?
+7|What is the largest country by area?
+8|What is the biggest country?
+9|Which country is the largest?
+10|Which country has the largest area?
+11|Which country has the largest population?
+12|Give me the country with the largest area.
+13|Give me the country with the smallest area.
+14|What country in Europe has the smallest area?
+15|Give me the country with the largest population in Asia.
+16|What country has the largest gdp per capita?
+17|What country in Asia has the largest gdp per capita?
+18|What European country has the largest area?
+19|What is the largest North American state?
+20|What is the most populated North American state?
+21|Give me the 2nd largest country.
+22|What is the 5th most populated country.
+23|List all countries with an area smaller than 20000 square kilometers.
+24|How many countries with less than 10000 inhabitants are there?
+25|How many countries in Europe are there?
+26|How many European countries are there?
+27|List all European countries.
+28|What country has the largest capital?
+29|What is the largest capital?
+30|Is Germany larger than Europe?
+31|Does Germany have a larger surface size than Europe?
+32|Does Germany have a larger area than Europe?
+33|Does Europe have more inhabitants than Europe?
+34|Which is larger, Europe or Germany?
+35|Give me the larger of Europe and Germany?
+36|What is the most populated of Switzerland and Romania?
+37|How many countries larger than China are there?
+38|How many countries cities are in China?
+39|How many regions are there in Romania?
+40|How many states are there in United States of America?
+41|How many states larger than Romania are there?
+42|How many lakes are bigger than Brazil?
+43|Is the Atlantic Ocean bigger than the Pacific Ocean?
+44|Which has a larger surface, the Atlantic Ocean or the Pacific Ocean?
+45|Is Monaco in Europe?
+46|Give me all countries.
+47|Give me all countries that have French as an official language.
+48|Give me all countries that speak Indian.
+49|What countries have Christianity as an official religion?
+50|Is Catholicism a Christian religion?
+51|Is Japan an European country?
+52|Is India an Asian country?
+53|Does Europe contain Luxembourg?
+54|What river crosses more than 5 countries?
+55|What rivers cross Hungary?
+56|What rivers cross both Ukraine and Greece?
+57|What rivers flow through the Philippines?
+58|Give me all rivers longer than the Amazon.
+59|Give me all rivers that flow into the Nile.
+60|Does the Nile flow into the Amazon?
+61|What sea does the Danube flow into?
+62|How many rivers flow into the Black Sea?
+63|How many rivers cross Russia?
+64|How many rivers flow through Burma?
+65|Are there any lakes in Luxembourg?
+66|How many people live in the largest country?
+67|How big is the largest country in Europe by population size?
+68|How big is the largest country in Europe?
+69|How tall is the tallest mountain?
+70|What is the tallest mountain in Brazil?
+71|What is the highest mountain?
+72|What Italian mountain is taller than the highest Indian mountain?
+73|Give me all the mountains taller than Burj Khalifa.
+74|How many countries flow through at least 5 African countries?
+75|How many actors are born after 1995?
+76|How many cosmonauts are from Indonesia?
+77|Which Moldavian city is the largest?
+78|What country has the most cities?
+79|What continent is larger than the Pacific Ocean?
+80|What is the southernmost point of the U.S.?
+81|What roads cross New York?
+82|What companies are based in Sri Lanka?
+83|What IT companies have their headquarters in Silicon Valley?
+84|What technology companies were founded in Seatle?
+85|Does Silicon Valley have more companies the Hong Kong?
+86|Are there more companies in France than in Spain?
+87|What islands are located in the Bering Sea?
+88|What is tha largest island of the Pacific Ocean?
+89|Give me all islands larger tha 10000 squared km in the Mediterranean Sea.
+90|What is the smallest island?
+91|What is the oldest cosmonaut?
+92|What is the 5th President of Ukraine?
+93|What kind of head of state does Bulgaria have?
+94|What is the 100th country by size?
+95|Give me all actors older than Morgan Freeman?
+96|Is Jim Carrey older than Wesley Snipes?
+97|Is the Queen of England younger than Pope Francis?
+98|Which is older, Simon Baker or Keanu Reeves?
+99|What is the oldest actor starring in The Matrix?
+100|What is the movie with the largest budget?
+101|Who directed the movie with the largest budget?
+102|Who published It?
+103|Who is the oldest of Metallica's members?
+104|Where are AC/DC's members born in?
+105|Does Game of Thrones have the largest budget of all series?
+106|In how many countries does the river Thames flow through?
+107|How many movies did Stanley Kubrik direct?
+108|In how many movies star both Morgand Freeman and Brad Pitt?
+109|In what country is Paris located?
+110|What country is Zurich located in?
+111|How many people live in the capital of Ethiopia?
+112|Where is Ethiopia?
+113|Where is the largest country?
+114|Does Samuel L. Jackson star in any movie directed by Quentin Tarantino?
+115|Give me all the actors that played in Pulp Fiction?
+116|What producers do Steven Spielberg movies have?
+117|Is Orson Welles a movie director?
+118|Did Ridley Scott direct more movies than Alfred Hitchcock?
+119|What is the youngest actor that played in Titanic.
+120|What is the profession of Martin Scorsese?
+121|What does Francis Ford Coppola do?
+122|Where does IBM have headquarters?
+123|What city is the headquarters of Amazon in?
+124|Is there any movie filmed in Panama?
+125|Does Simon Baker play in The Mentalist?
+126|How many episodes does The Young and the Restless have?
+127|Is Tom Hanks dead?
+128|Does Robert De Niro still live?
+129|Is Christian Bale born before Jack Nicholson?
+130|Who directed Gary Oldman's latest movie?
+131|Did Robert Downey Jr. and Brad Pitt play in any common movie?
+132|Is Will Smith married?
+133|How many children does Daniel Day Lewis have?
+134|What awards has Spielberg's latest movie won?
+135|How much was invested to create Shawshank Redemption?
+136|Who played the role of God?
+137|Is Johnny Depp Batman?
+138|Is Wonderwoman played by Meryl Streep?
+139|Is Clint Eastwood related to Robert De Niro?
+140|Give me all movies starring Matthew McConaughey with a budget of over 1 000 000 dollars.
+141|Is Jamie Fox American?
+142|Edward Horton played what roles?
+143|Where is Bose based in?
+144|What companies does George Clooney own?
+145|Is there any president that plays tennis?
+146|Give me all presidents that also play footbal.
+147|What professor had mentored the most students?
+148|Give me all the students are mentored by Albert Einstein.
+149|How many official languages are spoken in Ethiopia?
+150|What is the densest country in Africa?
+151|Do Spain and Italy use the same currency?
+152|What money do they use in Zimbabwe?
+153|How wide is the Ethiopian bank note?
+154|What is the population of the largest country?
+155|What is the area of the most populated country?
+156|What side of the road do they drive in Ethiopia?
+157|Do they drive on the right in England?
+158|Does Marlyn Manson play guitar?
+159|What instruments did George Enescu play?
+160|How many pieces did Bach compose?
+161|Who wrote the music for Star Wars Return of the Jedi?
+162|What famous people died because of the bubonic plague?
+163|Did any king die of the plague?
+164|When was Hubble deployed?
+165|Was Hubble launched in the U.S.?
+166|How many programs were ran by NASA?
+167|What's the easiest route on K2?
+168|Who was in charge of the Manhattan Project?
+169|What scientists were part of the Manhattan Project?
+170|Where was Little Boy deployed in?
+171|Who designed the bomb that exploded in Hiroshima?
+172|What ideology does the ruling party in the U.S. have?
+173|How much did Little Boy weigh
+174|Is the circumference of Earth larger than Mars's?
+175|Which is densest, the Mars or Jupiter?
+176|Is there any desert in the United Arab Emirates?
+177|Do Greenland and Iceland have the same climate?
+178|Is The Black Goat related to Cthulu?
+179|From what book is Palantir?
+180|Did J. R. R. Tolkien write more books than J. K. Rolling?
+181|What book followed The Hobbit?
+182|Give me all fantasy books written by George RR Martin.
+183|What healthcare companies were founded in the United Kingdom?
+184|What country has the most healthcare companies?
+185|What is the 150th country by population density?
+186|At what temperature does iron melt?
+187|What is the largest producer of Tungsten?
+188|What chemicals are there in the atmosphere of Venus?
+189|Is there Helium in the atmosphere of Mercury?
+190|Did Michael Jackson have any children?
+191|Is Michael Jackson burried in Los Angeles?
+192|Is Michael Jackson richer than Brad Pitt?
+193|How many siblings did Jason Statham have?
+194|Is Krakow the largest city in Poland?
+195|Are there any actors born in 1994?
+196|Give me all artists that play the saxophone.
+197|What is Albert Einstein known for?
+198|Who is the first wife of Einstein?
+199|What is the tiniest city in Bulgaria?
+200|Do more people live in Berlin than in London?
+201|What is the largest company with headquarters in Moscow?
+202|How many continents does Russia span in?
+203|
