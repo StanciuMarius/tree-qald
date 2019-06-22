@@ -24,6 +24,9 @@ class NodeType(Enum):
     # Returns true if the given set is not empty
     EXISTS = 'EXISTS'
 
+    # Returns true if a property exists between two given properties
+    EXISTS_RELATION = 'EXISTS_RELATION'
+
     # Returns true if the first entity has a property value greater than the second's
     IS_GREATER = 'IS_GREATER'
     

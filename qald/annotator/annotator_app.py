@@ -15,10 +15,11 @@ from services.parser.syntax_checker import SyntaxChecker
 from services.parser.constants import GRAMMAR_FILE_PATH
 from common.query_tree import QueryTree, NodeType
 
-ASK_FOR_RELATION = False
+ASK_FOR_RELATION = True
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 settings = {
     'symbol_vs_node_type': {
+        'f4':  NodeType.EXISTS_RELATION,
         'f3':  NodeType.ARGNTH,
         'f2':  NodeType.ARGMAX,
         'f1':  NodeType.ARGMIN,
@@ -267,7 +268,7 @@ def create_node(x, y, node_type, token=None):
 
 
 def user_create_node(x, y, node_type):
-    if ASK_FOR_RELATION and node_type in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.GREATER, NodeType.LESS, NodeType.PROPERTY, NodeType.IS_GREATER, NodeType.IS_LESS}:
+    if ASK_FOR_RELATION and node_type in {NodeType.EXISTS_RELATION, NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.GREATER, NodeType.LESS, NodeType.PROPERTY, NodeType.IS_GREATER, NodeType.IS_LESS}:
         relation = simpledialog.askstring('Relation for node', root)
         canvas.focus_set()
 

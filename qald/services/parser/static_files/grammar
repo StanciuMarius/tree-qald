@@ -4,11 +4,11 @@
 # Rules ending with '?' are '0 or 1' 
 # Rules can inherit base classes with RULE$BASE_CLASS
 
-ROOT: QUERY | COUNT | EXISTS | ISA | IS_LESS | IS_GREATER
+ROOT: QUERY | COUNT | EXISTS | ISA | IS_LESS | IS_GREATER | EXISTS_RELATION
 
 # PROPERTY is the subject or the object of an RDF triple. The child QUERY or ENTITY+ is the other side of the triple.
 # It can have an associated VARIABLE and types
-PROPERTY$QUERY: QUERY VARIABLE? TYPE+? | ENTITY+ VARIABLE? TYPE+? | LITERAL TYPE+? VARIABLE? | QUERY ENTITY+ TYPE+? VARIABLE? 
+PROPERTY$QUERY: QUERY VARIABLE? TYPE+? | ENTITY+ VARIABLE? TYPE+? | LITERAL TYPE+? VARIABLE? | QUERY ENTITY+ TYPE+? VARIABLE?
 ENUMERATE$QUERY: TYPE+?
 
 ARGMAX$QUERY: QUERY VARIABLE? | ENTITY+ VARIABLE? | QUERY QUERY VARIABLE? | QUERY ENTITY VARIABLE?
@@ -20,6 +20,9 @@ COUNT: QUERY VARIABLE?
 
 # Returns true if entity set is not empty
 EXISTS: QUERY
+
+# Returns true if a property exists between two given entities
+EXISTS_RELATION: ENTITY ENTITY | QUERY ENTITY | QUERY QUERY | QUERY LITERAL | ENTITY LITERAL
 
 # Returns true if entity set is part of all given
 ISA: QUERY TYPE+ | ENTITY+ TYPE+
