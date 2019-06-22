@@ -10,6 +10,38 @@
         {
             "type": "python",
             "request": "launch",
+            "name": "Run parser",
+            "program": "${workspaceFolder}\\services\\parser\\tree2labels\\run_ncrfpp.py",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--test",
+                "${workspaceFolder}\\services\\parser\\tmp\\intermediate_output.seq_lu",
+                // "--gold",
+                // ".\\test.txt",
+                "--model",
+                "${workspaceFolder}\\services\\parser\\tmp\\model\\ptb-bilstm2-chlstm-glove",
+                "--status",
+                "test",
+                "--gpu",
+                "False",
+                "--output",
+                "${workspaceFolder}\\services\\parser\\tmp\\output",
+                "--evalb",
+                ".\\EVALB\\evalb",
+                "--ncrfpp",
+                "${workspaceFolder}\\services\\parser\\tree2labels\\NCRFpp",
+                 ]
+        },
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "Train parser",
+            "program": "${workspaceFolder}\\services\\parser\\train.py",
+            "cwd": "${workspaceFolder}",
+        },
+        {
+            "type": "python",
+            "request": "launch",
             "name": "NLP service",
             "program": "${workspaceFolder}\\services\\nlp\\run_nlp_serivce.py",
             "cwd": "${workspaceFolder}"
