@@ -25,13 +25,13 @@ class NodeType(Enum):
     EXISTS = 'EXISTS'
 
     # Returns true if a property exists between two given properties
-    EXISTS_RELATION = 'EXISTS_RELATION'
+    EXISTSRELATION = 'EXISTSRELATION'
 
     # Returns true if the first entity has a property value greater than the second's
-    IS_GREATER = 'IS_GREATER'
+    ISGREATER = 'ISGREATER'
     
     # Returns true if the first entity has a property value less than the second's
-    IS_LESS = 'IS_LESS'
+    ISLESS = 'ISLESS'
 
     # Returns true if the type of the given entity matches the given type
     ISA = 'ISA'
@@ -77,6 +77,7 @@ class NodeType(Enum):
 class SerializationFormat(Enum):
     HIERARCHICAL_DICT = "HIERARCHICAL_DICT"
     PREFIX_PARANTHESES = "PREFIX_PARANTHESES"
+    TAG_SEQUENCE = "TAG_SEQUENCE"
 
 def enum_for_str(key: str):
     for member in NodeType:
@@ -86,15 +87,22 @@ def enum_for_str(key: str):
 
 class QueryTree:
     class Node:
-        def __init__(self, type: NodeType, id: int = None):
+        def __init__(self, type: NodeType, id: int = None, token: str = None):
             self.type: NodeType = type
             self.children: List[QueryTree.Node] = []
             self.id: int = id
+            self.token: str = token
+        
+        def __str__(self):
+            pretty_string = self.type.value
+            if self.type == NodeType.TOKEN:
+                pretty_string += '(' + str(self.token) + ')'
+            return pretty_string 
 
     def __init__(self, root: Node, tokens: List[str]):
         self.last_id = -1
         def assign_unique_id(node):
-            if not node.id:
+            if node.id == None:
                 node.id = self.last_id
                 self.last_id -= 1
 
@@ -108,6 +116,9 @@ class QueryTree:
    
 
     def to_serializable(self, format: SerializationFormat):
+        '''
+            This transforms the object to serializable types (dicts, lists, literals)
+        '''
         if format == SerializationFormat.HIERARCHICAL_DICT:
             return self.to_dict()
         if format == SerializationFormat.PREFIX_PARANTHESES:
@@ -117,12 +128,11 @@ class QueryTree:
                     result += ' ' + node2prefix(child)
                 
                 if node.type == NodeType.TOKEN:
-                    result += ' ' + self.tokens[node.id] 
+                    result += ' ' + str(node.id)
                 result += ')'
                 return result
             return node2prefix(self.root)
-    
-            
+
     def to_dict(self) -> dict:
         def node_to_dict(node):
             node_dict = {}
@@ -134,10 +144,10 @@ class QueryTree:
             return node_dict
         
         return node_to_dict(self.root)
-        
+
     @classmethod
     def from_dict(cls, tree_dict: dict, tokens: List[str]):
-        token_nodes = [QueryTree.Node(NodeType.TOKEN, id) for id in range(len(tokens))]
+        token_nodes = [QueryTree.Node(NodeType.TOKEN, id, tokens[id]) for id in range(len(tokens))]
         used_nodes = set()
         
         def node_from_dict(tree_dict):
@@ -155,8 +165,19 @@ class QueryTree:
             
             return node
 
-        root = node_from_dict(tree_dict)
+        def get_first_leaf(node: QueryTree.Node):
+            if node.type == NodeType.TOKEN:
+                return node.id
+            else:
+                return get_first_leaf(node.children[0])
+        
+        def sort_recursively(node: QueryTree.Node):
+            for child in node.children:
+                sort_recursively(child)
+            node.children = sorted(node.children, key=lambda x: get_first_leaf(x))
 
+        root = node_from_dict(tree_dict)
+        sort_recursively(root)
             
         tree = QueryTree(root, tokens)
         # Aggregate unused tokens 

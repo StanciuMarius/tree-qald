@@ -9,7 +9,6 @@ from services.tasks import run_task, Task
 from annotator.constants import INPUT_FILE_PATH, OUTPUT_FILE_PATH
 from common.query_tree import QueryTree, NodeType, SerializationFormat, enum_for_str
 
-
 questions = [line.split('|') for line in open(INPUT_FILE_PATH, 'r', encoding='utf-8').readlines()]
 trees = json.load(open(OUTPUT_FILE_PATH, 'r', encoding='utf-8'))
 

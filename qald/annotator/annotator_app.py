@@ -19,13 +19,13 @@ ASK_FOR_RELATION = True
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 settings = {
     'symbol_vs_node_type': {
-        'f4':  NodeType.EXISTS_RELATION,
+        'f4':  NodeType.EXISTSRELATION,
         'f3':  NodeType.ARGNTH,
         'f2':  NodeType.ARGMAX,
         'f1':  NodeType.ARGMIN,
         
-        '9': NodeType.IS_LESS,
-        '8': NodeType.IS_GREATER,
+        '9': NodeType.ISLESS,
+        '8': NodeType.ISGREATER,
 
         '7': NodeType.ENUMERATE,
         '6': NodeType.LESS,
@@ -268,7 +268,7 @@ def create_node(x, y, node_type, token=None):
 
 
 def user_create_node(x, y, node_type):
-    if ASK_FOR_RELATION and node_type in {NodeType.EXISTS_RELATION, NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.GREATER, NodeType.LESS, NodeType.PROPERTY, NodeType.IS_GREATER, NodeType.IS_LESS}:
+    if ASK_FOR_RELATION and node_type in {NodeType.EXISTSRELATION, NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.GREATER, NodeType.LESS, NodeType.PROPERTY, NodeType.ISGREATER, NodeType.ISLESS}:
         relation = simpledialog.askstring('Relation for node', root)
         canvas.focus_set()
 
