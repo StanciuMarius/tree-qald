@@ -7,29 +7,29 @@
             "request": "launch",
             "program": "${file}",
         },
-        {
-            "type": "python",
-            "request": "launch",
-            "name": "Run parser",
-            "program": "${workspaceFolder}\\services\\parser\\tree2labels\\run_ncrfpp.py",
-            "cwd": "${workspaceFolder}",
-            "args": [
-                "--test",
-                "${workspaceFolder}\\services\\parser\\tmp\\intermediate_input_query.seq_lu",
-                "--model",
-                "${workspaceFolder}\\services\\parser\\tmp\\model\\ptb-bilstm2-chlstm-glove",
-                "--status",
-                "test",
-                "--gpu",
-                "False",
-                "--output",
-                "${workspaceFolder}\\services\\parser\\tmp\\intermediate_output.paran",
-                "--evalb",
-                ".\\EVALB\\evalb",
-                "--ncrfpp",
-                "${workspaceFolder}\\services\\parser\\tree2labels\\NCRFpp",
-            ]
-        },
+        // {
+        //     "type": "python",
+        //     "request": "launch",
+        //     "name": "Run parser",
+        //     "program": "${workspaceFolder}\\services\\parser\\tree2labels\\run_ncrfpp.py",
+        //     "cwd": "${workspaceFolder}",
+        //     "args": [
+        //         "--test",
+        //         "${workspaceFolder}\\services\\parser\\tmp\\intermediate_input_query.seq_lu",
+        //         "--model",
+        //         "${workspaceFolder}\\services\\parser\\tmp\\model\\ptb-bilstm2-chlstm-glove",
+        //         "--status",
+        //         "test",
+        //         "--gpu",
+        //         "False",
+        //         "--output",
+        //         "${workspaceFolder}\\services\\parser\\tmp\\intermediate_output.paran",
+        //         "--evalb",
+        //         ".\\EVALB\\evalb",
+        //         "--ncrfpp",
+        //         "${workspaceFolder}\\services\\parser\\tree2labels\\NCRFpp",
+        //     ]
+        // },
         {
             "type": "python",
             "request": "launch",
@@ -40,24 +40,32 @@
         {
             "type": "python",
             "request": "launch",
-            "name": "NLP service",
+            "name": "Launch Parser service",
+            "program": "${workspaceFolder}\\services\\parser\\run_parser_service.py",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "Launch NLP service",
             "program": "${workspaceFolder}\\services\\nlp\\run_nlp_serivce.py",
             "cwd": "${workspaceFolder}"
         },
         {
             "type": "python",
             "request": "launch",
-            "name": "Mapping Service",
+            "name": "Launch Mapping service",
             "program": "${workspaceFolder}\\services\\mapping\\run_mapping_service.py",
             "cwd": "${workspaceFolder}"
         }
     ],
     "compounds": [
         {
-            "name": "Services",
+            "name": "Launch all services",
             "configurations": [
-                "NLP service",
-                "Mapping Service"
+                "Launch NLP service",
+                "Launch Parser service",
+                "Launch Mapping service"
             ]
         }
     ]

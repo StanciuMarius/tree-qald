@@ -101,7 +101,7 @@ if __name__ == '__main__':
         conf_str+="gpu="+args.gpu+"\n"
         # conf_str+="nbest=10\n"
 
-        decode_fid = str(uuid.uuid4())
+        decode_fid = "intermediate_decode_config"
         decode_conf_file = codecs.open("./services/parser/tmp/conf_"+decode_fid,"w")
         decode_conf_file.write(conf_str)
 
