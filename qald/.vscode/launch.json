@@ -15,9 +15,7 @@
             "cwd": "${workspaceFolder}",
             "args": [
                 "--test",
-                "${workspaceFolder}\\services\\parser\\tmp\\intermediate_output.seq_lu",
-                // "--gold",
-                // ".\\test.txt",
+                "${workspaceFolder}\\services\\parser\\tmp\\intermediate_input_query.seq_lu",
                 "--model",
                 "${workspaceFolder}\\services\\parser\\tmp\\model\\ptb-bilstm2-chlstm-glove",
                 "--status",
@@ -25,12 +23,12 @@
                 "--gpu",
                 "False",
                 "--output",
-                "${workspaceFolder}\\services\\parser\\tmp\\output",
+                "${workspaceFolder}\\services\\parser\\tmp\\intermediate_output.paran",
                 "--evalb",
                 ".\\EVALB\\evalb",
                 "--ncrfpp",
                 "${workspaceFolder}\\services\\parser\\tree2labels\\NCRFpp",
-                 ]
+            ]
         },
         {
             "type": "python",
