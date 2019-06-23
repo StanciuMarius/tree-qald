@@ -16,6 +16,8 @@ class Task(Enum):
     REMOVE_PUNCTUATION = 'remove_punctuation'
     PARSE = 'parse'
     MAP_RELATION = 'map_relation'
+    MAP_ENTITY = 'map_entity'
+    MAP_TYPE = 'map_type'
 
 
 def run_task(task: Task, input):

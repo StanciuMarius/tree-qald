@@ -3,7 +3,8 @@ import sys
 sys.path.insert(0, os.getcwd())
 
 from enum import Enum
-from typing import List
+from typing import List, Set
+from pptree import print_tree
 
 class NodeType(Enum):
     # The answer of a query
@@ -92,7 +93,18 @@ class QueryTree:
             self.children: List[QueryTree.Node] = []
             self.id: int = id
             self.token: str = token
+            self.kb_resources = []
         
+        def collect(self, target_types: Set[NodeType]) -> list:
+            result = []
+            if self.type in target_types:
+                result.append(self)
+            
+            for child in self.children:
+                result.extend(child.collect(target_types))
+            
+            return result
+
         def __str__(self):
             pretty_string = self.type.value
             if self.type == NodeType.TOKEN:
@@ -115,6 +127,8 @@ class QueryTree:
         self.unused_tokens = []
    
 
+
+        
     def to_serializable(self, format: SerializationFormat):
         '''
             This transforms the object to serializable types (dicts, lists, literals)
@@ -140,11 +154,16 @@ class QueryTree:
             node_dict['id'] = node.id
             if node.children:
                 node_dict['children'] = [node_to_dict(child) for child in node.children]
-                
+            
+            if node.kb_resources:
+                node_dict['kb_resources'] = node.kb_resources
             return node_dict
         
         return node_to_dict(self.root)
 
+    def pretty_print(self):
+        print_tree(self.root, childattr='children')
+    
     @classmethod
     def from_dict(cls, tree_dict: dict, tokens: List[str]):
         token_nodes = [QueryTree.Node(NodeType.TOKEN, id, tokens[id]) for id in range(len(tokens))]

@@ -22,7 +22,7 @@ class EntityMapping:
         self.text_vs_resources = {}
 
         with open(ENTITY_LEXICON_PATH, 'r', encoding='utf-8') as r:
-            lines = r.readlines()[-100:]
+            lines = r.readlines()
             for line in tqdm(lines, desc='Loading entity lexicon'):
                 tokens = line.rstrip('\t\n').split('\t')
 

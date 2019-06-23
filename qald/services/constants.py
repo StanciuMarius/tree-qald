@@ -12,7 +12,9 @@ TASKS = {
     'pos_tag': 'NLP',
     'spacy_process': 'NLP',
     'parse' : 'PARSER',
-    'map_relation': 'MAPPING'
+    'map_relation': 'MAPPING',
+    'map_entity': 'MAPPING',
+    'map_type': 'MAPPING'
 }
 
 URL_ROOT = 'http://localhost'
