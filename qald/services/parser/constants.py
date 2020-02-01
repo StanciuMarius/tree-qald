@@ -6,11 +6,11 @@ NCRFPP_REPOSITORY_PATH          = r'services\parser\tree2labels\NCRFpp'
 # Train dataset
 TRAIN_TEST_RATIO = 0.9
 QUESTION_SET_FILE_PATH          = r'datasets\parsing\data\constituency_annotated_questions.json'
-MODEL_CONFIG_FILE_PATH          = r'services\parser\tmp\model\crf-bilstm.config'
+MODEL_CONFIG_FILE_PATH          = r'services\parser\static_files\crf-bilstm.config'
 
 # Temporary files
 INTERMEDIATE_QUERY_FILE_PATH    = r'services\parser\tmp\intermediate_input_query.seq_lu'
-INTERMEDIATE_OUTPUT_FILE_PATH   = r'services\parser\tmp\intermediate_output.paran'
+INTERMEDIATE_OUTPUT_DIRECTORY_PATH = r'services\parser\tmp'
 INTERMEDIATE_TEST_FILE_PATH     = r'services\parser\tmp\intermediate_test.paran'
 INTERMEDIATE_TRAIN_FILE_PATH    = r'services\parser\tmp\intermediate_train.paran'
 FINAL_OUTPUT_FILE_PATH          = r'services\parser\tmp\final_output.param'

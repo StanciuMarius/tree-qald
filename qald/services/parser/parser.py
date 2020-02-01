@@ -24,7 +24,7 @@ def parse(question_text: str) -> dict:
     os.system(parse_command)
 
     with open(FINAL_OUTPUT_FILE_PATH, 'r') as intermediate_output_file:
-        tree_candidates = intermediate_output_file.readlines()
+            tree_candidates = intermediate_output_file.readlines()
 
     def tree2dict(tree: Tree):
         result = {}
