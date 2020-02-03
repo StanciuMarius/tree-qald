@@ -1,5 +1,5 @@
 GRAMMAR_FILE_PATH               = r'services\parser\static_files\grammar'
-MODEL_FILE_PATH                 = r'services\parser\tmp\model\crf-bilstm'
+MODEL_FILE_PATH                 = r'services\parser\tmp\model\crf-bilstm.33'
 NCRFPP_REPOSITORY_PATH          = r'services\parser\tree2labels\NCRFpp'
 
 

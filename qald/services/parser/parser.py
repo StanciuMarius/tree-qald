@@ -49,6 +49,6 @@ def parse(question_text: str) -> dict:
     
     return candidates
 
-# trees = parse("How many children does Barack Obama have?")
-# query_tree = QueryTree.from_dict(trees[0], trees[0]['tokens'])
-# print_tree(query_tree.root)
+trees = parse("How many children does Barack Obama have?")
+query_tree = QueryTree.from_dict(trees[0], trees[0]['tokens'])
+print_tree(query_tree.root)

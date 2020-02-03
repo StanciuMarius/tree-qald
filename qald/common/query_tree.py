@@ -56,8 +56,10 @@ class NodeType(Enum):
     LITERAL = 'LITERAL'
     
     # All entities of a particular type
-
     ENUMERATE = 'ENUMERATE'
+
+    # Pick a random sample from a set of ENTITIES
+    SAMPLE = 'SAMPLE'
     
     # Unused tokens
     UNUSED = 'UNUSED'

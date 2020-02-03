@@ -15,10 +15,11 @@ from services.parser.syntax_checker import SyntaxChecker
 from services.parser.constants import GRAMMAR_FILE_PATH
 from common.query_tree import QueryTree, NodeType
 
-ASK_FOR_RELATION = True
+ASK_FOR_RELATION = False
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 settings = {
     'symbol_vs_node_type': {
+        'f5': NodeType.SAMPLE,
         'f4':  NodeType.EXISTSRELATION,
         'f3':  NodeType.ARGNTH,
         'f2':  NodeType.ARGMAX,
