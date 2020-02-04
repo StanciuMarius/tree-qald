@@ -47935,5 +47935,4525 @@
             "spies",
             "\n"
         ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "0",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 3
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 8
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "the",
+            "city",
+            "with",
+            "most",
+            "inhabitants",
+            "in",
+            "Georgia",
+            ".",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "1",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "most",
+            "inhabited",
+            "city",
+            "in",
+            "Arkansas",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "2",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 6
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "biggest",
+            "company",
+            "in",
+            "New",
+            "York",
+            "by",
+            "number",
+            "of",
+            "employees",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "3",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "company",
+            "has",
+            "the",
+            "most",
+            "employees",
+            "in",
+            "Johannesburg",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "4",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "organization",
+            "has",
+            "the",
+            "greatest",
+            "number",
+            "of",
+            "members",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "5",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMIN",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "oldest",
+            "musician",
+            "that",
+            "plays",
+            "trumpet",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "6",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMIN",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 2
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "of",
+            "Queen",
+            "Elisabeth",
+            "'s",
+            "children",
+            "was",
+            "born",
+            "the",
+            "earliest",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "7",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 6
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "youngest",
+            "sibling",
+            "of",
+            "Adam",
+            "Sandler",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "8",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "stadium",
+            "has",
+            "the",
+            "most",
+            "seats",
+            "in",
+            "Beligum",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "9",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "biggest",
+            "footbal",
+            "stadium",
+            "in",
+            "France",
+            "by",
+            "number",
+            "of",
+            "seats",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "10",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "element",
+            "has",
+            "the",
+            "largest",
+            "atomic",
+            "number",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "11",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMIN",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "element",
+            "has",
+            "the",
+            "least",
+            "number",
+            "of",
+            "protons",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "12",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 2
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "football",
+            "player",
+            "has",
+            "the",
+            "most",
+            "awards",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "13",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "most",
+            "awarded",
+            "actor",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "14",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "engineer",
+            "has",
+            "won",
+            "the",
+            "greatest",
+            "amount",
+            "of",
+            "prizes",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "15",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ARGMAXCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "current",
+            "does",
+            "the",
+            "painter",
+            "with",
+            "most",
+            "paintings",
+            "belong",
+            "to",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "16",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMINCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "profession",
+            "does",
+            "the",
+            "oldest",
+            "man",
+            "alive",
+            "have",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "17",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMINCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "earliest",
+            "recorded",
+            "war",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "19",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMINCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "countries",
+            "participated",
+            "in",
+            "the",
+            "earliest",
+            "recorded",
+            "battle",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "20",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "SAMPLE",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 3
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ARGMAXCOUNT",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 7
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "a",
+            "city",
+            "from",
+            "the",
+            "largest",
+            "country",
+            "by",
+            "number",
+            "of",
+            "inhabitants",
+            ".",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "21",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "COUNT",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ARGMAXCOUNT",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 5
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "How",
+            "many",
+            "cities",
+            "does",
+            "the",
+            "country",
+            "with",
+            "most",
+            "cities",
+            "have",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "22",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAXCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "area",
+            "of",
+            "the",
+            "country",
+            "with",
+            "the",
+            "largest",
+            "area",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "23",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAXCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "How",
+            "large",
+            "is",
+            "the",
+            "country",
+            "with",
+            "the",
+            "largest",
+            "area",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "24",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ARGMAXCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "area",
+            "does",
+            "the",
+            "largest",
+            "country",
+            "have",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "25",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMINCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 8
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "surface",
+            "area",
+            "of",
+            "the",
+            "smallest",
+            "country",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "26",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMINCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "religion",
+            "of",
+            "the",
+            "smallest",
+            "country",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "27",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMINCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 4
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "oldest",
+            "religion",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "28",
+        "tree": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "capital",
+            "with",
+            "the",
+            "smallest",
+            "surface",
+            "area",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "29",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "river",
+            "flows",
+            "through",
+            "most",
+            "countries",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "30",
+        "tree": null,
+        "tokens": [
+            "Who",
+            "coached",
+            "most",
+            "football",
+            "players",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "31",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "constelation",
+            "has",
+            "the",
+            "most",
+            "stars",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "32",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "county",
+            "has",
+            "most",
+            "cities",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "33",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMINCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "cities",
+            "are",
+            "in",
+            "the",
+            "county",
+            "with",
+            "least",
+            "cities",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "34",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "country",
+            "is",
+            "crossed",
+            "by",
+            "most",
+            "rivers",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "35",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "river",
+            "crosses",
+            "most",
+            "cities",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "36",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "city",
+            "has",
+            "most",
+            "rivers",
+            "flowing",
+            "through",
+            "it",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "37",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "currency",
+            "is",
+            "used",
+            "in",
+            "most",
+            "countries",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "38",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "most",
+            "used",
+            "currency",
+            "by",
+            "number",
+            "of",
+            "countries",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "39",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMINCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 4
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "When",
+            "was",
+            "the",
+            "oldest",
+            "company",
+            "founded",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "40",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMINCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "company",
+            "was",
+            "founded",
+            "first",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "41",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMINCOUNT",
+                    "children": [
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 4
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 7
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "died",
+            "first",
+            ",",
+            "Ronald",
+            "Reagan",
+            "or",
+            "Benjamin",
+            "Franklin",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "42",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMINCOUNT",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 6
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 8
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 9
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "was",
+            "born",
+            "first",
+            ",",
+            "Frank",
+            "Sinatra",
+            "or",
+            "Chet",
+            "Baker",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "43",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "director",
+            "has",
+            "the",
+            "most",
+            "movies",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "44",
+        "tree": null,
+        "tokens": [
+            "Who",
+            "directed",
+            "the",
+            "least",
+            "amount",
+            "of",
+            "movies",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "45",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAXCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "movies",
+            "did",
+            "the",
+            "director",
+            "with",
+            "most",
+            "prizes",
+            "create",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "46",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAXCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "awards",
+            "does",
+            "the",
+            "movie",
+            "with",
+            "most",
+            "awards",
+            "have",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "47",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ARGMAXCOUNT",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 8
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "are",
+            "the",
+            "awards",
+            "of",
+            "the",
+            "most",
+            "awarded",
+            "actors",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "48",
+        "tree": null,
+        "tokens": [
+            "Who",
+            "directed",
+            "the",
+            "movie",
+            "with",
+            "most",
+            "actors",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "49",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "longest",
+            "rock",
+            "song",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "50",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 8
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "is",
+            "the",
+            "shortest",
+            "song",
+            "by",
+            "John",
+            "Coltrane",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "51",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 6
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 8
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 9
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 10
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "has",
+            "more",
+            "children",
+            ",",
+            "Barack",
+            "Obama",
+            "or",
+            "George",
+            "W.",
+            "Bush",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "52",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 6
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "highest",
+            "rated",
+            "chess",
+            "player",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "53",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 3
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 4
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "chess",
+            "player",
+            "with",
+            "highest",
+            "maximum",
+            "elo",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "54",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "movie",
+            "stars",
+            "most",
+            "actors",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "55",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGNTH",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "3rd",
+            "longest",
+            "river",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "56",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGNTH",
+                    "children": [
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "10th",
+            "largest",
+            "country",
+            "in",
+            "the",
+            "world",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "57",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "How",
+            "many",
+            "inhabitants",
+            "the",
+            "largest",
+            "country",
+            "have",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "58",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "mountain",
+            "has",
+            "the",
+            "highest",
+            "point",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "59",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "mountain",
+            "range",
+            "contains",
+            "the",
+            "highest",
+            "point",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "60",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "highest",
+            "mountain",
+            "in",
+            "Brazil",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "61",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "country",
+            "is",
+            "the",
+            "highest",
+            "mountain",
+            "in",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "62",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "country",
+            "is",
+            "the",
+            "tallest",
+            "mountain",
+            "in",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "63",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "musician",
+            "played",
+            "the",
+            "most",
+            "instruments",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "64",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "max",
+            "population",
+            "city",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "65",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "lake",
+            "has",
+            "the",
+            "largest",
+            "volume",
+            "of",
+            "water",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "67",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "sea",
+            "has",
+            "the",
+            "deepest",
+            "point",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "68",
+        "tree": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "lowest",
+            "point",
+            "in",
+            "the",
+            "world",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "69",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "painter",
+            "influenced",
+            "the",
+            "most",
+            "artists",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "70",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMIN",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 9
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "oldest",
+            "actor",
+            "that",
+            "played",
+            "in",
+            "the",
+            "Titanic",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "71",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "youngest",
+            "member",
+            "of",
+            "Metallica",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "72",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "award",
+            "was",
+            "won",
+            "by",
+            "most",
+            "people",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "73",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAXCOUNT",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "band",
+            "has",
+            "won",
+            "the",
+            "most",
+            "awards",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "74",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "genre",
+            "is",
+            "the",
+            "movie",
+            "with",
+            "the",
+            "highest",
+            "budget",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "75",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "movie",
+            "has",
+            "the",
+            "highest",
+            "budget",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "76",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "directed",
+            "the",
+            "movie",
+            "with",
+            "the",
+            "highest",
+            "budget",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "77",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "budget",
+            "did",
+            "the",
+            "movie",
+            "with",
+            "the",
+            "highest",
+            "budget",
+            "have",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "78",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 4
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 6
+                                                },
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 7
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "Google",
+            "the",
+            "largest",
+            "company",
+            "in",
+            "Silicon",
+            "Valley",
+            "by",
+            "number",
+            "of",
+            "employees",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "79",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "Brazil",
+            "the",
+            "largest",
+            "country",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "80",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ARGNTH",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 5
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 7
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "LITERAL",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "Paris",
+            "the",
+            "3rd",
+            "largest",
+            "city",
+            "in",
+            "France",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "81",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 3
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 8
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "Krakow",
+            "the",
+            "city",
+            "with",
+            "most",
+            "inhabitants",
+            "in",
+            "Poland",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "82",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 5
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 7
+                                                },
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 8
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "London",
+            "the",
+            "most",
+            "populated",
+            "city",
+            "in",
+            "Great",
+            "Britain",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "83",
+        "tree": null,
+        "tokens": [
+            "Does",
+            "Africa",
+            "have",
+            "more",
+            "countries",
+            "than",
+            "Europe",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "84",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 4
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "index": 5
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "China",
+            "the",
+            "largest",
+            "Asian",
+            "country",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "85",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 3
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "VARIABLE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "provice",
+            "in",
+            "China",
+            "has",
+            "the",
+            "most",
+            "inhabitants",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "86",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "actors",
+            "are",
+            "born",
+            "in",
+            "the",
+            "largest",
+            "country",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "87",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 7
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "is",
+            "larger",
+            "out",
+            "of",
+            "Germany",
+            "and",
+            "France",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "88",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMIN",
+                    "children": [
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 4
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "of",
+            "Spain",
+            "and",
+            "Portugal",
+            "has",
+            "the",
+            "least",
+            "inhabitants",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "89",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 4
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "of",
+            "Titanic",
+            "and",
+            "Gladiator",
+            "had",
+            "the",
+            "largest",
+            "budgets",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "90",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "book",
+            "written",
+            "by",
+            "Dostoevsky",
+            "has",
+            "the",
+            "most",
+            "pages",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "91",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "index": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "How",
+            "many",
+            "pages",
+            "does",
+            "the",
+            "book",
+            "with",
+            "most",
+            "pages",
+            "have",
+            "?",
+            "\n"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "index": "92",
+        "tree": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "index": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "wrote",
+            "the",
+            "book",
+            "with",
+            "most",
+            "pages",
+            "?"
+        ]
     }
 ]

@@ -1,0 +1,91 @@
+0|Give me the city with most inhabitants in Georgia.
+1|What is the most inhabited city in Arkansas?
+2|What is the biggest company in New York by number of employees?
+3|What company has the most employees in Johannesburg?
+4|What organization has the greatest number of members?
+5|What is the oldest musician that plays trumpet?
+6|Which of Queen Elisabeth's children was born the earliest?
+7|What is the youngest sibling of Adam Sandler?
+8|What stadium has the most seats in Beligum?
+9|What is the biggest footbal stadium in France by number of seats?
+10|Which element has the largest atomic number?
+11|What element has the least number of protons?
+12|What football player has the most awards?
+13|What is the most awarded actor?
+14|What engineer has won the greatest amount of prizes?
+15|What current does the painter with most paintings belong to?
+16|What profession does the oldest man alive have?
+17|What is the earliest recorded war?
+19|What countries participated in the earliest recorded battle?
+20|Give me a city from the largest country by number of inhabitants.
+21|How many cities does the country with most cities have?
+22|What is the area of the country with the largest area?
+23|How large is the country with the largest area?
+24|What area does the largest country have?
+25|What is the surface area of the smallest country?
+26|What is the religion of the smallest country?
+27|What is the oldest religion?
+28|What is the capital with the smallest surface area?
+29|Which river flows through most countries?
+30|Who coached most football players?
+31|What constelation has the most stars?
+32|What county has most cities?
+33|What cities are in the county with least cities?
+34|What country is crossed by most rivers?
+35|What river crosses most cities?
+36|What city has most rivers flowing through it?
+37|What currency is used in most countries?
+38|What is the most used currency by number of countries?
+39|When was the oldest company founded?
+40|What company was founded first?
+41|Who died first, Ronald Reagan or Benjamin Franklin?
+42|Who was born first, Frank Sinatra or Chet Baker?
+43|What director has the most movies?
+44|Who directed the least amount of movies?
+45|What movies did the director with most prizes create?
+46|What awards does the movie with most awards have?
+47|What are the awards of the most awarded actors?
+48|Who directed the movie with most actors?
+49|What is the longest rock song?
+50|What is is the shortest song by John Coltrane?
+51|Who has more children, Barack Obama or George W. Bush?
+52|What is the highest rated chess player?
+53|What is the chess player with highest maximum elo?
+54|What movie stars most actors?
+55|What is the 3rd longest river?
+56|What is the 10th largest country in the world?
+57|How many inhabitants the largest country have?
+58|What mountain has the highest point?
+59|What mountain range contains the highest point?
+60|What is the highest mountain in Brazil?
+61|What country is the highest mountain in?
+62|What country is the tallest mountain in?
+63|What musician played the most instruments?
+64|What is the max population city?
+65|What lake has the largest volume of water?
+67|What sea has the deepest point?
+68|What is the lowest point in the world?
+69|What painter influenced the most artists?
+70|What is the oldest actor that played in the Titanic?
+71|What is the youngest member of Metallica?
+72|What award was won by most people?
+73|What band has won the most awards?
+74|What genre is the movie with the highest budget?
+75|What movie has the highest budget?
+76|Who directed the movie with the highest budget?
+77|What budget did the movie with the highest budget have?
+78|Is Google the largest company in Silicon Valley by number of employees?
+79|Is Brazil the largest country?
+80|Is Paris the 3rd largest city in France?
+81|Is Krakow the city with most inhabitants in Poland?
+82|Is London the most populated city in Great Britain?
+83|Does Africa have more countries than Europe?
+84|Is China the largest Asian country?
+85|What provice in China has the most inhabitants?
+86|What actors are born in the largest country?
+87|Which is larger out of Germany and France?
+88|Which of Spain and Portugal has the least inhabitants?
+89|Which of Titanic and Gladiator had the largest budgets?
+90|What book written by Dostoevsky has the most pages?
+91|How many pages does the book with most pages have?
+92|Who wrote the book with most pages?
