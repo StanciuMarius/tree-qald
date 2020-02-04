@@ -19,6 +19,10 @@ ASK_FOR_RELATION = False
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 settings = {
     'symbol_vs_node_type': {
+        'f11': NodeType.TOPN,
+        'f10': NodeType.EQUAL,
+        'f9': NodeType.LESSCOUNT,
+        'f8': NodeType.GREATERCOUNT,
         'f7': NodeType.ARGMINCOUNT,
         'f6': NodeType.ARGMAXCOUNT,
         'f5': NodeType.SAMPLE,

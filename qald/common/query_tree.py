@@ -49,6 +49,18 @@ class NodeType(Enum):
     # Filters the entities with a relation value (to be extracted) less than a given value
     LESS = 'LESS'
 
+    # Retrieves the top n entities sorted by a property value
+    TOPN = 'TOPN'
+
+    # Filters e
+    EQUAL = 'EQUAL'
+
+    # Filters the entities with a cardinal of property (to be extracted) greater than a given literal
+    GREATERCOUNT = 'GREATERCOUNT'
+    
+    # Filters the entities with a cardinal of property (to be extracted) less than a given literal
+    LESSCOUNT = 'LESSCOUNT'
+
     # Property of a set of a entities
     PROPERTY = 'PROPERTY'
 

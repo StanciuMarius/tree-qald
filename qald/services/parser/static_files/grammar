@@ -39,10 +39,19 @@ ISGREATER: ENTITY ENTITY
 ISLESS: ENTITY ENTITY
 
 # Filters entity by property value greater than the given literal
-GREATER$QUERY: QUERY LITERAL
+GREATER$QUERY: QUERY LITERAL VARIABLE? | TYPE+ LITERAL VARIABLE?
+
+# Filters entity by cardinal of value greater than the given literal
+GREATERCOUNT$QUERY: QUERY LITERAL VARIABLE? | TYPE+ LITERAL VARIABLE?
 
 # Filters entity by property value less than the given literal
-LESS$QUERY: QUERY LITERAL
+LESS$QUERY: QUERY LITERAL | TYPE+ LITERAL
+
+# Filter entity 
+EQUAL$QUERY: QUERY ENTITY VARIABLE? | TYPE+ LITERAL VARIABLE? | QUERY LITERAL VARIABLE?
+
+# Top n entities by value of a property
+TOPN$QUERY: QUERY LITERAL VARIABLE?
 
 TYPE: TOKEN+
 ENTITY: TOKEN+ TYPE+?
