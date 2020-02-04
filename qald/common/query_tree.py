@@ -19,6 +19,12 @@ class NodeType(Enum):
     # Picks the entity from a set with the lowest value for a particular relation (to be extracted)
     ARGMIN = 'ARGMIN'
 
+    # Picks the entity from a set with the highest cardinal for a particular relation
+    ARGMAXCOUNT = 'ARGMAXCOUNT'
+
+    # Picks the entity from a set with the lowest cardinal for a particular relation
+    ARGMINCOUNT = 'ARGMINCOUNT'
+
     # Picks the entity from a set with the n-th lowest value (to be extracted)
     ARGNTH = 'ARGNTH'
 

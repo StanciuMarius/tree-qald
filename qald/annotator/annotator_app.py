@@ -19,6 +19,8 @@ ASK_FOR_RELATION = False
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 settings = {
     'symbol_vs_node_type': {
+        'f7': NodeType.ARGMINCOUNT,
+        'f6': NodeType.ARGMAXCOUNT,
         'f5': NodeType.SAMPLE,
         'f4':  NodeType.EXISTSRELATION,
         'f3':  NodeType.ARGNTH,
