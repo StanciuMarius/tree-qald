@@ -1,54 +1,111 @@
-import os
-import sys
 from typing import List
 
+import os
+import sys
 sys.path.insert(0, os.getcwd())
+
 from common.query_tree import QueryTree
 from common.query_tree import SerializationFormat
 from services.tasks import run_task, Task
 from nltk.tree import Tree
 from pptree import print_tree
 
-from services.parser.constants import INTERMEDIATE_QUERY_FILE_PATH, MODEL_FILE_PATH, FINAL_OUTPUT_FILE_PATH, NCRFPP_REPOSITORY_PATH
+from services.parser.constants import INTERMEDIATE_QUERY_FILE_PATH, MODEL_FILE_PATH, FINAL_OUTPUT_FILE_PATH, NCRFPP_REPOSITORY_PATH, NCRFPP_DECODE_CONFIG_FILE_PATH, TREE_CANDIDATES_N_BEST, GRAMMAR_FILE_PATH
+from services.parser.tree2labels.utils import sequence_to_parenthesis, get_enriched_labels_for_retagger
+from services.parser.preprocess import postprocess_labels
+from services.parser.syntax_checker import SyntaxChecker
+SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 
-def parse(question_text: str) -> dict:
-    tokens = run_task(Task.TOKENIZE, question_text)
+
+def parse(query_text: str) -> dict:
+    '''
+    Parses the input query text as a set of candidate constituency trees
+    '''
+    tokens = run_task(Task.TOKENIZE, query_text)
+    _prepare_input(tokens)
+    _run_ncrfpp()
+    candidates = _decode_labels(tokens)
+
+    # Statistically parsed trees might not validate the grammar. Discard invalid trees
+    candidates = list(filter(lambda tree: SYNTAX_CHECKER.validate(tree), candidates))
+    #print('Produced {}/{} valid candidates!'.format(len(candidates), TREE_CANDIDATES_N_BEST))
+    
+    return candidates
+
+def _prepare_input(tokens):
+    '''
+    Create an input file for the NCRFPP library. It contains the query to be tagged.
+    '''
     with open(INTERMEDIATE_QUERY_FILE_PATH, 'w') as intermediate_output_file:
         intermediate_output_file.write('-BOS-\t-BOS-\t-BOS-\n')
         for token in tokens:
             intermediate_output_file.write(token + '\tTOKEN\tUNUSED\n')
         intermediate_output_file.write('-EOS-\t-EOS-\t-EOS-\n')
 
-    parse_command = 'python ./services/parser/tree2labels/run_ncrfpp.py --test {INPUT} --model {MODEL} --status test --gpu False --output {OUTPUT} --ncrfpp {NCRFPP}'
-    parse_command = parse_command.format(INPUT=INTERMEDIATE_QUERY_FILE_PATH, MODEL=MODEL_FILE_PATH, OUTPUT=FINAL_OUTPUT_FILE_PATH, NCRFPP=NCRFPP_REPOSITORY_PATH)
-    os.system(parse_command)
+def _run_ncrfpp():
+    '''
+    Run the NCRFPP algorithm on the input files
+    '''
+    # Write input of ncrfpp in a configuration file
+    config_string =  "### Decode ###\nstatus=decode\n"
+    config_string += "raw_dir=" + INTERMEDIATE_QUERY_FILE_PATH + "\n"
+    config_string += "decode_dir=" + MODEL_FILE_PATH + ".output" + "\n"
+    config_string += "dset_dir=" + MODEL_FILE_PATH + ".dset" + "\n"
+    config_string += "load_model_dir=" + MODEL_FILE_PATH + ".model" + "\n"
+    config_string += "gpu=False\n"
+    config_string += "nbest=" + str(TREE_CANDIDATES_N_BEST) + "\n"
 
-    with open(FINAL_OUTPUT_FILE_PATH, 'r') as intermediate_output_file:
-            tree_candidates = intermediate_output_file.readlines()
+    with open(NCRFPP_DECODE_CONFIG_FILE_PATH, "w", encoding="utf-8") as decode_config_file:
+        decode_config_file.write(config_string)
 
-    def tree2dict(tree: Tree):
-        result = {}
+    ncrfpp_command_string = "python " + NCRFPP_REPOSITORY_PATH + "/main.py --config " + NCRFPP_DECODE_CONFIG_FILE_PATH
+    os.system(ncrfpp_command_string)
 
-        result['type'] = tree.label()
-        children = [tree2dict(t)  if isinstance(t, Tree)  else t for t in tree]
-        if tree.label() == 'TOKEN':
-            result['index'] = int(children[0])
-        elif children:
-            result['children'] = children
-        
-        return result
+def _decode_labels(tokens):
+    '''
+    Process the output of the NCRFPP algorithm.
+    '''
+    parenthesized_trees = []
+    with open(MODEL_FILE_PATH + ".output", encoding="utf-8") as ncrfpp_output_file:
+        lines = ncrfpp_output_file.readlines()
+        lines = [line.strip().split(' ') for line in lines[1:]]
+        for prediction_index in range(0, TREE_CANDIDATES_N_BEST):
+            sentence = []
+            pred = []
+            for token_index, line_tokens in enumerate(lines):
+                # The tree2labels algorithm is not aware of 'UNUSED' tokens. We first have to eliminate them, so the sequence_to_parenthesis algorithm
+                # reconstructs the tree corectly
+                if len(line_tokens) >= 2 and 'UNUSED' != line_tokens[1]:
+                    sentence.append((str(token_index - 1), 'TOKEN')) # -1 because of the -BOS- line
+                    pred.append(line_tokens[1 + prediction_index])
+
+            # The main decoding process of tree2labels repo
+            parenthesized_trees.extend(sequence_to_parenthesis([sentence], [pred]))
 
     candidates = []
-    for tree in tree_candidates:
+
+    for tree in parenthesized_trees:
+        def tree2dict(tree: Tree):
+            result = {}
+
+            result['type'] = tree.label()
+            children = [tree2dict(t)  if isinstance(t, Tree)  else t for t in tree]
+            if tree.label() == 'TOKEN':
+                result['index'] = int(children[0])
+            elif children:
+                result['children'] = children
+
+            return result
+
         tree = tree.strip()
         nltk_tree: Tree = Tree.fromstring(tree, remove_empty_top_bracketing=True)
         dict_tree = tree2dict(nltk_tree)
         dict_tree['tokens'] = tokens
-        # query_tree = QueryTree.from_dict(dict_tree, tokens)
-        candidates.append(dict_tree)
-    
+        query_tree = QueryTree.from_dict(dict_tree, tokens)
+        candidates.append(query_tree)
+
     return candidates
 
-trees = parse("How many children does Barack Obama have?")
-query_tree = QueryTree.from_dict(trees[0], trees[0]['tokens'])
-print_tree(query_tree.root)
+
+
+candidates = parse("What is the largest city in Brazil?")
