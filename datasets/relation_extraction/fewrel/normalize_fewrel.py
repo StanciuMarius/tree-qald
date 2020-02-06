@@ -1,9 +1,9 @@
 import json
 
-train = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\fewrel\train.json'
-val = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\fewrel\val.json'
-output_train = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\fewrel\train_normalized.json'
-output_val = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\fewrel\val_normalized.json'
+train = r'datasets\relation_extraction\fewrel\train.json'
+val = r'datasets\relation_extraction\fewrel\val.json'
+output_train = r'datasets\relation_extraction\fewrel\train_normalized.json'
+output_val = r'datasets\relation_extraction\fewrel\val_normalized.json'
 
 
 def normalize_fewrel(source_path, destination_path, dataset_name):

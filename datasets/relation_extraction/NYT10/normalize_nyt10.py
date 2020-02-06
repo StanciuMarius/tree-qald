@@ -1,9 +1,9 @@
 import json
 
-train = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\NYT10\train.txt'
-test = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\NYT10\test.txt'
-output_train = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\NYT10\train_normalized.json'
-output_test = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\NYT10\test_normalized.json'
+train = r'datasets\relation_extraction\NYT10\train.txt'
+test = r'datasets\relation_extraction\NYT10\test.txt'
+output_train = r'datasets\relation_extraction\NYT10\train_normalized.json'
+output_test = r'datasets\relation_extraction\NYT10\test_normalized.json'
 
 
 def normalize_nyt10(source_path, destination_path, dataset_name):

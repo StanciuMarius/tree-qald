@@ -1,11 +1,11 @@
 import json
 
-train = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\tacred\data\train.json'
-test = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\tacred\data\test.json'
-dev = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\tacred\data\dev.json'
-output_train = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\tacred\data\train_normalized.json'
-output_test = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\tacred\data\test_normalized.json'
-output_dev = r'C:\Users\Marius-ValeriuSTANCI\repos\research-2019\qald\datasets\relation_extraction\tacred\data\dev_normalized.json'
+train = r'datasets\relation_extraction\tacred\data\train.json'
+test = r'datasets\relation_extraction\tacred\data\test.json'
+dev = r'datasets\relation_extraction\tacred\data\dev.json'
+output_train = r'datasets\relation_extraction\tacred\data\train_normalized.json'
+output_test = r'datasets\relation_extraction\tacred\data\test_normalized.json'
+output_dev = r'datasets\relation_extraction\tacred\data\dev_normalized.json'
 
 def normalize_tacred(source_path, destination_path, dataset_name):
 
