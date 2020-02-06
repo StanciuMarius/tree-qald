@@ -5,5 +5,4 @@ __pycache__/*
 *.bin
 *.dump
 *.cache
-qald/datasets/parsing/data/constituency_annotated_questions.prefix
-qald/services/parser/tree2labels/resources/glove.6B.100d.txt
+venv/*

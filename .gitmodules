@@ -1,3 +1,3 @@
-[submodule "qald/services/parser/tree2labels"]
-	path = qald/services/parser/tree2labels
+[submodule "services/parser/tree2labels"]
+	path = services/parser/tree2labels
 	url = https://github.com/StanciuMarius/tree2labels
