@@ -1,0 +1,5251 @@
+[
+    {
+        "dataset": "qald-8",
+        "id": "23",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 4
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "dbp:nickname"
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "was",
+            "called",
+            "Frank",
+            "The",
+            "Tank",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "60",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "dbo:abbreviation"
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "does",
+            "IYCM",
+            "stand",
+            "for",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "69",
+        "root": null,
+        "tokens": [
+            "List",
+            "all",
+            "episodes",
+            "of",
+            "the",
+            "first",
+            "season",
+            "of",
+            "the",
+            "HBO",
+            "television",
+            "series",
+            "The",
+            "Sopranos",
+            "."
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "86",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "dbp:nickname"
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "was",
+            "called",
+            "Rodzilla",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "107",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "city",
+            "has",
+            "the",
+            "most",
+            "inhabitants",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "116",
+        "root": null,
+        "tokens": [
+            "Who",
+            "is",
+            "the",
+            "youngest",
+            "player",
+            "in",
+            "the",
+            "Premier",
+            "League",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "135",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "dbo:numberOfPages"
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "book",
+            "has",
+            "the",
+            "most",
+            "pages",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "137",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 5
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "dbo:races"
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "is",
+            "the",
+            "Formula",
+            "1",
+            "race",
+            "driver",
+            "with",
+            "the",
+            "most",
+            "races",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "151",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "dbo:mainspan"
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "bridge",
+            "with",
+            "the",
+            "longest",
+            "span",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "181",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "dbo:height"
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "is",
+            "the",
+            "tallest",
+            "basketball",
+            "player",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "182",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMIN",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "dbo:populationTotal"
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "city",
+            "has",
+            "the",
+            "least",
+            "inhabitants",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "199",
+        "root": null,
+        "tokens": [
+            "Does",
+            "the",
+            "new",
+            "Battlestar",
+            "Galactica",
+            "series",
+            "have",
+            "more",
+            "episodes",
+            "than",
+            "the",
+            "old",
+            "one",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-8",
+        "id": "200",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "dbo:birthDate"
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "is",
+            "the",
+            "youngest",
+            "Darts",
+            "player",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "6",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "largest",
+            "country",
+            "by",
+            "population",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "7",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "largest",
+            "country",
+            "by",
+            "area",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "8",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "biggest",
+            "country",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "9",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "country",
+            "is",
+            "the",
+            "largest",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "10",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "country",
+            "has",
+            "the",
+            "largest",
+            "area",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "11",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "country",
+            "has",
+            "the",
+            "largest",
+            "population",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "12",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "the",
+            "country",
+            "with",
+            "the",
+            "largest",
+            "area",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "13",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMIN",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "the",
+            "country",
+            "with",
+            "the",
+            "smallest",
+            "area",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "16",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "country",
+            "has",
+            "the",
+            "largest",
+            "gdp",
+            "per",
+            "capita",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "21",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGNTH",
+                    "children": [
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 5
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "the",
+            "2nd",
+            "largest",
+            "country",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "22",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGNTH",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "5th",
+            "most",
+            "populated",
+            "country",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "23",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "LESS",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 8
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 9
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 10
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "List",
+            "all",
+            "countries",
+            "with",
+            "an",
+            "area",
+            "smaller",
+            "than",
+            "20000",
+            "square",
+            "kilometers",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "24",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "COUNT",
+                    "children": [
+                        {
+                            "type": "LESS",
+                            "children": [
+                                {
+                                    "type": "ENUMERATE",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 2
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "LITERAL",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "How",
+            "many",
+            "countries",
+            "with",
+            "less",
+            "than",
+            "10000",
+            "inhabitants",
+            "are",
+            "there",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "28",
+        "root": null,
+        "tokens": [
+            "What",
+            "country",
+            "has",
+            "the",
+            "largest",
+            "capital",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "29",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "largest",
+            "capital",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "37",
+        "root": null,
+        "tokens": [
+            "How",
+            "many",
+            "countries",
+            "larger",
+            "than",
+            "China",
+            "are",
+            "there",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "38",
+        "root": null,
+        "tokens": [
+            "How",
+            "many",
+            "countries",
+            "cities",
+            "are",
+            "in",
+            "China",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "41",
+        "root": null,
+        "tokens": [
+            "How",
+            "many",
+            "states",
+            "larger",
+            "than",
+            "Romania",
+            "are",
+            "there",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "42",
+        "root": null,
+        "tokens": [
+            "How",
+            "many",
+            "lakes",
+            "are",
+            "bigger",
+            "than",
+            "Brazil",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "46",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ENUMERATE",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "countries",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "54",
+        "root": null,
+        "tokens": [
+            "What",
+            "river",
+            "crosses",
+            "more",
+            "than",
+            "5",
+            "countries",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "56",
+        "root": null,
+        "tokens": [
+            "What",
+            "rivers",
+            "cross",
+            "both",
+            "Ukraine",
+            "and",
+            "Greece",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "58",
+        "root": null,
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "rivers",
+            "longer",
+            "than",
+            "the",
+            "Amazon",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "59",
+        "root": null,
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "rivers",
+            "that",
+            "flow",
+            "into",
+            "the",
+            "Nile",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "66",
+        "root": null,
+        "tokens": [
+            "How",
+            "many",
+            "people",
+            "live",
+            "in",
+            "the",
+            "largest",
+            "country",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "67",
+        "root": null,
+        "tokens": [
+            "How",
+            "big",
+            "is",
+            "the",
+            "largest",
+            "country",
+            "in",
+            "Europe",
+            "by",
+            "population",
+            "size",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "68",
+        "root": null,
+        "tokens": [
+            "How",
+            "big",
+            "is",
+            "the",
+            "largest",
+            "country",
+            "in",
+            "Europe",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "69",
+        "root": null,
+        "tokens": [
+            "How",
+            "tall",
+            "is",
+            "the",
+            "tallest",
+            "mountain",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "71",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "highest",
+            "mountain",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "72",
+        "root": null,
+        "tokens": [
+            "What",
+            "Italian",
+            "mountain",
+            "is",
+            "taller",
+            "than",
+            "the",
+            "highest",
+            "Indian",
+            "mountain",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "73",
+        "root": null,
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "the",
+            "mountains",
+            "taller",
+            "than",
+            "Burj",
+            "Khalifa",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "74",
+        "root": null,
+        "tokens": [
+            "How",
+            "many",
+            "countries",
+            "flow",
+            "through",
+            "at",
+            "least",
+            "5",
+            "African",
+            "countries",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "75",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "COUNT",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "GREATER",
+                            "children": [
+                                {
+                                    "type": "ENUMERATE",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 2
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "LITERAL",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "How",
+            "many",
+            "actors",
+            "are",
+            "born",
+            "after",
+            "1995",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "78",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "country",
+            "has",
+            "the",
+            "most",
+            "cities",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "79",
+        "root": null,
+        "tokens": [
+            "What",
+            "continent",
+            "is",
+            "larger",
+            "than",
+            "the",
+            "Pacific",
+            "Ocean",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "80",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "southernmost",
+            "point",
+            "of",
+            "the",
+            "U.S.",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "84",
+        "root": null,
+        "tokens": [
+            "What",
+            "technology",
+            "companies",
+            "were",
+            "founded",
+            "in",
+            "Seatle",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "85",
+        "root": null,
+        "tokens": [
+            "Does",
+            "Silicon",
+            "Valley",
+            "have",
+            "more",
+            "companies",
+            "the",
+            "Hong",
+            "Kong",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "86",
+        "root": null,
+        "tokens": [
+            "Are",
+            "there",
+            "more",
+            "companies",
+            "in",
+            "France",
+            "than",
+            "in",
+            "Spain",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "89",
+        "root": null,
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "islands",
+            "larger",
+            "tha",
+            "10000",
+            "squared",
+            "km",
+            "in",
+            "the",
+            "Mediterranean",
+            "Sea",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "90",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMIN",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "smallest",
+            "island",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "91",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMIN",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "oldest",
+            "cosmonaut",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "93",
+        "root": null,
+        "tokens": [
+            "What",
+            "kind",
+            "of",
+            "head",
+            "of",
+            "state",
+            "does",
+            "Bulgaria",
+            "have",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "94",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGNTH",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "100th",
+            "country",
+            "by",
+            "size",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "95",
+        "root": null,
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "actors",
+            "older",
+            "than",
+            "Morgan",
+            "Freeman",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "97",
+        "root": null,
+        "tokens": [
+            "Is",
+            "the",
+            "Queen",
+            "of",
+            "England",
+            "younger",
+            "than",
+            "Pope",
+            "Francis",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "100",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "movie",
+            "with",
+            "the",
+            "largest",
+            "budget",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "101",
+        "root": null,
+        "tokens": [
+            "Who",
+            "directed",
+            "the",
+            "movie",
+            "with",
+            "the",
+            "largest",
+            "budget",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "102",
+        "root": null,
+        "tokens": [
+            "Who",
+            "published",
+            "It",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "105",
+        "root": null,
+        "tokens": [
+            "Does",
+            "Game",
+            "of",
+            "Thrones",
+            "have",
+            "the",
+            "largest",
+            "budget",
+            "of",
+            "all",
+            "series",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "106",
+        "root": null,
+        "tokens": [
+            "In",
+            "how",
+            "many",
+            "countries",
+            "does",
+            "the",
+            "river",
+            "Thames",
+            "flow",
+            "through",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "113",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "ENUMERATE",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 4
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Where",
+            "is",
+            "the",
+            "largest",
+            "country",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "114",
+        "root": null,
+        "tokens": [
+            "Does",
+            "Samuel",
+            "L.",
+            "Jackson",
+            "star",
+            "in",
+            "any",
+            "movie",
+            "directed",
+            "by",
+            "Quentin",
+            "Tarantino",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "116",
+        "root": null,
+        "tokens": [
+            "What",
+            "producers",
+            "do",
+            "Steven",
+            "Spielberg",
+            "movies",
+            "have",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "118",
+        "root": null,
+        "tokens": [
+            "Did",
+            "Ridley",
+            "Scott",
+            "direct",
+            "more",
+            "movies",
+            "than",
+            "Alfred",
+            "Hitchcock",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "119",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "youngest",
+            "actor",
+            "that",
+            "played",
+            "in",
+            "Titanic",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "129",
+        "root": null,
+        "tokens": [
+            "Is",
+            "Christian",
+            "Bale",
+            "born",
+            "before",
+            "Jack",
+            "Nicholson",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "134",
+        "root": null,
+        "tokens": [
+            "What",
+            "awards",
+            "has",
+            "Spielberg",
+            "'s",
+            "latest",
+            "movie",
+            "won",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "136",
+        "root": null,
+        "tokens": [
+            "Who",
+            "played",
+            "the",
+            "role",
+            "of",
+            "God",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "137",
+        "root": null,
+        "tokens": [
+            "Is",
+            "Johnny",
+            "Depp",
+            "Batman",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "138",
+        "root": null,
+        "tokens": [
+            "Is",
+            "Wonderwoman",
+            "played",
+            "by",
+            "Meryl",
+            "Streep",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "139",
+        "root": null,
+        "tokens": [
+            "Is",
+            "Clint",
+            "Eastwood",
+            "related",
+            "to",
+            "Robert",
+            "De",
+            "Niro",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "145",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "EXISTS",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENUMERATE",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 3
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "there",
+            "any",
+            "president",
+            "that",
+            "plays",
+            "tennis",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "146",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 7
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "presidents",
+            "that",
+            "also",
+            "play",
+            "footbal",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "147",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ARGMAX",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENUMERATE",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 1
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 6
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "VARIABLE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "professor",
+            "had",
+            "mentored",
+            "the",
+            "most",
+            "students",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "151",
+        "root": null,
+        "tokens": [
+            "Do",
+            "Spain",
+            "and",
+            "Italy",
+            "use",
+            "the",
+            "same",
+            "currency",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "154",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "population",
+            "of",
+            "the",
+            "largest",
+            "country",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "155",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "area",
+            "of",
+            "the",
+            "most",
+            "populated",
+            "country",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "156",
+        "root": null,
+        "tokens": [
+            "What",
+            "side",
+            "of",
+            "the",
+            "road",
+            "do",
+            "they",
+            "drive",
+            "in",
+            "Ethiopia",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "157",
+        "root": null,
+        "tokens": [
+            "Do",
+            "they",
+            "drive",
+            "on",
+            "the",
+            "right",
+            "in",
+            "England",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "158",
+        "root": null,
+        "tokens": [
+            "Does",
+            "Marlyn",
+            "Manson",
+            "play",
+            "guitar",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "162",
+        "root": null,
+        "tokens": [
+            "What",
+            "famous",
+            "people",
+            "died",
+            "because",
+            "of",
+            "the",
+            "bubonic",
+            "plague",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "163",
+        "root": null,
+        "tokens": [
+            "Did",
+            "any",
+            "king",
+            "die",
+            "of",
+            "the",
+            "plague",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "165",
+        "root": null,
+        "tokens": [
+            "Was",
+            "Hubble",
+            "launched",
+            "in",
+            "the",
+            "U.S.",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "167",
+        "root": null,
+        "tokens": [
+            "What",
+            "'s",
+            "the",
+            "easiest",
+            "route",
+            "on",
+            "K2",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "172",
+        "root": null,
+        "tokens": [
+            "What",
+            "ideology",
+            "does",
+            "the",
+            "ruling",
+            "party",
+            "in",
+            "the",
+            "U.S.",
+            "have",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "174",
+        "root": null,
+        "tokens": [
+            "Is",
+            "the",
+            "circumference",
+            "of",
+            "Earth",
+            "larger",
+            "than",
+            "Mars",
+            "'s",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "175",
+        "root": null,
+        "tokens": [
+            "Which",
+            "is",
+            "densest",
+            ",",
+            "the",
+            "Mars",
+            "or",
+            "Jupiter",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "177",
+        "root": null,
+        "tokens": [
+            "Do",
+            "Greenland",
+            "and",
+            "Iceland",
+            "have",
+            "the",
+            "same",
+            "climate",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "178",
+        "root": null,
+        "tokens": [
+            "Is",
+            "The",
+            "Black",
+            "Goat",
+            "related",
+            "to",
+            "Cthulu",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "179",
+        "root": null,
+        "tokens": [
+            "From",
+            "what",
+            "book",
+            "is",
+            "Palantir",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "180",
+        "root": null,
+        "tokens": [
+            "Did",
+            "J.",
+            "R.",
+            "R.",
+            "Tolkien",
+            "write",
+            "more",
+            "books",
+            "than",
+            "J.",
+            "K.",
+            "Rolling",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "181",
+        "root": null,
+        "tokens": [
+            "What",
+            "book",
+            "followed",
+            "The",
+            "Hobbit",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "182",
+        "root": null,
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "fantasy",
+            "books",
+            "written",
+            "by",
+            "George",
+            "RR",
+            "Martin",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "183",
+        "root": null,
+        "tokens": [
+            "What",
+            "healthcare",
+            "companies",
+            "were",
+            "founded",
+            "in",
+            "the",
+            "United",
+            "Kingdom",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "184",
+        "root": null,
+        "tokens": [
+            "What",
+            "country",
+            "has",
+            "the",
+            "most",
+            "healthcare",
+            "companies",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "185",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "150th",
+            "country",
+            "by",
+            "population",
+            "density",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "187",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "largest",
+            "producer",
+            "of",
+            "Tungsten",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "189",
+        "root": null,
+        "tokens": [
+            "Is",
+            "there",
+            "Helium",
+            "in",
+            "the",
+            "atmosphere",
+            "of",
+            "Mercury",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "190",
+        "root": null,
+        "tokens": [
+            "Did",
+            "Michael",
+            "Jackson",
+            "have",
+            "any",
+            "children",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "191",
+        "root": null,
+        "tokens": [
+            "Is",
+            "Michael",
+            "Jackson",
+            "burried",
+            "in",
+            "Los",
+            "Angeles",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "192",
+        "root": null,
+        "tokens": [
+            "Is",
+            "Michael",
+            "Jackson",
+            "richer",
+            "than",
+            "Brad",
+            "Pitt",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "193",
+        "root": null,
+        "tokens": [
+            "How",
+            "many",
+            "siblings",
+            "did",
+            "Jason",
+            "Statham",
+            "have",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "194",
+        "root": null,
+        "tokens": [
+            "Is",
+            "Krakow",
+            "the",
+            "largest",
+            "city",
+            "in",
+            "Poland",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "195",
+        "root": null,
+        "tokens": [
+            "Are",
+            "there",
+            "any",
+            "actors",
+            "born",
+            "in",
+            "1994",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "196",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 7
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "artists",
+            "that",
+            "play",
+            "the",
+            "saxophone",
+            "."
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "198",
+        "root": null,
+        "tokens": [
+            "Who",
+            "is",
+            "the",
+            "first",
+            "wife",
+            "of",
+            "Einstein",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "199",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "tiniest",
+            "city",
+            "in",
+            "Bulgaria",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "200",
+        "root": null,
+        "tokens": [
+            "Do",
+            "more",
+            "people",
+            "live",
+            "in",
+            "Berlin",
+            "than",
+            "in",
+            "London",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": "201",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "largest",
+            "company",
+            "with",
+            "headquarters",
+            "in",
+            "Moscow",
+            "?"
+        ]
+    },
+    {
+        "dataset": "created_1",
+        "id": -1,
+        "root": null,
+        "tokens": [
+            "How",
+            "many",
+            "continents",
+            "does",
+            "Russia",
+            "span",
+            "in",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "1",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "SAMPLE",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "LITERAL",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 6
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 7
+                                                },
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 8
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "relation": "dbo:recordDate"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "relation": "rdfs:label"
+                }
+            ]
+        },
+        "tokens": [
+            "what",
+            "'s",
+            "the",
+            "name",
+            "of",
+            "a",
+            "1974",
+            "jazz",
+            "album",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "2",
+        "root": null,
+        "tokens": [
+            "what",
+            "is",
+            "anna",
+            "chodakowska",
+            "'s",
+            "city",
+            "of",
+            "birth"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "3",
+        "root": null,
+        "tokens": [
+            "what",
+            "film",
+            "genre",
+            "is",
+            "in",
+            "de",
+            "schaduw",
+            "van",
+            "de",
+            "overwinning"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "30",
+        "root": null,
+        "tokens": [
+            "what",
+            "is",
+            "red"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "36",
+        "root": null,
+        "tokens": [
+            "what",
+            "person",
+            "was",
+            "born",
+            "in",
+            "freiburg",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "64",
+        "root": null,
+        "tokens": [
+            "charley",
+            "webb",
+            "'s",
+            "nationality",
+            "comes",
+            "from",
+            "what",
+            "country",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "75",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "netflix",
+            "genre",
+            "of",
+            "appleseed",
+            "(",
+            "film",
+            ")",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "172",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 6
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "state",
+            "is",
+            "the",
+            "area",
+            "code",
+            "425",
+            "in",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "245",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "name",
+            "of",
+            "a",
+            "surf",
+            "music",
+            "album",
+            "released",
+            "in",
+            "2003",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "274",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "LITERAL",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 6
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 7
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "which",
+            "1992",
+            "album",
+            "was",
+            "produced",
+            "by",
+            "daniel",
+            "barenboim",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "329",
+        "root": null,
+        "tokens": [
+            "Name",
+            "a",
+            "type",
+            "of",
+            "soft",
+            "tissue",
+            "disorder",
+            "classification",
+            "."
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "331",
+        "root": null,
+        "tokens": [
+            "Which",
+            "slapstick",
+            "film",
+            "was",
+            "released",
+            "in",
+            "1988",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "361",
+        "root": null,
+        "tokens": [
+            "what",
+            "is",
+            "a",
+            "2010",
+            "compilation",
+            "album",
+            "from",
+            "a",
+            "film",
+            "of",
+            "the",
+            "same",
+            "name"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "366",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "name",
+            "of",
+            "someone",
+            "who",
+            "plays",
+            "hammered",
+            "dulcimer"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "404",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "SAMPLE",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "PROPERTY",
+                                            "children": [
+                                                {
+                                                    "type": "PROPERTY",
+                                                    "children": [
+                                                        {
+                                                            "type": "ENTITY",
+                                                            "children": [
+                                                                {
+                                                                    "type": "TOKEN",
+                                                                    "id": 7
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "TYPE",
+                                                            "children": [
+                                                                {
+                                                                    "type": "TOKEN",
+                                                                    "id": 8
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "ENTITY",
+                                                    "children": [
+                                                        {
+                                                            "type": "TOKEN",
+                                                            "id": 9
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "LITERAL",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 6
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "what",
+            "is",
+            "the",
+            "title",
+            "of",
+            "a",
+            "1920",
+            "silent",
+            "film",
+            "western",
+            "film"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "421",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "who",
+            "produced",
+            "block",
+            "busters",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "490",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "which",
+            "thriller",
+            "(",
+            "genre",
+            ")",
+            "are",
+            "released",
+            "in",
+            "2002",
+            "?"
+        ]
+    },
+    {
+        "dataset": "fb-data-train",
+        "id": "498",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "VARIABLE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 7
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "where",
+            "in",
+            "Louisiana",
+            "is",
+            "the",
+            "zip",
+            "code",
+            "71360"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "28",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "capital",
+            "with",
+            "the",
+            "smallest",
+            "surface",
+            "area",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "30",
+        "root": null,
+        "tokens": [
+            "Who",
+            "coached",
+            "most",
+            "football",
+            "players",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "44",
+        "root": null,
+        "tokens": [
+            "Who",
+            "directed",
+            "the",
+            "least",
+            "amount",
+            "of",
+            "movies",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "48",
+        "root": null,
+        "tokens": [
+            "Who",
+            "directed",
+            "the",
+            "movie",
+            "with",
+            "most",
+            "actors",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "68",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "lowest",
+            "point",
+            "in",
+            "the",
+            "world",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "78",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 4
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 6
+                                                },
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 7
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "Google",
+            "the",
+            "largest",
+            "company",
+            "in",
+            "Silicon",
+            "Valley",
+            "by",
+            "number",
+            "of",
+            "employees",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "79",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "Brazil",
+            "the",
+            "largest",
+            "country",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "80",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ARGNTH",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 5
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 7
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "LITERAL",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "Paris",
+            "the",
+            "3rd",
+            "largest",
+            "city",
+            "in",
+            "France",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "81",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 3
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 8
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "Krakow",
+            "the",
+            "city",
+            "with",
+            "most",
+            "inhabitants",
+            "in",
+            "Poland",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "82",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 5
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 7
+                                                },
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 8
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "London",
+            "the",
+            "most",
+            "populated",
+            "city",
+            "in",
+            "Great",
+            "Britain",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "83",
+        "root": null,
+        "tokens": [
+            "Does",
+            "Africa",
+            "have",
+            "more",
+            "countries",
+            "than",
+            "Europe",
+            "?"
+        ]
+    },
+    {
+        "dataset": "argnth",
+        "id": "84",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ISA",
+                    "children": [
+                        {
+                            "type": "ARGMAX",
+                            "children": [
+                                {
+                                    "type": "PROPERTY",
+                                    "children": [
+                                        {
+                                            "type": "ENTITY",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 4
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "TYPE",
+                                            "children": [
+                                                {
+                                                    "type": "TOKEN",
+                                                    "id": 5
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Is",
+            "China",
+            "the",
+            "largest",
+            "Asian",
+            "country",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "6",
+        "root": null,
+        "tokens": [
+            "Which",
+            "countries",
+            "have",
+            "places",
+            "with",
+            "more",
+            "than",
+            "two",
+            "caves",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "9",
+        "root": null,
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "actors",
+            "starring",
+            "in",
+            "movies",
+            "directed",
+            "by",
+            "and",
+            "starring",
+            "William",
+            "Shatner",
+            "."
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "18",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "organizations",
+            "were",
+            "founded",
+            "in",
+            "1950",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "25",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "EQUAL",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 9
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "U.S.",
+            "states",
+            "are",
+            "in",
+            "the",
+            "same",
+            "timezone",
+            "as",
+            "Utah",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "32",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "TOPN",
+                    "children": [
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 5
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 6
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 7
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 8
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 9
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "What",
+            "are",
+            "the",
+            "top-10",
+            "action",
+            "role",
+            "-",
+            "playing",
+            "video",
+            "games",
+            "according",
+            "to",
+            "IGN",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "41",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ENUMERATE",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "cosmonauts",
+            "."
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "43",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "presidents",
+            "were",
+            "born",
+            "in",
+            "1945",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "44",
+        "root": null,
+        "tokens": [
+            "What",
+            "kind",
+            "of",
+            "music",
+            "did",
+            "Lou",
+            "Reed",
+            "play",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "52",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "most",
+            "frequent",
+            "cause",
+            "of",
+            "death",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "53",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "TOPN",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 5
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 6
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 7
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "are",
+            "the",
+            "four",
+            "youngest",
+            "MVP",
+            "basketball",
+            "players",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "58",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "COUNT",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "How",
+            "many",
+            "airlines",
+            "are",
+            "there",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "74",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 6
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Who",
+            "was",
+            "president",
+            "of",
+            "Pakistan",
+            "in",
+            "1978",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "84",
+        "root": null,
+        "tokens": [
+            "Who",
+            "produced",
+            "the",
+            "most",
+            "films",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "103",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ENUMERATE",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 3
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 4
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 5
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 6
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "types",
+            "of",
+            "eating",
+            "disorders",
+            "."
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "105",
+        "root": null,
+        "tokens": [
+            "What",
+            "was",
+            "Brazil",
+            "'s",
+            "lowest",
+            "rank",
+            "in",
+            "the",
+            "FIFA",
+            "World",
+            "Ranking",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "108",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "EQUAL",
+                    "children": [
+                        {
+                            "type": "PROPERTY",
+                            "children": [
+                                {
+                                    "type": "ENTITY",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ENTITY",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 10
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "U.S.",
+            "states",
+            "are",
+            "in",
+            "the",
+            "same",
+            "time",
+            "zone",
+            "as",
+            "Utah",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "134",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "GREATERCOUNT",
+                    "children": [
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "countries",
+            "have",
+            "more",
+            "than",
+            "two",
+            "official",
+            "languages",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "135",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "GREATERCOUNT",
+                    "children": [
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "countries",
+            "have",
+            "more",
+            "than",
+            "ten",
+            "caves",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "138",
+        "root": null,
+        "tokens": [
+            "When",
+            "did",
+            "Latvia",
+            "join",
+            "the",
+            "EU",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "148",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "ENUMERATE",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "holidays",
+            "are",
+            "celebrated",
+            "around",
+            "the",
+            "world",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "150",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "PROPERTY",
+                    "children": [
+                        {
+                            "type": "TYPE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "LITERAL",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "Which",
+            "organizations",
+            "were",
+            "founded",
+            "in",
+            "1930",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "166",
+        "root": null,
+        "tokens": [
+            "Is",
+            "Egypts",
+            "largest",
+            "city",
+            "also",
+            "its",
+            "capital",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "168",
+        "root": {
+            "type": "ROOT",
+            "children": [
+                {
+                    "type": "COUNT",
+                    "children": [
+                        {
+                            "type": "ENUMERATE",
+                            "children": [
+                                {
+                                    "type": "TYPE",
+                                    "children": [
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 2
+                                        },
+                                        {
+                                            "type": "TOKEN",
+                                            "id": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "VARIABLE",
+                            "children": [
+                                {
+                                    "type": "TOKEN",
+                                    "id": 0
+                                },
+                                {
+                                    "type": "TOKEN",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tokens": [
+            "How",
+            "many",
+            "programming",
+            "languages",
+            "are",
+            "there",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "169",
+        "root": null,
+        "tokens": [
+            "Which",
+            "Chess",
+            "players",
+            "died",
+            "in",
+            "the",
+            "same",
+            "place",
+            "they",
+            "were",
+            "born",
+            "in",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "174",
+        "root": null,
+        "tokens": [
+            "Which",
+            "mountains",
+            "are",
+            "higher",
+            "than",
+            "the",
+            "Nanga",
+            "Parbat",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "175",
+        "root": null,
+        "tokens": [
+            "Give",
+            "me",
+            "all",
+            "B",
+            "-",
+            "sides",
+            "of",
+            "the",
+            "Ramones",
+            "."
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "201",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "highest",
+            "mountain",
+            "in",
+            "Saxony",
+            "Germany",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "251",
+        "root": null,
+        "tokens": [
+            "What",
+            "is",
+            "the",
+            "longest",
+            "river",
+            "in",
+            "the",
+            "world",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "288",
+        "root": null,
+        "tokens": [
+            "how",
+            "much",
+            "is",
+            "the",
+            "population",
+            "densty",
+            "rank",
+            "of",
+            "germany",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "305",
+        "root": null,
+        "tokens": [
+            "Which",
+            "holidays",
+            "are",
+            "celebrated",
+            "around",
+            "the",
+            "world",
+            "?",
+            "test2"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "340",
+        "root": null,
+        "tokens": [
+            "Which",
+            "building",
+            "after",
+            "the",
+            "Burj",
+            "Khalifa",
+            "has",
+            "the",
+            "most",
+            "floors",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "341",
+        "root": null,
+        "tokens": [
+            "What",
+            "was",
+            "the",
+            "final",
+            "result",
+            "of",
+            "the",
+            "War",
+            "of",
+            "the",
+            "Roses",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "344",
+        "root": null,
+        "tokens": [
+            "Do",
+            "Urdu",
+            "and",
+            "Persian",
+            "have",
+            "a",
+            "common",
+            "root",
+            "?"
+        ]
+    },
+    {
+        "dataset": "qald-9-exclusive",
+        "id": "360",
+        "root": null,
+        "tokens": [
+            "Does",
+            "the",
+            "Ford",
+            "Motor",
+            "Company",
+            "have",
+            "a",
+            "manufacturing",
+            "plant",
+            "in",
+            "Malaysia",
+            "?"
+        ]
+    }
+]]

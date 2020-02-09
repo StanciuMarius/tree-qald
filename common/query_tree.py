@@ -31,6 +31,9 @@ class NodeType(Enum):
     # Returns true if the given set is not empty
     EXISTS = 'EXISTS'
 
+    # Pick a random sample from a set of entities
+    SAMPLE = 'SAMPLE'
+    
     # Returns true if a property exists between two given properties
     EXISTSRELATION = 'EXISTSRELATION'
 
@@ -52,16 +55,13 @@ class NodeType(Enum):
     # Retrieves the top n entities sorted by a property value
     TOPN = 'TOPN'
 
-    # Filters e
-    EQUAL = 'EQUAL'
-
     # Filters the entities with a cardinal of property (to be extracted) greater than a given literal
     GREATERCOUNT = 'GREATERCOUNT'
     
     # Filters the entities with a cardinal of property (to be extracted) less than a given literal
     LESSCOUNT = 'LESSCOUNT'
 
-    # Property of a set of a entities
+    # PROPERTY is the a term of an RDF triple (the subject or object, not known yet)
     PROPERTY = 'PROPERTY'
 
     # Tokens that represent knowledge base TYPE+. E.g. "comonauts" "writer" 
@@ -72,13 +72,7 @@ class NodeType(Enum):
 
     # Tokens that represent literals. E.g. "100", "15th of June", "1999", "1.0", "Frank the Tank"
     LITERAL = 'LITERAL'
-    
-    # All entities of a particular type
-    ENUMERATE = 'ENUMERATE'
 
-    # Pick a random sample from a set of ENTITIES
-    SAMPLE = 'SAMPLE'
-    
     # Unused tokens
     UNUSED = 'UNUSED'
 
@@ -133,7 +127,7 @@ class QueryTree:
                 pretty_string += '[' + self.kb_resources[0].split('/')[-1] + ']'
             return pretty_string 
 
-    def __init__(self, root: Node, tokens: List[str]):
+    def __init__(self, root: Node, tokens: List[str], id: str = 'default'):
         self.last_id = -1
         def assign_unique_id(node):
             if node.id == None:
@@ -147,6 +141,7 @@ class QueryTree:
         self.tokens = tokens
         self.root: Node = root
         self.unused_tokens = []
+        self.id: str = id
    
 
 
@@ -183,7 +178,8 @@ class QueryTree:
         
         return {
             'root': node_to_dict(self.root),
-            'tokens': self.tokens
+            'tokens': self.tokens,
+            'id': self.id
         }
 
     def pretty_print(self):
@@ -229,8 +225,8 @@ class QueryTree:
 
         root = node_from_dict(tree_dict['root'])
         sort_recursively(root)
-            
-        tree = QueryTree(root, tokens)
+        example_id = tree_dict['id']
+        tree = QueryTree(root, tokens, example_id)
         # Aggregate unused tokens 
         if len(used_nodes) < len(token_nodes):
             # unused_container_node = QueryTree.Node(NodeType.UNUSED)

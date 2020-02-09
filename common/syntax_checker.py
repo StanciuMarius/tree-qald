@@ -3,27 +3,24 @@ from functools import reduce
 
 import os
 import sys
-from copy import deepcopy
 sys.path.insert(0, os.getcwd())
 
 from common.query_tree import QueryTree, enum_for_str, NodeType
-COLLAPSABLE_NODES = {
-    NodeType.ENTITY: NodeType.ENTITIES,
-    NodeType.TOKEN: NodeType.TOKENS,
-    NodeType.TYPE: NodeType.TYPES,
-}
+import copy
+
+
 class SyntaxChecker:
     """ Tool for checking the syntax of QueryTrees against a context free grammar file """
     def __init__(self, grammar_file_path: str):
         # Baseline tree-like dict for syntax checking
         self.grammar = {}
-        self.class_vs_instances = {}
+        self.rule_vs_alias = {}
 
         self.sorting_rule = key=lambda t: t.value # for pattern matching
 
         with open(grammar_file_path, 'r') as grammar_file:
             lines = grammar_file.readlines()
-            # =========================================Parse classes
+            # =========================================Parse aliases
             for line in lines:
                 trimmed = line.strip()
                 
@@ -35,18 +32,14 @@ class SyntaxChecker:
 
                     non_terminal, _ = line.split(":")
                     non_terminal = non_terminal.replace(' ',  '').replace('\n', '').split('$')
-                    base_class = None
+                    alias = None
                     if len(non_terminal) > 1:
-                        non_terminal, base_class = non_terminal
+                        non_terminal, alias = non_terminal
                     else:
                         non_terminal = non_terminal[0]
 
-                    if base_class:
-                        if base_class not in self.class_vs_instances:
-                            self.class_vs_instances[base_class] = [non_terminal]
-                        else:
-                            self.class_vs_instances[base_class].append(non_terminal)
-            # =======================================
+                    if alias:
+                        self.rule_vs_alias[non_terminal] = alias
         
             for line in lines:
                 trimmed = line.strip()
@@ -64,41 +57,15 @@ class SyntaxChecker:
                     alternatives = alternatives.split("|")
                     alternatives = [[symbol.replace(' ',  '').replace('\n', '') for symbol in alternative.split(' ')] for alternative in alternatives]
                     alternatives = [[symbol for symbol in symbols if symbol] for symbols in alternatives]
-                    
 
-                    # Expand optional
-                    def expand_backtrack(symbols):
-                        if not symbols:
-                            return [[]]
-                        
-                        expanded_symbols = []
-                        alternatives = expand_backtrack(symbols[1:])
-
-                        symbol = symbols[0]
-                        if symbol[-1] == '?':
-                            symbol = symbol[:-1]
-                            # if optional, skip
-                            expanded_symbols.extend(alternatives)
-                        
-                        if symbol in self.class_vs_instances:
-                            for instance in self.class_vs_instances[symbol]:
-                                expanded_symbols.extend([[instance] + alternative for alternative in alternatives])           
-                        else:
-                            expanded_symbols.extend([[symbol] + alternative for alternative in alternatives])
-
-                        return deepcopy(expanded_symbols)
-                        
-                    expanded_alternatives = []
-                    for symbols in alternatives:
-                        expanded_alternatives.extend(expand_backtrack(symbols))
-                    expanded_alternatives = [tuple([enum_for_str(symbol) for symbol in symbols]) for symbols in expanded_alternatives]
-
-                    self.grammar[enum_for_str(non_terminal)] = expanded_alternatives
+                    self.grammar[non_terminal] = alternatives
 
     def validate(self, tree: QueryTree) -> bool:
         """ Checks the syntax of a QueryTree against the grammar passed to the constructor """
-
-        return self.__check_query_node(tree.root)
+        try:
+            return self.__check_query_node(tree.root)
+        except:
+            return False
 
     
     def __check_query_node(self, node: QueryTree.Node):
@@ -107,25 +74,38 @@ class SyntaxChecker:
             return True
         
         # Unknown symbol
-        if node.type not in NodeType or node.type not in self.grammar:
+        if node.type not in NodeType or node.type.value not in self.grammar:
             return False
-        
-        
-        children_symbols = tuple(sorted([child.type for child in node.children], key=self.sorting_rule))
 
+        found_valid_alternative = False
+        for alternative in self.grammar[node.type.value]:
+            alternative = copy.copy(alternative)
+            children = copy.copy(node.children)
+            
+            non_empty_lists = set()
+            symbols_satisfied = True
+            for child in children:
+                alias = self.rule_vs_alias[child.type.value] if child.type.value in self.rule_vs_alias else ''
+                if child.type.value in alternative:
+                    alternative.remove(child.type.value)
+                elif alias in alternative:
+                    alternative.remove(alias)
+                elif child.type.value + '+' in alternative:
+                    non_empty_lists.add(child.type.value + '+')
+                elif alias + '+' in alternative:
+                    non_empty_lists.add(alias + '+')
+                elif child.type.value + '*' not in alternative and alias + '*' not in alternative:
+                    symbols_satisfied = False
+            
+            # There should only be non-empty +lists or *lists
+            lists_satisfied = True
+            for symbol in alternative:
+                if not ('*' in symbol) and not ('+' in symbol and symbol in non_empty_lists):
+                    lists_satisfied = False
+            
+            if symbols_satisfied and lists_satisfied:
+                found_valid_alternative = True
+                break
 
-        # Collapse lists
-        collapsed_children_symbols = tuple(sorted(set([child.type for child in node.children]), key=self.sorting_rule))
-        collapsed_children_symbols = tuple([COLLAPSABLE_NODES[node_type] if node_type in COLLAPSABLE_NODES else node_type for node_type in collapsed_children_symbols])
-
-        allowed_alternatives = {tuple(sorted(alternative, key=self.sorting_rule)) for alternative in self.grammar[node.type]}
-        
-        # Node childrens match the rule for that particular type
-        if children_symbols in allowed_alternatives:
-            return reduce(lambda a, x: a and self.__check_query_node(x), node.children, True)
-
-        # Also try list versions
-        if collapsed_children_symbols in allowed_alternatives:
-            return reduce(lambda a, x: a and self.__check_query_node(x), node.children, True)
-
-        return False
+        # Recurse syntax check to children
+        return found_valid_alternative and reduce(lambda result, child: result and self.__check_query_node(child), node.children, True)

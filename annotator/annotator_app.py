@@ -11,16 +11,15 @@ import sys
 sys.path.insert(0, os.getcwd())
 from annotator.constants import INPUT_FILE_PATH, OUTPUT_FILE_PATH
 from services.tasks import run_task, Task
-from services.parser.syntax_checker import SyntaxChecker
-from services.parser.constants import GRAMMAR_FILE_PATH
+from common.syntax_checker import SyntaxChecker
+from common.constants import GRAMMAR_FILE_PATH
 from common.query_tree import QueryTree, NodeType
 
 ASK_FOR_RELATION = False
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 settings = {
     'symbol_vs_node_type': {
-        'f11': NodeType.TOPN,
-        'f10': NodeType.EQUAL,
+        'f10': NodeType.TOPN,
         'f9': NodeType.LESSCOUNT,
         'f8': NodeType.GREATERCOUNT,
         'f7': NodeType.ARGMINCOUNT,
@@ -34,7 +33,6 @@ settings = {
         '9': NodeType.ISLESS,
         '8': NodeType.ISGREATER,
 
-        '7': NodeType.ENUMERATE,
         '6': NodeType.LESS,
         '5': NodeType.GREATER,
         
@@ -215,7 +213,7 @@ def select(btn):
     canvas.focus_set()
 
 def validate(tree):
-    return SYNTAX_CHECKER.validate(QueryTree.from_dict(tree, state['tokens']))
+    return SYNTAX_CHECKER.validate(QueryTree.from_dict({'root': tree, 'tokens': state['tokens']}))
 
 def on_key(event):
     key = event.keysym.lower()

@@ -1,4 +1,3 @@
-GRAMMAR_FILE_PATH               = r'common\grammar'
 MODEL_FILE_PATH                 = r'services\parser\tmp\model\crf-bilstm'
 NCRFPP_REPOSITORY_PATH          = r'services\parser\tree2labels\NCRFpp'
 
