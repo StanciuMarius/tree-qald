@@ -21,8 +21,8 @@ parser_service.config['CORS_HEADERS'] = 'Content-Type'
 def parse():
     query_text = request.args.get('input')
     if query_text:
-        tree: dict = internal_parse(query_text)
-        return jsonify(tree)
+        tree_candidates: List[dict] = internal_parse(query_text)
+        return jsonify(tree_candidates)
     else:
         return 'No query given', 400
 

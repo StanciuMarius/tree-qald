@@ -146,7 +146,7 @@ def to_tree(node):
     if children:
         result['children'] = [to_tree(child) for child in children]
     if node.type == NodeType.TOKEN:
-        result['index'] = node.token
+        result['id'] = node.token
     if node.relation:
         result['relation'] = node.relation
     return result
@@ -161,7 +161,7 @@ def save(tree):
 
         data = {
             'dataset': 'qald-8',
-            'index': state['example_index'],
+            'id': state['example_index'],
             'tree': tree,
             'tokens': state['tokens']
         }

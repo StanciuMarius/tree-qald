@@ -9,6 +9,7 @@ from common.query_tree import SerializationFormat
 from services.tasks import run_task, Task
 from nltk.tree import Tree
 from pptree import print_tree
+from typing import List
 
 from services.parser.constants import INTERMEDIATE_QUERY_FILE_PATH, MODEL_FILE_PATH, FINAL_OUTPUT_FILE_PATH, NCRFPP_REPOSITORY_PATH, NCRFPP_DECODE_CONFIG_FILE_PATH, TREE_CANDIDATES_N_BEST, GRAMMAR_FILE_PATH
 from services.parser.tree2labels.utils import sequence_to_parenthesis, get_enriched_labels_for_retagger
@@ -17,7 +18,7 @@ from services.parser.syntax_checker import SyntaxChecker
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 
 
-def parse(query_text: str) -> dict:
+def parse(query_text: str) -> List[dict]:
     '''
     Parses the input query text as a set of candidate constituency trees
     '''
@@ -28,6 +29,7 @@ def parse(query_text: str) -> dict:
 
     # Statistically parsed trees might not validate the grammar. Discard invalid trees
     candidates = list(filter(lambda tree: SYNTAX_CHECKER.validate(tree), candidates))
+    candidates = list(map(lambda tree: tree.to_serializable(SerializationFormat.HIERARCHICAL_DICT), candidates))
     #print('Produced {}/{} valid candidates!'.format(len(candidates), TREE_CANDIDATES_N_BEST))
     
     return candidates
@@ -70,17 +72,20 @@ def _decode_labels(tokens):
         lines = ncrfpp_output_file.readlines()
         lines = [line.strip().split(' ') for line in lines[1:]]
         for prediction_index in range(0, TREE_CANDIDATES_N_BEST):
-            sentence = []
-            pred = []
-            for token_index, line_tokens in enumerate(lines):
-                # The tree2labels algorithm is not aware of 'UNUSED' tokens. We first have to eliminate them, so the sequence_to_parenthesis algorithm
-                # reconstructs the tree corectly
-                if len(line_tokens) >= 2 and 'UNUSED' != line_tokens[1]:
-                    sentence.append((str(token_index - 1), 'TOKEN')) # -1 because of the -BOS- line
-                    pred.append(line_tokens[1 + prediction_index])
+            try:
+                sentence = []
+                pred = []
+                for token_index, line_tokens in enumerate(lines):
+                    # The tree2labels algorithm is not aware of 'UNUSED' tokens. We first have to eliminate them, so the sequence_to_parenthesis algorithm
+                    # reconstructs the tree corectly
+                    if len(line_tokens) >= 2 and 'UNUSED' != line_tokens[1]:
+                        sentence.append((str(token_index - 1), 'TOKEN')) # -1 because of the -BOS- line
+                        pred.append(line_tokens[1 + prediction_index])
 
-            # The main decoding process of tree2labels repo
-            parenthesized_trees.extend(sequence_to_parenthesis([sentence], [pred]))
+                # The main decoding process of tree2labels repo
+                parenthesized_trees.extend(sequence_to_parenthesis([sentence], [pred]))
+            except:
+                print("Error decoding tree")
 
     candidates = []
 
@@ -91,7 +96,7 @@ def _decode_labels(tokens):
             result['type'] = tree.label()
             children = [tree2dict(t)  if isinstance(t, Tree)  else t for t in tree]
             if tree.label() == 'TOKEN':
-                result['index'] = int(children[0])
+                result['id'] = int(children[0])
             elif children:
                 result['children'] = children
 
@@ -99,13 +104,17 @@ def _decode_labels(tokens):
 
         tree = tree.strip()
         nltk_tree: Tree = Tree.fromstring(tree, remove_empty_top_bracketing=True)
-        dict_tree = tree2dict(nltk_tree)
-        dict_tree['tokens'] = tokens
-        query_tree = QueryTree.from_dict(dict_tree, tokens)
+        dict_tree = {
+            'root':  tree2dict(nltk_tree),
+            'tokens': tokens   
+        }
+        query_tree = QueryTree.from_dict(dict_tree)
         candidates.append(query_tree)
 
     return candidates
 
 
 
-candidates = parse("What is the largest city in Brazil?")
+# candidates = parse("What is the largest city in Brazil?")
+# best = candidates[0]
+# print(best['tokens'])

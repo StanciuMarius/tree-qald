@@ -22,9 +22,12 @@ def prepare_input():
 
     with open(QUESTION_SET_FILE_PATH, 'r', encoding='utf-8') as input_file:
         questions = json.load(input_file)
-        questions = list(filter(lambda question: question['tree'], questions))
-        questions = list(map(lambda question: QueryTree.from_dict(question['tree'], question['tokens']), questions))
+        questions = list(filter(lambda question: question['root'], questions))
+        questions = list(map(lambda question: QueryTree.from_dict(question), questions))
         questions = list(filter(lambda question: not contains_bad_exists(question), questions))
+        for question in questions:
+            question.remove_children_of_type(NodeType.VARIABLE)
+            
 
         random.shuffle(questions)
         split_point = int(TRAIN_TEST_RATIO * len(questions))

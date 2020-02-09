@@ -23,7 +23,7 @@ def tokens_to_token(tree_dict: dict):
             for token in child['tokens']:
                 children.append({
                     'type': 'TOKEN',
-                    'index': token
+                    'id': token
                 })
         else:
             tokens_to_token(child)
@@ -36,7 +36,7 @@ def from_dict(tree_dict: dict, tokens: List[str]):
         node_type = enum_for_str(tree_dict['type'])
 
         if node_type == NodeType.TOKEN:
-            node = token_nodes[tree_dict['index']]
+            node = token_nodes[tree_dict['id']]
             used_nodes.add(node)
         else:
             node = QueryTree.Node(node_type)
@@ -65,7 +65,7 @@ def from_dict(tree_dict: dict, tokens: List[str]):
 with open('jimmy.ask', 'w') as output_file:
     for tree in trees:
         try:
-            index = int(tree['index'])
+            index = int(tree['id'])
             tokens = run_task(Task.TOKENIZE, questions[index][1])
             tokens_to_token(tree['tree'])
             query_tree = from_dict(tree, tokens)

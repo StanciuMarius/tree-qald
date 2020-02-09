@@ -129,6 +129,8 @@ class QueryTree:
             pretty_string = self.type.value
             if self.type == NodeType.TOKEN:
                 pretty_string += '(' + str(self.token) + ')'
+            if self.kb_resources:
+                pretty_string += '[' + self.kb_resources[0].split('/')[-1] + ']'
             return pretty_string 
 
     def __init__(self, root: Node, tokens: List[str]):
@@ -179,13 +181,23 @@ class QueryTree:
                 node_dict['kb_resources'] = node.kb_resources
             return node_dict
         
-        return node_to_dict(self.root)
+        return {
+            'root': node_to_dict(self.root),
+            'tokens': self.tokens
+        }
 
     def pretty_print(self):
         print_tree(self.root, childattr='children')
-    
+
+    def offset_for_node(self, node: Node):
+        tokens = [token.id for token in node.collect({NodeType.TOKEN})]
+        begin_offset, end_offset = self._index_to_offset(tokens)
+
+        return begin_offset, end_offset
+
     @classmethod
-    def from_dict(cls, tree_dict: dict, tokens: List[str]):
+    def from_dict(cls, tree_dict: dict):
+        tokens = tree_dict['tokens']
         token_nodes = [QueryTree.Node(NodeType.TOKEN, id, tokens[id]) for id in range(len(tokens))]
         used_nodes = set()
         
@@ -193,7 +205,7 @@ class QueryTree:
             node_type = enum_for_str(tree_dict['type'])
 
             if node_type == NodeType.TOKEN:
-                node = token_nodes[tree_dict['index']]
+                node = token_nodes[tree_dict['id']]
                 used_nodes.add(node)
             else:
                 node = QueryTree.Node(node_type)
@@ -215,7 +227,7 @@ class QueryTree:
                 sort_recursively(child)
             node.children = sorted(node.children, key=lambda x: get_first_leaf(x))
 
-        root = node_from_dict(tree_dict)
+        root = node_from_dict(tree_dict['root'])
         sort_recursively(root)
             
         tree = QueryTree(root, tokens)
@@ -231,3 +243,26 @@ class QueryTree:
                     # unused_container_node.children.append(node)
         
         return tree
+        
+    def remove_children_of_type(self, node_type: NodeType):
+        def remove_children_of_type_recursive(node, node_type):
+            node.children = list(filter(lambda node: node.type != node_type, node.children))
+            for child in node.children:
+                remove_children_of_type_recursive(child, node_type)
+        remove_children_of_type_recursive(self.root, node_type)
+
+    def _index_to_offset(self, token_indexes: List[int]) -> (int, int):
+        '''
+            Convertor from token index clusters to begin-end offset notation.
+            E.g. Who is the wife of Barack Obama?
+            input: [0]
+            output: (0,3)
+        '''
+        token_indexes = sorted(token_indexes)
+        text = ' '.join(self.tokens)
+
+        target_text  = ' '.join([self.tokens[token] for token in token_indexes])
+        target_begin = text.find(target_text)
+        target_end    = target_begin + len(target_text)
+
+        return (target_begin, target_end)
