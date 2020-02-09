@@ -6,15 +6,17 @@ sys.path.insert(0, os.getcwd())
 
 from common.query_tree import QueryTree
 from common.query_tree import SerializationFormat
+from common.constants import GRAMMAR_FILE_PATH
+from common.syntax_checker import SyntaxChecker
+
 from services.tasks import run_task, Task
 from nltk.tree import Tree
 from pptree import print_tree
 from typing import List
 
-from services.parser.constants import INTERMEDIATE_QUERY_FILE_PATH, MODEL_FILE_PATH, FINAL_OUTPUT_FILE_PATH, NCRFPP_REPOSITORY_PATH, NCRFPP_DECODE_CONFIG_FILE_PATH, TREE_CANDIDATES_N_BEST, GRAMMAR_FILE_PATH
+from services.parser.constants import INTERMEDIATE_QUERY_FILE_PATH, MODEL_FILE_PATH, FINAL_OUTPUT_FILE_PATH, NCRFPP_REPOSITORY_PATH, NCRFPP_DECODE_CONFIG_FILE_PATH, TREE_CANDIDATES_N_BEST
 from services.parser.tree2labels.utils import sequence_to_parenthesis, get_enriched_labels_for_retagger
 from services.parser.preprocess import postprocess_labels
-from services.parser.syntax_checker import SyntaxChecker
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 
 

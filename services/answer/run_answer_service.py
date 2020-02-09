@@ -5,12 +5,12 @@ import time
 from flask import Flask, request, jsonify
 
 sys.path.insert(0, os.getcwd())
-from services.query.query import answer as internal_answer
+from services.answer.answer import answer as internal_answer
 from services.constants import PORTS
 
-query_service = Flask(__name__)
+answer_service = Flask(__name__)
 
-@query_app.route('/query', methods=['GET'])
+@query_app.route('/answer', methods=['GET'])
 def parse():
     query_text = request.args.get('input')
     if query_text:
@@ -21,7 +21,7 @@ def parse():
 
 
 def run_query_service():
-    query_service.run(host='0.0.0.0', port=PORTS['QUERY'])
+    query_service.run(host='0.0.0.0', port=PORTS['ANSWER'])
 
 
 if __name__ == '__main__':

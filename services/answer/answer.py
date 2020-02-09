@@ -5,13 +5,13 @@ from typing import List
 sys.path.insert(0, os.getcwd())
 from common.query_tree import QueryTree, NodeType
 from services.tasks import Task, run_task
-from services.query.utils import map_relations
+# from services.answer.utils import map_relations
 
 def answer(question_text: str) -> List[str]:
-    
     # Parse the query to obtain a query tree. TODO consider more candidates (atm [0])
     tree_dicts = run_task(Task.PARSE, question_text)
     trees = list(map(lambda tree_dict: QueryTree.from_dict(tree_dict), tree_dicts))
+    
     for tree in trees:
         # Map the entities
         entities: List[QueryTree.Node] = tree.root.collect({NodeType.ENTITY})
@@ -27,7 +27,7 @@ def answer(question_text: str) -> List[str]:
         tree.pretty_print()
 
         # Map the relations
-        map_relations(tree)
+        # map_relations(tree)
 
 
 answer("Who is the oldest child of Barack Obama?")

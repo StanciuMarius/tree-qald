@@ -3,7 +3,8 @@ PORTS = {
     'PARSER': 5001,
     'MAPPING': 5002,
     'NLP': 5003,
-    'QUERY': 5004,
+    'QUERY_GENERATOR': 5004,
+    'ANSWER': 5005,
 }
 
 TASKS = {

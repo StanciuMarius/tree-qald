@@ -20,7 +20,7 @@ RELATION_NODE_TYPES = {
     NodeType.ISLESS,
     NodeType.LESS,
     NodeType.SAMPLE,
-    NodeType.EQUAL
+    NodeType.EQUAL,
     NodeType.TOPN
     }
 INPUT_FILE_PATH = 'datasets\parsing\data\constituency_annotated_questions.json'
