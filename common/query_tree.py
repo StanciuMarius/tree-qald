@@ -81,13 +81,6 @@ class NodeType(Enum):
 
     # A token
     TOKEN = 'TOKEN'
-    
-    # Lists
-    TYPES = 'TYPE+'
-    ENTITIES = 'ENTITY+'
-    SUBJECTS = 'SUBJECT+'
-    OBJECTS = 'OBJECT+'
-    TOKENS = 'TOKEN+'
 
 class SerializationFormat(Enum):
     HIERARCHICAL_DICT = "HIERARCHICAL_DICT"
@@ -110,12 +103,15 @@ class QueryTree:
             self.kb_resources = []
         
         def collect(self, target_types: Set[NodeType]) -> list:
+            return self.filter(lambda node: node.type in target_types)
+
+        def filter(self, predicate) -> list:
             result = []
-            if self.type in target_types:
+            if predicate(self):
                 result.append(self)
             
             for child in self.children:
-                result.extend(child.collect(target_types))
+                result.extend(child.filter(predicate))
             
             return result
 

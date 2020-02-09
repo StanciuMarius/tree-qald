@@ -1,0 +1,3 @@
+QUERY_TEMPLATE_FILE_PATH = r'services\query_generator\static_files\query_template.sparql'
+ENTITY_SETS = {'ARGMAX', 'ARGMIN', 'ARGNTH', 'ARGMAXCOUNT', 'ARGMINCOUNT', 'SAMPLE', 'GREATER', 'LESS', 'GREATERCOUNT', 'LESSCOUNT', 'TOPN', 'PROPERTY', 'ENTITY'}
+TYPE_RELATION = 'a'
