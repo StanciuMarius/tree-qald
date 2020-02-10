@@ -1,0 +1,9 @@
+    {{ 
+        SELECT {ent} (COUNT({val}) AS {val_count}) WHERE
+        {{
+            {triples}
+            {ent} {relation} {val}.
+        }}
+        GROUP BY {ent}
+        ORDER BY {order}({val_count}) LIMIT 1
+    }}
