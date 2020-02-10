@@ -4,10 +4,11 @@ import sys
 sys.path.insert(0, os.getcwd())
 from common.query_tree import QueryTree, NodeType
 from services.query_generator.constants import QUERY_TEMPLATE_FILE_PATH, EXISTS_TEMPLATE_FILE_PATH, TYPE_RELATION, ENTITY_SETS
-from services.query_generator.node_handlers.argfunc import handle_ARGMAX, handle_ARGMIN, handle_ARGNTH
-from services.query_generator.node_handlers.misc import handle_ROOT, handle_PROPERTY, handle_ENTITY
+from services.query_generator.node_handlers.argfunc import handle_ARGMAX, handle_ARGMIN, handle_ARGNTH, handle_TOPN
+from services.query_generator.node_handlers.misc import handle_ROOT, handle_PROPERTY, handle_ENTITY, handle_SAMPLE
 from services.query_generator.node_handlers.count import handle_ARGMAXCOUNT, handle_ARGMINCOUNT, handle_COUNT
-from services.query_generator.node_handlers.exists import handle_EXISTS, handle_EXISTSRELATION
+from services.query_generator.node_handlers.exists import handle_EXISTS, handle_EXISTSRELATION, handle_ISA
+from services.query_generator.node_handlers.comparators import handle_GREATER, handle_LESS, handle_ISGREATER, handle_ISLESS, handle_GREATERCOUNT, handle_LESSCOUNT
 
 TRIPLE_PATTERN = '\t{} {} {}.\n'
 NODE_HANDLERS = {
@@ -22,7 +23,7 @@ NODE_HANDLERS = {
     'COUNT': handle_COUNT,
     'EXISTS': handle_EXISTS,
     'EXISTSRELATION': handle_EXISTSRELATION,
-    'SAMPLE': handle_SAMPLE
+    'SAMPLE': handle_SAMPLE,
     'GREATER': handle_GREATER,
     'LESS': handle_LESS,
     'TOPN': handle_TOPN,
@@ -30,6 +31,7 @@ NODE_HANDLERS = {
     'ISLESS': handle_ISLESS,
     'GREATERCOUNT': handle_GREATERCOUNT,
     'LESSCOUNT': handle_LESSCOUNT,
+    'ISA': handle_ISA,
 }
 class QueryGenerator:
 
@@ -86,7 +88,6 @@ class QueryGenerator:
         self.post_processing = []
         self.query_tree = None
 
-QUERY_GENERATOR = QueryGenerator()
 
 def generate_query(query_tree_dict: dict):
     try:
@@ -98,12 +99,5 @@ INPUT_FILE_PATH = 'datasets\parsing\data\constituency_annotated_questions.json'
 with open(INPUT_FILE_PATH, 'r', encoding='utf-8') as input_file:
     questions = json.load(input_file)
     query_trees = list(map(lambda question: QueryTree.from_dict(question), questions))
-    # query_tree = query_trees[838]
-    # query_tree = query_trees[914]
-    # query_tree = query_trees[247] # Count Property
-    # query_tree = query_trees[1178] # Count Type
-    query_tree = query_trees[20] # Exists
-    query_tree = query_trees[108] # Exists relation Prop-Literal
-    query_tree.pretty_print()
-    query = QUERY_GENERATOR.generate(query_tree)
-    print(query)
+
+    print (count_error)
