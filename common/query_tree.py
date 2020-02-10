@@ -179,6 +179,7 @@ class QueryTree:
         }
 
     def pretty_print(self):
+        print(' '.join(self.tokens))
         print_tree(self.root, childattr='children')
 
     def offset_for_node(self, node: Node):
