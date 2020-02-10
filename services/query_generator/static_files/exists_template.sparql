@@ -1,0 +1,8 @@
+{PREFIXES}
+
+ASK
+{{
+{TRIPLES}
+{FILTERS}
+}}
+{POST_PROCESS}
