@@ -1,0 +1,9 @@
+    {{ 
+        SELECT {ent} (COUNT({val}) AS {val_count}) WHERE
+        {{
+            {triples}
+            {ent} {relation} {val}.
+        }}
+        GROUP BY {ent}
+    }}
+    FILTER({val_count} {comparator} {literal})
