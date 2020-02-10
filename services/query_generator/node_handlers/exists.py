@@ -30,3 +30,10 @@ def handle_EXISTSRELATION(gen, node: QueryTree.Node):
     elif len(entity_sets) == 1 and len(literals) == 1:
         literal = '<yoyster literal>'
         gen.triples.append((gen.node_vs_reference[entity_sets[0]], relation, literal))
+
+
+def handle_ISA(gen, node: QueryTree.Node):
+    entity_sets = list(filter(lambda child: child.type.value in ENTITY_SETS, node.children))
+    gen.node_vs_reference[node] = gen.node_vs_reference[entity_sets[0]]
+    gen.add_type_restrictions(node)
+    gen.is_exists = True
