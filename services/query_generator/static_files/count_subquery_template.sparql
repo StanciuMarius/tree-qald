@@ -1,0 +1,9 @@
+{{
+    SELECT (COUNT({VAR}) as {VAR_COUNT})
+    WHERE
+    {{
+    {TRIPLES}
+    {FILTERS}
+    }}
+    {POST_PROCESS}
+}}

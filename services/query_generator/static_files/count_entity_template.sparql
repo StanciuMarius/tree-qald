@@ -1,0 +1,7 @@
+    {{ 
+        SELECT (COUNT({val}) AS {val_count}) WHERE
+        {{  
+            {triples}
+            {var} {relation} {val}.
+        }}
+    }}
