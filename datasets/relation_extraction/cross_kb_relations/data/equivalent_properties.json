@@ -13,6 +13,7 @@
             ]
         },
         {
+            "label": "abbreviation",
             "dbpedia": [
                 "http://dbpedia.org/ontology/abbreviation"
             ],
@@ -21,6 +22,7 @@
             ]
         },
         {
+            "label": "absoluteMagnitude",
             "dbpedia": [
                 "http://dbpedia.org/ontology/absoluteMagnitude"
             ],
@@ -29,6 +31,7 @@
             ]
         },
         {
+            "label": "address",
             "dbpedia": [
                 "http://dbpedia.org/ontology/address"
             ],
@@ -120,6 +123,7 @@
             ]
         },
         {
+            "label": "apparentMagnitude",
             "dbpedia": [
                 "http://dbpedia.org/ontology/apparentMagnitude"
             ],
