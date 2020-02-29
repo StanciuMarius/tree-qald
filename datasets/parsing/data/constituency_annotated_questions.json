@@ -26,6 +26,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:date"
                     ]
                 }
             ]
@@ -74,6 +77,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:musicBy"
                     ]
                 }
             ]
@@ -119,6 +125,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/height>"
                     ]
                 }
             ]
@@ -174,6 +183,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:spouse"
                     ]
                 }
             ]
@@ -221,6 +233,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/presenter>"
                     ]
                 }
             ]
@@ -262,6 +277,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/budget>"
                     ]
                 }
             ]
@@ -310,6 +328,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/locationCity>"
                     ]
                 }
             ]
@@ -349,6 +370,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/date>"
                     ]
                 }
             ]
@@ -400,6 +424,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/routeEnd>"
                     ]
                 }
             ]
@@ -437,6 +464,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/product>"
                     ]
                 }
             ]
@@ -472,6 +502,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:spouse"
                     ]
                 }
             ]
@@ -510,6 +543,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:deathCause"
                     ]
                 }
             ]
@@ -568,6 +604,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:artist"
                     ]
                 }
             ]
@@ -615,6 +654,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/city>"
                     ]
                 }
             ]
@@ -658,8 +700,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/ground>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/seatingCapacity>"
                     ]
                 }
             ]
@@ -707,8 +755,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/child>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/spouse>"
                     ]
                 }
             ]
@@ -760,6 +814,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/author>"
                             ]
                         },
                         {
@@ -776,6 +833,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/publisher>"
                     ]
                 }
             ]
@@ -817,6 +877,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/height>"
                     ]
                 }
             ]
@@ -872,6 +935,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:museum"
                     ]
                 }
             ]
@@ -933,6 +999,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:author"
                     ]
                 }
             ]
@@ -978,6 +1047,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:spouse"
                             ]
                         }
                     ]
@@ -1012,6 +1084,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/discoverer>"
                     ]
                 }
             ]
@@ -1057,6 +1132,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:crosses"
                     ]
                 }
             ]
@@ -1100,6 +1178,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:nickname"
                     ]
                 }
             ]
@@ -1134,6 +1215,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/areaTotal>"
                     ]
                 }
             ]
@@ -1180,6 +1264,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/mayor>"
                     ]
                 }
             ]
@@ -1246,8 +1333,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/city>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/coach>"
                     ]
                 }
             ]
@@ -1304,8 +1397,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:capital"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:mayor"
                     ]
                 }
             ]
@@ -1358,6 +1457,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:award"
                     ]
                 }
             ]
@@ -1402,6 +1504,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/budget>"
                     ]
                 }
             ]
@@ -1437,6 +1542,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/routeStart>"
                     ]
                 }
             ]
@@ -1491,6 +1599,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:parent"
                             ]
                         }
                     ]
@@ -1535,6 +1646,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:portrayer"
                     ]
                 }
             ]
@@ -1583,6 +1697,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/language>"
                             ]
                         }
                     ]
@@ -1648,6 +1765,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/starring>"
                     ]
                 }
             ]
@@ -1698,6 +1818,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:sourceCountry"
                     ]
                 }
             ]
@@ -1747,6 +1870,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/birthYear>"
                     ]
                 }
             ]
@@ -1800,6 +1926,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:party"
                             ]
                         }
                     ]
@@ -1835,6 +1964,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:birthPlace"
                     ]
                 }
             ]
@@ -1875,6 +2007,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/spouse>"
                             ]
                         }
                     ]
@@ -1915,6 +2050,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:firstAscentPerson"
                     ]
                 }
             ]
@@ -1951,6 +2089,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/populationTotal>"
                     ]
                 }
             ]
@@ -2003,6 +2144,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/location>"
                     ]
                 }
             ]
@@ -2062,6 +2206,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:starring"
                             ]
                         }
                     ]
@@ -2113,6 +2260,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:country"
                     ]
                 }
             ]
@@ -2166,8 +2316,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/starring>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/releaseDate>"
                     ]
                 }
             ]
@@ -2218,8 +2374,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:locatedInArea"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:elevation"
                     ]
                 }
             ]
@@ -2263,6 +2425,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:deathDate"
                             ]
                         }
                     ]
@@ -2302,6 +2467,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/creator>"
                     ]
                 }
             ]
@@ -2344,6 +2512,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:officialLanguage"
                     ]
                 }
             ]
@@ -2393,6 +2564,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/writer>"
                     ]
                 }
             ]
@@ -2455,8 +2629,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/director>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/starring>"
                     ]
                 }
             ]
@@ -2504,6 +2684,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/ingredient>"
                     ]
                 }
             ]
@@ -2553,6 +2736,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:birthPlace"
                     ]
                 }
             ]
@@ -2592,6 +2778,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/ingredient>"
                     ]
                 }
             ]
@@ -2646,6 +2835,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/team>"
                             ]
                         }
                     ]
@@ -2696,6 +2888,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/award>"
                     ]
                 }
             ]
@@ -2758,8 +2953,14 @@
                                                 }
                                             ]
                                         }
+                                    ],
+                                    "kb_resources": [
+                                        "<http://dbpedia.org/ontology/foundingYear>"
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/foundingYear>"
                             ]
                         }
                     ]
@@ -2815,6 +3016,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:country"
                             ]
                         },
                         {
@@ -2827,6 +3031,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:headquarter"
                     ]
                 }
             ]
@@ -2891,6 +3098,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:date"
                     ]
                 }
             ]
@@ -2931,6 +3141,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:abbreviation"
                     ]
                 }
             ]
@@ -2974,6 +3187,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:dissolutionDate"
                     ]
                 }
             ]
@@ -3034,8 +3250,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:seasonNumber"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:series"
                     ]
                 }
             ]
@@ -3086,6 +3308,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:populationTotal"
                     ]
                 }
             ]
@@ -3141,6 +3366,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:almaMater"
                             ]
                         }
                     ]
@@ -3191,6 +3419,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:locatedInArea"
                     ]
                 }
             ]
@@ -3239,8 +3470,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:country"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:areaTotal"
                     ]
                 }
             ]
@@ -3290,6 +3527,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:operator"
                     ]
                 }
             ]
@@ -3340,6 +3580,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:leaderName"
                     ]
                 }
             ]
@@ -3375,6 +3618,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/creator>"
                     ]
                 }
             ]
@@ -3410,6 +3656,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/portrayer>"
                     ]
                 }
             ]
@@ -3459,6 +3708,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:programmingLanguage"
                     ]
                 }
             ]
@@ -3512,6 +3764,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/currency>"
                     ]
                 }
             ]
@@ -3560,6 +3815,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:editor"
                     ]
                 }
             ]
@@ -3598,8 +3856,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:capital"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:populationTotal"
                     ]
                 }
             ]
@@ -3651,6 +3915,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:birthPlace"
                     ]
                 }
             ]
@@ -3700,6 +3967,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/industry>"
                             ]
                         },
                         {
@@ -3712,6 +3982,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/foundationPlace>"
                     ]
                 }
             ]
@@ -3769,6 +4042,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:publisher"
                     ]
                 }
             ]
@@ -3811,6 +4087,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/numberOfLocations>"
                             ]
                         }
                     ]
@@ -3847,6 +4126,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/capital>"
                     ]
                 }
             ]
@@ -3959,6 +4241,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:spouse"
                             ]
                         }
                     ]
@@ -4015,6 +4300,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/director>"
                     ]
                 }
             ]
@@ -4070,8 +4358,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:director"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:budget"
                     ]
                 }
             ]
@@ -4132,6 +4426,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:numberOfEpisodes"
                     ]
                 }
             ]
@@ -4170,6 +4467,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:nickname"
                     ]
                 }
             ]
@@ -4224,6 +4524,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:birthPlace"
                             ]
                         }
                     ]
@@ -4270,8 +4573,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/child>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/child>"
                     ]
                 }
             ]
@@ -4325,6 +4634,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/starring>"
                             ]
                         },
                         {
@@ -4341,6 +4653,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/director>"
                     ]
                 }
             ]
@@ -4383,8 +4698,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/creator>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/deathDate>"
                     ]
                 }
             ]
@@ -4433,8 +4754,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:creator"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:nationality"
                     ]
                 }
             ]
@@ -4472,6 +4799,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/property/alterEgo>"
                     ]
                 }
             ]
@@ -4524,6 +4854,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/governmentType>"
                     ]
                 }
             ]
@@ -4577,8 +4910,14 @@
                                                 }
                                             ]
                                         }
+                                    ],
+                                    "kb_resources": [
+                                        "<http://dbpedia.org/ontology/foundedBy>"
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/foundedBy>"
                             ]
                         }
                     ]
@@ -4647,8 +4986,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:genre"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:country"
                     ]
                 }
             ]
@@ -4692,6 +5037,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/child>"
                             ]
                         }
                     ]
@@ -4733,6 +5081,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:child"
                     ]
                 }
             ]
@@ -4785,6 +5136,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:wineRegion"
                     ]
                 }
             ]
@@ -4829,8 +5183,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:child"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:birthDate"
                     ]
                 }
             ]
@@ -4938,6 +5298,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:starring"
                             ]
                         }
                     ]
@@ -4985,6 +5348,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:publisher"
                     ]
                 }
             ]
@@ -5032,6 +5398,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:inflow"
                             ]
                         }
                     ]
@@ -5083,6 +5452,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/targetAirport>"
                     ]
                 }
             ]
@@ -5131,8 +5503,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/location>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/numberOfEmployees>"
                     ]
                 }
             ]
@@ -5178,6 +5556,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/connotation>"
                     ]
                 }
             ]
@@ -5210,6 +5591,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:author"
                     ]
                 }
             ]
@@ -5263,6 +5647,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:spouse"
                             ]
                         }
                     ]
@@ -5315,6 +5702,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:spouse"
                             ]
                         },
                         {
@@ -5327,6 +5717,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:spouse"
                     ]
                 }
             ]
@@ -5381,6 +5774,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/ethnicGroup>"
                             ]
                         }
                     ]
@@ -5428,6 +5824,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/leader>"
                     ]
                 }
             ]
@@ -5476,6 +5875,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/director>"
                     ]
                 }
             ]
@@ -5510,6 +5912,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:completionDate"
                     ]
                 }
             ]
@@ -5551,6 +5956,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:numberOfPages"
                     ]
                 }
             ]
@@ -5601,8 +6009,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:locatedInArea"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:elevation"
                     ]
                 }
             ]
@@ -5642,6 +6056,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:height"
                     ]
                 }
             ]
@@ -5697,6 +6114,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:vicePresident"
                     ]
                 }
             ]
@@ -5737,6 +6157,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:subsidiary"
                             ]
                         },
                         {
@@ -5763,6 +6186,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:targetAirport"
                     ]
                 }
             ]
@@ -5809,6 +6235,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:successor"
                     ]
                 }
             ]
@@ -5845,6 +6274,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/musicComposer>"
                     ]
                 }
             ]
@@ -5891,6 +6323,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:director"
                     ]
                 }
             ]
@@ -5952,10 +6387,19 @@
                                                 }
                                             ]
                                         }
+                                    ],
+                                    "kb_resources": [
+                                        "dbo:artist"
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:releaseDate"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:recordLabel"
                     ]
                 }
             ]
@@ -6007,6 +6451,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/timeZone>"
                     ]
                 }
             ]
@@ -6051,6 +6498,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:currency"
                     ]
                 }
             ]
@@ -6085,6 +6535,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/developer>"
                     ]
                 }
             ]
@@ -6131,8 +6584,14 @@
                                                 }
                                             ]
                                         }
+                                    ],
+                                    "kb_resources": [
+                                        "dbo:deathPlace"
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:website"
                             ]
                         }
                     ]
@@ -6182,6 +6641,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/leader>"
                     ]
                 }
             ]
@@ -6231,6 +6693,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/deathPlace>"
                     ]
                 }
             ]
@@ -6274,6 +6739,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:father"
                     ]
                 }
             ]
@@ -6318,6 +6786,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/conservationStatus>"
                     ]
                 }
             ]
@@ -6373,10 +6844,19 @@
                                                 }
                                             ]
                                         }
+                                    ],
+                                    "kb_resources": [
+                                        "yoyster"
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:largestCity"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:populationTotal"
                     ]
                 }
             ]
@@ -6437,6 +6917,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:battle"
                     ]
                 }
             ]
@@ -6484,6 +6967,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:sourceCountry"
                     ]
                 }
             ]
@@ -6529,6 +7015,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/product>"
                     ]
                 }
             ]
@@ -6569,6 +7058,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/child>"
                             ]
                         }
                     ]
@@ -6628,8 +7120,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/property/office>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/birthPlace>"
                     ]
                 }
             ]
@@ -6681,6 +7179,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/birthPlace>"
                     ]
                 }
             ]
@@ -6726,6 +7227,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/language>"
                     ]
                 }
             ]
@@ -6775,6 +7279,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:author"
                     ]
                 }
             ]
@@ -6829,6 +7336,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:spouse"
                     ]
                 }
             ]
@@ -6865,6 +7375,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:areaCode"
                     ]
                 }
             ]
@@ -6918,6 +7431,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:starring"
                     ]
                 }
             ]
@@ -6959,6 +7475,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/property/nickname>"
                     ]
                 }
             ]
@@ -7008,8 +7527,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/artist>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/releaseDate>"
                     ]
                 }
             ]
@@ -7064,6 +7589,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:country"
                     ]
                 }
             ]
@@ -7118,6 +7646,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:creator"
                     ]
                 }
             ]
@@ -7164,6 +7695,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/foundationPlace>"
                     ]
                 }
             ]
@@ -7201,6 +7735,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/spouse>"
                     ]
                 }
             ]
@@ -7234,6 +7771,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:capital"
                     ]
                 }
             ]
@@ -7276,6 +7816,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/influenced>"
                     ]
                 }
             ]
@@ -7329,6 +7872,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:deathPlace"
                     ]
                 }
             ]
@@ -7383,6 +7929,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:battle"
                     ]
                 }
             ]
@@ -7431,6 +7980,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/composer>"
                     ]
                 }
             ]
@@ -7470,6 +8022,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:architect"
                     ]
                 }
             ]
@@ -7507,6 +8062,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/activeYearsEndDate>"
                     ]
                 }
             ]
@@ -7543,6 +8101,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/growingGrape>"
                     ]
                 }
             ]
@@ -7582,6 +8143,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:height"
                     ]
                 }
             ]
@@ -7639,8 +8203,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/mayor>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/party>"
                     ]
                 }
             ]
@@ -7704,6 +8274,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:author"
                     ]
                 }
             ]
@@ -7769,8 +8342,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:office"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:orderInOffice"
                     ]
                 }
             ]
@@ -7812,6 +8391,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:elevation"
                     ]
                 }
             ]
@@ -7850,6 +8432,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/doctoralAdvisor>"
                     ]
                 }
             ]
@@ -7900,6 +8485,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/residence>"
                     ]
                 }
             ]
@@ -7949,6 +8537,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:currency"
                     ]
                 }
             ]
@@ -7995,6 +8586,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:influencedBy"
                     ]
                 }
             ]
@@ -8049,6 +8643,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:timezone"
                     ]
                 }
             ]
@@ -8096,6 +8693,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/parent>"
                     ]
                 }
             ]
@@ -8146,6 +8746,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/location>"
                     ]
                 }
             ]
@@ -8188,6 +8791,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:founder"
                     ]
                 }
             ]
@@ -8227,6 +8833,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/foundingYear>"
                     ]
                 }
             ]
@@ -8270,6 +8879,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:leaderName"
                     ]
                 }
             ]
@@ -8314,6 +8926,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:birthPlace"
                     ]
                 }
             ]
@@ -8357,6 +8972,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/author>"
                     ]
                 }
             ]
@@ -8398,8 +9016,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:spouse"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:parent"
                     ]
                 }
             ]
@@ -8461,6 +9085,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:award"
                     ]
                 }
             ]
@@ -8543,6 +9170,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:parent"
                     ]
                 }
             ]
@@ -8586,6 +9216,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:child"
                             ]
                         }
                     ]
@@ -8643,6 +9276,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:areaTotal"
                     ]
                 }
             ]
@@ -8694,6 +9330,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/award>"
                     ]
                 }
             ]
@@ -8749,6 +9388,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:author"
                             ]
                         },
                         {
@@ -8761,6 +9403,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:numberOfPages"
                     ]
                 }
             ]
@@ -8805,6 +9450,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/property/location>"
                     ]
                 }
             ]
@@ -8852,6 +9500,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:location"
                     ]
                 }
             ]
@@ -8892,6 +9543,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/restingPlace>"
                     ]
                 }
             ]
@@ -8947,6 +9601,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/timeZone>"
                     ]
                 }
             ]
@@ -9014,8 +9671,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/author>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/movement>"
                     ]
                 }
             ]
@@ -9088,6 +9751,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:knownFor"
                     ]
                 }
             ]
@@ -9143,6 +9809,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/series>"
                     ]
                 }
             ]
@@ -9198,6 +9867,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:isPartOf"
                             ]
                         },
                         {
@@ -9210,6 +9882,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:populationTotal"
                     ]
                 }
             ]
@@ -9268,8 +9943,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/location>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/numberOfVisitors>"
                     ]
                 }
             ]
@@ -9315,6 +9996,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:height"
                     ]
                 }
             ]
@@ -9372,6 +10056,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:developer"
                     ]
                 }
             ]
@@ -9422,6 +10109,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:foundedBy"
                     ]
                 }
             ]
@@ -9467,6 +10157,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:musicComposer"
                     ]
                 }
             ]
@@ -9503,6 +10196,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/bandMember>"
                     ]
                 }
             ]
@@ -9555,6 +10251,9 @@
                                                 }
                                             ]
                                         }
+                                    ],
+                                    "kb_resources": [
+                                        "<http://dbpedia.org/ontology/country>"
                                     ]
                                 },
                                 {
@@ -9575,8 +10274,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/producer>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/starring>"
                     ]
                 }
             ]
@@ -9624,6 +10329,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/subsidiary>"
                             ]
                         },
                         {
@@ -9646,6 +10354,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/targetAirport>"
                     ]
                 }
             ]
@@ -9694,6 +10405,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:country"
                     ]
                 }
             ]
@@ -9742,6 +10456,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/language>"
                             ]
                         }
                     ]
@@ -9793,8 +10510,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "<http://dbpedia.org/ontology/location>"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/seatingCapacity>"
                     ]
                 }
             ]
@@ -9844,6 +10567,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:birthPlace"
                     ]
                 }
             ]
@@ -9884,6 +10610,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/governmentType>"
                     ]
                 }
             ]
@@ -9966,6 +10695,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/deathDate>"
                     ]
                 }
             ]
@@ -10003,6 +10735,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:location"
                             ]
                         },
                         {
@@ -10019,6 +10754,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:wineProduced"
                     ]
                 }
             ]
@@ -53390,6 +54128,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:nickname"
                     ]
                 }
             ]
@@ -53424,6 +54165,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:abbreviation"
                     ]
                 }
             ]
@@ -53527,6 +54271,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbp:nickname"
                     ]
                 }
             ]
@@ -53559,6 +54306,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:populationTotal"
                     ]
                 }
             ]
@@ -53611,8 +54361,14 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "dbo:league"
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:birthDate"
                     ]
                 }
             ]
@@ -53650,6 +54406,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:numberOfPages"
                     ]
                 }
             ]
@@ -53696,6 +54455,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/races>"
                     ]
                 }
             ]
@@ -53735,6 +54497,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:mainspan"
                     ]
                 }
             ]
@@ -53775,6 +54540,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/height>"
                     ]
                 }
             ]
@@ -53809,6 +54577,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "<http://dbpedia.org/ontology/populationTotal>"
                     ]
                 }
             ]
@@ -53847,6 +54618,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "dbo:birthDate"
                     ]
                 }
             ]
