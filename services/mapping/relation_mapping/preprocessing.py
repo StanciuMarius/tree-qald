@@ -1,55 +1,62 @@
 import json
 import numpy as np
-from transformers import BertTokenizer
-from keras.preprocessing.sequence import pad_sequences
+# from transformers import BertTokenizer
+# from keras.preprocessing.sequence import pad_sequences
 from services.mapping.relation_mapping.constants import EQUIVALENT_RELATIONS_DATASET_PATH, KNOWLEDGE_BASES
-from sklearn.preprocessing import LabelEncoder
+# from sklearn.preprocessing import LabelEncoder
 from typing import List
 import torch
 
 UNKNOWN_LABEL = 'UNKNOWN'
-def generate_equivalent_relations(dataset_relations: List[str]):
-    kb_vs_generic_relations = {}
-    with open(EQUIVALENT_RELATIONS_DATASET_PATH, 'r', encoding='utf-8') as file:
-        relation_sets = json.load(file)['dataset']
-        for relation_set in  relation_sets:
-            label = relation_set['label']
-            for kb in KNOWLEDGE_BASES:
-                if kb in  relation_set:
-                    for relation in relation_set[kb]:
-                        kb_vs_generic_relations[relation] = label
-    dataset_relation_aliases = []
-    for relation in dataset_relations:
-        if relation in kb_vs_generic_relations:
-            dataset_relation_aliases.append(kb_vs_generic_relations[relation])
-        else:
-            dataset_relation_aliases.append(UNKNOWN_LABEL)
-    dataset_relation_aliases = list(set(dataset_relation_aliases))
 
-    return kb_vs_generic_relations, dataset_relation_aliases
-
-class LabelEncoderTransform(object):
-    def __init__(self, labels: List[str]):
-        self.label_encoder = LabelEncoder()            
-        self.label_encoder.fit(labels)
+# class LabelEncoderTransform(object):
+#     def __init__(self, labels: List[str]):
+#         self.label_encoder = LabelEncoder()            
+#         self.label_encoder.fit(labels)
     
-    def __call__(self, sample):
-        sample['label'] = self.label_encoder.transform([sample['label']])[0]
-        return sample
+#     def __call__(self, sample):
+#         sample['label'] = self.label_encoder.transform([sample['label']])[0]
+#         return sample
 
-class LabelAliasTransform(object):
-    def __init__(self, label_aliases: dict):
-        self.label_aliases = label_aliases
-      
+class BertRelationExtractionFormatTransform(object):
+    def __call__(self, sample):
+        text = sample['text']
+        new_token_indices = [
+            ('[E1]', sample['subject_begin']),
+            ('[/E1]', sample['subject_end']),
+            ('[E2]', sample['object_begin']),
+            ('[/E2]', sample['object_end']),
+        ]
+        new_token_indices = sorted(new_token_indices, key=lambda x: x[1])
+        accumulated_offset = 0
+        for token, old_index in new_token_indices:
+            text_to_insert = ' ' + token + ' '
+            new_index = old_index + accumulated_offset
+            text = text[:new_index] + text_to_insert + text[new_index:]
+            accumulated_offset += len(text_to_insert)
+        
+        return {'text': text, 'relation': sample['label']}
+
+class EquivalentRelationTransform(object):
+    def __init__(self):
+        self.kb_vs_generic_relations = {}
+        with open(EQUIVALENT_RELATIONS_DATASET_PATH, 'r', encoding='utf-8') as file:
+            relation_sets = json.load(file)['dataset']
+            for relation_set in  relation_sets:
+                label = relation_set['label']
+                for kb in KNOWLEDGE_BASES:
+                    if kb in  relation_set:
+                        for relation in relation_set[kb]:
+                            self.kb_vs_generic_relations[relation] = label
     def __call__(self, sample):
         relation = sample['relation']
         reversed_relation = '_' + relation
 
-        if relation in self.label_aliases:
-            sample['label'] = self.label_aliases[relation]
+        if relation in self.kb_vs_generic_relations:
+            sample['label'] = self.kb_vs_generic_relations[relation]
         # TODO: reconsider reversed relations
-        elif reversed_relation in self.label_aliases:
-            sample['label'] = self.label_aliases[reversed_relation]
+        elif reversed_relation in self.kb_vs_generic_relations:
+            sample['label'] = self.kb_vs_generic_relations[reversed_relation]
         else:
             sample['label'] = UNKNOWN_LABEL
 

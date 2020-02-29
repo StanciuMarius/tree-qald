@@ -10,8 +10,6 @@ DATASET_PATHS = [
     r'datasets\relation_extraction\tacred\data\train_normalized.json',
 ]
 
-
-
 class RelationExtractionDataset(Dataset):
     def __init__(self, transform=None):
         self.transform = transform
