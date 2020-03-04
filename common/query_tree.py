@@ -64,6 +64,9 @@ class NodeType(Enum):
     # PROPERTY is the a term of an RDF triple (the subject or object, not known yet)
     PROPERTY = 'PROPERTY'
 
+    # Filters ENTITYSET by property containing the child entity or literal
+    PROPERTYCONTAINS = 'PROPERTYCONTAINS'
+
     # Tokens that represent knowledge base TYPE+. E.g. "comonauts" "writer" 
     TYPE = 'TYPE'
 
@@ -81,6 +84,36 @@ class NodeType(Enum):
 
     # A token
     TOKEN = 'TOKEN'
+
+# Nodes that correspond to a Knowledge Base relation, hence they need mapping.
+RELATION_NODE_TYPES = { NodeType.PROPERTY,
+    NodeType.ARGMAXCOUNT,
+    NodeType.ARGMINCOUNT,
+    NodeType.ARGMAX,
+    NodeType.ARGMIN,
+    NodeType.ARGNTH,
+    NodeType.EXISTSRELATION,
+    NodeType.GREATER,
+    NodeType.GREATERCOUNT,
+    NodeType.LESS,
+    NodeType.TOPN,
+    NodeType.ISGREATER,
+    NodeType.ISLESS,
+}
+ENTITY_SET_TYPES = {
+    NodeType.PROPERTY,
+    NodeType.SAMPLE,
+    NodeType.ARGMAX,
+    NodeType.ARGMIN,
+    NodeType.ARGNTH,
+    NodeType.ARGMAXCOUNT,
+    NodeType.ARGMINCOUNT,
+    NodeType.ARGMINCOUNT,
+    NodeType.LESS,
+    NodeType.GREATERCOUNT,
+    NodeType.TOPN,
+    NodeType.ENTITY
+}
 
 class SerializationFormat(Enum):
     HIERARCHICAL_DICT = "HIERARCHICAL_DICT"
@@ -116,11 +149,12 @@ class QueryTree:
             return result
 
         def __str__(self):
-            pretty_string = self.type.value
             if self.type == NodeType.TOKEN:
-                pretty_string += '(' + str(self.token) + ')'
+                pretty_string = str(self.token)
+            else: 
+                pretty_string = self.type.value + '#{}'.format(abs(self.id))
             if self.kb_resources:
-                pretty_string += '[' + self.kb_resources[0].split('/')[-1] + ']'
+                pretty_string += '[' + self.kb_resources[0].split('/')[-1].replace('>', '') + ']'
             return pretty_string 
 
     def __init__(self, root: Node, tokens: List[str], id: str = 'default'):
@@ -202,6 +236,9 @@ class QueryTree:
                 used_nodes.add(node)
             else:
                 node = QueryTree.Node(node_type)
+            
+            if 'kb_resources' in tree_dict:
+                node.kb_resources = tree_dict['kb_resources']
 
             if 'children' in tree_dict:
                 for child in tree_dict['children']:
@@ -254,7 +291,7 @@ class QueryTree:
         token_indexes = sorted(token_indexes)
         text = ' '.join(self.tokens)
 
-        target_text  = ' '.join([self.tokens[token] for token in token_indexes])
+        target_text  = ' '.join(self.tokens[token_indexes[0]:token_indexes[-1] + 1])
         target_begin = text.find(target_text)
         target_end    = target_begin + len(target_text)
 

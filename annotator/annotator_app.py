@@ -19,6 +19,7 @@ ASK_FOR_RELATION = False
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 settings = {
     'symbol_vs_node_type': {
+        'f11': NodeType.PROPERTYCONTAINS,
         'f10': NodeType.TOPN,
         'f9': NodeType.LESSCOUNT,
         'f8': NodeType.GREATERCOUNT,

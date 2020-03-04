@@ -787,7 +787,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -2989,7 +2989,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -3940,7 +3940,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -4603,7 +4603,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -4945,7 +4945,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -6140,7 +6140,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -10224,7 +10224,7 @@
                     "id": -2,
                     "children": [
                         {
-                            "type": "PROPERTY",
+                            "type": "PROPERTYCONTAINS",
                             "id": -3,
                             "children": [
                                 {
@@ -10308,7 +10308,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -10718,7 +10718,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -13131,7 +13131,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -29408,7 +29408,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -31696,7 +31696,7 @@
                     "id": -2,
                     "children": [
                         {
-                            "type": "PROPERTY",
+                            "type": "PROPERTYCONTAINS",
                             "id": -3,
                             "children": [
                                 {
@@ -35600,7 +35600,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -36829,7 +36829,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -39820,28 +39820,22 @@
                                     ]
                                 },
                                 {
-                                    "type": "PROPERTY",
+                                    "type": "ENTITY",
                                     "id": -5,
                                     "children": [
                                         {
-                                            "type": "ENTITY",
-                                            "id": -6,
-                                            "children": [
-                                                {
-                                                    "type": "TOKEN",
-                                                    "id": 9
-                                                }
-                                            ]
-                                        },
+                                            "type": "TOKEN",
+                                            "id": 9
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "TYPE",
+                                    "id": -6,
+                                    "children": [
                                         {
-                                            "type": "TYPE",
-                                            "id": -7,
-                                            "children": [
-                                                {
-                                                    "type": "TOKEN",
-                                                    "id": 10
-                                                }
-                                            ]
+                                            "type": "TOKEN",
+                                            "id": 10
                                         }
                                     ]
                                 }
@@ -40633,7 +40627,7 @@
                     "id": -2,
                     "children": [
                         {
-                            "type": "PROPERTY",
+                            "type": "PROPERTYCONTAINS",
                             "id": -3,
                             "children": [
                                 {
@@ -44613,7 +44607,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -45288,7 +45282,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -45349,7 +45343,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -46965,7 +46959,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -47387,7 +47381,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -48775,7 +48769,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -49324,7 +49318,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -49808,7 +49802,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -50774,7 +50768,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -50788,7 +50782,7 @@
                             ]
                         },
                         {
-                            "type": "PROPERTY",
+                            "type": "PROPERTYCONTAINS",
                             "id": -4,
                             "children": [
                                 {
@@ -51489,7 +51483,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -51937,7 +51931,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -56235,7 +56229,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -56837,7 +56831,7 @@
                     "id": -2,
                     "children": [
                         {
-                            "type": "PROPERTY",
+                            "type": "PROPERTYCONTAINS",
                             "id": -3,
                             "children": [
                                 {
@@ -58103,7 +58097,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
@@ -58181,7 +58175,7 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "PROPERTYCONTAINS",
                     "id": -2,
                     "children": [
                         {
