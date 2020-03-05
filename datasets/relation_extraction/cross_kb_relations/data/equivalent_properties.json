@@ -185,7 +185,7 @@
             "description": "The number of employees or members of an organization.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/numberOfEmployees",
-                "http://dbpedia.org/property/numEmployees",
+                "http://dbpedia.org/property/numEmployees"
             ],
             "wikidata": [
                 "https://www.wikidata.org/entity/P2124",
@@ -942,7 +942,7 @@
             "label": "genre",
             "description": "Genre of an artwork.",
             "dbpedia": [
-                "http://dbpedia.org/ontology/genre"
+                "http://dbpedia.org/ontology/genre",
                 "http://dbpedia.org/ontology/literaryGenre"
             ],
             "wikidata": [
