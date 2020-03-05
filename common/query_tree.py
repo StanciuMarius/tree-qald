@@ -86,7 +86,9 @@ class NodeType(Enum):
     TOKEN = 'TOKEN'
 
 # Nodes that correspond to a Knowledge Base relation, hence they need mapping.
-RELATION_NODE_TYPES = { NodeType.PROPERTY,
+RELATION_NODE_TYPES = {
+    NodeType.PROPERTY,
+    NodeType.PROPERTYCONTAINS,
     NodeType.ARGMAXCOUNT,
     NodeType.ARGMINCOUNT,
     NodeType.ARGMAX,
@@ -102,6 +104,7 @@ RELATION_NODE_TYPES = { NodeType.PROPERTY,
 }
 ENTITY_SET_TYPES = {
     NodeType.PROPERTY,
+    NodeType.PROPERTYCONTAINS,
     NodeType.SAMPLE,
     NodeType.ARGMAX,
     NodeType.ARGMIN,
