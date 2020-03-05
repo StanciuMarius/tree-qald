@@ -5,7 +5,7 @@ sys.path.insert(0, os.getcwd())
 from common.query_tree import QueryTree, NodeType
 from services.query_generator.constants import QUERY_TEMPLATE_FILE_PATH, EXISTS_TEMPLATE_FILE_PATH, TYPE_RELATION, ENTITY_SETS
 from services.query_generator.node_handlers.argfunc import handle_ARGMAX, handle_ARGMIN, handle_ARGNTH, handle_TOPN
-from services.query_generator.node_handlers.misc import handle_ROOT, handle_PROPERTY, handle_ENTITY, handle_SAMPLE
+from services.query_generator.node_handlers.misc import handle_ROOT, handle_PROPERTY, handle_PROPERTYCONTAINS, handle_ENTITY, handle_SAMPLE
 from services.query_generator.node_handlers.count import handle_ARGMAXCOUNT, handle_ARGMINCOUNT, handle_COUNT
 from services.query_generator.node_handlers.exists import handle_EXISTS, handle_EXISTSRELATION, handle_ISA
 from services.query_generator.node_handlers.comparators import handle_GREATER, handle_LESS, handle_ISGREATER, handle_ISLESS, handle_GREATERCOUNT, handle_LESSCOUNT
@@ -17,6 +17,7 @@ NODE_HANDLERS = {
     'ARGMIN': handle_ARGMIN,
     'ARGNTH': handle_ARGNTH,
     'PROPERTY': handle_PROPERTY,
+    'PROPERTYCONTAINS': handle_PROPERTYCONTAINS,
     'ENTITY': handle_ENTITY,
     'ARGMAXCOUNT': handle_ARGMAXCOUNT,
     'ARGMINCOUNT': handle_ARGMINCOUNT,

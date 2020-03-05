@@ -20,7 +20,15 @@ def handle_PROPERTY(gen, node: QueryTree.Node):
         reference = gen.node_vs_reference[other_node]
         gen.triples.append((gen.node_vs_reference[node], relation_uri, reference))
 
+def handle_PROPERTYCONTAINS(gen, node: QueryTree.Node):
+    gen.node_vs_reference[node] = gen.generate_variable_name()
+    relation_uri = '<yoyster relation>'
 
+    gen.add_type_restrictions(node)
+    entity_set = list(filter(lambda child: child.type.value in ENTITY_SETS and child.type.value != NodeType.ENTITY, node.children))
+    entity = list(filter(lambda child: child.type.value == NodeType.ENTITY, node.children))
+    gen.triples.append((gen.node_vs_reference[entity_set[0]], relation_uri, gen.node_vs_reference[entity[0]]))
+    
 def handle_ENTITY(gen, node: QueryTree.Node):
     gen.node_vs_reference[node] = "<yoyster entity>"
 
