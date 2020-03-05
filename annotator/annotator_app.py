@@ -13,9 +13,9 @@ from annotator.constants import INPUT_FILE_PATH, OUTPUT_FILE_PATH
 from services.tasks import run_task, Task
 from common.syntax_checker import SyntaxChecker
 from common.constants import GRAMMAR_FILE_PATH
-from common.query_tree import QueryTree, NodeType
+from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 
-ASK_FOR_RELATION = False
+ASK_FOR_RELATION = True
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 settings = {
     'symbol_vs_node_type': {
@@ -147,7 +147,7 @@ def to_tree(node):
     if node.type == NodeType.TOKEN:
         result['id'] = node.token
     if node.relation:
-        result['relation'] = node.relation
+        result['kb_resources'] = [node.relation]
     return result
 
 def save(tree):
@@ -161,7 +161,7 @@ def save(tree):
         data = {
             'dataset': 'qald-8',
             'id': state['example_index'],
-            'tree': tree,
+            'root': tree,
             'tokens': state['tokens']
         }
 
@@ -214,7 +214,7 @@ def select(btn):
     canvas.focus_set()
 
 def validate(tree):
-    return SYNTAX_CHECKER.validate(QueryTree.from_dict({'root': tree, 'tokens': state['tokens']}))
+    return SYNTAX_CHECKER.validate(QueryTree.from_dict({'root': tree, 'id': state['examples'][state['current_example_index']][0], 'tokens': state['tokens']}))
 
 def on_key(event):
     key = event.keysym.lower()
@@ -274,7 +274,7 @@ def create_node(x, y, node_type, token=None):
 
 
 def user_create_node(x, y, node_type):
-    if ASK_FOR_RELATION and node_type in {NodeType.EXISTSRELATION, NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.GREATER, NodeType.LESS, NodeType.PROPERTY, NodeType.ISGREATER, NodeType.ISLESS}:
+    if ASK_FOR_RELATION and node_type in RELATION_NODE_TYPES:
         relation = simpledialog.askstring('Relation for node', root)
         canvas.focus_set()
 
@@ -285,7 +285,7 @@ def user_create_node(x, y, node_type):
         create_node(x, y, node_type)
     
 def init(index, text):
-    state['tokens'] = tokens = run_task(Task.TOKENIZE, text)
+    state['tokens'] = tokens = run_task(Task.TOKENIZE, text.strip())
     state['example_index'] = index
 
     canvas.bind("<Button-1>", lambda event: user_create_node(event.x, event.y, state['node_type']))
