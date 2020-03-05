@@ -8,7 +8,7 @@ import torch
 
 from datasets.relation_extraction.relation_extraction_dataset import RelationExtractionDataset
 from services.mapping.relation_mapping.preprocessing import EquivalentRelationTransform, BertRelationExtractionFormatTransform
-from services.mapping.relation_mapping.constants import TEMP_TESTSET_FOR_SUBMODULE_PATH, TEMP_TRAINSET_FOR_SUBMODULE_PATH, TRAIN_TEST_SPLIT_RATIO, ADDITIONAL_TOKENS_FILE_PATH
+from services.mapping.relation_mapping.constants import TEMP_TESTSET_FOR_SUBMODULE_PATH, TEMP_TRAINSET_FOR_SUBMODULE_PATH, TRAIN_TEST_SPLIT_RATIO, ADDITIONAL_TOKENS_FILE_PATH, TEMP_FOLDER_FOR_SUBMODULE_PATH
 from services.mapping.relation_mapping.BERT_Relation_Extraction.main_pretraining import main as pretrain
 from services.mapping.relation_mapping.BERT_Relation_Extraction.main_task import main as task
 from torchvision import transforms
@@ -30,7 +30,7 @@ def train():
         train_data = [example for example in train_dataset]
         json.dump(train_data, file)
 
-    train_args = ["--test_data", TEMP_TESTSET_FOR_SUBMODULE_PATH, "--train_data", TEMP_TRAINSET_FOR_SUBMODULE_PATH, "--additional_tokens_path", ADDITIONAL_TOKENS_FILE_PATH]
+    train_args = ["--test_data", TEMP_TESTSET_FOR_SUBMODULE_PATH, "--train_data", TEMP_TRAINSET_FOR_SUBMODULE_PATH, "--additional_tokens_path", ADDITIONAL_TOKENS_FILE_PATH, "--temp_folder_path", TEMP_FOLDER_FOR_SUBMODULE_PATH]
     # pretrain(['--pretrain_data', r'services\mapping\relation_mapping\temp\cnn.txt'])
     task(train_args)
 
