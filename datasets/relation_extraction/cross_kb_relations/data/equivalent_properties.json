@@ -18,7 +18,7 @@
                 "http://dbpedia.org/ontology/abbreviation"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P743"
+                "http://wikidata.org/entity/P743"
             ]
         },
         {
@@ -27,7 +27,7 @@
                 "http://dbpedia.org/ontology/absoluteMagnitude"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1457"
+                "http://wikidata.org/entity/P1457"
             ]
         },
         {
@@ -36,7 +36,7 @@
                 "http://dbpedia.org/ontology/address"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P969"
+                "http://wikidata.org/entity/P969"
             ]
         },
         {
@@ -46,10 +46,10 @@
                 "http://dbpedia.org/ontology/alias"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P742",
-                "http://www.wikidata.org/entity/P1449",
-                "http://www.wikidata.org/entity/P1705",
-                "http://www.wikidata.org/entity/P1448"
+                "http://wikidata.org/entity/P742",
+                "http://wikidata.org/entity/P1449",
+                "http://wikidata.org/entity/P1705",
+                "http://wikidata.org/entity/P1448"
             ],
             "tacred": [
                 "tacred:per:alternate_names",
@@ -65,7 +65,7 @@
                 "http://dbpedia.org/ontology/college"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P69"
+                "http://wikidata.org/entity/P69"
             ],
             "tacred": [
                 "tacred:per:schools_attended"
@@ -77,7 +77,7 @@
                 "http://dbpedia.org/ontology/anthem"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P85"
+                "http://wikidata.org/entity/P85"
             ]
         },
         {
@@ -92,15 +92,15 @@
                 "http://dbpedia.org/ontology/crewMember"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P108",
-                "http://www.wikidata.org/entity/P1029"
+                "http://wikidata.org/entity/P108",
+                "http://wikidata.org/entity/P1029"
             ],
             "tacred": [
                 "_tacred:org:top_members/employees",
                 "tacred:per:employee_of"
             ],
             "freebase": [
-                "www.freebase.com/soccer/football_position/players"
+                "http://freebase.com/soccer/football_position/players"
             ]
         },
         {
@@ -111,15 +111,15 @@
                 "http://dbpedia.org/ontology/family"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P53",
-                "http://www.wikidata.org/entity/P71",
-                "http://www.wikidata.org/entity/P1038"
+                "http://wikidata.org/entity/P53",
+                "http://wikidata.org/entity/P71",
+                "http://wikidata.org/entity/P1038"
             ],
             "tacred": [
                 "tacred:per:other_family"
             ],
             "freebase": [
-                "www.freebase.com/people/family_member/family"
+                "http://freebase.com/people/family_member/family"
             ]
         },
         {
@@ -128,7 +128,7 @@
                 "http://dbpedia.org/ontology/apparentMagnitude"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1215"
+                "http://wikidata.org/entity/P1215"
             ]
         },
         {
@@ -137,10 +137,10 @@
                 "http://dbpedia.org/ontology/architect"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P84"
+                "http://wikidata.org/entity/P84"
             ],
             "freebase": [
-                "www.freebase.com/architecture/structure/architect"
+                "http://freebase.com/architecture/structure/architect"
             ]
         },
         {
@@ -151,12 +151,12 @@
                 "http://dbpedia.org/ontology/movement"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P135",
-                "http://www.wikidata.org/entity/P149"
+                "http://wikidata.org/entity/P135",
+                "http://wikidata.org/entity/P149"
             ],
             "freebase": [
-                "www.freebase.com/architecture/structure/architectural_style",
-                "_www.freebase.com/visual_art/art_period_movement/associated_artists"
+                "http://freebase.com/architecture/structure/architectural_style",
+                "_http://freebase.com/visual_art/art_period_movement/associated_artists"
             ]
         },
         {
@@ -165,10 +165,10 @@
                 "http://dbpedia.org/ontology/areaCode"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P473"
+                "http://wikidata.org/entity/P473"
             ],
             "freebase": [
-                "_www.freebase.com/location/postal_code/country"
+                "_http://freebase.com/location/postal_code/country"
             ]
         },
         {
@@ -177,7 +177,7 @@
                 "http://dbpedia.org/ontology/atomicNumber"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1086"
+                "http://wikidata.org/entity/P1086"
             ]
         },
         {
@@ -188,8 +188,8 @@
                 "http://dbpedia.org/property/numEmployees"
             ],
             "wikidata": [
-                "https://www.wikidata.org/entity/P2124",
-                "https://www.wikidata.org/entity/P1128"
+                "https://wikidata.org/entity/P2124",
+                "https://wikidata.org/entity/P1128"
             ],
             "tacred": [
                 "tacred:org:number_of_employees/members"
@@ -204,8 +204,8 @@
                 "http://dbpedia.org/property/title"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P166",
-                "http://www.wikidata.org/entity/P4444"
+                "http://wikidata.org/entity/P166",
+                "http://wikidata.org/entity/P4444"
             ],
             "tacred": [
                 "tacred:per:title"
@@ -219,17 +219,17 @@
                 "http://dbpedia.org/ontology/discipline",
                 "http://dbpedia.org/ontology/occupation",
                 "http://dbpedia.org/ontology/field",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                "http://w3.org/1999/02/22-rdf-syntax-ns#type"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P106",
-                "http://www.wikidata.org/entity/P241",
-                "http://www.wikidata.org/entity/P101"
+                "http://wikidata.org/entity/P106",
+                "http://wikidata.org/entity/P241",
+                "http://wikidata.org/entity/P101"
             ],
             "freebase": [
-                "www.freebase.com/people/person/profession",
-                "_www.freebase.com/people/profession/people_with_this_profession",
-                "www.freebase.com/fictional_universe/fictional_character/occupation"
+                "http://freebase.com/people/person/profession",
+                "_http://freebase.com/people/profession/people_with_this_profession",
+                "http://freebase.com/fictional_universe/fictional_character/occupation"
             ]
         },
         {
@@ -241,21 +241,21 @@
                 "http://dbpedia.org/ontology/knownFor"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P800"
+                "http://wikidata.org/entity/P800"
             ]
         },
         {
             "label": "symptoms",
             "freebase": [
-                "www.freebase.com/medicine/disease/symptoms",
-                "_www.freebase.com/medicine/symptom/symptom_of"
+                "http://freebase.com/medicine/disease/symptoms",
+                "_http://freebase.com/medicine/symptom/symptom_of"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P780"
+                "http://wikidata.org/entity/P780"
             ],
             "dbpedia": [
                 "http://dbpedia.org/property/symptoms",
-                "http://www.w3.org/2000/01/rdf-schema#comment"
+                "http://w3.org/2000/01/rdf-schema#comment"
             ]
         },
         {
@@ -264,7 +264,7 @@
                 "http://dbpedia.org/ontology/basedOn"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P144"
+                "http://wikidata.org/entity/P144"
             ]
         },
         {
@@ -273,7 +273,7 @@
                 "http://dbpedia.org/ontology/battle"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P607"
+                "http://wikidata.org/entity/P607"
             ]
         },
         {
@@ -282,7 +282,7 @@
                 "http://dbpedia.org/ontology/birthName"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1477"
+                "http://wikidata.org/entity/P1477"
             ]
         },
         {
@@ -291,11 +291,11 @@
                 "http://dbpedia.org/ontology/builder"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P176"
+                "http://wikidata.org/entity/P176"
             ],
             "freebase": [
-                "www.freebase.com/boats/ship/ship_builder",
-                "_www.freebase.com/boats/ship_builder/ships_built"
+                "http://freebase.com/boats/ship/ship_builder",
+                "_http://freebase.com/boats/ship_builder/ships_built"
             ]
         },
         {
@@ -304,7 +304,7 @@
                 "http://dbpedia.org/ontology/capital"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P36"
+                "http://wikidata.org/entity/P36"
             ]
         },
         {
@@ -318,18 +318,18 @@
                 "_http://dbpedia.org/ontology/father"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P40",
-                "_http://www.wikidata.org/entity/P22",
-                "_http://www.wikidata.org/entity/P25"
+                "http://wikidata.org/entity/P40",
+                "_http://wikidata.org/entity/P22",
+                "_http://wikidata.org/entity/P25"
             ],
             "tacred": [
                 "tacred:per:children",
                 "_tacred:per:parents"
             ],
             "freebase": [
-                "www.freebase.com/people/person/children",
-                "_www.freebase.com/people/person/parents",
-                "www.freebase.com/fictional_universe/fictional_character/children"
+                "http://freebase.com/people/person/children",
+                "_http://freebase.com/people/person/parents",
+                "http://freebase.com/fictional_universe/fictional_character/children"
             ]
         },
         {
@@ -343,10 +343,10 @@
                 "http://dbpedia.org/ontology/sourceRegion"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P885"
+                "http://wikidata.org/entity/P885"
             ],
             "freebase": [
-                "www.freebase.com/geography/river/origin"
+                "http://freebase.com/geography/river/origin"
             ]
         },
         {
@@ -358,10 +358,10 @@
                 "http://dbpedia.org/ontology/mouthCountry"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P403"
+                "http://wikidata.org/entity/P403"
             ],
             "freebase": [
-                "www.freebase.com/geography/river/mouth"
+                "http://freebase.com/geography/river/mouth"
             ]
         },
         {
@@ -370,7 +370,7 @@
                 "http://dbpedia.org/ontology/chromosome"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1057"
+                "http://wikidata.org/entity/P1057"
             ]
         },
         {
@@ -380,7 +380,7 @@
                 "http://dbpedia.org/property/siblings"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P3373"
+                "http://wikidata.org/entity/P3373"
             ],
             "tacred": [
                 "tacred:per:siblings"
@@ -394,10 +394,10 @@
                 "http://dbpedia.org/ontology/manager"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P286"
+                "http://wikidata.org/entity/P286"
             ],
             "freebase": [
-                "www.freebase.com/american_football/football_coach/current_team_head_coached"
+                "http://freebase.com/american_football/football_coach/current_team_head_coached"
             ]
         },
         {
@@ -406,7 +406,7 @@
                 "http://dbpedia.org/ontology/cinematography"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P344"
+                "http://wikidata.org/entity/P344"
             ]
         },
         {
@@ -415,7 +415,7 @@
                 "http://dbpedia.org/ontology/citizenship"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P27"
+                "http://wikidata.org/entity/P27"
             ]
         },
         {
@@ -424,7 +424,7 @@
                 "http://dbpedia.org/ontology/classis"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P77"
+                "http://wikidata.org/entity/P77"
             ]
         },
         {
@@ -433,7 +433,7 @@
                 "http://dbpedia.org/ontology/coatOfArms"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P94"
+                "http://wikidata.org/entity/P94"
             ]
         },
         {
@@ -442,7 +442,7 @@
                 "http://dbpedia.org/ontology/colour"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P462"
+                "http://wikidata.org/entity/P462"
             ]
         },
         {
@@ -455,20 +455,20 @@
                 "http://dbpedia.org/ontology/musicComposer"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P50",
-                "http://www.wikidata.org/entity/P86",
-                "http://www.wikidata.org/entity/P170"
+                "http://wikidata.org/entity/P50",
+                "http://wikidata.org/entity/P86",
+                "http://wikidata.org/entity/P170"
             ],
             "freebase": [
-                "www.freebase.com/music/composition/composer",
-                "www.freebase.com/tv/tv_program/program_creator",
-                "www.freebase.com/book/written_work/author",
-                "_www.freebase.com/visual_art/artwork/artist",
-                "www.freebase.com/film/film/written_by",
-                "www.freebase.com/music/recording/artist",
-                "_www.freebase.com/book/author/works_written",
-                "_www.freebase.com/film/writer/film",
-                "www.freebase.com/tv/tv_series_episode/writer"
+                "http://freebase.com/music/composition/composer",
+                "http://freebase.com/tv/tv_program/program_creator",
+                "http://freebase.com/book/written_work/author",
+                "_http://freebase.com/visual_art/artwork/artist",
+                "http://freebase.com/film/film/written_by",
+                "http://freebase.com/music/recording/artist",
+                "_http://freebase.com/book/author/works_written",
+                "_http://freebase.com/film/writer/film",
+                "http://freebase.com/tv/tv_series_episode/writer"
             ]
         },
         {
@@ -477,11 +477,11 @@
                 "http://dbpedia.org/property/lyricist"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P676"
+                "http://wikidata.org/entity/P676"
             ],
             "freebase": [
-                "www.freebase.com/music/composition/lyricist",
-                "www.freebase.com/theater/play/lyricist"
+                "http://freebase.com/music/composition/lyricist",
+                "http://freebase.com/theater/play/lyricist"
             ]
         },
         {
@@ -490,7 +490,7 @@
                 "http://dbpedia.org/ontology/compressionRatio"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1247"
+                "http://wikidata.org/entity/P1247"
             ]
         },
         {
@@ -499,7 +499,7 @@
                 "http://dbpedia.org/ontology/computingPlatform"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P400"
+                "http://wikidata.org/entity/P400"
             ]
         },
         {
@@ -508,11 +508,11 @@
                 "http://dbpedia.org/ontology/constellation"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P59"
+                "http://wikidata.org/entity/P59"
             ],
             "freebase": [
-                "www.freebase.com/astronomy/star/constellation",
-                "_www.freebase.com/astronomy/constellation/contains"
+                "http://freebase.com/astronomy/star/constellation",
+                "_http://freebase.com/astronomy/constellation/contains"
             ]
         },
         {
@@ -521,7 +521,7 @@
                 "http://dbpedia.org/ontology/constructionMaterial"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P186"
+                "http://wikidata.org/entity/P186"
             ]
         },
         {
@@ -530,10 +530,10 @@
                 "http://dbpedia.org/ontology/county"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P131"
+                "http://wikidata.org/entity/P131"
             ],
             "freebase": [
-                "www.freebase.com/location/hud_county_place/county"
+                "http://freebase.com/location/hud_county_place/county"
             ]
         },
         {
@@ -542,7 +542,7 @@
                 "http://dbpedia.org/ontology/coverArtist"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P736"
+                "http://wikidata.org/entity/P736"
             ]
         },
         {
@@ -551,7 +551,7 @@
                 "http://dbpedia.org/ontology/cpu"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P880"
+                "http://wikidata.org/entity/P880"
             ]
         },
         {
@@ -560,10 +560,10 @@
                 "http://dbpedia.org/ontology/crosses"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P177"
+                "http://wikidata.org/entity/P177"
             ],
             "freebase": [
-                "_www.freebase.com/geography/body_of_water/bridges"
+                "_http://freebase.com/geography/body_of_water/bridges"
             ]
         },
         {
@@ -572,10 +572,10 @@
                 "http://dbpedia.org/ontology/currency"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P38"
+                "http://wikidata.org/entity/P38"
             ],
             "freebase": [
-                "www.freebase.com/location/country/currency_formerly_used"
+                "http://freebase.com/location/country/currency_formerly_used"
             ]
         },
         {
@@ -584,7 +584,7 @@
                 "http://dbpedia.org/ontology/currencyCode"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P498"
+                "http://wikidata.org/entity/P498"
             ]
         },
         {
@@ -604,13 +604,13 @@
                 "http://dbpedia.org/ontology/launchDate"
             ],
             "wikidata": [
-                "https://www.wikidata.org/entity/P571",
-                "http://www.wikidata.org/entity/P577",
-                "https://www.wikidata.org/entity/P585",
-                "http://www.wikidata.org/entity/P2031",
-                "http://www.wikidata.org/entity/P580",
-                "http://www.wikidata.org/entity/P620",
-                "http://www.wikidata.org/entity/P619"
+                "https://wikidata.org/entity/P571",
+                "http://wikidata.org/entity/P577",
+                "https://wikidata.org/entity/P585",
+                "http://wikidata.org/entity/P2031",
+                "http://wikidata.org/entity/P580",
+                "http://wikidata.org/entity/P620",
+                "http://wikidata.org/entity/P619"
             ],
             "tacred": [
                 "tacred:org:founded"
@@ -624,15 +624,15 @@
                 "http://dbpedia.org/ontology/causeOfDeath"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P509",
-                "http://www.wikidata.org/entity/P1196"
+                "http://wikidata.org/entity/P509",
+                "http://wikidata.org/entity/P1196"
             ],
             "tacred": [
                 "tacred:per:cause_of_death"
             ],
             "freebase": [
-                "www.freebase.com/people/deceased_person/cause_of_death",
-                "_www.freebase.com/people/cause_of_death/people"
+                "http://freebase.com/people/deceased_person/cause_of_death",
+                "_http://freebase.com/people/cause_of_death/people"
             ]
         },
         {
@@ -643,7 +643,7 @@
                 "http://dbpedia.org/ontology/deathYear"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P570"
+                "http://wikidata.org/entity/P570"
             ],
             "tacred": [
                 "tacred:per:date_of_death"
@@ -657,9 +657,9 @@
                 "http://dbpedia.org/property/url"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P2699",
-                "http://www.wikidata.org/entity/P856",
-                "https://www.wikidata.org/entity/P1581"
+                "http://wikidata.org/entity/P2699",
+                "http://wikidata.org/entity/P856",
+                "https://wikidata.org/entity/P1581"
             ],
             "tacred": [
                 "tacred:per:website"
@@ -682,7 +682,7 @@
                 "http://dbpedia.org/ontology/deathPlace"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P20"
+                "http://wikidata.org/entity/P20"
             ],
             "tacred": [
                 "tacred:per:stateorprovince_of_death",
@@ -690,7 +690,7 @@
                 "tacred:per:country_of_death"
             ],
             "freebase": [
-                "www.freebase.com/people/deceased_person/place_of_death"
+                "http://freebase.com/people/deceased_person/place_of_death"
             ]
         },
         {
@@ -699,7 +699,7 @@
                 "http://dbpedia.org/ontology/designer"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P287"
+                "http://wikidata.org/entity/P287"
             ]
         },
         {
@@ -708,10 +708,10 @@
                 "http://dbpedia.org/ontology/developer"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P178"
+                "http://wikidata.org/entity/P178"
             ],
             "freebase": [
-                "www.freebase.com/computer/software/developer"
+                "http://freebase.com/computer/software/developer"
             ]
         },
         {
@@ -720,14 +720,14 @@
                 "http://dbpedia.org/ontology/director"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P57"
+                "http://wikidata.org/entity/P57"
             ],
             "freebase": [
-                "www.freebase.com/film/film/directed_by",
-                "_www.freebase.com/tv/tv_director/episodes_directed",
-                "_www.freebase.com/film/director/film",
-                "www.freebase.com/film/film/film_art_direction_by",
-                "www.freebase.com/tv/tv_series_episode/director"
+                "http://freebase.com/film/film/directed_by",
+                "_http://freebase.com/tv/tv_director/episodes_directed",
+                "_http://freebase.com/film/director/film",
+                "http://freebase.com/film/film/film_art_direction_by",
+                "http://freebase.com/tv/tv_series_episode/director"
             ]
         },
         {
@@ -737,13 +737,13 @@
                 "http://dbpedia.org/ontology/editing"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P98",
-                "http://www.wikidata.org/entity/P1040"
+                "http://wikidata.org/entity/P98",
+                "http://wikidata.org/entity/P1040"
             ],
             "freebase": [
-                "www.freebase.com/film/film/edited_by",
-                "_www.freebase.com/film/editor/film",
-                "www.freebase.com/book/book_edition/author_editor"
+                "http://freebase.com/film/film/edited_by",
+                "_http://freebase.com/film/editor/film",
+                "http://freebase.com/book/book_edition/author_editor"
             ]
         },
         {
@@ -753,8 +753,8 @@
                 "_http://dbpedia.org/ontology/discovered"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P61",
-                "_http://www.wikidata.org/entity/P575"
+                "http://wikidata.org/entity/P61",
+                "_http://wikidata.org/entity/P575"
             ]
         },
         {
@@ -763,7 +763,7 @@
                 "http://dbpedia.org/ontology/distributor"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P750"
+                "http://wikidata.org/entity/P750"
             ]
         },
         {
@@ -774,12 +774,12 @@
                 "_http://dbpedia.org/ontology/doctoralStudent"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P184",
-                "http://www.wikidata.org/entity/P1066",
-                "_http://www.wikidata.org/entity/P185"
+                "http://wikidata.org/entity/P184",
+                "http://wikidata.org/entity/P1066",
+                "_http://wikidata.org/entity/P185"
             ],
             "freebase": [
-                "www.freebase.com/education/academic/advisors"
+                "http://freebase.com/education/academic/advisors"
             ]
         },
         {
@@ -788,7 +788,7 @@
                 "http://dbpedia.org/ontology/elo"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1087"
+                "http://wikidata.org/entity/P1087"
             ]
         },
         {
@@ -797,7 +797,7 @@
                 "http://dbpedia.org/ontology/emblem"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P158"
+                "http://wikidata.org/entity/P158"
             ]
         },
         {
@@ -806,7 +806,7 @@
                 "http://dbpedia.org/ontology/endDate"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P582"
+                "http://wikidata.org/entity/P582"
             ]
         },
         {
@@ -816,11 +816,11 @@
                 "http://dbpedia.org/ontology/ethnicity"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P172"
+                "http://wikidata.org/entity/P172"
             ],
             "freebase": [
-                "www.freebase.com/people/person/ethnicity",
-                "_www.freebase.com/people/ethnicity/people"
+                "http://freebase.com/people/person/ethnicity",
+                "_http://freebase.com/people/ethnicity/people"
             ]
         },
         {
@@ -829,7 +829,7 @@
                 "http://dbpedia.org/ontology/eyeColor"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1340"
+                "http://wikidata.org/entity/P1340"
             ]
         },
         {
@@ -838,7 +838,7 @@
                 "http://dbpedia.org/ontology/flag"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P41"
+                "http://wikidata.org/entity/P41"
             ]
         },
         {
@@ -847,7 +847,7 @@
                 "http://dbpedia.org/ontology/followedBy"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P156"
+                "http://wikidata.org/entity/P156"
             ]
         },
         {
@@ -856,7 +856,7 @@
                 "http://dbpedia.org/ontology/follows"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P155"
+                "http://wikidata.org/entity/P155"
             ]
         },
         {
@@ -865,7 +865,7 @@
                 "http://dbpedia.org/ontology/formationDate"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P571"
+                "http://wikidata.org/entity/P571"
             ]
         },
         {
@@ -876,13 +876,13 @@
                 "http://dbpedia.org/ontology/founder"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P112"
+                "http://wikidata.org/entity/P112"
             ],
             "tacred": [
                 "tacred:org:founded_by"
             ],
             "freebase": [
-                "www.freebase.com/organization/organization/founders"
+                "http://freebase.com/organization/organization/founders"
             ]
         },
         {
@@ -892,7 +892,7 @@
                 "http://dbpedia.org/ontology/portrayer"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P175"
+                "http://wikidata.org/entity/P175"
             ]
         },
         {
@@ -904,11 +904,11 @@
                 "http://dbpedia.org/ontology/artist"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P161",
-                "http://www.wikidata.org/entity/P175"
+                "http://wikidata.org/entity/P161",
+                "http://wikidata.org/entity/P175"
             ],
             "freebase": [
-                "_www.freebase.com/theater/theater_character/plays_appears_in"
+                "_http://freebase.com/theater/theater_character/plays_appears_in"
             ]
         },
         {
@@ -917,7 +917,7 @@
                 "http://dbpedia.org/ontology/fuelSystem"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1211"
+                "http://wikidata.org/entity/P1211"
             ]
         },
         {
@@ -926,7 +926,7 @@
                 "http://dbpedia.org/ontology/gameEngine"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P408"
+                "http://wikidata.org/entity/P408"
             ]
         },
         {
@@ -935,7 +935,7 @@
                 "http://dbpedia.org/ontology/generalManager"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P505"
+                "http://wikidata.org/entity/P505"
             ]
         },
         {
@@ -946,17 +946,17 @@
                 "http://dbpedia.org/ontology/literaryGenre"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P136"
+                "http://wikidata.org/entity/P136"
             ],
             "freebase": [
-                "www.freebase.com/music/artist/genre",
-                "www.freebase.com/computer/software/software_genre",
-                "www.freebase.com/visual_art/artwork/art_genre",
-                "www.freebase.com/music/album/genre",
-                "www.freebase.com/tv/tv_program/genre",
-                "www.freebase.com/cvg/computer_videogame/cvg_genre",
-                "www.freebase.com/broadcast/content/genre",
-                "www.freebase.com/book/short_story/genre"
+                "http://freebase.com/music/artist/genre",
+                "http://freebase.com/computer/software/software_genre",
+                "http://freebase.com/visual_art/artwork/art_genre",
+                "http://freebase.com/music/album/genre",
+                "http://freebase.com/tv/tv_program/genre",
+                "http://freebase.com/cvg/computer_videogame/cvg_genre",
+                "http://freebase.com/broadcast/content/genre",
+                "http://freebase.com/book/short_story/genre"
             ]
         },
         {
@@ -965,7 +965,7 @@
                 "http://dbpedia.org/ontology/genus"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P74"
+                "http://wikidata.org/entity/P74"
             ]
         },
         {
@@ -974,7 +974,7 @@
                 "http://dbpedia.org/ontology/handedness"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P552"
+                "http://wikidata.org/entity/P552"
             ]
         },
         {
@@ -986,7 +986,7 @@
                 "http://dbpedia.org/ontology/locationCountry"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P159"
+                "http://wikidata.org/entity/P159"
             ],
             "tacred": [
                 "tacred:org:stateorprovince_of_headquarters",
@@ -1000,7 +1000,7 @@
                 "http://dbpedia.org/ontology/highestPoint"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P610"
+                "http://wikidata.org/entity/P610"
             ]
         },
         {
@@ -1009,7 +1009,7 @@
                 "http://dbpedia.org/ontology/highwaySystem"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P16"
+                "http://wikidata.org/entity/P16"
             ]
         },
         {
@@ -1018,7 +1018,7 @@
                 "http://dbpedia.org/ontology/homeport"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P504"
+                "http://wikidata.org/entity/P504"
             ]
         },
         {
@@ -1027,7 +1027,7 @@
                 "http://dbpedia.org/ontology/iataAirlineCode"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P229"
+                "http://wikidata.org/entity/P229"
             ]
         },
         {
@@ -1036,7 +1036,7 @@
                 "http://dbpedia.org/ontology/icaoAirlineCode"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P230"
+                "http://wikidata.org/entity/P230"
             ]
         },
         {
@@ -1045,7 +1045,7 @@
                 "http://dbpedia.org/ontology/illustrator"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P110"
+                "http://wikidata.org/entity/P110"
             ]
         },
         {
@@ -1054,7 +1054,7 @@
                 "http://dbpedia.org/ontology/imdbId"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P345"
+                "http://wikidata.org/entity/P345"
             ]
         },
         {
@@ -1064,7 +1064,7 @@
                 "http://dbpedia.org/ontology/partner"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P451"
+                "http://wikidata.org/entity/P451"
             ]
         },
         {
@@ -1073,7 +1073,7 @@
                 "http://dbpedia.org/ontology/individualisedGnd"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P227"
+                "http://wikidata.org/entity/P227"
             ]
         },
         {
@@ -1082,10 +1082,10 @@
                 "http://dbpedia.org/ontology/industry"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P452"
+                "http://wikidata.org/entity/P452"
             ],
             "freebase": [
-                "www.freebase.com/business/business_operation/industry"
+                "http://freebase.com/business/business_operation/industry"
             ]
         },
         {
@@ -1094,7 +1094,7 @@
                 "http://dbpedia.org/ontology/inflow"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P200"
+                "http://wikidata.org/entity/P200"
             ]
         },
         {
@@ -1103,7 +1103,7 @@
                 "http://dbpedia.org/ontology/inseeCode"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P374"
+                "http://wikidata.org/entity/P374"
             ]
         },
         {
@@ -1112,11 +1112,11 @@
                 "http://dbpedia.org/ontology/instrument"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1303"
+                "http://wikidata.org/entity/P1303"
             ],
             "freebase": [
-                "www.freebase.com/music/group_member/instruments_played",
-                "_www.freebase.com/music/instrument/instrumentalists"
+                "http://freebase.com/music/group_member/instruments_played",
+                "_http://freebase.com/music/instrument/instrumentalists"
             ]
         },
         {
@@ -1125,7 +1125,7 @@
                 "http://dbpedia.org/ontology/isPartOf"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P361"
+                "http://wikidata.org/entity/P361"
             ]
         },
         {
@@ -1134,8 +1134,8 @@
                 "http://dbpedia.org/ontology/isbn"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P212",
-                "http://www.wikidata.org/entity/P957"
+                "http://wikidata.org/entity/P212",
+                "http://wikidata.org/entity/P957"
             ]
         },
         {
@@ -1144,7 +1144,7 @@
                 "http://dbpedia.org/ontology/killedBy"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P157"
+                "http://wikidata.org/entity/P157"
             ]
         },
         {
@@ -1153,10 +1153,10 @@
                 "http://dbpedia.org/ontology/kingdom"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P75"
+                "http://wikidata.org/entity/P75"
             ],
             "freebase": [
-                "www.freebase.com/royalty/monarch/kingdom"
+                "http://freebase.com/royalty/monarch/kingdom"
             ]
         },
         {
@@ -1165,7 +1165,7 @@
                 "http://dbpedia.org/ontology/launchSite"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P448"
+                "http://wikidata.org/entity/P448"
             ]
         },
         {
@@ -1174,7 +1174,7 @@
                 "http://dbpedia.org/ontology/launchVehicle"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P375"
+                "http://wikidata.org/entity/P375"
             ]
         },
         {
@@ -1183,7 +1183,7 @@
                 "http://dbpedia.org/ontology/league"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P118"
+                "http://wikidata.org/entity/P118"
             ]
         },
         {
@@ -1192,7 +1192,7 @@
                 "http://dbpedia.org/ontology/license"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P275"
+                "http://wikidata.org/entity/P275"
             ]
         },
         {
@@ -1201,7 +1201,7 @@
                 "http://dbpedia.org/ontology/maintainedBy"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P126"
+                "http://wikidata.org/entity/P126"
             ]
         },
         {
@@ -1210,7 +1210,7 @@
                 "http://dbpedia.org/ontology/musicBy"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P86"
+                "http://wikidata.org/entity/P86"
             ]
         },
         {
@@ -1219,7 +1219,7 @@
                 "http://dbpedia.org/ontology/namedAfter"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P138"
+                "http://wikidata.org/entity/P138"
             ]
         },
         {
@@ -1228,7 +1228,7 @@
                 "http://dbpedia.org/ontology/order"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P70"
+                "http://wikidata.org/entity/P70"
             ]
         },
         {
@@ -1237,7 +1237,7 @@
                 "http://dbpedia.org/ontology/orientation"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P91"
+                "http://wikidata.org/entity/P91"
             ]
         },
         {
@@ -1247,19 +1247,19 @@
                 "http://dbpedia.org/ontology/originalLanguage"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P364"
+                "http://wikidata.org/entity/P364"
             ],
             "freebase": [
-                "www.freebase.com/film/film/language",
-                "_www.freebase.com/language/human_language/main_country",
-                "www.freebase.com/music/composition/language",
-                "www.freebase.com/tv/tv_program/languages",
-                "www.freebase.com/book/written_work/original_language",
-                "www.freebase.com/people/person/languages",
-                "www.freebase.com/people/ethnicity/languages_spoken",
-                "www.freebase.com/computer/software/languages_used",
-                "www.freebase.com/book/periodical/language",
-                "www.freebase.com/broadcast/content/language"
+                "http://freebase.com/film/film/language",
+                "_http://freebase.com/language/human_language/main_country",
+                "http://freebase.com/music/composition/language",
+                "http://freebase.com/tv/tv_program/languages",
+                "http://freebase.com/book/written_work/original_language",
+                "http://freebase.com/people/person/languages",
+                "http://freebase.com/people/ethnicity/languages_spoken",
+                "http://freebase.com/computer/software/languages_used",
+                "http://freebase.com/book/periodical/language",
+                "http://freebase.com/broadcast/content/language"
             ]
         },
         {
@@ -1269,7 +1269,7 @@
                 "http://dbpedia.org/ontology/party"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P102"
+                "http://wikidata.org/entity/P102"
             ]
         },
         {
@@ -1279,10 +1279,10 @@
                 "http://dbpedia.org/ontology/restingPlace"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P119"
+                "http://wikidata.org/entity/P119"
             ],
             "freebase": [
-                "www.freebase.com/people/deceased_person/place_of_burial"
+                "http://freebase.com/people/deceased_person/place_of_burial"
             ]
         },
         {
@@ -1291,7 +1291,7 @@
                 "http://dbpedia.org/ontology/populationTotal"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1082"
+                "http://wikidata.org/entity/P1082"
             ]
         },
         {
@@ -1300,7 +1300,7 @@
                 "http://dbpedia.org/ontology/primeMinister"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P6"
+                "http://wikidata.org/entity/P6"
             ]
         },
         {
@@ -1313,19 +1313,19 @@
                 "http://dbpedia.org/ontology/religion"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P1142",
-                "http://www.wikidata.org/entity/P135",
-                "http://www.wikidata.org/entity/P140"
+                "http://wikidata.org/entity/P1142",
+                "http://wikidata.org/entity/P135",
+                "http://wikidata.org/entity/P140"
             ],
             "tacred": [
                 "tacred:org:political/religious_affiliation",
                 "tacred:per:religion"
             ],
             "freebase": [
-                "www.freebase.com/government/political_party/ideology",
-                "www.freebase.com/people/person/religion",
-                "www.freebase.com/religion/place_of_worship/religion",
-                "_www.freebase.com/government/political_ideology/political_parties"
+                "http://freebase.com/government/political_party/ideology",
+                "http://freebase.com/people/person/religion",
+                "http://freebase.com/religion/place_of_worship/religion",
+                "_http://freebase.com/government/political_ideology/political_parties"
             ]
         },
         {
@@ -1343,13 +1343,13 @@
                 "http://dbpedia.org/ontology/district"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P276",
-                "http://www.wikidata.org/entity/P263",
-                "http://www.wikidata.org/entity/P551",
-                "http://www.wikidata.org/entity/P131",
-                "http://www.wikidata.org/entity/P17",
-                "http://www.wikidata.org/entity/P30",
-                "_http://www.wikidata.org/entity/P131"
+                "http://wikidata.org/entity/P276",
+                "http://wikidata.org/entity/P263",
+                "http://wikidata.org/entity/P551",
+                "http://wikidata.org/entity/P131",
+                "http://wikidata.org/entity/P17",
+                "http://wikidata.org/entity/P30",
+                "_http://wikidata.org/entity/P131"
             ],
             "tacred": [
                 "tacred:per:countries_of_residence",
@@ -1357,23 +1357,23 @@
                 "tacred:per:cities_of_residence"
             ],
             "freebase": [
-                "www.freebase.com/location/location/containedby",
-                "_www.freebase.com/location/location/partially_contains",
-                "www.freebase.com/location/location/partially_containedby",
-                "www.freebase.com/music/release/region",
-                "_www.freebase.com/location/location/contains",
-                "www.freebase.com/film/film/country",
-                "www.freebase.com/time/event/locations",
-                "www.freebase.com/location/administrative_division/country",
-                "www.freebase.com/sports/sports_team/location",
-                "www.freebase.com/base/thoroughbredracing/thoroughbred_racehorse/country"
+                "http://freebase.com/location/location/containedby",
+                "_http://freebase.com/location/location/partially_contains",
+                "http://freebase.com/location/location/partially_containedby",
+                "http://freebase.com/music/release/region",
+                "_http://freebase.com/location/location/contains",
+                "http://freebase.com/film/film/country",
+                "http://freebase.com/time/event/locations",
+                "http://freebase.com/location/administrative_division/country",
+                "http://freebase.com/sports/sports_team/location",
+                "http://freebase.com/base/thoroughbredracing/thoroughbred_racehorse/country"
             ]
         },
         {
             "label": "charges",
             "description": "Crimes a person was convicted or charged for.",
             "wikidata": [
-                "http://www.wikidata.org/entity/P1399"
+                "http://wikidata.org/entity/P1399"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/kindOfCriminal"
@@ -1388,7 +1388,7 @@
                 "http://dbpedia.org/ontology/selibrId"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P906"
+                "http://wikidata.org/entity/P906"
             ]
         },
         {
@@ -1397,7 +1397,7 @@
                 "http://dbpedia.org/ontology/settlement"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P131"
+                "http://wikidata.org/entity/P131"
             ]
         },
         {
@@ -1407,14 +1407,14 @@
                 "http://dbpedia.org/ontology/sex"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P21"
+                "http://wikidata.org/entity/P21"
             ],
             "freebase": [
-                "www.freebase.com/people/person/gender",
-                "www.freebase.com/fictional_universe/fictional_character/gender",
-                "www.freebase.com/base/thoroughbredracing/thoroughbred_racehorse/sex",
-                "_www.freebase.com/fictional_universe/character_gender/characters_of_this_gender",
-                "www.freebase.com/biology/organism/sex"
+                "http://freebase.com/people/person/gender",
+                "http://freebase.com/fictional_universe/fictional_character/gender",
+                "http://freebase.com/base/thoroughbredracing/thoroughbred_racehorse/sex",
+                "_http://freebase.com/fictional_universe/character_gender/characters_of_this_gender",
+                "http://freebase.com/biology/organism/sex"
             ]
         },
         {
@@ -1423,13 +1423,13 @@
                 "http://dbpedia.org/ontology/signature"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P109"
+                "http://wikidata.org/entity/P109"
             ]
         },
         {
             "label": "characters",
             "freebase": [
-                "www.freebase.com/book/book/characters"
+                "http://freebase.com/book/book/characters"
             ]
         },
         {
@@ -1439,7 +1439,7 @@
                 "http://dbpedia.org/ontology/spouse"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P26"
+                "http://wikidata.org/entity/P26"
             ],
             "tacred": [
                 "tacred:per:spouse"
@@ -1455,29 +1455,29 @@
                 "http://dbpedia.org/ontology/formerTeam"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P54"
+                "http://wikidata.org/entity/P54"
             ]
         },
         {
             "label": "publisher",
             "wikidata": [
-                "http://www.wikidata.org/entity/P123"
+                "http://wikidata.org/entity/P123"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/publisher"
             ],
             "freebase": [
-                "www.freebase.com/cvg/computer_videogame/publisher",
-                "www.freebase.com/book/book_edition/publisher",
-                "_www.freebase.com/book/publishing_company/books_published"
+                "http://freebase.com/cvg/computer_videogame/publisher",
+                "http://freebase.com/book/book_edition/publisher",
+                "_http://freebase.com/book/publishing_company/books_published"
             ]
         },
         {
             "label": "birthPlace",
             "description": "The place a person was born in or originates from.",
             "wikidata": [
-                "http://www.wikidata.org/entity/P19",
-                "http://www.wikidata.org/entity/P1321"
+                "http://wikidata.org/entity/P19",
+                "http://wikidata.org/entity/P1321"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/birthPlace",
@@ -1491,13 +1491,13 @@
                 "tacred:per:city_of_birth"
             ],
             "freebase": [
-                "_www.freebase.com/location/location/people_born_here"
+                "_http://freebase.com/location/location/people_born_here"
             ]
         },
         {
             "label": "inflow",
             "wikidata": [
-                "http://www.wikidata.org/entity/P200"
+                "http://wikidata.org/entity/P200"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/inflow"
@@ -1506,7 +1506,7 @@
         {
             "label": "présentateur",
             "wikidata": [
-                "http://www.wikidata.org/entity/P371"
+                "http://wikidata.org/entity/P371"
             ],
             "dbpedia": [
                 "http://fr.dbpedia.org/property/présentateur"
@@ -1515,19 +1515,19 @@
         {
             "label": "influenced",
             "wikidata": [
-                "http://www.wikidata.org/entity/P737"
+                "http://wikidata.org/entity/P737"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/influenced"
             ],
             "freebase": [
-                "www.freebase.com/influence/influence_node/influenced"
+                "http://freebase.com/influence/influence_node/influenced"
             ]
         },
         {
             "label": "recordLabel",
             "wikidata": [
-                "http://www.wikidata.org/entity/P264"
+                "http://wikidata.org/entity/P264"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/recordLabel"
@@ -1536,7 +1536,7 @@
         {
             "label": "outflow",
             "wikidata": [
-                "http://www.wikidata.org/entity/P201"
+                "http://wikidata.org/entity/P201"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/outflow"
@@ -1545,7 +1545,7 @@
         {
             "label": "runtime",
             "wikidata": [
-                "http://www.wikidata.org/entity/P2047"
+                "http://wikidata.org/entity/P2047"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/Work/runtime"
@@ -1554,7 +1554,7 @@
         {
             "label": "name",
             "wikidata": [
-                "http://www.wikidata.org/entity/P2561"
+                "http://wikidata.org/entity/P2561"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/Name"
@@ -1563,13 +1563,13 @@
         {
             "label": "timezone",
             "freebase": [
-                "www.freebase.com/location/location/time_zones"
+                "http://freebase.com/location/location/time_zones"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/timeZone"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P421"
+                "http://wikidata.org/entity/P421"
             ]
         },
         {
@@ -1581,8 +1581,8 @@
                 "http://dbpedia.org/ontology/age"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P569",
-                "http://www.wikidata.org/entity/P3150"
+                "http://wikidata.org/entity/P569",
+                "http://wikidata.org/entity/P3150"
             ],
             "tacred": [
                 "tacred:per:date_of_birth"
@@ -1596,15 +1596,15 @@
                 "http://dbpedia.org/ontology/subsidiary"
             ],
             "wikidata": [
-                "_https://www.wikidata.org/entity/P127",
-                "_https://www.wikidata.org/entity/P749"
+                "_https://wikidata.org/entity/P127",
+                "_https://wikidata.org/entity/P749"
             ],
             "tacred": [
                 "tacred:org:subsidiaries"
             ],
             "freebase": [
-                "www.freebase.com/education/educational_institution/subsidiary_or_constituent_schools",
-                "_www.freebase.com/education/educational_institution/parent_institution"
+                "http://freebase.com/education/educational_institution/subsidiary_or_constituent_schools",
+                "_http://freebase.com/education/educational_institution/parent_institution"
             ]
         },
         {
@@ -1612,44 +1612,44 @@
             "description": "The subject of this work. (what the work is about).",
             "dbpedia": [
                 "http://dbpedia.org/ontology/abstract",
-                "http://www.w3.org/2000/01/rdf-schema#comment"
+                "http://w3.org/2000/01/rdf-schema#comment"
             ],
             "wikidata": [
-                "https://www.wikidata.org/entity/P921"
+                "https://wikidata.org/entity/P921"
             ],
             "freebase": [
-                "www.freebase.com/visual_art/artwork/art_subject",
-                "_www.freebase.com/common/topic/subject_of"
+                "http://freebase.com/visual_art/artwork/art_subject",
+                "_http://freebase.com/common/topic/subject_of"
             ]
         },
         {
             "label": "producer",
             "description": "Manufacturer or producer of this product",
             "wikidata": [
-                "http://www.wikidata.org/entity/P162",
-                "http://www.wikidata.org/entity/P162"
+                "http://wikidata.org/entity/P162",
+                "http://wikidata.org/entity/P162"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/producer",
                 "http://dbpedia.org/ontology/manufacturer"
             ],
             "freebase": [
-                "www.freebase.com/film/film/produced_by",
-                "www.freebase.com/music/release/producers",
-                "_www.freebase.com/theater/theater_producer/plays_produced",
-                "_www.freebase.com/music/producer/releases_produced",
-                "www.freebase.com/film/film/executive_produced_by",
-                "_www.freebase.com/film/producer/film",
-                "www.freebase.com/medicine/manufactured_drug_form/manufacturer",
-                "www.freebase.com/aviation/aircraft_model/manufacturer"
+                "http://freebase.com/film/film/produced_by",
+                "http://freebase.com/music/release/producers",
+                "_http://freebase.com/theater/theater_producer/plays_produced",
+                "_http://freebase.com/music/producer/releases_produced",
+                "http://freebase.com/film/film/executive_produced_by",
+                "_http://freebase.com/film/producer/film",
+                "http://freebase.com/medicine/manufactured_drug_form/manufacturer",
+                "http://freebase.com/aviation/aircraft_model/manufacturer"
             ]
         },
         {
             "label": "leader",
             "description": "Leader of an organization.",
             "wikidata": [
-                "http://www.wikidata.org/entity/P35",
-                "http://www.wikidata.org/entity/P169"
+                "http://wikidata.org/entity/P35",
+                "http://wikidata.org/entity/P169"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/president",
@@ -1666,17 +1666,17 @@
                 "http://dbpedia.org/ontology/owner"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P127"
+                "http://wikidata.org/entity/P127"
             ],
             "freebase": [
-                "www.freebase.com/book/newspaper/owner",
-                "www.freebase.com/broadcast/radio_station/owner"
+                "http://freebase.com/book/newspaper/owner",
+                "http://freebase.com/broadcast/radio_station/owner"
             ]
         },
         {
             "label": "seatingCapacity",
             "wikidata": [
-                "http://www.wikidata.org/entity/P1083"
+                "http://wikidata.org/entity/P1083"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/seatingCapacity"
@@ -1688,16 +1688,16 @@
                 "http://dbpedia.org/ontology/nationality"
             ],
             "wikidata": [
-                "http://www.wikidata.org/entity/P27"
+                "http://wikidata.org/entity/P27"
             ],
             "freebase": [
-                "www.freebase.com/people/person/nationality"
+                "http://freebase.com/people/person/nationality"
             ]
         },
         {
             "label": "presenter",
             "wikidata": [
-                "http://www.wikidata.org/entity/P371"
+                "http://wikidata.org/entity/P371"
             ],
             "dbpedia": [
                 "http://dbpedia.org/ontology/presenter"
