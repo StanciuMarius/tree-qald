@@ -55,7 +55,9 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/alias"
+                "http://dbpedia.org/ontology/alias",
+                "http://dbpedia.org/property/nickname",
+                "http://dbpedia.org/property/alterEgo"
             ],
             "description": "Alternate name of a thing.",
             "label": "alias",
@@ -90,19 +92,6 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/architect"
-            ],
-            "freebase": [
-                "http://freebase.com/architecture/structure/architect",
-                "_http://freebase.com/architecture/architect/structures_designed"
-            ],
-            "label": "architect",
-            "wikidata": [
-                "http://wikidata.org/entity/P84"
-            ]
-        },
-        {
-            "dbpedia": [
                 "http://dbpedia.org/ontology/areaCode"
             ],
             "freebase": [
@@ -128,9 +117,11 @@
                 "http://dbpedia.org/ontology/musicComposer",
                 "http://dbpedia.org/ontology/creator",
                 "http://dbpedia.org/ontology/author",
+                "http://dbpedia.org/property/artist",
                 "http://dbpedia.org/ontology/musicBy",
                 "http://dbpedia.org/ontology/writer",
-                "http://dbpedia.org/property/writer"
+                "http://dbpedia.org/property/writer",
+                "http://dbpedia.org/property/author"
             ],
             "description": "Author of a piece of work.",
             "freebase": [
@@ -164,9 +155,10 @@
             "dbpedia": [
                 "http://dbpedia.org/property/title",
                 "http://dbpedia.org/ontology/award",
-                "http://dbpedia.org/ontology/title"
+                "http://dbpedia.org/ontology/title",
+                "_http://dbpedia.org/property/champions"
             ],
-            "description": "Titles or prizes awarded to a person.",
+            "description": "Titles or prizes awarded to a person or team.",
             "label": "award",
             "tacred": [
                 "tacred:per:title"
@@ -216,7 +208,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/birthName"
+                "http://dbpedia.org/ontology/birthName",
+                "http://dbpedia.org/property/birthName"
             ],
             "label": "birthName",
             "wikidata": [
@@ -280,7 +273,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/kindOfCriminal"
+                "http://dbpedia.org/ontology/kindOfCriminal",
+                "http://dbpedia.org/property/conviction"
             ],
             "description": "Crimes a person was convicted or charged for.",
             "label": "charges",
@@ -295,7 +289,9 @@
             "dbpedia": [
                 "_http://dbpedia.org/ontology/mother",
                 "http://dbpedia.org/property/children",
+                "http://dbpedia.org/ontology/children",
                 "_http://dbpedia.org/ontology/father",
+                "_http://dbpedia.org/property/father",
                 "http://dbpedia.org/ontology/child",
                 "_http://dbpedia.org/property/parents",
                 "_http://dbpedia.org/ontology/parent"
@@ -491,15 +487,30 @@
                 "http://dbpedia.org/ontology/date",
                 "http://dbpedia.org/ontology/publicationDate",
                 "http://dbpedia.org/ontology/activeYearsStartDate",
+                "http://dbpedia.org/ontology/activeYearsStartYear",
                 "http://dbpedia.org/ontology/startDate",
+                "http://dbpedia.org/property/established",
+                "http://dbpedia.org/property/deploymentDate",
+                "http://dbpedia.org/ontology/isolationDate",
+                "http://dbpedia.org/property/isolationDate",
+                "http://dbpedia.org/property/years",
+                "http://dbpedia.org/property/year",
+                "http://dbpedia.org/property/releaseDate",
+                "http://dbpedia.org/property/released",
+                "http://dbpedia.org/ontology/eruptionYear",
                 "http://dbpedia.org/ontology/launchDate",
+                "http://dbpedia.org/property/launchDate",
                 "http://dbpedia.org/ontology/foundingYear",
+                "http://dbpedia.org/property/founded",
                 "http://dbpedia.org/ontology/landingDate",
                 "http://dbpedia.org/ontology/foundingDate",
-                "http://dbpedia.org/ontology/releaseDate"
+                "http://dbpedia.org/ontology/releaseDate",
+                "http://dbpedia.org/ontology/firstFlightStartDate",
+                "http://dbpedia.org/property/beginningDate",
+                "http://dbpedia.org/ontology/openingYear"
             ],
             "description": "Date an event took place, or started.",
-            "label": "date",
+            "label": "startDate",
             "tacred": [
                 "tacred:org:founded"
             ],
@@ -566,11 +577,18 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/designer"
+                "http://dbpedia.org/ontology/designer",
+                "http://dbpedia.org/property/designer",
+                "http://dbpedia.org/ontology/architect"
+            ],
+            "freebase": [
+                "http://freebase.com/architecture/structure/architect",
+                "_http://freebase.com/architecture/architect/structures_designed"
             ],
             "label": "designer",
             "wikidata": [
-                "http://wikidata.org/entity/P287"
+                "http://wikidata.org/entity/P287",
+                "http://wikidata.org/entity/P84"
             ]
         },
         {
@@ -616,7 +634,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/dissolved"
+                "http://dbpedia.org/ontology/dissolved",
+                "http://dbpedia.org/ontology/dissolutionDate"
             ],
             "description": "The date an organization dissolved.",
             "label": "dissolved",
@@ -637,7 +656,8 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/editing",
-                "http://dbpedia.org/ontology/editor"
+                "http://dbpedia.org/ontology/editor",
+                "http://dbpedia.org/property/editor"
             ],
             "freebase": [
                 "_http://freebase.com/film/editor/film",
@@ -654,6 +674,7 @@
             "dbpedia": [
                 "http://dbpedia.org/ontology/college",
                 "http://dbpedia.org/ontology/almaMater",
+                "http://dbpedia.org/property/almaMater",
                 "http://dbpedia.org/property/education"
             ],
             "description": "Organization where a person studies.",
@@ -685,7 +706,9 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/endDate"
+                "http://dbpedia.org/ontology/endDate",
+                "http://dbpedia.org/ontology/serviceEndYear",
+                "http://dbpedia.org/ontology/completionDate"
             ],
             "label": "endDate",
             "wikidata": [
@@ -698,7 +721,7 @@
                 "http://dbpedia.org/ontology/riverMouth",
                 "http://dbpedia.org/ontology/routeEnd"
             ],
-            "description": "The location where a linear thing (road, river, border, etc.) starts.",
+            "description": "The location where a linear thing (road, river, border, etc.) ends.",
             "freebase": [
                 "http://freebase.com/geography/river/mouth"
             ],
@@ -724,9 +747,11 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/eyeColor"
+                "http://dbpedia.org/ontology/eyeColor",
+                "http://dbpedia.org/ontology/officialSchoolColour",
+                "http://dbpedia.org/property/colorProcess"
             ],
-            "label": "eyeColor",
+            "label": "color",
             "wikidata": [
                 "http://wikidata.org/entity/P1340"
             ]
@@ -911,7 +936,9 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/highestPoint"
+                "http://dbpedia.org/ontology/highestPoint",
+                "http://dbpedia.org/property/highestpoint",
+                "http://dbpedia.org/property/highest"
             ],
             "label": "highestPoint",
             "wikidata": [
@@ -1016,7 +1043,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/industry"
+                "http://dbpedia.org/ontology/industry",
+                "http://dbpedia.org/property/speciality"
             ],
             "freebase": [
                 "_http://freebase.com/business/industry/companies",
@@ -1109,6 +1137,8 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/originalLanguage",
+                "http://dbpedia.org/ontology/officialLanguage",
+                "http://dbpedia.org/property/officialLanguages",
                 "http://dbpedia.org/ontology/language"
             ],
             "description": "The language used or spoken.",
@@ -1131,7 +1161,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/launchSite"
+                "http://dbpedia.org/ontology/launchSite",
+                "http://dbpedia.org/property/launchPad"
             ],
             "label": "launchSite",
             "wikidata": [
@@ -1152,8 +1183,11 @@
                 "http://dbpedia.org/ontology/president",
                 "http://dbpedia.org/ontology/ceo",
                 "http://dbpedia.org/ontology/leader",
+                "http://dbpedia.org/property/leader",
+                "http://dbpedia.org/ontology/leaderName",
                 "http://dbpedia.org/ontology/chairman",
-                "http://dbpedia.org/ontology/manager"
+                "http://dbpedia.org/ontology/manager",
+                "http://dbpedia.org/ontology/notableCommander"
             ],
             "description": "Leader of an organization.",
             "label": "leader",
@@ -1192,14 +1226,20 @@
                 "http://dbpedia.org/ontology/region",
                 "http://dbpedia.org/ontology/district",
                 "http://dbpedia.org/ontology/residence",
+                "http://dbpedia.org/property/residence",
                 "http://dbpedia.org/ontology/location",
+                "http://dbpedia.org/property/country",
                 "http://dbpedia.org/ontology/locatedInArea",
                 "http://dbpedia.org/ontology/province",
                 "http://dbpedia.org/ontology/settlement",
                 "http://dbpedia.org/ontology/county",
                 "http://dbpedia.org/ontology/state",
                 "http://dbpedia.org/ontology/isPartOf",
-                "http://dbpedia.org/ontology/place"
+                "http://dbpedia.org/ontology/place",
+                "_http://dbpedia.org/ontology/wineProduced",
+                "_http://dbpedia.org/ontology/ethnicGroup",
+                "http://dbpedia.org/property/location",
+                "_http://dbpedia.org/ontology/growingGrape"
             ],
             "description": "Current or past location of a thing.",
             "freebase": [
@@ -1268,7 +1308,9 @@
                 "_http://dbpedia.org/ontology/board",
                 "_http://dbpedia.org/ontology/keyPerson",
                 "http://dbpedia.org/ontology/employer",
-                "_http://dbpedia.org/property/members"
+                "_http://dbpedia.org/property/members",
+                "_http://dbpedia.org/ontology/formerBandMember",
+                "_http://dbpedia.org/ontology/bandMember"
             ],
             "description": "Organization for which a person works or is part of.",
             "freebase": [
@@ -1321,7 +1363,8 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/numberOfEmployees",
-                "http://dbpedia.org/property/numEmployees"
+                "http://dbpedia.org/property/numEmployees",
+                "http://dbpedia.org/property/employees"
             ],
             "description": "The number of employees or members of an organization.",
             "label": "numberOfEmployees",
@@ -1389,7 +1432,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/party"
+                "http://dbpedia.org/ontology/party",
+                "http://dbpedia.org/property/leaderParty"
             ],
             "description": "Political party affiliation.",
             "label": "party",
@@ -1400,7 +1444,9 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/restingPlace",
-                "http://dbpedia.org/ontology/placeOfBurial"
+                "http://dbpedia.org/ontology/placeOfBurial",
+                "http://dbpedia.org/property/burialPlace",
+                "http://dbpedia.org/property/restingPlace"
             ],
             "freebase": [
                 "http://freebase.com/people/deceased_person/place_of_burial",
@@ -1413,7 +1459,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/populationTotal"
+                "http://dbpedia.org/ontology/populationTotal",
+                "http://dbpedia.org/property/populationTotal"
             ],
             "label": "populationTotal",
             "wikidata": [
@@ -1422,7 +1469,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/portrayer"
+                "http://dbpedia.org/ontology/portrayer",
+                "http://dbpedia.org/property/portrayer"
             ],
             "description": "The portrayer of a fictional character.",
             "label": "portrayer",
@@ -1455,7 +1503,8 @@
                 "http://dbpedia.org/ontology/manufacturer",
                 "http://dbpedia.org/ontology/executiveProducer",
                 "http://dbpedia.org/property/studio",
-                "http://dbpedia.org/property/productionCompanies"
+                "http://dbpedia.org/property/productionCompanies",
+                "_http://dbpedia.org/ontology/product"
             ],
             "description": "Manufacturer or producer of this product",
             "freebase": [
@@ -1481,7 +1530,9 @@
                 "http://dbpedia.org/ontology/occupation",
                 "http://dbpedia.org/ontology/discipline",
                 "http://dbpedia.org/ontology/profession",
-                "http://dbpedia.org/ontology/field"
+                "http://dbpedia.org/ontology/field",
+                "http://dbpedia.org/ontology/office",
+                "http://dbpedia.org/property/office"
             ],
             "description": "The profession of a person.",
             "freebase": [
@@ -1556,9 +1607,10 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/Work/runtime"
+                "http://dbpedia.org/ontology/Work/runtime",
+                "http://dbpedia.org/ontology/runtime"
             ],
-            "label": "runtime",
+            "label": "timespan",
             "wikidata": [
                 "http://wikidata.org/entity/P2047"
             ]
@@ -1583,7 +1635,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/property/siblings"
+                "http://dbpedia.org/property/siblings",
+                "http://dbpedia.org/ontology/sibling"
             ],
             "description": "Brother or sister of a person.",
             "label": "sibling",
@@ -1605,7 +1658,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/spouse"
+                "http://dbpedia.org/ontology/spouse",
+                "http://dbpedia.org/property/spouse"
             ],
             "description": "The spouse(wife or husband) of a person.",
             "label": "spouse",
@@ -1636,6 +1690,7 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/source",
+                "http://dbpedia.org/property/source",
                 "http://dbpedia.org/ontology/sourceCountry",
                 "http://dbpedia.org/ontology/sourcePlace",
                 "http://dbpedia.org/ontology/routeStart",
@@ -1712,7 +1767,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/timeZone"
+                "http://dbpedia.org/ontology/timeZone",
+                "http://dbpedia.org/property/timezone"
             ],
             "freebase": [
                 "_http://freebase.com/time/time_zone/locations_in_this_time_zone",
@@ -1734,7 +1790,8 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/wikiPageExternalLink",
-                "http://dbpedia.org/property/url"
+                "http://dbpedia.org/property/url",
+                "http://dbpedia.org/ontology/website"
             ],
             "description": "A link affiliated with a resource.",
             "label": "url",
@@ -1749,7 +1806,10 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/property/weight"
+                "http://dbpedia.org/property/weight",
+                "http://dbpedia.org/ontology/Weapon/weight",
+                "http://dbpedia.org/ontology/weight",
+                "http://dbpedia.org/ontology/mass"
             ],
             "freebase": [
                 "http://freebase.com/sports/boxer/weight_division"
@@ -1848,7 +1908,8 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/property/namedafter",
-                "http://dbpedia.org/property/namedFor"
+                "http://dbpedia.org/property/namedFor",
+                "http://dbpedia.org/property/shipNamesake"
             ],
             "freebase": [
                 "_http://freebase.com/symbols/name_source/namesakes",
@@ -1876,7 +1937,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/hubAirport"
+                "http://dbpedia.org/ontology/hubAirport",
+                "http://dbpedia.org/ontology/targetAirport"
             ],
             "freebase": [
                 "http://freebase.com/aviation/airline/hubs"
@@ -1949,21 +2011,345 @@
         },
         {
             "dbpedia": [
+                "http://dbpedia.org/ontology/successor",
+                "http://dbpedia.org/property/successor",
                 "http://dbpedia.org/ontology/subsequentWork"
             ],
             "freebase": [
+                "http://freebase.com/automotive/model/successor",
                 "http://freebase.com/tv/tv_series_episode/next_episode"
             ],
-            "label": "subsequentWork"
+            "label": "successor"
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/successor"
+                "http://dbpedia.org/ontology/Lake/volume",
+                "http://dbpedia.org/ontology/Planet/volume"
             ],
-            "freebase": [
-                "http://freebase.com/automotive/model/successor"
+            "label": "volume"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/property/operator",
+                "http://dbpedia.org/ontology/operator"
+                
             ],
-            "label": "successor"
+            "label": "operator"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/activeYearsEndDate"
+            ],
+            "label": "endDate"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/netIncome"
+            ],
+            "label": "netIncome"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/property/satelliteOf"
+            ],
+            "label": "satelliteOf"
+        },
+
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/conservationStatus"
+            ],
+            "label": "conservationStatus" 
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/connotation"
+            ],
+            "label": "connotation"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/property/netWorth"
+            ],
+            "label": "netWorth"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/property/chemical",
+                "http://dbpedia.org/property/chemicals",
+                "http://dbpedia.org/property/mineral",
+                "http://dbpedia.org/ontology/ingredient"
+            ],
+            "label": "containedSubstances",
+            "description": "The ingredient substances in a thing."
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/mission",
+                "http://dbpedia.org/property/programme"
+            ],
+            "label": "mission"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/populationDensity",
+                "http://dbpedia.org/ontology/Planet/density"
+            ],
+            "label": "density"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/budget"
+            ],
+            "label": "budget"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/entranceCount",
+                "http://dbpedia.org/property/entranceCount"
+            ],
+            "label": "entranceCount"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/numberOfLocations"
+            ],
+            "label": "numberOfLocations"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/numberOfEpisodes"
+            ],
+            "label": "numberOfEpisodes"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/east",
+                "http://dbpedia.org/property/east",
+                "_http://dbpedia.org/property/west",
+                "_http://dbpedia.org/ontology/west"
+            ],
+            "label": "east"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/north",
+                "http://dbpedia.org/property/north",
+                "_http://dbpedia.org/property/south",
+                "_http://dbpedia.org/ontology/south"
+            ],
+            "label": "north"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/property/breed",
+                "http://dbpedia.org/property/species"
+            ],
+            "label": "breed"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/gdpNominalPerCapita",
+                "http://dbpedia.org/property/gdpNominalPerCapita"
+            ],
+            "label": "gdpNominalPerCapita"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/areaTotal"
+            ],
+            "label": "areaTotal"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/areaLand"
+            ],
+            "label": "areaLand"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/governmentType"
+            ],
+            "label": "governmentType"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/leaderTitle"
+            ],
+            "label": "leaderType"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/mainspan",
+                "http://dbpedia.org/property/length",
+                "http://dbpedia.org/ontology/length",
+                "http://dbpedia.org/property/width"
+            ],
+            "label": "length"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/races"
+            ],
+            "label": "raceCount"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/property/carbs"
+            ],
+            "label": "carbohydrates"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/property/borderingstates",
+                "http://dbpedia.org/property/borderingStates",
+                "http://dbpedia.org/property/borders"
+            ],
+            "label": "borders"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/orderInOffice"
+            ],
+            "label": "orderInOffice"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/maximumDepth"
+            ],
+            "label": "maximumDepth"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/ontology/height",
+                "http://dbpedia.org/ontology/maximumElevation",
+                "http://dbpedia.org/ontology/elevation"
+            ],
+            "label": "height"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/property/ballpark",
+                "http://dbpedia.org/ontology/ground"
+            ],
+            "label": "homeStadium"
+        },
+        {        
+            "dbpedia": [
+                "http://dbpedia.org/property/zipCode",
+                "http://dbpedia.org/ontology/zipCode"
+            ],
+            "label": "zipCode"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/vicePresident"
+            ],
+            "label": "vicePresident"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/firstAscentPerson"
+            ],
+            "label": "firstAscentPerson"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/wineRegion"
+            ],
+            "label": "wineRegion"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/property/circumference"
+            ],
+            "label": "circumference"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/numberOfPages"
+            ],
+            "label": "numberOfPages"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/album"
+            ],
+            "label": "album"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/museum"
+            ],
+            "description": "The museum where a piece of art is exhibited.",
+            "label": "museum"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/property/longitude"
+            ],
+            "label": "longitude"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/property/governor"
+            ],
+            "label": "governor"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/mayor"
+            ],
+            "label": "mayor"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/alliance"
+            ],
+            "label": "alliance"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/numberOfVisitors"
+            ],
+            "label": "numberOfVisitors"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/property/lowestPoint",
+                "http://dbpedia.org/property/lowestpoint"
+            ],
+            "label": "lowestPoint"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/numberOfStations"
+            ],
+            "label": "numberOfStations"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/property/admittancedate"
+            ],
+            "label": "admittanceDate"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/property/team"
+            ],
+            "label": "teamCount"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/property/drivesOn"
+            ],
+            "label": "drivingLaneSide"
+        },
+        {               
+            "dbpedia": [
+                "http://dbpedia.org/ontology/seasonNumber"
+            ],
+            "label": "numberOfSeasons"
         }
     ],
     "description": "List of equivalent(or very similar in the context of Question Answering) relation clusters from multiple popular knowledge bases (DBpedia, Wikidata, Freebase, Tacred)",
