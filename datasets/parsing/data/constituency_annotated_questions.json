@@ -15699,6 +15699,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -15865,6 +15868,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:tv/tv_program/genre"
                     ]
                 }
             ]
@@ -15964,6 +15970,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/release/track"
                     ]
                 }
             ]
@@ -16164,6 +16173,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -16253,6 +16265,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -16307,6 +16322,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/country"
                     ]
                 }
             ]
@@ -16345,6 +16363,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:common/topic/notable_types"
                     ]
                 }
             ]
@@ -16647,6 +16668,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:location/location/contains"
                             ]
                         }
                     ]
@@ -16826,6 +16850,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:location/location/contains"
                             ]
                         }
                     ]
@@ -17034,6 +17061,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:symbols/name_source/namesakes"
                     ]
                 }
             ]
@@ -17079,6 +17109,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -17263,6 +17296,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:location/location/contains"
                             ]
                         }
                     ]
@@ -17367,6 +17403,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -17429,6 +17468,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -17478,6 +17520,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/track"
                     ]
                 }
             ]
@@ -17585,6 +17630,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/release_type"
                     ]
                 }
             ]
@@ -17627,6 +17675,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -17820,6 +17871,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -17902,6 +17956,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -18023,6 +18080,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -18146,6 +18206,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -18257,6 +18320,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -18344,6 +18410,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -18454,6 +18523,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -18582,6 +18654,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/people_born_here"
                     ]
                 }
             ]
@@ -18759,6 +18834,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/recording/artist"
                     ]
                 }
             ]
@@ -18840,6 +18918,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:baseball/baseball_player/position_s"
                     ]
                 }
             ]
@@ -18927,6 +19008,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -19043,6 +19127,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -19103,6 +19190,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/language"
                     ]
                 }
             ]
@@ -19143,6 +19233,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -19195,6 +19288,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -19238,6 +19334,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/release/region"
                     ]
                 }
             ]
@@ -19283,6 +19382,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -19333,6 +19435,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:location/location/contains"
                             ]
                         }
                     ]
@@ -19570,6 +19675,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -19589,19 +19697,28 @@
             "id": -1,
             "children": [
                 {
-                    "type": "PROPERTY",
+                    "type": "SAMPLE",
                     "id": -2,
                     "children": [
                         {
-                            "type": "ENTITY",
-                            "id": -3,
-                            "children": [
-                                {
-                                    "type": "TOKEN",
-                                    "id": 6
-                                }
-                            ]
-                        }
+                        "type": "PROPERTY",
+                        "id": -3,
+                        "children": [
+                            {
+                                "type": "ENTITY",
+                                "id": -4,
+                                "children": [
+                                    {
+                                        "type": "TOKEN",
+                                        "id": 6
+                                    }
+                                ]
+                            }
+                        ],
+                        "kb_resources": [
+                            "fb:location/location/people_born_here"
+                        ]
+                        }   
                     ]
                 }
             ]
@@ -19989,6 +20106,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -20334,6 +20454,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -20463,6 +20586,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:media_common/netflix_title/netflix_genres"
                     ]
                 }
             ]
@@ -20590,6 +20716,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -20683,6 +20812,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film_genre/films_in_this_genre"
                     ]
                 }
             ]
@@ -20718,6 +20850,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -20764,6 +20899,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -20886,6 +21024,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:common/topic/notable_types"
                     ]
                 }
             ]
@@ -20962,6 +21103,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -21053,6 +21197,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -21089,6 +21236,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -21174,6 +21324,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -21363,6 +21516,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -21592,6 +21748,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -21630,6 +21789,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:common/topic/notable_types"
                     ]
                 }
             ]
@@ -21682,6 +21844,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -22072,6 +22237,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/profession"
                     ]
                 }
             ]
@@ -22122,6 +22290,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -22493,6 +22664,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -22640,6 +22814,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -22914,6 +23091,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:music/genre/artists"
                             ]
                         }
                     ]
@@ -22976,6 +23156,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/artist"
                     ]
                 }
             ]
@@ -23031,6 +23214,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/release_track/release"
                     ]
                 }
             ]
@@ -23083,6 +23269,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -23259,6 +23448,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -23413,6 +23605,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/language"
                     ]
                 }
             ]
@@ -23578,6 +23773,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:book/written_work/subjects"
                     ]
                 }
             ]
@@ -23642,6 +23840,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:book/written_work/subjects"
                     ]
                 }
             ]
@@ -23848,6 +24049,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -23993,6 +24197,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/artist"
                     ]
                 }
             ]
@@ -24170,6 +24377,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -24215,6 +24425,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -24292,6 +24505,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -24428,6 +24644,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -24514,6 +24733,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/people_born_here"
                     ]
                 }
             ]
@@ -24564,6 +24786,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -24662,6 +24887,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -24739,6 +24967,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:book/written_work/subjects"
                     ]
                 }
             ]
@@ -24777,6 +25008,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -25117,6 +25351,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -25157,6 +25394,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -25444,6 +25684,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/recording/releases"
                     ]
                 }
             ]
@@ -25495,6 +25738,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -25692,6 +25938,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -25724,6 +25973,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/deceased_person/place_of_death"
                     ]
                 }
             ]
@@ -25769,6 +26021,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/artist"
                     ]
                 }
             ]
@@ -25922,6 +26177,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/language"
                     ]
                 }
             ]
@@ -25974,6 +26232,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/artist"
                     ]
                 }
             ]
@@ -26102,6 +26363,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:music/genre/artists"
                             ]
                         }
                     ]
@@ -26201,6 +26465,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -26304,6 +26571,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -26418,6 +26688,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -26620,6 +26893,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -26705,6 +26981,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:music/album_release_type/albums"
                             ]
                         }
                     ]
@@ -26798,6 +27077,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/country"
                     ]
                 }
             ]
@@ -26845,6 +27127,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -26882,6 +27167,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/children"
                     ]
                 }
             ]
@@ -27202,6 +27490,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/deceased_person/place_of_death"
                     ]
                 }
             ]
@@ -27246,6 +27537,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/deceased_person/place_of_death"
                     ]
                 }
             ]
@@ -27301,6 +27595,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/language"
                     ]
                 }
             ]
@@ -27415,6 +27712,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:music/artist/track"
                             ]
                         }
                     ]
@@ -27477,6 +27777,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:astronomy/celestial_object/category"
                     ]
                 }
             ]
@@ -27526,6 +27829,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -27624,6 +27930,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/release_track/release"
                     ]
                 }
             ]
@@ -27845,6 +28154,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -27947,6 +28259,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:location/location/contains"
                             ]
                         }
                     ]
@@ -28055,6 +28370,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -28139,6 +28457,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:book/written_work/subjects"
                     ]
                 }
             ]
@@ -28368,6 +28689,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/release_type"
                     ]
                 }
             ]
@@ -28488,6 +28812,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -28536,6 +28863,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:book/written_work/subjects"
                     ]
                 }
             ]
@@ -28692,6 +29022,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -28737,6 +29070,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:book/written_work/subjects"
                     ]
                 }
             ]
@@ -28911,6 +29247,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -28961,6 +29300,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -29241,6 +29583,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:common/topic/notable_types"
                     ]
                 }
             ]
@@ -29336,6 +29681,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -29386,6 +29734,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -29491,6 +29842,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -29541,6 +29895,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -29597,6 +29954,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -29650,6 +30010,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:soccer/football_player/position_s"
                     ]
                 }
             ]
@@ -29750,6 +30113,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/country"
                     ]
                 }
             ]
@@ -29803,6 +30169,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -29846,6 +30215,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/single/versions"
                     ]
                 }
             ]
@@ -29889,6 +30261,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -30175,6 +30550,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -30255,6 +30633,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:location/location/contains"
                             ]
                         }
                     ]
@@ -30303,6 +30684,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:american_football/football_player/position_s"
                     ]
                 }
             ]
@@ -30416,6 +30800,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -30467,6 +30854,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/deceased_person/place_of_death"
                     ]
                 }
             ]
@@ -30525,6 +30915,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -30751,6 +31144,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -30789,6 +31185,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/people_born_here"
                     ]
                 }
             ]
@@ -30885,6 +31284,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -30941,6 +31343,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -31138,6 +31543,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/release_track/release"
                     ]
                 }
             ]
@@ -31232,6 +31640,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -31270,6 +31681,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -31332,6 +31746,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -31398,6 +31815,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -31551,6 +31971,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -31620,6 +32043,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/release_type"
                     ]
                 }
             ]
@@ -31994,6 +32420,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:book/written_work/author"
                     ]
                 }
             ]
@@ -32046,6 +32475,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -32332,6 +32764,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -32472,6 +32907,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -32575,6 +33013,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:soccer/football_player/position_s"
                     ]
                 }
             ]
@@ -32742,6 +33183,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -32790,6 +33234,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/profession"
                     ]
                 }
             ]
@@ -32894,6 +33341,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:education/educational_institution/campuses"
                     ]
                 }
             ]
@@ -32936,6 +33386,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/recording/artist"
                     ]
                 }
             ]
@@ -32971,6 +33424,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -33031,6 +33487,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -33132,6 +33591,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/country"
                     ]
                 }
             ]
@@ -33473,6 +33935,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:time/time_zone/locations_in_this_time_zone"
                             ]
                         }
                     ]
@@ -33656,6 +34121,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/release/format"
                     ]
                 }
             ]
@@ -33775,6 +34243,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -33874,6 +34345,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/people_born_here"
                     ]
                 }
             ]
@@ -33921,6 +34395,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/genre/artists"
                     ]
                 }
             ]
@@ -33970,6 +34447,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -34020,6 +34500,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -34113,6 +34596,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/composition/language"
                     ]
                 }
             ]
@@ -34166,6 +34652,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:film/film_genre/films_in_this_genre"
                             ]
                         }
                     ]
@@ -34298,6 +34787,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -34599,6 +35091,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/language"
                     ]
                 }
             ]
@@ -34653,6 +35148,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -34700,6 +35198,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -34788,6 +35289,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/people_born_here"
                     ]
                 }
             ]
@@ -34975,6 +35479,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -35023,6 +35530,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:film/film_genre/films_in_this_genre"
                             ]
                         }
                     ]
@@ -35145,6 +35655,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/country"
                     ]
                 }
             ]
@@ -35280,6 +35793,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -35394,6 +35910,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/recording/tracks"
                     ]
                 }
             ]
@@ -35433,6 +35952,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -35813,6 +36335,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/people_born_here"
                     ]
                 }
             ]
@@ -35860,6 +36385,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -35987,6 +36515,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/release_type"
                     ]
                 }
             ]
@@ -36091,6 +36622,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:symbols/namesake/named_after"
                     ]
                 }
             ]
@@ -36130,6 +36664,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -36317,6 +36854,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -36453,6 +36993,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -36625,6 +37168,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -36764,6 +37310,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/recording/tracks"
                     ]
                 }
             ]
@@ -36810,6 +37359,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -37074,6 +37626,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -37111,6 +37666,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:book/written_work/subjects"
                     ]
                 }
             ]
@@ -37407,6 +37965,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -37450,6 +38011,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:common/topic/notable_types"
                     ]
                 }
             ]
@@ -37489,6 +38053,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -37732,6 +38299,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -37812,6 +38382,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/deceased_person/place_of_death"
                     ]
                 }
             ]
@@ -37875,6 +38448,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
@@ -37965,6 +38541,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -38003,6 +38582,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -38039,6 +38621,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/place_of_birth"
                     ]
                 }
             ]
@@ -38105,6 +38690,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:book/book/genre"
                     ]
                 }
             ]
@@ -38219,6 +38807,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/language"
                     ]
                 }
             ]
@@ -38263,6 +38854,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/country"
                     ]
                 }
             ]
@@ -38408,6 +39002,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/language"
                     ]
                 }
             ]
@@ -38458,6 +39055,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:music/release/track"
                             ]
                         }
                     ]
@@ -38615,6 +39215,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/album_content_type"
                     ]
                 }
             ]
@@ -38668,6 +39271,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:soccer/football_player/position_s"
                     ]
                 }
             ]
@@ -38832,6 +39438,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -38879,6 +39488,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -39032,6 +39644,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/country"
                     ]
                 }
             ]
@@ -39186,6 +39801,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -39298,6 +39916,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -39449,6 +40070,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/artist"
                     ]
                 }
             ]
@@ -39501,6 +40125,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/genre"
                     ]
                 }
             ]
@@ -39676,6 +40303,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -39722,6 +40352,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:location/location/containedby"
                     ]
                 }
             ]
@@ -39839,6 +40472,9 @@
                                         }
                                     ]
                                 }
+                            ],
+                            "kb_resources": [
+                                "fb:tv/tv_genre/programs"
                             ]
                         }
                     ]
@@ -39901,6 +40537,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -39941,6 +40580,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/gender"
                     ]
                 }
             ]
@@ -40044,6 +40686,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -40089,6 +40734,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -40130,6 +40778,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/artist/genre"
                     ]
                 }
             ]
@@ -40188,6 +40839,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/recording/releases"
                     ]
                 }
             ]
@@ -40228,6 +40882,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/deceased_person/place_of_death"
                     ]
                 }
             ]
@@ -40270,6 +40927,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film_genre/films_in_this_genre"
                     ]
                 }
             ]
@@ -40367,6 +41027,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:music/album/album_content_type"
                     ]
                 }
             ]
@@ -40550,6 +41213,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:people/person/nationality"
                     ]
                 }
             ]
@@ -58964,6 +59630,9 @@
                                 }
                             ]
                         }
+                    ],
+                    "kb_resources": [
+                        "fb:film/film/genre"
                     ]
                 }
             ]
