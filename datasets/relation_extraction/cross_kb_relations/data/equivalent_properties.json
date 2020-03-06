@@ -1,464 +1,134 @@
 {
-    "description": "List of equivalent(or very similar in the context of Question Answering) relation clusters from multiple popular knowledge bases (DBpedia, Wikidata, Freebase, Tacred)",
-    "format": "Array of objects. Each object contains a list of property URIs for each available dataset. Relations URIs prefixed by _ symbol imply the subject and object are reversed.",
     "dataset": [
         {
-            "label": "NA",
             "description": "Not available or not existing.",
-            "wikidata": [
-                "NA"
-            ],
+            "label": "NA",
             "tacred": [
                 "tacred:no_relation"
+            ],
+            "wikidata": [
+                "NA"
             ]
         },
         {
-            "label": "abbreviation",
             "dbpedia": [
                 "http://dbpedia.org/ontology/abbreviation"
             ],
+            "label": "abbreviation",
             "wikidata": [
                 "http://wikidata.org/entity/P743"
             ]
         },
         {
-            "label": "absoluteMagnitude",
             "dbpedia": [
                 "http://dbpedia.org/ontology/absoluteMagnitude"
             ],
+            "label": "absoluteMagnitude",
             "wikidata": [
                 "http://wikidata.org/entity/P1457"
             ]
         },
         {
-            "label": "address",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/academicAdvisor",
+                "http://dbpedia.org/ontology/doctoralAdvisor",
+                "_http://dbpedia.org/ontology/doctoralStudent"
+            ],
+            "freebase": [
+                "http://freebase.com/education/academic/advisors"
+            ],
+            "label": "academicAdvisor",
+            "wikidata": [
+                "http://wikidata.org/entity/P184",
+                "http://wikidata.org/entity/P1066",
+                "_http://wikidata.org/entity/P185"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/address"
             ],
+            "label": "address",
             "wikidata": [
                 "http://wikidata.org/entity/P969"
             ]
         },
         {
-            "label": "alias",
-            "description": "Alternate name of a thing.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/alias"
+            ],
+            "description": "Alternate name of a thing.",
+            "label": "alias",
+            "tacred": [
+                "tacred:per:alternate_names",
+                "tacred:org:alternate_names"
             ],
             "wikidata": [
                 "http://wikidata.org/entity/P742",
                 "http://wikidata.org/entity/P1449",
                 "http://wikidata.org/entity/P1705",
                 "http://wikidata.org/entity/P1448"
-            ],
-            "tacred": [
-                "tacred:per:alternate_names",
-                "tacred:org:alternate_names"
             ]
         },
         {
-            "label": "education",
-            "description": "Organization where a person studies.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/almaMater",
-                "http://dbpedia.org/property/education",
-                "http://dbpedia.org/ontology/college"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P69"
-            ],
-            "tacred": [
-                "tacred:per:schools_attended"
-            ]
-        },
-        {
-            "label": "anthem",
             "dbpedia": [
                 "http://dbpedia.org/ontology/anthem"
             ],
+            "label": "anthem",
             "wikidata": [
                 "http://wikidata.org/entity/P85"
             ]
         },
         {
-            "label": "member/employer",
-            "description": "Organization for which a person works or is part of.",
-            "dbpedia": [
-                "http://dbpedia.org/property/workInstitutions",
-                "http://dbpedia.org/ontology/employer",
-                "http://dbpedia.org/property/workplaces",
-                "_http://dbpedia.org/ontology/keyPerson",
-                "_http://dbpedia.org/ontology/board",
-                "http://dbpedia.org/ontology/crewMember"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P108",
-                "http://wikidata.org/entity/P1029"
-            ],
-            "tacred": [
-                "_tacred:org:top_members/employees",
-                "tacred:per:employee_of"
-            ],
-            "freebase": [
-                "http://freebase.com/soccer/football_position/players"
-            ]
-        },
-        {
-            "label": "relatives",
-            "description": "Relatives of a person.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/relative",
-                "http://dbpedia.org/ontology/family"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P53",
-                "http://wikidata.org/entity/P71",
-                "http://wikidata.org/entity/P1038"
-            ],
-            "tacred": [
-                "tacred:per:other_family"
-            ],
-            "freebase": [
-                "http://freebase.com/people/family_member/family"
-            ]
-        },
-        {
-            "label": "apparentMagnitude",
             "dbpedia": [
                 "http://dbpedia.org/ontology/apparentMagnitude"
             ],
+            "label": "apparentMagnitude",
             "wikidata": [
                 "http://wikidata.org/entity/P1215"
             ]
         },
         {
-            "label": "architect",
             "dbpedia": [
                 "http://dbpedia.org/ontology/architect"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P84"
-            ],
             "freebase": [
                 "http://freebase.com/architecture/structure/architect"
-            ]
-        },
-        {
-            "label": "movement",
-            "description": "The movement or style associated with something or someone.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/architecturalStyle",
-                "http://dbpedia.org/ontology/movement"
             ],
+            "label": "architect",
             "wikidata": [
-                "http://wikidata.org/entity/P135",
-                "http://wikidata.org/entity/P149"
-            ],
-            "freebase": [
-                "http://freebase.com/architecture/structure/architectural_style",
-                "_http://freebase.com/visual_art/art_period_movement/associated_artists"
+                "http://wikidata.org/entity/P84"
             ]
         },
         {
-            "label": "areaCode",
             "dbpedia": [
                 "http://dbpedia.org/ontology/areaCode"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P473"
-            ],
             "freebase": [
                 "_http://freebase.com/location/postal_code/country"
+            ],
+            "label": "areaCode",
+            "wikidata": [
+                "http://wikidata.org/entity/P473"
             ]
         },
         {
-            "label": "atomicNumber",
             "dbpedia": [
                 "http://dbpedia.org/ontology/atomicNumber"
             ],
+            "label": "atomicNumber",
             "wikidata": [
                 "http://wikidata.org/entity/P1086"
             ]
         },
         {
-            "label": "numberOfEmployees",
-            "description": "The number of employees or members of an organization.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/numberOfEmployees",
-                "http://dbpedia.org/property/numEmployees"
-            ],
-            "wikidata": [
-                "https://wikidata.org/entity/P2124",
-                "https://wikidata.org/entity/P1128"
-            ],
-            "tacred": [
-                "tacred:org:number_of_employees/members"
-            ]
-        },
-        {
-            "label": "award",
-            "description": "Titles or prizes awarded to a person.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/award",
-                "http://dbpedia.org/ontology/title",
-                "http://dbpedia.org/property/title"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P166",
-                "http://wikidata.org/entity/P4444"
-            ],
-            "tacred": [
-                "tacred:per:title"
-            ]
-        },
-        {
-            "label": "profession",
-            "description": "The profession of a person.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/profession",
-                "http://dbpedia.org/ontology/discipline",
-                "http://dbpedia.org/ontology/occupation",
-                "http://dbpedia.org/ontology/field",
-                "http://w3.org/1999/02/22-rdf-syntax-ns#type"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P106",
-                "http://wikidata.org/entity/P241",
-                "http://wikidata.org/entity/P101"
-            ],
-            "freebase": [
-                "http://freebase.com/people/person/profession",
-                "_http://freebase.com/people/profession/people_with_this_profession",
-                "http://freebase.com/fictional_universe/fictional_character/occupation"
-            ]
-        },
-        {
-            "label": "notableWork",
-            "description": "Something a person is known for.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/notableWork",
-                "http://dbpedia.org/property/works",
-                "http://dbpedia.org/ontology/knownFor"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P800"
-            ]
-        },
-        {
-            "label": "symptoms",
-            "freebase": [
-                "http://freebase.com/medicine/disease/symptoms",
-                "_http://freebase.com/medicine/symptom/symptom_of"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P780"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/property/symptoms",
-                "http://w3.org/2000/01/rdf-schema#comment"
-            ]
-        },
-        {
-            "label": "basedOn",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/basedOn"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P144"
-            ]
-        },
-        {
-            "label": "battle",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/battle"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P607"
-            ]
-        },
-        {
-            "label": "birthName",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/birthName"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P1477"
-            ]
-        },
-        {
-            "label": "builder",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/builder"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P176"
-            ],
-            "freebase": [
-                "http://freebase.com/boats/ship/ship_builder",
-                "_http://freebase.com/boats/ship_builder/ships_built"
-            ]
-        },
-        {
-            "label": "capital",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/capital"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P36"
-            ]
-        },
-        {
-            "label": "child",
-            "description": "Person that is the child of another person",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/child",
-                "http://dbpedia.org/property/children",
-                "_http://dbpedia.org/property/parents",
-                "_http://dbpedia.org/ontology/mother",
-                "_http://dbpedia.org/ontology/father"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P40",
-                "_http://wikidata.org/entity/P22",
-                "_http://wikidata.org/entity/P25"
-            ],
-            "tacred": [
-                "tacred:per:children",
-                "_tacred:per:parents"
-            ],
-            "freebase": [
-                "http://freebase.com/people/person/children",
-                "_http://freebase.com/people/person/parents",
-                "http://freebase.com/fictional_universe/fictional_character/children"
-            ]
-        },
-        {
-            "label": "startLocation",
-            "description": "The location where a linear thing (road, river, border, etc.) starts.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/routeStart",
-                "http://dbpedia.org/ontology/source",
-                "http://dbpedia.org/ontology/sourceCountry",
-                "http://dbpedia.org/ontology/sourcePlace",
-                "http://dbpedia.org/ontology/sourceRegion"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P885"
-            ],
-            "freebase": [
-                "http://freebase.com/geography/river/origin"
-            ]
-        },
-        {
-            "label": "endLocation",
-            "description": "The location where a linear thing (road, river, border, etc.) starts.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/routeEnd",
-                "http://dbpedia.org/ontology/riverMouth",
-                "http://dbpedia.org/ontology/mouthCountry"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P403"
-            ],
-            "freebase": [
-                "http://freebase.com/geography/river/mouth"
-            ]
-        },
-        {
-            "label": "chromosome",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/chromosome"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P1057"
-            ]
-        },
-        {
-            "label": "sibling",
-            "description": "Brother or sister of a person.",
-            "dbpedia": [
-                "http://dbpedia.org/property/siblings"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P3373"
-            ],
-            "tacred": [
-                "tacred:per:siblings"
-            ]
-        },
-        {
-            "label": "coach",
-            "description": "Coach of a player or organization.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/formerCoach",
-                "http://dbpedia.org/ontology/manager"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P286"
-            ],
-            "freebase": [
-                "http://freebase.com/american_football/football_coach/current_team_head_coached"
-            ]
-        },
-        {
-            "label": "cinematography",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/cinematography"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P344"
-            ]
-        },
-        {
-            "label": "citizenship",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/citizenship"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P27"
-            ]
-        },
-        {
-            "label": "classis",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/classis"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P77"
-            ]
-        },
-        {
-            "label": "coatOfArms",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/coatOfArms"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P94"
-            ]
-        },
-        {
-            "label": "colour",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/colour"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P462"
-            ]
-        },
-        {
-            "label": "author",
-            "description": "Author of a piece of work.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/author",
                 "http://dbpedia.org/ontology/creator",
                 "http://dbpedia.org/ontology/composer",
                 "http://dbpedia.org/ontology/musicComposer"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P50",
-                "http://wikidata.org/entity/P86",
-                "http://wikidata.org/entity/P170"
-            ],
+            "description": "Author of a piece of work.",
             "freebase": [
                 "http://freebase.com/music/composition/composer",
                 "http://freebase.com/tv/tv_program/program_creator",
@@ -469,127 +139,334 @@
                 "_http://freebase.com/book/author/works_written",
                 "_http://freebase.com/film/writer/film",
                 "http://freebase.com/tv/tv_series_episode/writer"
+            ],
+            "label": "author",
+            "wikidata": [
+                "http://wikidata.org/entity/P50",
+                "http://wikidata.org/entity/P86",
+                "http://wikidata.org/entity/P170"
             ]
         },
         {
-            "label": "lyricist",
             "dbpedia": [
-                "http://dbpedia.org/property/lyricist"
+                "http://dbpedia.org/ontology/award",
+                "http://dbpedia.org/ontology/title",
+                "http://dbpedia.org/property/title"
+            ],
+            "description": "Titles or prizes awarded to a person.",
+            "label": "award",
+            "tacred": [
+                "tacred:per:title"
             ],
             "wikidata": [
-                "http://wikidata.org/entity/P676"
-            ],
-            "freebase": [
-                "http://freebase.com/music/composition/lyricist",
-                "http://freebase.com/theater/play/lyricist"
+                "http://wikidata.org/entity/P166",
+                "http://wikidata.org/entity/P4444"
             ]
         },
         {
-            "label": "compressionRatio",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/basedOn"
+            ],
+            "label": "basedOn",
+            "wikidata": [
+                "http://wikidata.org/entity/P144"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/battle"
+            ],
+            "label": "battle",
+            "wikidata": [
+                "http://wikidata.org/entity/P607"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/birthDate",
+                "http://dbpedia.org/ontology/birthYear",
+                "http://dbpedia.org/ontology/age"
+            ],
+            "description": "The date a person was born in.",
+            "label": "birthDate",
+            "tacred": [
+                "tacred:per:date_of_birth"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P569",
+                "http://wikidata.org/entity/P3150"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/birthName"
+            ],
+            "label": "birthName",
+            "wikidata": [
+                "http://wikidata.org/entity/P1477"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/birthPlace",
+                "http://dbpedia.org/property/birthPlace",
+                "http://dbpedia.org/ontology/origin"
+            ],
+            "description": "The place a person was born in or originates from.",
+            "freebase": [
+                "_http://freebase.com/location/location/people_born_here"
+            ],
+            "label": "birthPlace",
+            "tacred": [
+                "tacred:per:origin",
+                "tacred:per:stateorprovince_of_birth",
+                "tacred:per:country_of_birth",
+                "tacred:per:city_of_birth"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P19",
+                "http://wikidata.org/entity/P1321"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/builder"
+            ],
+            "freebase": [
+                "http://freebase.com/boats/ship/ship_builder",
+                "_http://freebase.com/boats/ship_builder/ships_built"
+            ],
+            "label": "builder",
+            "wikidata": [
+                "http://wikidata.org/entity/P176"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/capital"
+            ],
+            "label": "capital",
+            "wikidata": [
+                "http://wikidata.org/entity/P36"
+            ]
+        },
+        {
+            "freebase": [
+                "http://freebase.com/book/book/characters"
+            ],
+            "label": "characters"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/kindOfCriminal"
+            ],
+            "description": "Crimes a person was convicted or charged for.",
+            "label": "charges",
+            "tacred": [
+                "tacred:per:charges"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P1399"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/child",
+                "http://dbpedia.org/property/children",
+                "_http://dbpedia.org/property/parents",
+                "_http://dbpedia.org/ontology/mother",
+                "_http://dbpedia.org/ontology/father"
+            ],
+            "description": "Person that is the child of another person",
+            "freebase": [
+                "http://freebase.com/people/person/children",
+                "_http://freebase.com/people/person/parents",
+                "http://freebase.com/fictional_universe/fictional_character/children",
+                "http://rdf.freebase.com/ns/people/person/children"
+            ],
+            "label": "child",
+            "tacred": [
+                "tacred:per:children",
+                "_tacred:per:parents"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P40",
+                "_http://wikidata.org/entity/P22",
+                "_http://wikidata.org/entity/P25"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/chromosome"
+            ],
+            "label": "chromosome",
+            "wikidata": [
+                "http://wikidata.org/entity/P1057"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/cinematography"
+            ],
+            "label": "cinematography",
+            "wikidata": [
+                "http://wikidata.org/entity/P344"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/citizenship"
+            ],
+            "label": "citizenship",
+            "wikidata": [
+                "http://wikidata.org/entity/P27"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/classis"
+            ],
+            "label": "classis",
+            "wikidata": [
+                "http://wikidata.org/entity/P77"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/formerCoach",
+                "http://dbpedia.org/ontology/manager"
+            ],
+            "description": "Coach of a player or organization.",
+            "freebase": [
+                "http://freebase.com/american_football/football_coach/current_team_head_coached"
+            ],
+            "label": "coach",
+            "wikidata": [
+                "http://wikidata.org/entity/P286"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/coatOfArms"
+            ],
+            "label": "coatOfArms",
+            "wikidata": [
+                "http://wikidata.org/entity/P94"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/colour"
+            ],
+            "label": "colour",
+            "wikidata": [
+                "http://wikidata.org/entity/P462"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/compressionRatio"
             ],
+            "label": "compressionRatio",
             "wikidata": [
                 "http://wikidata.org/entity/P1247"
             ]
         },
         {
-            "label": "computingPlatform",
             "dbpedia": [
                 "http://dbpedia.org/ontology/computingPlatform"
             ],
+            "label": "computingPlatform",
             "wikidata": [
                 "http://wikidata.org/entity/P400"
             ]
         },
         {
-            "label": "constellation",
             "dbpedia": [
                 "http://dbpedia.org/ontology/constellation"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P59"
             ],
             "freebase": [
                 "http://freebase.com/astronomy/star/constellation",
                 "_http://freebase.com/astronomy/constellation/contains"
+            ],
+            "label": "constellation",
+            "wikidata": [
+                "http://wikidata.org/entity/P59"
             ]
         },
         {
-            "label": "constructionMaterial",
             "dbpedia": [
                 "http://dbpedia.org/ontology/constructionMaterial"
             ],
+            "label": "constructionMaterial",
             "wikidata": [
                 "http://wikidata.org/entity/P186"
             ]
         },
         {
-            "label": "county",
             "dbpedia": [
                 "http://dbpedia.org/ontology/county"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P131"
-            ],
             "freebase": [
                 "http://freebase.com/location/hud_county_place/county"
+            ],
+            "label": "county",
+            "wikidata": [
+                "http://wikidata.org/entity/P131"
             ]
         },
         {
-            "label": "coverArtist",
             "dbpedia": [
                 "http://dbpedia.org/ontology/coverArtist"
             ],
+            "label": "coverArtist",
             "wikidata": [
                 "http://wikidata.org/entity/P736"
             ]
         },
         {
-            "label": "cpu",
             "dbpedia": [
                 "http://dbpedia.org/ontology/cpu"
             ],
+            "label": "cpu",
             "wikidata": [
                 "http://wikidata.org/entity/P880"
             ]
         },
         {
-            "label": "crosses",
             "dbpedia": [
                 "http://dbpedia.org/ontology/crosses"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P177"
-            ],
             "freebase": [
                 "_http://freebase.com/geography/body_of_water/bridges"
+            ],
+            "label": "crosses",
+            "wikidata": [
+                "http://wikidata.org/entity/P177"
             ]
         },
         {
-            "label": "currency",
             "dbpedia": [
                 "http://dbpedia.org/ontology/currency"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P38"
-            ],
             "freebase": [
                 "http://freebase.com/location/country/currency_formerly_used"
+            ],
+            "label": "currency",
+            "wikidata": [
+                "http://wikidata.org/entity/P38"
             ]
         },
         {
-            "label": "currencyCode",
             "dbpedia": [
                 "http://dbpedia.org/ontology/currencyCode"
             ],
+            "label": "currencyCode",
             "wikidata": [
                 "http://wikidata.org/entity/P498"
             ]
         },
         {
-            "label": "date",
-            "description": "Date an event took place, or started.",
             "dbpedia": [
                 "http://dbpedia.org/property/date",
                 "http://dbpedia.org/ontology/activeYearsStartDate",
@@ -603,6 +480,11 @@
                 "http://dbpedia.org/ontology/landingDate",
                 "http://dbpedia.org/ontology/launchDate"
             ],
+            "description": "Date an event took place, or started.",
+            "label": "date",
+            "tacred": [
+                "tacred:org:founded"
+            ],
             "wikidata": [
                 "https://wikidata.org/entity/P571",
                 "http://wikidata.org/entity/P577",
@@ -611,116 +493,83 @@
                 "http://wikidata.org/entity/P580",
                 "http://wikidata.org/entity/P620",
                 "http://wikidata.org/entity/P619"
-            ],
-            "tacred": [
-                "tacred:org:founded"
             ]
         },
         {
-            "label": "deathCause",
-            "description": "Cause of death of a person.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/deathCause",
                 "http://dbpedia.org/ontology/causeOfDeath"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P509",
-                "http://wikidata.org/entity/P1196"
-            ],
-            "tacred": [
-                "tacred:per:cause_of_death"
-            ],
+            "description": "Cause of death of a person.",
             "freebase": [
                 "http://freebase.com/people/deceased_person/cause_of_death",
                 "_http://freebase.com/people/cause_of_death/people"
+            ],
+            "label": "deathCause",
+            "tacred": [
+                "tacred:per:cause_of_death"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P509",
+                "http://wikidata.org/entity/P1196"
             ]
         },
         {
-            "label": "deathDate",
-            "description": "The Date a person died on.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/deathDate",
                 "http://dbpedia.org/ontology/deathYear"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P570"
-            ],
+            "description": "The Date a person died on.",
+            "label": "deathDate",
             "tacred": [
                 "tacred:per:date_of_death"
-            ]
-        },
-        {
-            "label": "url",
-            "description": "A link affiliated with a resource.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/wikiPageExternalLink",
-                "http://dbpedia.org/property/url"
             ],
             "wikidata": [
-                "http://wikidata.org/entity/P2699",
-                "http://wikidata.org/entity/P856",
-                "https://wikidata.org/entity/P1581"
-            ],
-            "tacred": [
-                "tacred:per:website"
+                "http://wikidata.org/entity/P570"
             ]
         },
         {
-            "label": "dissolved",
-            "description": "The date an organization dissolved.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/dissolved"
-            ],
-            "tacred": [
-                "tacred:org:dissolved"
-            ]
-        },
-        {
-            "label": "deathPlace",
-            "description": "The place a person died in.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/deathPlace"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P20"
+            "description": "The place a person died in.",
+            "freebase": [
+                "http://freebase.com/people/deceased_person/place_of_death"
             ],
+            "label": "deathPlace",
             "tacred": [
                 "tacred:per:stateorprovince_of_death",
                 "per:city_of_death",
                 "tacred:per:country_of_death"
             ],
-            "freebase": [
-                "http://freebase.com/people/deceased_person/place_of_death"
+            "wikidata": [
+                "http://wikidata.org/entity/P20"
             ]
         },
         {
-            "label": "designer",
             "dbpedia": [
                 "http://dbpedia.org/ontology/designer"
             ],
+            "label": "designer",
             "wikidata": [
                 "http://wikidata.org/entity/P287"
             ]
         },
         {
-            "label": "developer",
             "dbpedia": [
                 "http://dbpedia.org/ontology/developer"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P178"
-            ],
             "freebase": [
                 "http://freebase.com/computer/software/developer"
+            ],
+            "label": "developer",
+            "wikidata": [
+                "http://wikidata.org/entity/P178"
             ]
         },
         {
-            "label": "director",
             "dbpedia": [
                 "http://dbpedia.org/ontology/director"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P57"
             ],
             "freebase": [
                 "http://freebase.com/film/film/directed_by",
@@ -728,226 +577,251 @@
                 "_http://freebase.com/film/director/film",
                 "http://freebase.com/film/film/film_art_direction_by",
                 "http://freebase.com/tv/tv_series_episode/director"
-            ]
-        },
-        {
-            "label": "editor",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/editor",
-                "http://dbpedia.org/ontology/editing"
             ],
+            "label": "director",
             "wikidata": [
-                "http://wikidata.org/entity/P98",
-                "http://wikidata.org/entity/P1040"
-            ],
-            "freebase": [
-                "http://freebase.com/film/film/edited_by",
-                "_http://freebase.com/film/editor/film",
-                "http://freebase.com/book/book_edition/author_editor"
+                "http://wikidata.org/entity/P57"
             ]
         },
         {
-            "label": "discoverer",
             "dbpedia": [
                 "http://dbpedia.org/ontology/discoverer",
                 "_http://dbpedia.org/ontology/discovered"
             ],
+            "label": "discoverer",
             "wikidata": [
                 "http://wikidata.org/entity/P61",
                 "_http://wikidata.org/entity/P575"
             ]
         },
         {
-            "label": "distributor",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/dissolved"
+            ],
+            "description": "The date an organization dissolved.",
+            "label": "dissolved",
+            "tacred": [
+                "tacred:org:dissolved"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/distributor"
             ],
+            "label": "distributor",
             "wikidata": [
                 "http://wikidata.org/entity/P750"
             ]
         },
         {
-            "label": "academicAdvisor",
             "dbpedia": [
-                "http://dbpedia.org/ontology/academicAdvisor",
-                "http://dbpedia.org/ontology/doctoralAdvisor",
-                "_http://dbpedia.org/ontology/doctoralStudent"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P184",
-                "http://wikidata.org/entity/P1066",
-                "_http://wikidata.org/entity/P185"
+                "http://dbpedia.org/ontology/editor",
+                "http://dbpedia.org/ontology/editing"
             ],
             "freebase": [
-                "http://freebase.com/education/academic/advisors"
+                "http://freebase.com/film/film/edited_by",
+                "_http://freebase.com/film/editor/film",
+                "http://freebase.com/book/book_edition/author_editor"
+            ],
+            "label": "editor",
+            "wikidata": [
+                "http://wikidata.org/entity/P98",
+                "http://wikidata.org/entity/P1040"
             ]
         },
         {
-            "label": "elo",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/almaMater",
+                "http://dbpedia.org/property/education",
+                "http://dbpedia.org/ontology/college"
+            ],
+            "description": "Organization where a person studies.",
+            "label": "education",
+            "tacred": [
+                "tacred:per:schools_attended"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P69"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/elo"
             ],
+            "label": "elo",
             "wikidata": [
                 "http://wikidata.org/entity/P1087"
             ]
         },
         {
-            "label": "emblem",
             "dbpedia": [
                 "http://dbpedia.org/ontology/emblem"
             ],
+            "label": "emblem",
             "wikidata": [
                 "http://wikidata.org/entity/P158"
             ]
         },
         {
-            "label": "endDate",
             "dbpedia": [
                 "http://dbpedia.org/ontology/endDate"
             ],
+            "label": "endDate",
             "wikidata": [
                 "http://wikidata.org/entity/P582"
             ]
         },
         {
-            "label": "ethnicity",
-            "description": "Ethnicity of a preson",
             "dbpedia": [
-                "http://dbpedia.org/ontology/ethnicity"
+                "http://dbpedia.org/ontology/routeEnd",
+                "http://dbpedia.org/ontology/riverMouth",
+                "http://dbpedia.org/ontology/mouthCountry"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P172"
-            ],
+            "description": "The location where a linear thing (road, river, border, etc.) starts.",
             "freebase": [
-                "http://freebase.com/people/person/ethnicity",
-                "_http://freebase.com/people/ethnicity/people"
+                "http://freebase.com/geography/river/mouth"
+            ],
+            "label": "endLocation",
+            "wikidata": [
+                "http://wikidata.org/entity/P403"
             ]
         },
         {
-            "label": "eyeColor",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/ethnicity",
+                "http://dbpedia.org/property/ethnicity"
+            ],
+            "description": "Ethnicity of a preson",
+            "freebase": [
+                "http://freebase.com/people/person/ethnicity",
+                "_http://freebase.com/people/ethnicity/people"
+            ],
+            "label": "ethnicity",
+            "wikidata": [
+                "http://wikidata.org/entity/P172"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/eyeColor"
             ],
+            "label": "eyeColor",
             "wikidata": [
                 "http://wikidata.org/entity/P1340"
             ]
         },
         {
-            "label": "flag",
             "dbpedia": [
                 "http://dbpedia.org/ontology/flag"
             ],
+            "label": "flag",
             "wikidata": [
                 "http://wikidata.org/entity/P41"
             ]
         },
         {
-            "label": "followedBy",
+            "dbpedia": [
+                "http://dbpedia.org/property/flavor"
+            ],
+            "freebase": [
+                "http://freebase.com/medicine/manufactured_drug_form/flavor"
+            ],
+            "label": "flavor"
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/followedBy"
             ],
+            "label": "followedBy",
             "wikidata": [
                 "http://wikidata.org/entity/P156"
             ]
         },
         {
-            "label": "follows",
             "dbpedia": [
                 "http://dbpedia.org/ontology/follows"
             ],
+            "label": "follows",
             "wikidata": [
                 "http://wikidata.org/entity/P155"
             ]
         },
         {
-            "label": "formationDate",
             "dbpedia": [
                 "http://dbpedia.org/ontology/formationDate"
             ],
+            "label": "formationDate",
             "wikidata": [
                 "http://wikidata.org/entity/P571"
             ]
         },
         {
-            "label": "founded_by",
-            "description": "The person an organization was founded by.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/foundedBy",
                 "http://dbpedia.org/ontology/founder"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P112"
+            "description": "The person an organization was founded by.",
+            "freebase": [
+                "http://freebase.com/organization/organization/founders"
             ],
+            "label": "founded_by",
             "tacred": [
                 "tacred:org:founded_by"
             ],
-            "freebase": [
-                "http://freebase.com/organization/organization/founders"
-            ]
-        },
-        {
-            "label": "portrayer",
-            "description": "The portrayer of a fictional character.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/portrayer"
-            ],
             "wikidata": [
-                "http://wikidata.org/entity/P175"
+                "http://wikidata.org/entity/P112"
             ]
         },
         {
-            "label": "starring",
-            "description": "The artists an artwork is featuring. (e.g. actors part of a movie)",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/starring",
-                "http://dbpedia.org/ontology/musicalArtist",
-                "http://dbpedia.org/ontology/artist"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P161",
-                "http://wikidata.org/entity/P175"
-            ],
-            "freebase": [
-                "_http://freebase.com/theater/theater_character/plays_appears_in"
-            ]
-        },
-        {
-            "label": "fuelSystem",
             "dbpedia": [
                 "http://dbpedia.org/ontology/fuelSystem"
             ],
+            "label": "fuelSystem",
             "wikidata": [
                 "http://wikidata.org/entity/P1211"
             ]
         },
         {
-            "label": "gameEngine",
             "dbpedia": [
                 "http://dbpedia.org/ontology/gameEngine"
             ],
+            "label": "gameEngine",
             "wikidata": [
                 "http://wikidata.org/entity/P408"
             ]
         },
         {
-            "label": "generalManager",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/sex"
+            ],
+            "description": "Gender or sex of a person.",
+            "freebase": [
+                "http://freebase.com/people/person/gender",
+                "http://freebase.com/fictional_universe/fictional_character/gender",
+                "http://freebase.com/base/thoroughbredracing/thoroughbred_racehorse/sex",
+                "_http://freebase.com/fictional_universe/character_gender/characters_of_this_gender",
+                "http://freebase.com/biology/organism/sex"
+            ],
+            "label": "gender/sex",
+            "wikidata": [
+                "http://wikidata.org/entity/P21"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/generalManager"
             ],
+            "label": "generalManager",
             "wikidata": [
                 "http://wikidata.org/entity/P505"
             ]
         },
         {
-            "label": "genre",
-            "description": "Genre of an artwork.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/genre",
                 "http://dbpedia.org/ontology/literaryGenre"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P136"
-            ],
+            "description": "Genre of an artwork.",
             "freebase": [
                 "http://freebase.com/music/artist/genre",
                 "http://freebase.com/computer/software/software_genre",
@@ -956,299 +830,255 @@
                 "http://freebase.com/tv/tv_program/genre",
                 "http://freebase.com/cvg/computer_videogame/cvg_genre",
                 "http://freebase.com/broadcast/content/genre",
-                "http://freebase.com/book/short_story/genre"
+                "http://freebase.com/book/short_story/genre",
+                "http://freebase.com/theater/play/genre"
+            ],
+            "label": "genre",
+            "wikidata": [
+                "http://wikidata.org/entity/P136"
             ]
         },
         {
-            "label": "genus",
             "dbpedia": [
                 "http://dbpedia.org/ontology/genus"
             ],
+            "label": "genus",
             "wikidata": [
                 "http://wikidata.org/entity/P74"
             ]
         },
         {
-            "label": "handedness",
             "dbpedia": [
                 "http://dbpedia.org/ontology/handedness"
             ],
+            "label": "handedness",
             "wikidata": [
                 "http://wikidata.org/entity/P552"
             ]
         },
         {
-            "label": "headquarters",
-            "description": "The place of the headquarters of a company.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/headquarter",
                 "http://dbpedia.org/ontology/locationCity",
                 "http://dbpedia.org/ontology/locationCountry"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P159"
-            ],
+            "description": "The place of the headquarters of a company.",
+            "label": "headquarters",
             "tacred": [
                 "tacred:org:stateorprovince_of_headquarters",
                 "tacred:org:country_of_headquarters",
                 "tacred:org:city_of_headquarters"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P159"
             ]
         },
         {
-            "label": "highestPoint",
             "dbpedia": [
                 "http://dbpedia.org/ontology/highestPoint"
             ],
+            "label": "highestPoint",
             "wikidata": [
                 "http://wikidata.org/entity/P610"
             ]
         },
         {
-            "label": "highwaySystem",
             "dbpedia": [
                 "http://dbpedia.org/ontology/highwaySystem"
             ],
+            "label": "highwaySystem",
             "wikidata": [
                 "http://wikidata.org/entity/P16"
             ]
         },
         {
-            "label": "homeport",
             "dbpedia": [
                 "http://dbpedia.org/ontology/homeport"
             ],
+            "label": "homeport",
             "wikidata": [
                 "http://wikidata.org/entity/P504"
             ]
         },
         {
-            "label": "iataAirlineCode",
             "dbpedia": [
                 "http://dbpedia.org/ontology/iataAirlineCode"
             ],
+            "label": "iataAirlineCode",
             "wikidata": [
                 "http://wikidata.org/entity/P229"
             ]
         },
         {
-            "label": "icaoAirlineCode",
             "dbpedia": [
                 "http://dbpedia.org/ontology/icaoAirlineCode"
             ],
+            "label": "icaoAirlineCode",
             "wikidata": [
                 "http://wikidata.org/entity/P230"
             ]
         },
         {
-            "label": "illustrator",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/politicalAffiliation",
+                "http://dbpedia.org/ontology/religiousAffiliation",
+                "http://dbpedia.org/ontology/ideology",
+                "http://dbpedia.org/ontology/religion"
+            ],
+            "description": "The political, religious or philosophical ideology of a thing.",
+            "freebase": [
+                "http://freebase.com/government/political_party/ideology",
+                "http://freebase.com/people/person/religion",
+                "http://freebase.com/religion/place_of_worship/religion",
+                "_http://freebase.com/government/political_ideology/political_parties"
+            ],
+            "label": "ideology",
+            "tacred": [
+                "tacred:org:political/religious_affiliation",
+                "tacred:per:religion"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P1142",
+                "http://wikidata.org/entity/P135",
+                "http://wikidata.org/entity/P140"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/illustrator"
             ],
+            "label": "illustrator",
             "wikidata": [
                 "http://wikidata.org/entity/P110"
             ]
         },
         {
-            "label": "imdbId",
             "dbpedia": [
                 "http://dbpedia.org/ontology/imdbId"
             ],
+            "label": "imdbId",
             "wikidata": [
                 "http://wikidata.org/entity/P345"
             ]
         },
         {
-            "label": "partner",
-            "description": "Professional partner (not married)",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/partner"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P451"
-            ]
-        },
-        {
-            "label": "individualisedGnd",
             "dbpedia": [
                 "http://dbpedia.org/ontology/individualisedGnd"
             ],
+            "label": "individualisedGnd",
             "wikidata": [
                 "http://wikidata.org/entity/P227"
             ]
         },
         {
-            "label": "industry",
             "dbpedia": [
                 "http://dbpedia.org/ontology/industry"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P452"
-            ],
             "freebase": [
                 "http://freebase.com/business/business_operation/industry"
+            ],
+            "label": "industry",
+            "wikidata": [
+                "http://wikidata.org/entity/P452"
             ]
         },
         {
-            "label": "inflow",
             "dbpedia": [
                 "http://dbpedia.org/ontology/inflow"
             ],
+            "label": "inflow",
             "wikidata": [
                 "http://wikidata.org/entity/P200"
             ]
         },
         {
-            "label": "inseeCode",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/inflow"
+            ],
+            "label": "inflow",
+            "wikidata": [
+                "http://wikidata.org/entity/P200"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/influenced"
+            ],
+            "freebase": [
+                "http://freebase.com/influence/influence_node/influenced"
+            ],
+            "label": "influenced",
+            "wikidata": [
+                "http://wikidata.org/entity/P737"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/inseeCode"
             ],
+            "label": "inseeCode",
             "wikidata": [
                 "http://wikidata.org/entity/P374"
             ]
         },
         {
-            "label": "instrumentPlayed",
             "dbpedia": [
                 "http://dbpedia.org/ontology/instrument"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P1303"
             ],
             "freebase": [
                 "http://freebase.com/music/group_member/instruments_played",
                 "_http://freebase.com/music/instrument/instrumentalists"
+            ],
+            "label": "instrumentPlayed",
+            "wikidata": [
+                "http://wikidata.org/entity/P1303"
             ]
         },
         {
-            "label": "isPartOf",
             "dbpedia": [
                 "http://dbpedia.org/ontology/isPartOf"
             ],
+            "label": "isPartOf",
             "wikidata": [
                 "http://wikidata.org/entity/P361"
             ]
         },
         {
-            "label": "isbn",
             "dbpedia": [
                 "http://dbpedia.org/ontology/isbn"
             ],
+            "label": "isbn",
             "wikidata": [
                 "http://wikidata.org/entity/P212",
                 "http://wikidata.org/entity/P957"
             ]
         },
         {
-            "label": "killer",
             "dbpedia": [
                 "http://dbpedia.org/ontology/killedBy"
             ],
+            "label": "killer",
             "wikidata": [
                 "http://wikidata.org/entity/P157"
             ]
         },
         {
-            "label": "kingdom",
             "dbpedia": [
                 "http://dbpedia.org/ontology/kingdom"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P75"
-            ],
             "freebase": [
                 "http://freebase.com/royalty/monarch/kingdom"
-            ]
-        },
-        {
-            "label": "launchSite",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/launchSite"
             ],
+            "label": "kingdom",
             "wikidata": [
-                "http://wikidata.org/entity/P448"
+                "http://wikidata.org/entity/P75"
             ]
         },
         {
-            "label": "launchVehicle",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/launchVehicle"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P375"
-            ]
-        },
-        {
-            "label": "league",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/league"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P118"
-            ]
-        },
-        {
-            "label": "license",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/license"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P275"
-            ]
-        },
-        {
-            "label": "maintainedBy",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/maintainedBy"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P126"
-            ]
-        },
-        {
-            "label": "musicBy",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/musicBy"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P86"
-            ]
-        },
-        {
-            "label": "namedAfter",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/namedAfter"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P138"
-            ]
-        },
-        {
-            "label": "order",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/order"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P70"
-            ]
-        },
-        {
-            "label": "orientation",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/orientation"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P91"
-            ]
-        },
-        {
-            "label": "language",
-            "description": "The language used or spoken.",
             "dbpedia": [
                 "http://dbpedia.org/ontology/originalLanguage"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P364"
-            ],
+            "description": "The language used or spoken.",
             "freebase": [
                 "http://freebase.com/film/film/language",
                 "_http://freebase.com/language/human_language/main_country",
@@ -1260,77 +1090,64 @@
                 "http://freebase.com/computer/software/languages_used",
                 "http://freebase.com/book/periodical/language",
                 "http://freebase.com/broadcast/content/language"
-            ]
-        },
-        {
-            "label": "party",
-            "description": "Political party affiliation.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/party"
             ],
+            "label": "language",
             "wikidata": [
-                "http://wikidata.org/entity/P102"
+                "http://wikidata.org/entity/P364"
             ]
         },
         {
-            "label": "placeOfBurial",
             "dbpedia": [
-                "http://dbpedia.org/ontology/placeOfBurial",
-                "http://dbpedia.org/ontology/restingPlace"
+                "http://dbpedia.org/ontology/launchSite"
             ],
+            "label": "launchSite",
             "wikidata": [
-                "http://wikidata.org/entity/P119"
-            ],
-            "freebase": [
-                "http://freebase.com/people/deceased_person/place_of_burial"
+                "http://wikidata.org/entity/P448"
             ]
         },
         {
-            "label": "populationTotal",
             "dbpedia": [
-                "http://dbpedia.org/ontology/populationTotal"
+                "http://dbpedia.org/ontology/launchVehicle"
             ],
+            "label": "launchVehicle",
             "wikidata": [
-                "http://wikidata.org/entity/P1082"
+                "http://wikidata.org/entity/P375"
             ]
         },
         {
-            "label": "primeMinister",
             "dbpedia": [
-                "http://dbpedia.org/ontology/primeMinister"
+                "http://dbpedia.org/ontology/president",
+                "http://dbpedia.org/ontology/leader",
+                "http://dbpedia.org/ontology/manager",
+                "http://dbpedia.org/ontology/chairman",
+                "http://dbpedia.org/ontology/ceo"
             ],
+            "description": "Leader of an organization.",
+            "label": "leader",
             "wikidata": [
-                "http://wikidata.org/entity/P6"
+                "http://wikidata.org/entity/P35",
+                "http://wikidata.org/entity/P169"
             ]
         },
         {
-            "label": "ideology",
-            "description": "The political, religious or philosophical ideology of a thing.",
             "dbpedia": [
-                "http://dbpedia.org/ontology/politicalAffiliation",
-                "http://dbpedia.org/ontology/religiousAffiliation",
-                "http://dbpedia.org/ontology/ideology",
-                "http://dbpedia.org/ontology/religion"
+                "http://dbpedia.org/ontology/league"
             ],
+            "label": "league",
             "wikidata": [
-                "http://wikidata.org/entity/P1142",
-                "http://wikidata.org/entity/P135",
-                "http://wikidata.org/entity/P140"
-            ],
-            "tacred": [
-                "tacred:org:political/religious_affiliation",
-                "tacred:per:religion"
-            ],
-            "freebase": [
-                "http://freebase.com/government/political_party/ideology",
-                "http://freebase.com/people/person/religion",
-                "http://freebase.com/religion/place_of_worship/religion",
-                "_http://freebase.com/government/political_ideology/political_parties"
+                "http://wikidata.org/entity/P118"
             ]
         },
         {
-            "label": "location",
-            "description": "Current or past location of a thing.",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/license"
+            ],
+            "label": "license",
+            "wikidata": [
+                "http://wikidata.org/entity/P275"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/residence",
                 "http://dbpedia.org/ontology/province",
@@ -1342,20 +1159,7 @@
                 "http://dbpedia.org/ontology/locatedInArea",
                 "http://dbpedia.org/ontology/district"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P276",
-                "http://wikidata.org/entity/P263",
-                "http://wikidata.org/entity/P551",
-                "http://wikidata.org/entity/P131",
-                "http://wikidata.org/entity/P17",
-                "http://wikidata.org/entity/P30",
-                "_http://wikidata.org/entity/P131"
-            ],
-            "tacred": [
-                "tacred:per:countries_of_residence",
-                "tacred:per:stateorprovinces_of_residence",
-                "tacred:per:cities_of_residence"
-            ],
+            "description": "Current or past location of a thing.",
             "freebase": [
                 "http://freebase.com/location/location/containedby",
                 "_http://freebase.com/location/location/partially_contains",
@@ -1367,272 +1171,267 @@
                 "http://freebase.com/location/administrative_division/country",
                 "http://freebase.com/sports/sports_team/location",
                 "http://freebase.com/base/thoroughbredracing/thoroughbred_racehorse/country"
-            ]
-        },
-        {
-            "label": "charges",
-            "description": "Crimes a person was convicted or charged for.",
-            "wikidata": [
-                "http://wikidata.org/entity/P1399"
             ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/kindOfCriminal"
-            ],
+            "label": "location",
             "tacred": [
-                "tacred:per:charges"
+                "tacred:per:countries_of_residence",
+                "tacred:per:stateorprovinces_of_residence",
+                "tacred:per:cities_of_residence"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P276",
+                "http://wikidata.org/entity/P263",
+                "http://wikidata.org/entity/P551",
+                "http://wikidata.org/entity/P131",
+                "http://wikidata.org/entity/P17",
+                "http://wikidata.org/entity/P30",
+                "_http://wikidata.org/entity/P131"
             ]
         },
         {
-            "label": "selibrId",
             "dbpedia": [
-                "http://dbpedia.org/ontology/selibrId"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P906"
-            ]
-        },
-        {
-            "label": "settlement",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/settlement"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P131"
-            ]
-        },
-        {
-            "label": "gender/sex",
-            "description": "Gender or sex of a person.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/sex"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P21"
+                "http://dbpedia.org/property/lyricist"
             ],
             "freebase": [
-                "http://freebase.com/people/person/gender",
-                "http://freebase.com/fictional_universe/fictional_character/gender",
-                "http://freebase.com/base/thoroughbredracing/thoroughbred_racehorse/sex",
-                "_http://freebase.com/fictional_universe/character_gender/characters_of_this_gender",
-                "http://freebase.com/biology/organism/sex"
-            ]
-        },
-        {
-            "label": "signature",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/signature"
+                "http://freebase.com/music/composition/lyricist",
+                "http://freebase.com/theater/play/lyricist"
             ],
+            "label": "lyricist",
             "wikidata": [
-                "http://wikidata.org/entity/P109"
+                "http://wikidata.org/entity/P676"
             ]
         },
         {
-            "label": "characters",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/maintainedBy"
+            ],
+            "label": "maintainedBy",
+            "wikidata": [
+                "http://wikidata.org/entity/P126"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/property/workInstitutions",
+                "http://dbpedia.org/ontology/employer",
+                "http://dbpedia.org/property/workplaces",
+                "_http://dbpedia.org/ontology/keyPerson",
+                "_http://dbpedia.org/ontology/board",
+                "http://dbpedia.org/ontology/crewMember"
+            ],
+            "description": "Organization for which a person works or is part of.",
             "freebase": [
-                "http://freebase.com/book/book/characters"
-            ]
-        },
-        {
-            "label": "spouse",
-            "description": "The spouse(wife or husband) of a person.",
-            "dbpedia": [
-                "http://dbpedia.org/ontology/spouse"
+                "http://freebase.com/soccer/football_position/players"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P26"
-            ],
+            "label": "member/employer",
             "tacred": [
-                "tacred:per:spouse"
+                "_tacred:org:top_members/employees",
+                "tacred:per:employee_of"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P108",
+                "http://wikidata.org/entity/P1029"
             ]
         },
         {
-            "label": "team",
-            "description": "The team of a player.",
             "dbpedia": [
-                "http://dbpedia.org/ontology/team",
-                "http://dbpedia.org/ontology/prospectTeam",
-                "http://dbpedia.org/ontology/draftTeam",
-                "http://dbpedia.org/ontology/formerTeam"
+                "http://dbpedia.org/ontology/architecturalStyle",
+                "http://dbpedia.org/ontology/movement"
             ],
-            "wikidata": [
-                "http://wikidata.org/entity/P54"
-            ]
-        },
-        {
-            "label": "publisher",
-            "wikidata": [
-                "http://wikidata.org/entity/P123"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/publisher"
-            ],
+            "description": "The movement or style associated with something or someone.",
             "freebase": [
-                "http://freebase.com/cvg/computer_videogame/publisher",
-                "http://freebase.com/book/book_edition/publisher",
-                "_http://freebase.com/book/publishing_company/books_published"
-            ]
-        },
-        {
-            "label": "birthPlace",
-            "description": "The place a person was born in or originates from.",
+                "http://freebase.com/architecture/structure/architectural_style",
+                "_http://freebase.com/visual_art/art_period_movement/associated_artists"
+            ],
+            "label": "movement",
             "wikidata": [
-                "http://wikidata.org/entity/P19",
-                "http://wikidata.org/entity/P1321"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/birthPlace",
-                "http://dbpedia.org/property/birthPlace",
-                "http://dbpedia.org/ontology/origin"
-            ],
-            "tacred": [
-                "tacred:per:origin",
-                "tacred:per:stateorprovince_of_birth",
-                "tacred:per:country_of_birth",
-                "tacred:per:city_of_birth"
-            ],
-            "freebase": [
-                "_http://freebase.com/location/location/people_born_here"
+                "http://wikidata.org/entity/P135",
+                "http://wikidata.org/entity/P149"
             ]
         },
         {
-            "label": "inflow",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/musicBy"
+            ],
+            "label": "musicBy",
             "wikidata": [
-                "http://wikidata.org/entity/P200"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/inflow"
+                "http://wikidata.org/entity/P86"
             ]
         },
         {
-            "label": "présentateur",
-            "wikidata": [
-                "http://wikidata.org/entity/P371"
-            ],
             "dbpedia": [
-                "http://fr.dbpedia.org/property/présentateur"
-            ]
-        },
-        {
-            "label": "influenced",
-            "wikidata": [
-                "http://wikidata.org/entity/P737"
+                "http://dbpedia.org/ontology/Name"
             ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/influenced"
-            ],
-            "freebase": [
-                "http://freebase.com/influence/influence_node/influenced"
-            ]
-        },
-        {
-            "label": "recordLabel",
-            "wikidata": [
-                "http://wikidata.org/entity/P264"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/recordLabel"
-            ]
-        },
-        {
-            "label": "outflow",
-            "wikidata": [
-                "http://wikidata.org/entity/P201"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/outflow"
-            ]
-        },
-        {
-            "label": "runtime",
-            "wikidata": [
-                "http://wikidata.org/entity/P2047"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/Work/runtime"
-            ]
-        },
-        {
             "label": "name",
             "wikidata": [
                 "http://wikidata.org/entity/P2561"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/Name"
             ]
         },
         {
-            "label": "timezone",
+            "dbpedia": [
+                "http://dbpedia.org/ontology/namedAfter"
+            ],
+            "label": "namedAfter",
+            "wikidata": [
+                "http://wikidata.org/entity/P138"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/nationality"
+            ],
             "freebase": [
-                "http://freebase.com/location/location/time_zones"
+                "http://freebase.com/people/person/nationality"
             ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/timeZone"
-            ],
+            "label": "nationality",
             "wikidata": [
-                "http://wikidata.org/entity/P421"
+                "http://wikidata.org/entity/P27"
             ]
         },
         {
-            "label": "birthDate",
-            "description": "The date a person was born in.",
             "dbpedia": [
-                "http://dbpedia.org/ontology/birthDate",
-                "http://dbpedia.org/ontology/birthYear",
-                "http://dbpedia.org/ontology/age"
+                "http://dbpedia.org/ontology/notableWork",
+                "http://dbpedia.org/property/works",
+                "http://dbpedia.org/ontology/knownFor"
             ],
+            "description": "Something a person is known for.",
+            "label": "notableWork",
             "wikidata": [
-                "http://wikidata.org/entity/P569",
-                "http://wikidata.org/entity/P3150"
+                "http://wikidata.org/entity/P800"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/numberOfEmployees",
+                "http://dbpedia.org/property/numEmployees"
             ],
+            "description": "The number of employees or members of an organization.",
+            "label": "numberOfEmployees",
             "tacred": [
-                "tacred:per:date_of_birth"
+                "tacred:org:number_of_employees/members"
+            ],
+            "wikidata": [
+                "https://wikidata.org/entity/P2124",
+                "https://wikidata.org/entity/P1128"
             ]
         },
         {
-            "label": "subsidiary",
-            "description": "Organization that is under the control of this organisation.",
             "dbpedia": [
-                "_http://dbpedia.org/ontology/parentCompany",
-                "http://dbpedia.org/ontology/subsidiary"
+                "http://dbpedia.org/ontology/order"
             ],
+            "label": "order",
             "wikidata": [
-                "_https://wikidata.org/entity/P127",
-                "_https://wikidata.org/entity/P749"
+                "http://wikidata.org/entity/P70"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/orientation"
             ],
-            "tacred": [
-                "tacred:org:subsidiaries"
+            "label": "orientation",
+            "wikidata": [
+                "http://wikidata.org/entity/P91"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/outflow"
+            ],
+            "label": "outflow",
+            "wikidata": [
+                "http://wikidata.org/entity/P201"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/owner"
+            ],
+            "description": "Owner of a product/organization.",
+            "freebase": [
+                "http://freebase.com/book/newspaper/owner",
+                "http://freebase.com/broadcast/radio_station/owner"
+            ],
+            "label": "owner",
+            "wikidata": [
+                "http://wikidata.org/entity/P127"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/partner"
+            ],
+            "description": "Professional partner (not married)",
+            "label": "partner",
+            "wikidata": [
+                "http://wikidata.org/entity/P451"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/party"
+            ],
+            "description": "Political party affiliation.",
+            "label": "party",
+            "wikidata": [
+                "http://wikidata.org/entity/P102"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/placeOfBurial",
+                "http://dbpedia.org/ontology/restingPlace"
             ],
             "freebase": [
-                "http://freebase.com/education/educational_institution/subsidiary_or_constituent_schools",
-                "_http://freebase.com/education/educational_institution/parent_institution"
+                "http://freebase.com/people/deceased_person/place_of_burial"
+            ],
+            "label": "placeOfBurial",
+            "wikidata": [
+                "http://wikidata.org/entity/P119"
             ]
         },
         {
-            "label": "subject",
-            "description": "The subject of this work. (what the work is about).",
             "dbpedia": [
-                "http://dbpedia.org/ontology/abstract",
-                "http://w3.org/2000/01/rdf-schema#comment"
+                "http://dbpedia.org/ontology/populationTotal"
             ],
+            "label": "populationTotal",
             "wikidata": [
-                "https://wikidata.org/entity/P921"
-            ],
-            "freebase": [
-                "http://freebase.com/visual_art/artwork/art_subject",
-                "_http://freebase.com/common/topic/subject_of"
+                "http://wikidata.org/entity/P1082"
             ]
         },
         {
-            "label": "producer",
-            "description": "Manufacturer or producer of this product",
-            "wikidata": [
-                "http://wikidata.org/entity/P162",
-                "http://wikidata.org/entity/P162"
+            "dbpedia": [
+                "http://dbpedia.org/ontology/portrayer"
             ],
+            "description": "The portrayer of a fictional character.",
+            "label": "portrayer",
+            "wikidata": [
+                "http://wikidata.org/entity/P175"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/presenter"
+            ],
+            "label": "presenter",
+            "wikidata": [
+                "http://wikidata.org/entity/P371"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/primeMinister"
+            ],
+            "label": "primeMinister",
+            "wikidata": [
+                "http://wikidata.org/entity/P6"
+            ]
+        },
+        {
             "dbpedia": [
                 "http://dbpedia.org/ontology/producer",
                 "http://dbpedia.org/ontology/manufacturer"
             ],
+            "description": "Manufacturer or producer of this product",
             "freebase": [
                 "http://freebase.com/film/film/produced_by",
                 "http://freebase.com/music/release/producers",
@@ -1642,66 +1441,306 @@
                 "_http://freebase.com/film/producer/film",
                 "http://freebase.com/medicine/manufactured_drug_form/manufacturer",
                 "http://freebase.com/aviation/aircraft_model/manufacturer"
+            ],
+            "label": "producer",
+            "wikidata": [
+                "http://wikidata.org/entity/P162",
+                "http://wikidata.org/entity/P162"
             ]
         },
         {
-            "label": "leader",
-            "description": "Leader of an organization.",
-            "wikidata": [
-                "http://wikidata.org/entity/P35",
-                "http://wikidata.org/entity/P169"
-            ],
             "dbpedia": [
-                "http://dbpedia.org/ontology/president",
-                "http://dbpedia.org/ontology/leader",
-                "http://dbpedia.org/ontology/manager",
-                "http://dbpedia.org/ontology/chairman",
-                "http://dbpedia.org/ontology/ceo"
+                "http://dbpedia.org/ontology/profession",
+                "http://dbpedia.org/ontology/discipline",
+                "http://dbpedia.org/ontology/occupation",
+                "http://dbpedia.org/ontology/field",
+                "http://w3.org/1999/02/22-rdf-syntax-ns#type"
+            ],
+            "description": "The profession of a person.",
+            "freebase": [
+                "http://freebase.com/people/person/profession",
+                "_http://freebase.com/people/profession/people_with_this_profession",
+                "http://freebase.com/fictional_universe/fictional_character/occupation"
+            ],
+            "label": "profession",
+            "wikidata": [
+                "http://wikidata.org/entity/P106",
+                "http://wikidata.org/entity/P241",
+                "http://wikidata.org/entity/P101"
             ]
         },
         {
-            "label": "owner",
-            "description": "Owner of a product/organization.",
             "dbpedia": [
-                "http://dbpedia.org/ontology/owner"
+                "http://dbpedia.org/ontology/programmingLanguage"
             ],
+            "label": "programmingLanguage"
+        },
+        {
+            "dbpedia": [
+                "http://fr.dbpedia.org/property/pr\u00e9sentateur"
+            ],
+            "label": "pr\u00e9sentateur",
             "wikidata": [
-                "http://wikidata.org/entity/P127"
+                "http://wikidata.org/entity/P371"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/publisher"
             ],
             "freebase": [
-                "http://freebase.com/book/newspaper/owner",
-                "http://freebase.com/broadcast/radio_station/owner"
+                "http://freebase.com/cvg/computer_videogame/publisher",
+                "http://freebase.com/book/book_edition/publisher",
+                "_http://freebase.com/book/publishing_company/books_published"
+            ],
+            "label": "publisher",
+            "wikidata": [
+                "http://wikidata.org/entity/P123"
             ]
         },
         {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/recordLabel"
+            ],
+            "label": "recordLabel",
+            "wikidata": [
+                "http://wikidata.org/entity/P264"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/relative",
+                "http://dbpedia.org/ontology/family"
+            ],
+            "description": "Relatives of a person.",
+            "freebase": [
+                "http://freebase.com/people/family_member/family"
+            ],
+            "label": "relatives",
+            "tacred": [
+                "tacred:per:other_family"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P53",
+                "http://wikidata.org/entity/P71",
+                "http://wikidata.org/entity/P1038"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/Work/runtime"
+            ],
+            "label": "runtime",
+            "wikidata": [
+                "http://wikidata.org/entity/P2047"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/seatingCapacity"
+            ],
             "label": "seatingCapacity",
             "wikidata": [
                 "http://wikidata.org/entity/P1083"
-            ],
-            "dbpedia": [
-                "http://dbpedia.org/ontology/seatingCapacity"
             ]
         },
         {
-            "label": "nationality",
             "dbpedia": [
-                "http://dbpedia.org/ontology/nationality"
+                "http://dbpedia.org/ontology/selibrId"
+            ],
+            "label": "selibrId",
+            "wikidata": [
+                "http://wikidata.org/entity/P906"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/settlement"
+            ],
+            "label": "settlement",
+            "wikidata": [
+                "http://wikidata.org/entity/P131"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/property/siblings"
+            ],
+            "description": "Brother or sister of a person.",
+            "label": "sibling",
+            "tacred": [
+                "tacred:per:siblings"
             ],
             "wikidata": [
-                "http://wikidata.org/entity/P27"
+                "http://wikidata.org/entity/P3373"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/signature"
+            ],
+            "label": "signature",
+            "wikidata": [
+                "http://wikidata.org/entity/P109"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/spouse"
+            ],
+            "description": "The spouse(wife or husband) of a person.",
+            "label": "spouse",
+            "tacred": [
+                "tacred:per:spouse"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P26"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/starring",
+                "http://dbpedia.org/ontology/musicalArtist",
+                "http://dbpedia.org/ontology/artist"
+            ],
+            "description": "The artists an artwork is featuring. (e.g. actors part of a movie)",
+            "freebase": [
+                "_http://freebase.com/theater/theater_character/plays_appears_in"
+            ],
+            "label": "starring",
+            "wikidata": [
+                "http://wikidata.org/entity/P161",
+                "http://wikidata.org/entity/P175"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/routeStart",
+                "http://dbpedia.org/ontology/source",
+                "http://dbpedia.org/ontology/sourceCountry",
+                "http://dbpedia.org/ontology/sourcePlace",
+                "http://dbpedia.org/ontology/sourceRegion"
+            ],
+            "description": "The location where a linear thing (road, river, border, etc.) starts.",
+            "freebase": [
+                "http://freebase.com/geography/river/origin"
+            ],
+            "label": "startLocation",
+            "wikidata": [
+                "http://wikidata.org/entity/P885"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/abstract",
+                "http://w3.org/2000/01/rdf-schema#comment"
+            ],
+            "description": "The subject of this work. (what the work is about).",
+            "freebase": [
+                "http://freebase.com/visual_art/artwork/art_subject",
+                "_http://freebase.com/common/topic/subject_of"
+            ],
+            "label": "subject",
+            "wikidata": [
+                "https://wikidata.org/entity/P921"
+            ]
+        },
+        {
+            "dbpedia": [
+                "_http://dbpedia.org/ontology/parentCompany",
+                "http://dbpedia.org/ontology/subsidiary"
+            ],
+            "description": "Organization that is under the control of this organisation.",
+            "freebase": [
+                "http://freebase.com/education/educational_institution/subsidiary_or_constituent_schools",
+                "_http://freebase.com/education/educational_institution/parent_institution"
+            ],
+            "label": "subsidiary",
+            "tacred": [
+                "tacred:org:subsidiaries"
+            ],
+            "wikidata": [
+                "_https://wikidata.org/entity/P127",
+                "_https://wikidata.org/entity/P749"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/property/symptoms",
+                "http://w3.org/2000/01/rdf-schema#comment"
             ],
             "freebase": [
-                "http://freebase.com/people/person/nationality"
+                "http://freebase.com/medicine/disease/symptoms",
+                "_http://freebase.com/medicine/symptom/symptom_of"
+            ],
+            "label": "symptoms",
+            "wikidata": [
+                "http://wikidata.org/entity/P780"
             ]
         },
         {
-            "label": "presenter",
-            "wikidata": [
-                "http://wikidata.org/entity/P371"
-            ],
             "dbpedia": [
-                "http://dbpedia.org/ontology/presenter"
+                "http://dbpedia.org/ontology/team",
+                "http://dbpedia.org/ontology/prospectTeam",
+                "http://dbpedia.org/ontology/draftTeam",
+                "http://dbpedia.org/ontology/formerTeam"
+            ],
+            "description": "The team of a player.",
+            "label": "team",
+            "wikidata": [
+                "http://wikidata.org/entity/P54"
             ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/timeZone"
+            ],
+            "freebase": [
+                "http://freebase.com/location/location/time_zones"
+            ],
+            "label": "timezone",
+            "wikidata": [
+                "http://wikidata.org/entity/P421"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/absoluteMagnitude"
+            ],
+            "description": "Relations not currently supported for various reasons.",
+            "freebase": [
+                "http://freebase.com/base/usnationalparks/us_national_park/classification",
+                "http://freebase.com/interests/hobbyist/hobbies",
+                "http://freebase.com/visual_art/visual_artist/art_forms"
+            ],
+            "label": "unsupported"
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/ontology/wikiPageExternalLink",
+                "http://dbpedia.org/property/url"
+            ],
+            "description": "A link affiliated with a resource.",
+            "label": "url",
+            "tacred": [
+                "tacred:per:website"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P2699",
+                "http://wikidata.org/entity/P856",
+                "https://wikidata.org/entity/P1581"
+            ]
+        },
+        {
+            "dbpedia": [
+                "http://dbpedia.org/property/weight"
+            ],
+            "freebase": [
+                "http://freebase.com/sports/boxer/weight_division"
+            ],
+            "label": "weight"
         }
-    ]
+    ],
+    "description": "List of equivalent(or very similar in the context of Question Answering) relation clusters from multiple popular knowledge bases (DBpedia, Wikidata, Freebase, Tacred)",
+    "format": "Array of objects. Each object contains a list of property URIs for each available dataset. Relations URIs prefixed by _ symbol imply the subject and object are reversed."
 }
