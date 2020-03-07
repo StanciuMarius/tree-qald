@@ -1,36 +1,66 @@
 import sys
 import os
-
 sys.path.insert(0, os.getcwd())
 
+from random import shuffle
 import json
 import torch
-
+from tqdm import tqdm 
 from datasets.relation_extraction.relation_extraction_dataset import RelationExtractionDataset
-from services.mapping.relation_mapping.preprocessing import EquivalentRelationTransform, BertRelationExtractionFormatTransform
-from services.mapping.relation_mapping.constants import TEMP_TESTSET_FOR_SUBMODULE_PATH, TEMP_TRAINSET_FOR_SUBMODULE_PATH, TRAIN_TEST_SPLIT_RATIO, ADDITIONAL_TOKENS_FILE_PATH, TEMP_FOLDER_FOR_SUBMODULE_PATH
+from services.mapping.relation_mapping.preprocessing import EquivalentRelationTransform, BertRelationExtractionFormatTransform, NormalizeRelationUriTransofrm, parse_trees_to_relation_extraction_format, UNKNOWN_LABEL, validate
+from services.mapping.relation_mapping.constants import TEMP_PARSE_TREES_RELATION_EXTRACTION_DATASET_PATH, TEMP_TESTSET_FOR_SUBMODULE_PATH, TEMP_TRAINSET_FOR_SUBMODULE_PATH, TRAIN_TEST_SPLIT_RATIO, ADDITIONAL_TOKENS_FILE_PATH, TEMP_FOLDER_FOR_SUBMODULE_PATH, BERT_TRAIN_EPOCHS
 from services.mapping.relation_mapping.BERT_Relation_Extraction.main_pretraining import main as pretrain
 from services.mapping.relation_mapping.BERT_Relation_Extraction.main_task import main as task
 from torchvision import transforms
+
+
+RELATION_EXTRACTION_DATASET_PATHS = [
+    r'datasets\relation_extraction\fewrel\data\train_normalized.json',
+    r'datasets\relation_extraction\NYT10\data\train_normalized.json',
+    r'datasets\relation_extraction\simple_questions\data\simple_normalized_train.json',
+    r'datasets\relation_extraction\tacred\data\train_normalized.json',
+]
+
+PARSE_TREES_DATASET_PATH = r'datasets\parsing\data\constituency_annotated_questions.json'
 
 def train():
     '''
     Using BERT-Relation-Extraction submodule to train a BERT model on an aggregated dataset
     '''
-    dataset = RelationExtractionDataset(transform=transforms.Compose([EquivalentRelationTransform(), BertRelationExtractionFormatTransform()]))
-    train_size = int(TRAIN_TEST_SPLIT_RATIO * len(dataset))
-    validation_size = len(dataset) - train_size
-    train_dataset, validation_dataset = torch.utils.data.random_split(dataset, [train_size, validation_size])
+    parse_trees_to_relation_extraction_format(PARSE_TREES_DATASET_PATH, TEMP_PARSE_TREES_RELATION_EXTRACTION_DATASET_PATH)
+    paths = list(RELATION_EXTRACTION_DATASET_PATHS)# + [TEMP_PARSE_TREES_RELATION_EXTRACTION_DATASET_PATH]
 
+    dataset = RelationExtractionDataset(paths, transform=transforms.Compose([
+                                                            NormalizeRelationUriTransofrm(),
+                                                            EquivalentRelationTransform(),
+                                                            BertRelationExtractionFormatTransform()]))
+            
+    
+    # train_size = int(TRAIN_TEST_SPLIT_RATIO * len(dataset))
+    # validation_size = len(dataset) - train_size
+    # train_dataset, validation_dataset = torch.utils.data.random_split(dataset, [train_size, validation_size])
+
+    examples = list(filter(validate, [example for example in tqdm(dataset)]))
+    num_classes = len(set([example['relation'] for example in examples]))
+
+    print("There are {} valid examples with {} distinct classes.".format(len(examples), num_classes))
+    train_size = int(TRAIN_TEST_SPLIT_RATIO * len(examples))
+    shuffle(examples)
+    train_examples, validation_examples = examples[:train_size], examples[train_size:]
     with open(TEMP_TESTSET_FOR_SUBMODULE_PATH, 'w') as file:
-        test_data = [example for example in validation_dataset]
-        json.dump(test_data, file)
+        json.dump(validation_examples, file)
 
     with open(TEMP_TRAINSET_FOR_SUBMODULE_PATH, 'w') as file:
-        train_data = [example for example in train_dataset]
-        json.dump(train_data, file)
+        json.dump(train_examples, file)
 
-    train_args = ["--test_data", TEMP_TESTSET_FOR_SUBMODULE_PATH, "--train_data", TEMP_TRAINSET_FOR_SUBMODULE_PATH, "--additional_tokens_path", ADDITIONAL_TOKENS_FILE_PATH, "--temp_folder_path", TEMP_FOLDER_FOR_SUBMODULE_PATH]
+
+    # print(eq_transform.unknown_relation_count, '/', len(dataset))
+    train_args = ["--test_data", TEMP_TESTSET_FOR_SUBMODULE_PATH,
+                  "--train_data", TEMP_TRAINSET_FOR_SUBMODULE_PATH,
+                  "--additional_tokens_path", ADDITIONAL_TOKENS_FILE_PATH,
+                  "--temp_folder_path", TEMP_FOLDER_FOR_SUBMODULE_PATH,
+                  "--num_classes", str(num_classes),
+                  "--num_epochs", str(BERT_TRAIN_EPOCHS)]
     # pretrain(['--pretrain_data', r'services\mapping\relation_mapping\temp\cnn.txt'])
     task(train_args)
 

@@ -1,16 +1,14 @@
 import json
 import numpy as np
-from services.mapping.relation_mapping.constants import EQUIVALENT_RELATIONS_DATASET_PATH, KNOWLEDGE_BASES
 from typing import List
 import torch
-
-UNKNOWN_LABEL = 'UNKNOWN'
 
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 from common.syntax_checker import SyntaxChecker
 from common.constants import GRAMMAR_FILE_PATH
 from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentRelationResolver
 
+UNKNOWN_LABEL = 'UNKNOWN'
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 QUESTION_WORDS = {'who', 'when', 'what', 'how', 'which'}
 
@@ -45,10 +43,12 @@ class BertRelationExtractionFormatTransform(object):
         return {'text': text, 'relation': sample['label']}
 
 class EquivalentRelationTransform(object):
-    def __init__(self):
+    def __init__(self, save_statistics=False):
         self.resolver = EquivalentRelationResolver()
-        self.unknown_relations = {}
-        self.unknown_relation_count = 0
+        self.save_statistics = save_statistics
+        if save_statistics:
+            self.unknown_relations = {}
+            self.unknown_relation_count = 0
 
     def __call__(self, sample):
         relation = sample['relation']
@@ -57,35 +57,18 @@ class EquivalentRelationTransform(object):
             sample['label'] = generic_relation
         else:
             sample['label'] = UNKNOWN_LABEL
-            self.unknown_relation_count += 1
-            new_count = (1 if relation not in self.unknown_relations else self.unknown_relations[relation][0] + 1, sample['text'])
-            self.unknown_relations[relation] = new_count
+            if self.save_statistics:
+                self.unknown_relation_count += 1
+                new_count = (1 if relation not in self.unknown_relations else self.unknown_relations[relation][0] + 1, sample['text'])
+                self.unknown_relations[relation] = new_count
 
         return sample
 
-
-class BertFormatTransform(object):
-    def __init__(self, max_sequence_length: int):
-        self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
-        self.max_sequence_length = max_sequence_length
-
-    def __call__(self, sample):
-        text = sample['text']
-        label = sample['label']
-
-        subject_text = sample['text'][sample['subject_begin']:sample['subject_end']]
-        object_text = sample['text'][sample['object_begin']:sample['object_end']]
-
-        tokens = ['[CLS]'] + self.tokenizer.tokenize(text) + ['[SEP]'] + self.tokenizer.tokenize(subject_text) + ['[SEP]'] + self.tokenizer.tokenize(object_text) + ['[SEP]']
-
-        token_ids = self.tokenizer.convert_tokens_to_ids(tokens)
-        token_ids = pad_sequences([token_ids], maxlen=self.max_sequence_length, dtype="long", value=0, truncating="post", padding="post")[0]
-        attention_mask = np.array([int(token_id > 0) for token_id in token_ids]).reshape(token_ids.shape)
-
-        return {'token_ids': torch.LongTensor(token_ids), 'attention_mask': torch.Tensor(attention_mask), 'label': label}
-
-
-
+def validate(example):
+    valid_label = example['relation'] not in {UNKNOWN_LABEL, 'NA'}
+    text = example['text']
+    valid_text = '[E1]' in text and '[/E1]' in text and '[E2]' in text and '[/E2]' in text
+    return valid_label and valid_text
 
 def generate_relation_extraction_sequences(tree: QueryTree):    
     def offset_for_node_union(tree: QueryTree, nodes):
@@ -178,3 +161,26 @@ def parse_trees_to_relation_extraction_format(parse_trees_file_path, output_file
         
     with open(output_file_path, 'w', encoding='utf-8') as output_file:
         json.dump(sequences, output_file)
+
+
+# class BertFormatTransform(object):
+#     def __init__(self, max_sequence_length: int):
+#         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
+#         self.max_sequence_length = max_sequence_length
+
+#     def __call__(self, sample):
+#         text = sample['text']
+#         label = sample['label']
+
+#         subject_text = sample['text'][sample['subject_begin']:sample['subject_end']]
+#         object_text = sample['text'][sample['object_begin']:sample['object_end']]
+
+#         tokens = ['[CLS]'] + self.tokenizer.tokenize(text) + ['[SEP]'] + self.tokenizer.tokenize(subject_text) + ['[SEP]'] + self.tokenizer.tokenize(object_text) + ['[SEP]']
+
+#         token_ids = self.tokenizer.convert_tokens_to_ids(tokens)
+#         token_ids = pad_sequences([token_ids], maxlen=self.max_sequence_length, dtype="long", value=0, truncating="post", padding="post")[0]
+#         attention_mask = np.array([int(token_id > 0) for token_id in token_ids]).reshape(token_ids.shape)
+
+#         return {'token_ids': torch.LongTensor(token_ids), 'attention_mask': torch.Tensor(attention_mask), 'label': label}
+
+

@@ -1,3 +1,5 @@
+import json
+
 EQUIVALENT_RELATIONS_DATASET_PATH = r'datasets\relation_extraction\cross_kb_relations\data\equivalent_relations.json'
 KNOWLEDGE_BASES = ['dbpedia', 'tacred', 'wikidata', 'freebase']
 
