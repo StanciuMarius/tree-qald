@@ -1,10 +1,10 @@
 
-EQUIVALENT_RELATIONS_DATASET_PATH = r'datasets\relation_extraction\cross_kb_relations\data\equivalent_properties.json'
+EQUIVALENT_RELATIONS_DATASET_PATH = r'datasets\relation_extraction\cross_kb_relations\data\equivalent_relations.json'
 TEMP_TRAINSET_FOR_SUBMODULE_PATH = r'services\mapping\relation_mapping\temp\re_train.json'
 TEMP_TESTSET_FOR_SUBMODULE_PATH = r'services\mapping\relation_mapping\temp\re_test.json'
 ADDITIONAL_TOKENS_FILE_PATH = r'services\mapping\relation_mapping\static\additional_tokens.csv'
 TEMP_FOLDER_FOR_SUBMODULE_PATH = r'services\mapping\relation_mapping\temp'
-
+TEMP_PARSE_TREES_RELATION_EXTRACTION_DATASET_PATH = r'services\mapping\relation_mapping\temp\parse_trees_relation_extraction.json'
 KNOWLEDGE_BASES = ['dbpedia', 'tacred', 'wikidata', 'freebase']
 TRAIN_TEST_SPLIT_RATIO = 0.8
 BERT_MAX_SEQUENCE_LENGTH = 128
