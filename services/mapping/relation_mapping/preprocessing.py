@@ -9,6 +9,8 @@ UNKNOWN_LABEL = 'UNKNOWN'
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 from common.syntax_checker import SyntaxChecker
 from common.constants import GRAMMAR_FILE_PATH
+from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentRelationResolver
+
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 QUESTION_WORDS = {'who', 'when', 'what', 'how', 'which'}
 
@@ -44,31 +46,20 @@ class BertRelationExtractionFormatTransform(object):
 
 class EquivalentRelationTransform(object):
     def __init__(self):
-        self.kb_vs_generic_relations = {}
-        with open(EQUIVALENT_RELATIONS_DATASET_PATH, 'r', encoding='utf-8') as file:
-            relation_sets = json.load(file)['dataset']
-            for relation_set in  relation_sets:
-                label = relation_set['label']
-                for kb in KNOWLEDGE_BASES:
-                    if kb in  relation_set:
-                        for relation in relation_set[kb]:
-                            self.kb_vs_generic_relations[relation] = label
+        self.resolver = EquivalentRelationResolver()
         self.unknown_relations = {}
         self.unknown_relation_count = 0
+
     def __call__(self, sample):
         relation = sample['relation']
-        reversed_relation = '_' + relation
-
-        if relation in self.kb_vs_generic_relations:
-            sample['label'] = self.kb_vs_generic_relations[relation]
-        # TODO: reconsider reversed relations
-        elif reversed_relation in self.kb_vs_generic_relations:
-            sample['label'] = self.kb_vs_generic_relations[reversed_relation]
+        generic_relation = self.resolver(relation)
+        if generic_relation:
+            sample['label'] = generic_relation
         else:
+            sample['label'] = UNKNOWN_LABEL
             self.unknown_relation_count += 1
             new_count = (1 if relation not in self.unknown_relations else self.unknown_relations[relation][0] + 1, sample['text'])
             self.unknown_relations[relation] = new_count
-            sample['label'] = UNKNOWN_LABEL
 
         return sample
 
