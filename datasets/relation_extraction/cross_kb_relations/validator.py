@@ -4,7 +4,7 @@ import json
 valid = True
 duplicates = []
 invalid_keys = []
-with open(r'datasets\relation_extraction\cross_kb_relations\data\equivalent_properties.json', 'r', encoding='utf-8') as file:
+with open(r'datasets\relation_extraction\cross_kb_relations\data\equivalent_relations.json', 'r', encoding='utf-8') as file:
     dataset = json.load(file)
     dataset['dataset'] = sorted(dataset['dataset'], key=lambda x: x['label'])
     labels = set()
@@ -30,6 +30,6 @@ if duplicates:
 if invalid_keys:
     print('Invalid keys found:', ' '.join(invalid_keys))
     valid = False
-    
+
 if valid:
     print('Dataset appears valid!')
