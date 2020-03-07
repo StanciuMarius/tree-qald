@@ -39,8 +39,10 @@ class BertRelationExtractionFormatTransform(object):
             new_index = old_index + accumulated_offset
             text = text[:new_index] + text_to_insert + text[new_index:]
             accumulated_offset += len(text_to_insert)
-        
-        return {'text': text, 'relation': sample['label']}
+        result = {'text': text}
+        if 'label' in sample:
+            result['relation']: sample['label']
+        return result
 
 class EquivalentRelationTransform(object):
     def __init__(self, save_statistics=False):

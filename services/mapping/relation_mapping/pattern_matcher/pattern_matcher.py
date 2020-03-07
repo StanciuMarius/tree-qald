@@ -106,7 +106,6 @@ class RelationPatternMatcher:
             text_between_end = subject_begin
             is_reversed = True
 
-
         info = run_task(Task.SPACY_PROCESS, question_text)
         tokens = info['tokens']
         idx = info['idx']
