@@ -11,7 +11,7 @@ class RelationExtractionDataset(Dataset):
         self.examples = []
         for path in file_paths:
             with open(path, 'r', encoding='utf-8') as file:
-                file_examples = json.load(file)[:1000]
+                file_examples = json.load(file)
                 self.examples.extend(file_examples)
         self.labels = list(set([example['relation'] for example in self.examples]))
         self.label_vs_id = {label: label_id for label_id, label in enumerate(self.labels)}
