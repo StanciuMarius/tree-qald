@@ -9,13 +9,13 @@ import os
 import sys
 import torch
 
-from services.mapping.relation_mapping.sequence_classifier.constants import BERT_MAX_SEQUENCE_LENGTH, BERT_TRAIN_EPOCHS, BERT_LR, BERT_EPS, TRAIN_TEST_SPLIT_RATIO, BERT_BATCH_SIZE
+from services.mapping.relation_mapping.relation_classifier.constants import BERT_MAX_SEQUENCE_LENGTH, BERT_TRAIN_EPOCHS, BERT_LR, BERT_EPS, TRAIN_TEST_SPLIT_RATIO, BERT_BATCH_SIZE
 from transformers import BertForSequenceClassification, AdamW
 from transformers import get_linear_schedule_with_warmup
 from common.logging import format_time, flat_accuracy
 from common.gpu import get_device
 from datasets.relation_extraction.relation_extraction_dataset import RelationExtractionDataset
-from services.mapping.relation_mapping.sequence_classifier.preprocessing import LabelAliasTransform, BertFormatTransform, LabelEncoderTransform, generate_equivalent_relations
+from services.mapping.relation_mapping.relation_classifier.preprocessing import LabelAliasTransform, BertFormatTransform, LabelEncoderTransform, generate_equivalent_relations
 from torchvision import transforms, datasets
 from torch.utils.data import DataLoader, TensorDataset
 

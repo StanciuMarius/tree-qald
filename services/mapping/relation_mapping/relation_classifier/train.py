@@ -7,11 +7,10 @@ import json
 import torch
 from tqdm import tqdm 
 from datasets.relation_extraction.relation_extraction_dataset import RelationExtractionDataset
-import services.mapping.relation_mapping.sequence_classifier.preprocessing as preprocessing
-import services.mapping.relation_mapping.sequence_classifier.constants as constants
-# from services.mapping.relation_mapping.sequence_classifier.constants import #TEMP_PARSE_TREES_RELATION_EXTRACTION_DATASET_PATH, TEMP_TESTSET_FOR_SUBMODULE_PATH, TEMP_TRAINSET_FOR_SUBMODULE_PATH, TRAIN_TEST_SPLIT_RATIO, ADDITIONAL_TOKENS_FILE_PATH, TEMP_FOLDER_FOR_SUBMODULE_PATH, BERT_TRAIN_EPOCHS, NUM_CLASSES
-from services.mapping.relation_mapping.sequence_classifier.BERT_Relation_Extraction.main_pretraining import main as pretrain
-from services.mapping.relation_mapping.sequence_classifier.BERT_Relation_Extraction.main_task import main as task
+import services.mapping.relation_mapping.relation_classifier.preprocessing as preprocessing
+import services.mapping.relation_mapping.relation_classifier.constants as constants
+from services.mapping.relation_mapping.relation_classifier.BERT_Relation_Extraction.main_pretraining import main as pretrain
+from services.mapping.relation_mapping.relation_classifier.BERT_Relation_Extraction.main_task import main as task
 from torchvision import transforms
 
 

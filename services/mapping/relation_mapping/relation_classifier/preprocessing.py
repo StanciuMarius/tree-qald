@@ -7,7 +7,7 @@ from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 from common.syntax_checker import SyntaxChecker
 from common.constants import GRAMMAR_FILE_PATH
 from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentRelationResolver
-
+import common.knowledge_base as knowledge_base
 UNKNOWN_LABEL = 'UNKNOWN'
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 QUESTION_WORDS = {'who', 'when', 'what', 'how', 'which'}
@@ -41,7 +41,7 @@ class BertRelationExtractionFormatTransform(object):
             accumulated_offset += len(text_to_insert)
         result = {'text': text}
         if 'label' in sample:
-            result['relation']: sample['label']
+            result['relation'] = sample['label']
         return result
 
 class EquivalentRelationTransform(object):
@@ -52,9 +52,9 @@ class EquivalentRelationTransform(object):
             self.unknown_relations = {}
             self.unknown_relation_count = 0
 
-    def __call__(self, sample):
+    def __call__(self, sample, kb: knowledge_base.KnowledgeBase=None):
         relation = sample['relation']
-        generic_relation = self.resolver(relation)
+        generic_relation = self.resolver(relation, kb)
         if generic_relation:
             sample['label'] = generic_relation
         else:
@@ -66,12 +66,20 @@ class EquivalentRelationTransform(object):
 
         return sample
 
-def validate(example):
-    valid_label = example['relation'] not in {UNKNOWN_LABEL, 'NA'}
-    text = example['text']
-    valid_text = '[E1]' in text and '[/E1]' in text and '[E2]' in text and '[/E2]' in text
-    return valid_label and valid_text
 
+def has_unknown_relation(example):
+    return example['relation'] == UNKNOWN_LABEL
+
+def has_na_relation(example):
+    return example['relation'] == 'NA'
+
+def has_valid_bert_sequence(example):
+    text = example['text']
+    return '[E1]' in text and '[/E1]' in text and '[E2]' in text and '[/E2]' in text and len(text.split(' ')) < 450   
+
+def validate(example):
+    return not has_unknown_relation(example) and not has_na_relation(example) and has_valid_bert_sequence(example)
+    
 def generate_relation_extraction_sequences(tree: QueryTree):    
     def offset_for_node_union(tree: QueryTree, nodes):
         union_begin, union_end = tree.offset_for_node(nodes[0])
