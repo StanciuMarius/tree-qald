@@ -1,5 +1,6 @@
 import json
 import common.knowledge_base as knowledge_base
+from typing import List
 
 EQUIVALENT_RELATIONS_DATASET_PATH = r'datasets\relation_extraction\cross_kb_relations\data\equivalent_relations.json'
 
@@ -24,7 +25,7 @@ class EquivalentRelationResolver(object):
     
 
     
-    def __call__(self, relation_uri: str, kb: KnowledgeBase=None) -> List[str]:
+    def __call__(self, relation_uri: str, kb: knowledge_base.KnowledgeBase=None) -> List[str]:
         '''
         Returns equivalent relations to the @param relation_uri.
         If a kb is not specified, the generic label of the relation's equivalence set is returned.

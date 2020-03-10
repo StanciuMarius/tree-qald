@@ -10,7 +10,7 @@ from annotator.constants import INPUT_FILE_PATH, OUTPUT_FILE_PATH
 from common.query_tree import QueryTree, NodeType, SerializationFormat, RELATION_NODE_TYPES, ENTITY_SET_TYPES
 from common.syntax_checker import SyntaxChecker
 from common.constants import GRAMMAR_FILE_PATH
-from services.mapping.relation_mapping.relation_mapping import generate_relation_extraction_sequences
+from services.mapping.relation_mapping.relation_mapping import generate_relation_extraction_sequence
 
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
 
