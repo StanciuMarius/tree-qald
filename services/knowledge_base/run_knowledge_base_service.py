@@ -32,9 +32,21 @@ def retrieve_relations():
 
     relations: List[str] = KB_OPERATOR.retrieve_relations(subject, object_)
     return jsonify(relations)
-    # except:
-    #     return 'Bad input', 400
 
+
+@knowledge_base_service.route('/run_sparql_query', methods=['GET'])
+@cross_origin()
+def run_sparql_query():
+    try:
+        input_json_object = json.loads(request.args.get('input'))
+        query_body = input_json_object['query_body']
+        return_variable = input_json_object['return_variable']
+
+        values: List[str] = KB_OPERATOR.run_query(query_body, return_variable)
+        return jsonify(values)
+    except:
+        return 'Bad input', 400
+    
 def run_knowledge_base_service():
     knowledge_base_service.run(host='0.0.0.0', port=PORTS['KNOWLEDGE_BASE'])
 
