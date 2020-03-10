@@ -11,13 +11,13 @@ def handle_TOPN(gen, node: QueryTree.Node):
     return handle_topn_helper(gen, node, literal)
 
 def handle_ARGMIN(gen, node: QueryTree.Node):
-    entity_sets = list(filter(lambda child: child.type.value in ENTITY_SETS, node.children))
-    relation_uri = '<yoyster relation>'
+    entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
+    relation_uri = node.kb_resources[0]
     if len(entity_sets) == 1: # Subquery
-        gen.node_vs_reference[node] = gen.node_vs_reference[entity_sets[0]]
+        gen.node_vs_reference[node.id] = gen.node_vs_reference[entity_sets[0].id]
         handle_subquery(gen, node, asc=True)
     elif len(entity_sets) == 0: # Type only
-        gen.node_vs_reference[node] = gen.generate_variable_name()
+        gen.node_vs_reference[node.id] = gen.generate_variable_name()
         handle_subquery(gen, node, asc=True)
     elif len(entity_sets) == 2 and entity_sets[0].type == NodeType.ENTITY and entity_sets[1].type == NodeType.ENTITY:
         e1, e2 = entity_sets
@@ -29,14 +29,14 @@ def handle_ARGMIN(gen, node: QueryTree.Node):
     gen.add_type_restrictions(node)
 
 def handle_ARGNTH(gen, node: QueryTree.Node):
-    entity_sets = list(filter(lambda child: child.type.value in ENTITY_SETS, node.children))
-    # literal = list(filter(lambda child: child.type = NodeType.LITERAL, node.children))[0]\
-    literal = '<yoyster literal>'
+    entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
+    literal = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))[0].kb_resources[0]
+
     if len(entity_sets) == 1:
-        gen.node_vs_reference[node] = gen.node_vs_reference[entity_sets[0]]
+        gen.node_vs_reference[node.id] = gen.node_vs_reference[entity_sets[0].id]
         handle_subquery(gen, node, asc=True, ordinal=literal)
     elif len(entity_sets) == 0: # Type only
-        gen.node_vs_reference[node] = gen.generate_variable_name()
+        gen.node_vs_reference[node.id] = gen.generate_variable_name()
         handle_subquery(gen, node, asc=True, ordinal=literal)
     else:
         # TODO handle union of arbitrary length entity sets
@@ -45,17 +45,17 @@ def handle_ARGNTH(gen, node: QueryTree.Node):
     gen.add_type_restrictions(node)
 
 def handle_2_entities(gen, node, e1, e2, relation, sign):
-    relation_uri = '<yoyster relation>'
+    relation_uri = node.kb_resources[0]
     v1, v2 = gen.generate_variable_name(), gen.generate_variable_name()
-    gen.node_vs_reference[node] = gen.generate_variable_name()
+    gen.node_vs_reference[node.id] = gen.generate_variable_name()
     gen.triples.append((e1, relation_uri, v1))
     gen.triples.append((e2, relation_uri, v2))
-    gen.filters.append(BIND_PATTERN.format(v1, sign, v2, e1, e2, gen.node_vs_reference[node]))
+    gen.filters.append(BIND_PATTERN.format(v1, sign, v2, e1, e2, gen.node_vs_reference[node.id]))
 
 def handle_subquery(gen, node, asc=True, ordinal=None, limit=1):
-    relation_uri = '<yoyster relation>'
+    relation_uri = node.kb_resources[0]
     val = gen.generate_variable_name() 
-    gen.triples.append((gen.node_vs_reference[node], relation_uri, val))
+    gen.triples.append((gen.node_vs_reference[node.id], relation_uri, val))
     if ordinal:
         gen.post_processing.append(ARGNTH_PATTERN.format(val, ordinal))
     elif asc:
@@ -65,13 +65,13 @@ def handle_subquery(gen, node, asc=True, ordinal=None, limit=1):
 
 
 def handle_topn_helper(gen, node: QueryTree.Node, limit: int):
-    entity_sets = list(filter(lambda child: child.type.value in ENTITY_SETS, node.children))
-    relation_uri = '<yoyster relation>'
+    entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
+    relation_uri = node.kb_resources[0]
     if len(entity_sets) == 1: # Subquery
-        gen.node_vs_reference[node] = gen.node_vs_reference[entity_sets[0]]
+        gen.node_vs_reference[node.id] = gen.node_vs_reference[entity_sets[0].id]
         handle_subquery(gen, node, asc=False, ordinal=None, limit=limit)
     elif len(entity_sets) == 0: # Type only
-        gen.node_vs_reference[node] = gen.generate_variable_name()
+        gen.node_vs_reference[node.id] = gen.generate_variable_name()
         handle_subquery(gen, node, asc=False, ordinal=None, limit=limit)
     elif len(entity_sets) == 2 and entity_sets[0].type == NodeType.ENTITY and entity_sets[1].type == NodeType.ENTITY:
         e1, e2 = entity_sets

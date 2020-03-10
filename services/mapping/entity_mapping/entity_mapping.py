@@ -23,7 +23,7 @@ class EntityMapping:
 
         with open(ENTITY_LEXICON_PATH, 'r', encoding='utf-8') as r:
             lines = r.readlines()
-            for line in tqdm(lines, desc='Loading entity lexicon'):
+            for line in tqdm(lines[:100], desc='Loading entity lexicon'):
                 tokens = line.rstrip('\t\n').split('\t')
 
                 firstCandidate = tokens[1].split(' ')
