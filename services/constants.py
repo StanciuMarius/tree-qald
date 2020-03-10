@@ -5,6 +5,7 @@ PORTS = {
     'NLP': 5003,
     'QUERY_GENERATOR': 5004,
     'ANSWER': 5005,
+    'KNOWLEDGE_BASE': 5006
 }
 
 TASKS = {
@@ -15,7 +16,8 @@ TASKS = {
     'parse' : 'PARSER',
     'map_relation': 'MAPPING',
     'map_entity': 'MAPPING',
-    'map_type': 'MAPPING'
+    'map_type': 'MAPPING',
+    'retrieve_relations': 'KNOWLEDGE_BASE'
 }
 
 URL_ROOT = 'http://localhost'

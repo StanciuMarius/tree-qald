@@ -1,0 +1,5 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select DISTINCT ?property WHERE {{
+    {ARG1} ?property ?object.
+    {FILTERS}
+}}

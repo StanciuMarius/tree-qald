@@ -5,3 +5,11 @@ class KnowledgeBase(Enum):
     TACRED   = 'tacred'
     WIKIDATA = 'wikidata'
     FREEBASE = 'freebase'
+
+class ResourceType(Enum):
+    ENTITY      = 'ENTITY'
+    TYPE        = 'TYPE'
+    RELATION    = 'RELATION'
+    DATE        = 'DATE'
+    NUMERAL     = 'NUMERAL'
+    STRING      = 'STRING'

@@ -1,0 +1,4 @@
+select distinct ?property WHERE {{
+{ARG1} ?property {ARG2}.
+{FILTERS}
+}}

@@ -18,6 +18,7 @@ class Task(Enum):
     MAP_RELATION = 'map_relation'
     MAP_ENTITY = 'map_entity'
     MAP_TYPE = 'map_type'
+    RETRIEVE_RELATIONS = 'retrieve_relations'
 
 
 def run_task(task: Task, input):
@@ -38,3 +39,4 @@ def run_task(task: Task, input):
 # Example of running a task from Task enum
 # print(run_task(Task.TOKENIZE, "hello world"))
 # print(run_task(Task.PARSE, "hello world"))
+# test_1 = kb.retrieve_relation(, (ResourceType.ENTITY, "http://dbpedia.org/resource/Michelle_Obama")) == ['http://dbpedia.org/ontology/spouse']
