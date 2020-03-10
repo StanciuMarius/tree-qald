@@ -14,10 +14,11 @@ TASKS = {
     'pos_tag': 'NLP',
     'spacy_process': 'NLP',
     'parse' : 'PARSER',
-    'map_relation': 'MAPPING',
+    'rank_relations': 'MAPPING',
     'map_entity': 'MAPPING',
     'map_type': 'MAPPING',
-    'retrieve_relations': 'KNOWLEDGE_BASE'
+    'retrieve_relations': 'KNOWLEDGE_BASE',
+    'run_sparql_query': 'KNOWLEDGE_BASE'
 }
 
 URL_ROOT = 'http://localhost'

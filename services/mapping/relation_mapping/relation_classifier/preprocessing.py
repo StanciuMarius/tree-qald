@@ -80,7 +80,7 @@ def has_valid_bert_sequence(example):
 def validate(example):
     return not has_unknown_relation(example) and not has_na_relation(example) and has_valid_bert_sequence(example)
     
-def generate_relation_extraction_sequences(tree: QueryTree):    
+def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):    
     def offset_for_node_union(tree: QueryTree, nodes):
         union_begin, union_end = tree.offset_for_node(nodes[0])
         for node in nodes[1:]:
@@ -90,73 +90,69 @@ def generate_relation_extraction_sequences(tree: QueryTree):
         return union_begin, union_end
 
     text = ' '.join(tree.tokens)
-    relation_nodes = tree.root.collect(RELATION_NODE_TYPES)
 
-    node_vs_sequence = {}
+    # Generate one sequence for each relation node
+    sequence = text
 
-    for node in relation_nodes:
-        if len(node.kb_resources) == 0:
-            continue
-        # Generate one sequence for each relation node
-        sequence = text
+    e1_nodes = []
+    e2_nodes = []
 
-        e1_nodes = []
-        e2_nodes = []
+    if node.type in {NodeType.EXISTSRELATION}:
+        # Relation is between 2 entities/literal
+        e1_nodes = [node.children[0]]
+        e2_nodes = [node.children[1]]
+    elif node.type in {NodeType.GREATER, NodeType.LESS}:
+        e1_nodes = list(filter(lambda x: x.type != NodeType.LITERAL, node.children))
+        e2_nodes = list(filter(lambda x: x.type in {NodeType.LITERAL}, node.children))
+    elif node.type in {NodeType.PROPERTY}:
+        e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE, node.children))
+        # We can consider a type as a substitute for entities
+        # e.g. Give me all [E1] songs [/E1] by [E2] Bruce Springsteen [/E2].
+        e2_nodes = list(filter(lambda x: x.type in {NodeType.TYPE}, node.children))[:1] # TODO: currently only consider first type
+    elif node.type in {NodeType.PROPERTYCONTAINS}:
+        e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.ENTITY and x.type != NodeType.LITERAL, node.children))
+        e2_nodes = list(filter(lambda x: x.type == NodeType.ENTITY or x.type == NodeType.LITERAL, node.children))
+    elif node.type in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.ARGMAXCOUNT, NodeType.ARGMINCOUNT, NodeType.TOPN, NodeType.GREATERCOUNT}:
+        e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.LITERAL, node.children))
+        if len(e1_nodes) == 0: e1_nodes = list(filter(lambda x: x.type != NodeType.LITERAL, node.children))
+    elif node.type in {NodeType.ISLESS, NodeType.ISGREATER}:
+        # Technically there are 2 identical relations for each child entity. We can only extract for one of them.
+        e1_nodes = [node.children[0]]
+    
+    e1_begin, e1_end = offset_for_node_union(tree, e1_nodes)
 
-        if node.type in {NodeType.EXISTSRELATION}:
-            # Relation is between 2 entities/literal
-            e1_nodes = [node.children[0]]
-            e2_nodes = [node.children[1]]
-        elif node.type in {NodeType.GREATER, NodeType.LESS}:
-            e1_nodes = list(filter(lambda x: x.type != NodeType.LITERAL, node.children))
-            e2_nodes = list(filter(lambda x: x.type in {NodeType.LITERAL}, node.children))
-        elif node.type in {NodeType.PROPERTY}:
-            e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE, node.children))
-            # We can consider a type as a substitute for entities
-            # e.g. Give me all [E1] songs [/E1] by [E2] Bruce Springsteen [/E2].
-            e2_nodes = list(filter(lambda x: x.type in {NodeType.TYPE}, node.children))[:1] # TODO: currently only consider first type
-        elif node.type in {NodeType.PROPERTYCONTAINS}:
-            e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.ENTITY and x.type != NodeType.LITERAL, node.children))
-            e2_nodes = list(filter(lambda x: x.type == NodeType.ENTITY or x.type == NodeType.LITERAL, node.children))
-        elif node.type in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.ARGMAXCOUNT, NodeType.ARGMINCOUNT, NodeType.TOPN, NodeType.GREATERCOUNT}:
-            e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.LITERAL, node.children))
-            if len(e1_nodes) == 0: e1_nodes = list(filter(lambda x: x.type != NodeType.LITERAL, node.children))
-        elif node.type in {NodeType.ISLESS, NodeType.ISGREATER}:
-            # Technically there are 2 identical relations for each child entity. We can only extract for one of them.
-            e1_nodes = [node.children[0]]
-        
-        e1_begin, e1_end = offset_for_node_union(tree, e1_nodes)
+    if len(e2_nodes) == 0:
+        if node.type == NodeType.PROPERTY and tree.tokens[0].lower() in QUESTION_WORDS and node in tree.root.children:
+            # We can consider the question word as one of the entities for the direct child of a root
+            # e.g. [E1] Who [/E1] is the wife of [E2] Barack Obama [/E2] ?
+            e2_begin = 0
+            e2_end = len(tree.tokens[0])
+        else:
+            # We only have one entity, so we add a dummy token at the beginning of the sequence to consider as E2
+            new_token = ' [{}] '.format(node.type.value)
+            sequence = new_token + sequence
+            offset = len(new_token)
+            e1_begin, e1_end, e2_begin, e2_end = offset + e1_begin, offset + e1_end, 0, offset
+    else: 
+        e2_begin, e2_end = offset_for_node_union(tree, e2_nodes)
 
-        if len(e2_nodes) == 0:
-            if node.type == NodeType.PROPERTY and tree.tokens[0].lower() in QUESTION_WORDS and node in tree.root.children:
-                # We can consider the question word as one of the entities for the direct child of a root
-                # e.g. [E1] Who [/E1] is the wife of [E2] Barack Obama [/E2] ?
-                e2_begin = 0
-                e2_end = len(tree.tokens[0])
-            else:
-                # We only have one entity, so we add a dummy token at the beginning of the sequence to consider as E2
-                new_token = ' [{}] '.format(node.type.value)
-                sequence = new_token + sequence
-                offset = len(new_token)
-                e1_begin, e1_end, e2_begin, e2_end = offset + e1_begin, offset + e1_end, 0, offset
-        else: 
-            e2_begin, e2_end = offset_for_node_union(tree, e2_nodes)
+    result = {
+        'text': sequence,
+        'id': '{}${}'.format(tree.id, node.id),
+        'subject': text[e1_begin:e1_end],
+        'object':text[e2_begin:e2_end],
+        # 'subject_node_ids': [node.id for node in e1_nodes],
+        # 'object_node_ids': [node.id for node in e2_nodes] if e2_nodes else [],
+        'subject_begin': e1_begin,
+        'subject_end': e1_end,
+        'object_begin': e2_begin,
+        'object_end': e2_end,
+    }
 
-        node_vs_sequence[node.id] = {
-            'text': sequence,
-            'id': '{}${}'.format(tree.id, node.id),
-            'subject': text[e1_begin:e1_end],
-            'object':text[e2_begin:e2_end],
-            'subject_begin': e1_begin,
-            'subject_end': e1_end,
-            'object_begin': e2_begin,
-            'object_end': e2_end,
-        }
+    if len(node.kb_resources) > 0:
+        result['relation'] = node.kb_resources[0] # TODO Consider others 
 
-        if len(node.kb_resources) > 0:
-            node_vs_sequence[node.id]['relation'] = node.kb_resources[0] # TODO Consider others 
-
-    return node_vs_sequence
+    return result
 
 def parse_trees_to_relation_extraction_format(parse_trees_file_path, output_file_path):
     with open(parse_trees_file_path, 'r', encoding='utf-8') as input_file:
@@ -167,7 +163,9 @@ def parse_trees_to_relation_extraction_format(parse_trees_file_path, output_file
     
     sequences = []
     for tree in trees:
-        sequences.extend(generate_relation_extraction_sequences(tree).values())
+        relation_nodes = tree.root.collect(RELATION_NODE_TYPES)
+        for node in relation_nodes:
+            sequences.append(generate_relation_extraction_sequence(tree))
         
     with open(output_file_path, 'w', encoding='utf-8') as output_file:
         json.dump(sequences, output_file)

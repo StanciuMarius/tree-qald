@@ -9,7 +9,7 @@ from typing import List
 sys.path.insert(0, os.getcwd())
 
 from services.tasks import run_task, Task
-from services.mapping.constants import PATTY_DBPEDIA_PARAPHRASES_FILE_PATH, PATTY_POS_VS_SPACY_POS
+import services.mapping.constants as constants
 
 class PattyPatternTrie:
     class Node:    
@@ -54,8 +54,8 @@ class PattyPatternTrie:
     def __add_pattern(self, tokens: List[str], relation):
         it = self.root
         for i, token in enumerate(tokens):
-            if token in PATTY_POS_VS_SPACY_POS:
-                token = PATTY_POS_VS_SPACY_POS[token]
+            if token in constants.PATTY_POS_VS_SPACY_POS:
+                token = constants.PATTY_POS_VS_SPACY_POS[token]
             it = it.add_child(token)
         
         it.add_value(relation)
@@ -93,10 +93,10 @@ class PattyPatternTrie:
             
 class RelationPatternMatcher:
 
-    def __init__(self, pattern_file_path: str):
+    def __init__(self, pattern_file_path: str = constants.PATTY_DBPEDIA_PARAPHRASES_FILE_PATH):
         self.pattern_trie = PattyPatternTrie(pattern_file_path)
     
-    def find_relation(self, question_text, subject_begin, subject_end, object_begin, object_end):
+    def __call__(self, text, subject_begin, subject_end, object_begin, object_end, **kwargs):
         if subject_begin < object_begin:
             text_between_begin = subject_end
             text_between_end = object_begin

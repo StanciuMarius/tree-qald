@@ -15,10 +15,11 @@ class Task(Enum):
     SPACY_PROCESS = 'spacy_process'
     REMOVE_PUNCTUATION = 'remove_punctuation'
     PARSE = 'parse'
-    MAP_RELATION = 'map_relation'
+    RANK_RELATIONS = 'rank_relations'
     MAP_ENTITY = 'map_entity'
     MAP_TYPE = 'map_type'
     RETRIEVE_RELATIONS = 'retrieve_relations'
+    RUN_SPARQL_QUERY = 'run_sparql_query'
 
 
 def run_task(task: Task, input):
