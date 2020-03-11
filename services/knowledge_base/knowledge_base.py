@@ -17,9 +17,14 @@ class KnowledgeBaseOperator(object):
         for key, path in constants.RELATION_RETRIVAL_SPARQL_TEMPLATE_PATHS.items():
             with open(path, 'r', encoding='utf-8') as file:
                 self.sparql_templates[key] = str(file.read())
+        self.cache = {}
 
     def run_query(self, query: str, return_variable: str):
 
+        cache_key = query + "|" + return_variable
+        if cache_key in self.cache:
+            return self.cache[cache_key]
+        
         with open(constants.QUERY_FILE_PATH, 'w', encoding='ascii', newline='\n') as file:
             file.write(query)
 
@@ -32,7 +37,7 @@ class KnowledgeBaseOperator(object):
             value = element[return_variable]['value']
             if value not in constants.RESULT_BLACKLIST:
                 result.append(value)
-
+        self.cache[cache_key] = result
         return result
 
     def retrieve_relations(self, subject=Tuple[ResourceType, str], object_=Tuple[ResourceType, str]):
