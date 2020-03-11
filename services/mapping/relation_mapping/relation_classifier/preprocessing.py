@@ -80,7 +80,8 @@ def has_valid_bert_sequence(example):
 def validate(example):
     return not has_unknown_relation(example) and not has_na_relation(example) and has_valid_bert_sequence(example)
     
-def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):    
+def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):  
+    # TODO this code does kind of the same thing as the query generation handlers. Make it dry  
     def offset_for_node_union(tree: QueryTree, nodes):
         union_begin, union_end = tree.offset_for_node(nodes[0])
         for node in nodes[1:]:
@@ -88,7 +89,7 @@ def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):
             union_begin = min(union_begin, node_begin)
             union_end = max(union_end, node_end)
         return union_begin, union_end
-
+        
     text = ' '.join(tree.tokens)
 
     # Generate one sequence for each relation node

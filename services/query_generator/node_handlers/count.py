@@ -1,6 +1,6 @@
 from common.query_tree import QueryTree, NodeType
 from services.query_generator.constants import ENTITY_SETS
-from services.query_generator.constants import COUNT_SUBQUERY_TEMPLATE_FILE_PATH, ARGFUNC_SUBQUERY_TEMPLATE_FILE_PATH, COUNT_ENTITY_TEMPLATE_FILE_PATH, TRIPLE_PATTERN, BIND_PATTERN
+from services.query_generator.constants import RELATION_EXTRACTION_VARIABLE, COUNT_SUBQUERY_TEMPLATE_FILE_PATH, ARGFUNC_SUBQUERY_TEMPLATE_FILE_PATH, COUNT_ENTITY_TEMPLATE_FILE_PATH, TRIPLE_PATTERN, BIND_PATTERN
 
 
 def handle_COUNT(gen, node: QueryTree.Node):
@@ -35,7 +35,11 @@ def handle_ARGMINCOUNT(gen, node: QueryTree.Node):
 
 def handle_ARGfuncCOUNT(gen, node: QueryTree.Node, func = 'MAX'):
     entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
-    relation_uri = node.kb_resources[0]
+    if node.kb_resources:
+        relation = gen.generate_variable_name()
+        gen.bindings[relation] = node.kb_resources
+    else:
+        relation = RELATION_EXTRACTION_VARIABLE
 
     if len(entity_sets) == 1 or len(entity_sets) == 0: # Subquery
         if len(entity_sets) == 1:
@@ -54,13 +58,17 @@ def handle_ARGfuncCOUNT(gen, node: QueryTree.Node, func = 'MAX'):
         with open(ARGFUNC_SUBQUERY_TEMPLATE_FILE_PATH, 'r', encoding='utf-8') as query_template_file:
             template = query_template_file.read()
         order = 'DESC' if func == 'MAX' else 'ASC'
-        gen.filters.append(template.format(ent=gen.node_vs_reference[node.id], val=val, val_count=val_count, relation=relation_uri, triples=triples, order=order))
+
+        gen.filters.append(template.format(ent=gen.node_vs_reference[node.id], val=val, val_count=val_count, relation=relation, triples=triples, order=order))
    
     elif len(entity_sets) == 2 and entity_sets[0].type == NodeType.ENTITY and entity_sets[1].type == NodeType.ENTITY:
         gen.node_vs_reference[node.id] = gen.generate_variable_name()
-        relation_uri = node.kb_resources[0]
-        ent_1 = entity_sets[0].kb_resources[0]
-        ent_2 = entity_sets[1].kb_resources[0]
+        e1 = gen.generate_variable_name()
+        gen.bindings[e1] = entity_sets[0].kb_resources
+
+        e2 = gen.generate_variable_name()
+        gen.bindings[e2] = entity_sets[1].kb_resources
+
         val_1 = gen.generate_variable_name()
         val_2 = gen.generate_variable_name()
         val_count_1 = gen.generate_variable_name()
@@ -69,9 +77,9 @@ def handle_ARGfuncCOUNT(gen, node: QueryTree.Node, func = 'MAX'):
         with open(COUNT_ENTITY_TEMPLATE_FILE_PATH, 'r', encoding='utf-8') as query_template_file:
             template = query_template_file.read()
         sign = '>' if func == 'MAX' else '<'
-        gen.filters.append(BIND_PATTERN.format(val_count_1, sign, val_count_2, ent_1, ent_2, gen.node_vs_reference[node.id]))
-        gen.filters.append(template.format(var=ent_1, relation=relation_uri, val=val_1, val_count=val_count_1, triples=''))
-        gen.filters.append(template.format(var=ent_2, relation=relation_uri, val=val_2, val_count=val_count_2, triples=''))
+        gen.filters.append(BIND_PATTERN.format(val_count_1, sign, val_count_2, e1, e2, gen.node_vs_reference[node.id]))
+        gen.filters.append(template.format(var=e1, relation=relation, val=val_1, val_count=val_count_1, triples=''))
+        gen.filters.append(template.format(var=e2, relation=relation, val=val_2, val_count=val_count_2, triples=''))
     else:
         # TODO handle union of multiple entity sets
         print("Unsupported ARGfuncCOUNT!")

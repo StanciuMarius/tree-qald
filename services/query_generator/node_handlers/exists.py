@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, os.getcwd())
 
 from common.query_tree import QueryTree, NodeType
-from services.query_generator.constants import ENTITY_SETS, TRIPLE_PATTERN
+from services.query_generator.constants import ENTITY_SETS, TRIPLE_PATTERN, RELATION_EXTRACTION_VARIABLE
 
 def handle_EXISTS(gen, node: QueryTree.Node):
     gen.is_exists = True
@@ -17,19 +17,27 @@ def handle_EXISTS(gen, node: QueryTree.Node):
         print("Unsupported EXISTS!")
         raise
 
-def handle_EXISTSRELATION(gen, node: QueryTree.Node):
+def handle_EXISTSRELATION(gen, node: QueryTree.Node, reverse_relation=False):
     gen.is_exists = True
     entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
     literals = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))
     gen.node_vs_reference[node.id] = None
-    relation = node.kb_resources[0]
-
+    if node.kb_resources:
+        relation = gen.generate_variable_name()
+        gen.bindings[relation] = node.kb_resources
+    else:
+        relation = RELATION_EXTRACTION_VARIABLE
     if len(entity_sets) == 2:
         e1, e2 = entity_sets
-        gen.triples.append((gen.node_vs_reference[e1.id], relation, gen.node_vs_reference[e2.id]))
+        triple = (gen.node_vs_reference[e1.id], relation, gen.node_vs_reference[e2.id])
+        gen.triples.append(reversed(triple) if reverse_relation else triple)
+
+
     elif len(entity_sets) == 1 and len(literals) == 1:
         literal = literals[0].kb_resources[0]
-        gen.triples.append((gen.node_vs_reference[entity_sets[0].id], relation, literal))
+        triple = (gen.node_vs_reference[entity_sets[0].id], relation, literal)
+        gen.triples.append(reversed(triple) if reverse_relation else triple)
+
 
 
 def handle_ISA(gen, node: QueryTree.Node):
