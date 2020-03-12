@@ -7,9 +7,11 @@ TYPES_TRIE_PATH = "datasets/type_mapping/data/types_trie.pkl"
 SPACY_CACHE_PATH = "services/mapping/type_mapping/cache.dump"
 
 TYPE_LEXICON_PATH = r'datasets\type_mapping\data\lexicon.tsv'
+LABELS_SPACY_DOCS_PATH = r'datasets\type_mapping\data\labels_spacy_docs.json'
 YAGO_TAXONOMY_PATH = r'datasets\type_mapping\data\yago_taxonomy.nt'
 DBPEDIA_TYPE_INSTANCES_PATH = r'datasets\type_mapping\data\instance-types_lang=en.ttl'
-
+DBPEDIA_TYPE_SYNSETS_PATH = r'datasets\type_mapping\data\type_synonyms.csv'
+TOP_N_SIMILAR_TYPES = 3
 PATTY_POS_VS_SPACY_POS = {
     '[[det]]': 'DET',
     '[[pro]]': 'PRO',

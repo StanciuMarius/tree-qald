@@ -1,0 +1,857 @@
+<http://dbpedia.org/ontology/Company>,other_company large_company small_company business whole_company company big_company major_company said_company large_corporation new_company
+<http://dbpedia.org/ontology/Animal>,wild_animal farm_animal live_animal single_animal domesticated_animal other_animals animals animal other_animal living_animal living_creature
+<http://dbpedia.org/ontology/Athlete>,great_athlete elite_athlete athlete world_class_athlete athelete pro_athlete high_school_athlete college_athlete professional_athlete good_athlete football_player
+<http://dbpedia.org/ontology/AustralianRulesFootballPlayer>,
+<http://dbpedia.org/ontology/Person>,certain_person person other_person said_person specific_person individual particular_person somebody he/she someone _person
+<http://dbpedia.org/ontology/Governor>,new_governor congressman governors president governor legislator governorship governer senator current_governor state_legislature
+<http://dbpedia.org/ontology/Software>,other_software own_software custom_software software/hardware hardware/software specific_software new_software software hardware most_software actual_software
+<http://dbpedia.org/ontology/Single>,single
+<http://dbpedia.org/ontology/AdministrativeRegion>,
+<http://dbpedia.org/ontology/Building>,building large_building buildings several_buildings other_building other_buildings top_floor whole_building office_building small_building entire_building
+<http://dbpedia.org/ontology/AutoRacingLeague>,
+<http://dbpedia.org/ontology/ChristianBishop>,
+<http://dbpedia.org/ontology/Cleric>,sorceror monk rogue clerics paladin barbarian sorcerer cleric bard necromancer spellcaster
+<http://dbpedia.org/ontology/Weapon>,other_weapons second_weapon multiple_weapons other_weapon main_weapon particular_weapon weapon actual_weapon melee_weapon secondary_weapon primary_weapon
+<http://dbpedia.org/ontology/Device>,single_device devices particular_device specific_device second_device other_devices other_device first_device device many_devices external_device
+<http://dbpedia.org/ontology/Cyclist>,cager pedestrian bike_rider motorcyclist bicyclist car_driver motorcyclists motorist cyclist cyclists van_driver
+<http://dbpedia.org/ontology/Species>,own_species single_species many_species animal_species whole_species evolutionary_history other_species human_species organisms sentient_species species
+<http://dbpedia.org/ontology/Tunnel>,tunnel corridor long_tunnel
+<http://dbpedia.org/ontology/AnatomicalStructure>,anatomical_structure
+<http://dbpedia.org/ontology/Stream>,whole_stream vod entire_stream own_stream twitch_stream vods twitch_channel streams twitch stream other_stream
+<http://dbpedia.org/ontology/Station>,stations other_station station different_station
+<http://dbpedia.org/ontology/Aircraft>,airliner aircrafts airframe aircraft fixed-wing_aircraft modern_aircraft airliners other_aircraft commercial_aircraft fighter_aircraft military_aircraft
+<http://dbpedia.org/ontology/Fungus>,mealy_bugs biofilm fungal_infections mites microbes fungus nematodes pollen bacteria fungi fungal_spores
+<http://dbpedia.org/ontology/Election>,elections election last_election reelection next_election general_elections election_cycle presidential_election re-election general_election first_election
+<http://dbpedia.org/ontology/Mammal>,other_mammal most_mammals rodent insect platypus carnivorous mammals other_animal species primate mammal
+<http://dbpedia.org/ontology/Criminal>,violent_criminal actual_criminal criminal serious_crime innocent_person police_officer criminals corrupt_cop felon murderer perp
+<http://dbpedia.org/ontology/Project>,projects project big_project new_project particular_project own_project entire_project small_project whole_project current_project other_project
+<http://dbpedia.org/ontology/Website>,site main_website web_site main_site homepage actual_website own_website webpage other_website website official_site
+<http://dbpedia.org/ontology/Mountain>,mountains hills mountain_top mountain_side lake dunes mountainside large_mountain mountain canyon small_mountain
+<http://dbpedia.org/ontology/Bridge>,first_bridge bridge second_bridge
+<http://dbpedia.org/ontology/AustralianFootballLeague>,
+<http://dbpedia.org/ontology/LacrosseLeague>,
+<http://dbpedia.org/ontology/ClubMoss>,
+<http://dbpedia.org/ontology/EducationalInstitution>,public_institution educational_institution institution public_university
+<http://dbpedia.org/ontology/Artist>,other_artist artist real_artist good_artist original_artist actual_artist great_artist particular_artist
+<http://dbpedia.org/ontology/Monument>,monuments monument memorial
+<http://dbpedia.org/ontology/Disease>,common_cold various_diseases other_disease many_diseases other_diseases serious_disease disease diseases particular_disease illnesses deadly_disease
+<http://dbpedia.org/ontology/InlineHockeyLeague>,
+<http://dbpedia.org/ontology/Musical>,musical musicals
+<http://dbpedia.org/ontology/FieldHockeyLeague>,
+<http://dbpedia.org/ontology/Artery>,carotid femoral_artery artery trachea major_artery spinal_column carotid_artery clot aorta spleen spinal_cord
+<http://dbpedia.org/ontology/Senator>,vice_president state_senator congressman senators president legislator governor lawmaker state_representative presidential_candidate senator
+<http://dbpedia.org/ontology/Currency>,fiat_currency new_currency currencies other_currency fiat_money actual_currency currency hard_currency denominated fiat other_currencies
+<http://dbpedia.org/ontology/BadmintonPlayer>,
+<http://dbpedia.org/ontology/Activity>,activity other_activity
+<http://dbpedia.org/ontology/Language>,own_language idioms language other_language other_languages different_language languages langauge particular_language real_language spoken_language
+<http://dbpedia.org/ontology/Rocket>,rockets payload rocket other_rockets missile torpedo own_rocket warhead missle first_rocket launch_pad
+<http://dbpedia.org/ontology/Airline>,airlines other_airline other_airlines airline_company most_airlines particular_airline airline
+<http://dbpedia.org/ontology/MusicalWork>,musical_work
+<http://dbpedia.org/ontology/Olympics>,olympics winter_olympics
+<http://dbpedia.org/ontology/Library>,library
+<http://dbpedia.org/ontology/Theatre>,cinema movie_theater theaters local_theater theatres local_theatre movie_theatre theatre theater
+<http://dbpedia.org/ontology/Village>,villages castle capital_city little_village home_village small_village village nearby_village countryside encampment
+<http://dbpedia.org/ontology/YearInSpaceflight>,
+<http://dbpedia.org/ontology/Planet>,solar_system entire_solar_system planet other_planet planet_earth whole_planet own_planet earth only_planet other_planets entire_planet
+<http://dbpedia.org/ontology/Colour>,actual_color light_color colored coloured hues colors colours same_colour color white_color colour
+<http://dbpedia.org/ontology/SkiArea>,ski_area ski_resort
+<http://dbpedia.org/ontology/PrimeMinister>,prime_minister opposition_leader parliament current_prime_minister prime_minster president elected_leader ruling_party opposition_party current_president foreign_minister
+<http://dbpedia.org/ontology/PeriodicalLiterature>,
+<http://dbpedia.org/ontology/College>,freshman_year college high_school junior_college university highschool senior_year high-school grad_school sophomore_year school
+<http://dbpedia.org/ontology/Museum>,museum local_museum history_museum natural_history_museum museums science_center art_museum art_gallery
+<http://dbpedia.org/ontology/Stadium>,new_stadium old_stadium football_stadium current_stadium soccer_stadium stadium full_stadium other_stadiums baseball_stadium stadiums own_stadium
+<http://dbpedia.org/ontology/Mollusca>,
+<http://dbpedia.org/ontology/Cardinal>,cardinal
+<http://dbpedia.org/ontology/Bacteria>,harmful_bacteria other_bacteria pathogens bacterium microorganisms microbes good_bacteria toxins bacteria fungi bad_bacteria
+<http://dbpedia.org/ontology/GridironFootballPlayer>,
+<http://dbpedia.org/ontology/Reptile>,gecko amphibian reptile rodent insect lizard snake
+<http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete>,
+<http://dbpedia.org/ontology/Insect>,jellyfish mosquito amphibian arthropods reptile rodent insect worm insects aphid mammal
+<http://dbpedia.org/ontology/Holiday>,major_holiday holidays business_trip long_weekend long_holiday holiday vacation
+<http://dbpedia.org/ontology/EthnicGroup>,ethnic_identity ethnic ethnic_groups specific_ethnicity racial_group other_ethnic_groups ethnicity ethnic_group cultural_group ethnic_minority same_ethnic_group
+<http://dbpedia.org/ontology/Database>,log_files main_database web_service querying own_database databas local_database entire_database query database databases
+<http://dbpedia.org/ontology/PersonFunction>,
+<http://dbpedia.org/ontology/School>,school_program uni school college preschool high_school university college_classes summer_school local_school _school
+<http://dbpedia.org/ontology/Monarch>,emperor absolute_monarch sovereign republic monarch monarchy monarchs absolute_monarchy constitutional_monarchy royal_family
+<http://dbpedia.org/ontology/ComicsCreator>,
+<http://dbpedia.org/ontology/Comedian>,professional_comedian comedienne stand_up_comedian great_comedian talk_show stand-up_comedian comedians talk_show_host other_comedians comedian comedy_show
+<http://dbpedia.org/ontology/CanadianFootballTeam>,
+<http://dbpedia.org/ontology/Writer>,writer other_writer professional_writer good_writer novelist filmmaker bad_writer author talented_writer great_writer screenwriter
+<http://dbpedia.org/ontology/Valley>,mountains hills lake valley rolling_hills mountain canyon foothills
+<http://dbpedia.org/ontology/Ginkgo>,ginkgo ginseng
+<http://dbpedia.org/ontology/Hospital>,hospital intensive_care clinic local_hospital emergency_surgery hospice different_hospital urgent_care emergency_room emergency_department nurse
+<http://dbpedia.org/ontology/Muscle>,little_muscle muscles more_muscle actual_muscle lean_muscle muscle much_muscle building_muscle muscle_mass lean_mass lean_muscle_mass
+<http://dbpedia.org/ontology/Island>,island other_islands tiny_island islands little_island main_island whole_island main_land small_islands entire_island small_island
+<http://dbpedia.org/ontology/Airport>,aiport international_airport major_airport airport layover air_port local_airport next_flight train_station bus_station small_airport
+<http://dbpedia.org/ontology/Magazine>,magazines magazine same_magazine
+<http://dbpedia.org/ontology/Country>,whole_country _country countries own_country single_country entire_country country nation united_states western_country other_country
+<http://dbpedia.org/ontology/WomensTennisAssociationTournament>,
+<http://dbpedia.org/ontology/Wrestler>,wrestler great_wrestler wrestling pro_wrestler main_eventer other_wrestler wrestlers better_wrestler babyface technical_wrestler good_wrestler
+<http://dbpedia.org/ontology/Conifer>,conifer
+<http://dbpedia.org/ontology/FormulaOneRacer>,
+<http://dbpedia.org/ontology/Protein>,complex_carbs fats carbohydrates extra_protein carbs protein healthy_fats whey_protein more_protein protien high_protein
+<http://dbpedia.org/ontology/Arachnid>,arachnid
+<http://dbpedia.org/ontology/Archaea>,archaea protozoa eukaryotes prokaryotes fungi protists
+<http://dbpedia.org/ontology/Beverage>,other_drinks drink beer alcoholic_drink coffee beverages soft_drink soda other_beverages beverage
+<http://dbpedia.org/ontology/MilitaryConflict>,military_actions armed_conflicts major_war conventional_war military_conflict foreign_intervention military_action armed_conflict direct_war proxy_war open_conflict
+<http://dbpedia.org/ontology/TelevisionShow>,show current_show television_program tv_show popular_show television_series television old_show television_show other_show sitcom
+<http://dbpedia.org/ontology/Crustacean>,crustacean
+<http://dbpedia.org/ontology/LegalCase>,law_suit civil_lawsuit lawsuit litigation legal_case civil_suit plaintiff court_case criminal_case legal_proceedings civil_case
+<http://dbpedia.org/ontology/Chancellor>,chancellor
+<http://dbpedia.org/ontology/Politician>,politician other_politician other_politicians congressman president elected_official politican political_figure career_politician presidential_candidate senator
+<http://dbpedia.org/ontology/BasketballPlayer>,soccer_player professional_basketball_player hockey_player basketball basketball_player football_player
+<http://dbpedia.org/ontology/MountainRange>,mountains mountain_range coastline mountain_ridge shoreline western_side inland_sea eastern_side small_valley coast_line mountain_ranges
+<http://dbpedia.org/ontology/TradeUnion>,labor_union union trade_union
+<http://dbpedia.org/ontology/VideoGame>,computer_game video_game videogame videogames video-game
+<http://dbpedia.org/ontology/MixedMartialArtsEvent>,
+<http://dbpedia.org/ontology/SportsEvent>,sporting_event baseball_game sporting_events major_sporting_event sports_events sports_event football_game
+<http://dbpedia.org/ontology/Spacecraft>,interplanetary_space space_station low_earth_orbit spacecraft space_craft propulsion_system launch_vehicle earth_orbit low_orbit lunar_orbit space_shuttle
+<http://dbpedia.org/ontology/SoftballLeague>,softball_league
+<http://dbpedia.org/ontology/PopulatedPlace>,
+<http://dbpedia.org/ontology/Astronaut>,astronaut
+<http://dbpedia.org/ontology/PoloLeague>,
+<http://dbpedia.org/ontology/WineRegion>,
+<http://dbpedia.org/ontology/Lighthouse>,light_house lighthouse observatory
+<http://dbpedia.org/ontology/SoccerClub>,soccer_club
+<http://dbpedia.org/ontology/SportsTeam>,sports_team sports_teams baseball_team football_team professional_sports_team favorite_sports_team sport_team soccer_team hockey_team
+<http://dbpedia.org/ontology/RoadTunnel>,
+<http://dbpedia.org/ontology/GreenAlga>,
+<http://dbpedia.org/ontology/RouteOfTransportation>,
+<http://dbpedia.org/ontology/Embryology>,embryology
+<http://dbpedia.org/ontology/ComicsCharacter>,
+<http://dbpedia.org/ontology/Eukaryote>,single_organism organism eukaryote eukaryotic_cells
+<http://dbpedia.org/ontology/Continent>,continents whole_continent landmass continent own_continent other_continents entire_continent
+<http://dbpedia.org/ontology/Scientist>,theoretical_physicist mathematician scientist researcher biologist real_scientist climate_scientist physicist biochemist astrophysicist neuroscientist
+<http://dbpedia.org/ontology/HockeyTeam>,college_hockey sports_team baseball_team football_team hockey_teams minor_league_team professional_sports_team soccer_team outdoor_game hockey_team basketball_team
+<http://dbpedia.org/ontology/AmericanFootballLeague>,
+<http://dbpedia.org/ontology/WorldHeritageSite>,world_heritage_site
+<http://dbpedia.org/ontology/FloweringPlant>,flowering_plant
+<http://dbpedia.org/ontology/MilitaryUnit>,military_unit
+<http://dbpedia.org/ontology/Journalist>,journo news_organization reporter journalists media_outlet news_outlet news_agency journalist columnist other_journalists blogger
+<http://dbpedia.org/ontology/Convention>,conventions convention
+<http://dbpedia.org/ontology/Settlement>,settlement
+<http://dbpedia.org/ontology/EurovisionSongContestEntry>,
+<http://dbpedia.org/ontology/GivenName>,given_name last_name middle_name first_name patronymic family_name second_name surname birthname birth_name full_first_name
+<http://dbpedia.org/ontology/Architect>,architect
+<http://dbpedia.org/ontology/GolfLeague>,
+<http://dbpedia.org/ontology/Amphibian>,amphibian reptile insect
+<http://dbpedia.org/ontology/Restaurant>,local_restaurant chain_restaurant pizza_place resteraunt restaurant restaraunt fast_food_restaurant small_restaurant burger_joint resturaunt resturant
+<http://dbpedia.org/ontology/WrittenWork>,literary_work published_work written_work
+<http://dbpedia.org/ontology/GolfPlayer>,
+<http://dbpedia.org/ontology/GrandPrix>,grand_prix
+<http://dbpedia.org/ontology/Congressman>,state_senator congressman senators congress_person elected_official legislator state_legislators congressperson state_representative congressmen senator
+<http://dbpedia.org/ontology/MusicGenre>,hip-hop modern_music hip_hop music_genre
+<http://dbpedia.org/ontology/ProtectedArea>,protected_area
+<http://dbpedia.org/ontology/SnookerWorldRanking>,
+<http://dbpedia.org/ontology/Ambassador>,ambassador diplomat
+<http://dbpedia.org/ontology/PoliticalParty>,particular_party opposition_party political_party conservative_party major_political_party political_parties ruling_party governing_party political_group special_interest_group democratic_party
+<http://dbpedia.org/ontology/MusicalArtist>,other_artist musical_artist
+<http://dbpedia.org/ontology/AmericanFootballPlayer>,
+<http://dbpedia.org/ontology/Newspaper>,news_paper local_newspaper local_paper news_papers major_newspaper newspapers newspaper
+<http://dbpedia.org/ontology/SoccerManager>,
+<http://dbpedia.org/ontology/SupremeCourtOfTheUnitedStatesCase>,
+<http://dbpedia.org/ontology/Automobile>,automobile automobiles
+<http://dbpedia.org/ontology/BiologicalDatabase>,
+<http://dbpedia.org/ontology/CollegeCoach>,defensive_coordinator coaching college_coach great_coach coach coaching_staff position_coach good_coach proven_coach head_coach college_coaches
+<http://dbpedia.org/ontology/SoccerPlayer>,soccer tennis_player soccer_player hockey_player rugby_player basketball_player football_player
+<http://dbpedia.org/ontology/President>,prime_minister sitting_president vice_president presidency president elected governor current_president new_president presidential_candidate senator
+<http://dbpedia.org/ontology/SoccerLeague>,soccer_league
+<http://dbpedia.org/ontology/AdultActor>,
+<http://dbpedia.org/ontology/MotorcycleRacingLeague>,
+<http://dbpedia.org/ontology/Locomotive>,locomotive
+<http://dbpedia.org/ontology/VideogamesLeague>,
+<http://dbpedia.org/ontology/Gnetophytes>,
+<http://dbpedia.org/ontology/Cricketer>,cricketer
+<http://dbpedia.org/ontology/MusicFestival>,music_fest outdoor_festival festival rave big_festival free_concert concert music_festival outdoor_concert local_festival coachella
+<http://dbpedia.org/ontology/LaunchPad>,launch_site landing_pad rocket booster_stage spacecraft landing_site command_module launchpad lander launch_pad spaceplane
+<http://dbpedia.org/ontology/University>,university/college uni local_college business_school university graduate_program major_university local_community_college state_university undergrad local_university
+<http://dbpedia.org/ontology/BasketballLeague>,basketball_league
+<http://dbpedia.org/ontology/Cycad>,
+<http://dbpedia.org/ontology/Plant>,many_plants plants entire_plant soil single_plant fertilizer whole_plant other_plant original_plant other_plants plant
+<http://dbpedia.org/ontology/NaturalPlace>,natural_place
+<http://dbpedia.org/ontology/CricketLeague>,
+<http://dbpedia.org/ontology/SportsLeague>,sports_league
+<http://dbpedia.org/ontology/MeanOfTransportation>,
+<http://dbpedia.org/ontology/MixedMartialArtsLeague>,
+<http://dbpedia.org/ontology/BritishRoyalty>,
+<http://dbpedia.org/ontology/Place>,where place
+<http://dbpedia.org/ontology/MemberOfParliament>,
+<http://dbpedia.org/ontology/Lake>,creek pier lake huge_lake shoreline river dunes small_lake big_lake canyon shore
+<http://dbpedia.org/ontology/Race>,only_one_race races single_race race
+<http://dbpedia.org/ontology/Mayor>,mayor
+<http://dbpedia.org/ontology/ChemicalSubstance>,substances chemical_substance
+<http://dbpedia.org/ontology/FictionalCharacter>,fictional_characters fictional_person comic_book_character fictional_character real_person real_life_person fictional fictional_story
+<http://dbpedia.org/ontology/River>,creek large_lake river_bank big_river lake shoreline river small_river downriver shore riverbed
+<http://dbpedia.org/ontology/Moss>,moss wisteria mosses ferns leaves
+<http://dbpedia.org/ontology/Event>,actual_event major_event other_event other_events first_event such_event specific_event event
+<http://dbpedia.org/ontology/Name>,first_name full_name name _name actual_name real_name
+<http://dbpedia.org/ontology/ResearchProject>,research_group research_assistant independent_study graduate_work undergraduate_research research_project research_work research_lab research_projects research_program undergrad_research
+<http://dbpedia.org/ontology/Lymph>,lymphatic_system lymph lymph_nodes
+<http://dbpedia.org/ontology/Work>,work- actual_work work _work
+<http://dbpedia.org/ontology/Cave>,small_cave forest grotto cave_system nearby_cave cave caves cavern dark_cave catacombs caverns
+<http://dbpedia.org/ontology/WrestlingEvent>,house_show wrestling_event
+<http://dbpedia.org/ontology/BroadcastNetwork>,cable_network cable_channel broadcast_network
+<http://dbpedia.org/ontology/SpaceStation>,space_station asteroid_belt spacecraft space_ship space_shuttle space_craft low_orbit space_stations deep_space spaceship asteroid
+<http://dbpedia.org/ontology/Grape>,watermelon blueberry grape raisin strawberry melon cherries flavored grapes pomegranate grapefruit
+<http://dbpedia.org/ontology/ShoppingMall>,shopping_centre train_station bus_station shopping_mall shopping_center office_building mall subway_station
+<http://dbpedia.org/ontology/City>,suburb outskirts major_city huge_city downtown_area large_city little_town city small_city town whole_city
+<http://dbpedia.org/ontology/Bone>,leg_bones bones bone ribs sinew cartilage marrow
+<http://dbpedia.org/ontology/Song>,particular_song other_song first_song last_song second_song whole_song lyrics great_song actual_song entire_song song
+<http://dbpedia.org/ontology/Award>,award academy_award awards other_awards
+<http://dbpedia.org/ontology/Ship>,ship first_ship main_ship own_ship other_ship large_ship new_ship other_ships small_ship big_ship ships
+<http://dbpedia.org/ontology/Judge>,judge juror defendant jury prosecutor defense_attorney magistrate court first_judge jury_trial prosecuting_attorney
+<http://dbpedia.org/ontology/SpaceMission>,space_mission
+<http://dbpedia.org/ontology/Drug>,most_drugs drug street_drugs dangerous_drug certain_drugs drugs other_drugs many_drugs narcotic other_drug opioids
+<http://dbpedia.org/ontology/Actor>,main_actor good_actor great_actor other_actor only_actor actor/actress character_actor actor lead_role actress lead_actor
+<http://dbpedia.org/ontology/Legislature>,legislation congress legislatures state_legislatures legislature legislative_body legislators state_government constitutional_amendment legislative_branch state_legislature
+<http://dbpedia.org/ontology/Game>,single_player real_game other_game actual_game entire_game _game game whole_game game- regular_game particular_game
+<http://dbpedia.org/ontology/Book>,actual_book few_books entire_book other_book particular_book first_book whole_book book books single_book other_books
+<http://dbpedia.org/ontology/PokerPlayer>,poker_player
+<http://dbpedia.org/ontology/Saint>,saint
+<http://dbpedia.org/ontology/Bird>,squirrel bird hippo wasp rabbit parrot other_bird seagull small_bird snake octopus
+<http://dbpedia.org/ontology/VolleyballLeague>,
+<http://dbpedia.org/ontology/Album>,album second_album entire_album whole_album opening_track other_album full_album first_track
+<http://dbpedia.org/ontology/Play>,play other_plays plays actual_play other_play
+<http://dbpedia.org/ontology/Food>,so_much_food other_food cheap_food most_food food _food own_food fresh_food cooked_food actual_food food-
+<http://dbpedia.org/ontology/Model>,other_model models other_models model
+<http://dbpedia.org/ontology/Hotel>,hotel hotels nice_hotel hotel_downtown fancy_hotel nearby_hotel hotel_room hostel local_hotel motel cheap_hotel
+<http://dbpedia.org/ontology/Nerve>,nerve
+<http://dbpedia.org/ontology/Sport>,soccer competitive_sport many_sports most_sports only_sport sports sport other_sport team_sports professional_sport other_sports
+<http://dbpedia.org/ontology/Canal>,canal
+<http://dbpedia.org/ontology/BasketballTeam>,rival_school college_team baseball_team state_championship football_team national_championship soccer_team high_school_team basketball_teams hockey_team basketball_team
+<http://dbpedia.org/ontology/Film>,original_film film films screenplay great_film many_films whole_film movie actual_film good_film most_films
+<http://dbpedia.org/ontology/Vein>,vein
+<http://dbpedia.org/ontology/NascarDriver>,nascar_driver
+<http://dbpedia.org/ontology/FigureSkater>,figure_skater
+<http://dbpedia.org/ontology/IceHockeyLeague>,
+<http://dbpedia.org/ontology/Non-ProfitOrganisation>,
+<http://dbpedia.org/ontology/PlayboyPlaymate>,
+<http://dbpedia.org/ontology/Road>,expressway country_road dirt_road same_road road interstate freeway highway gravel_road major_road back_road
+<http://dbpedia.org/ontology/RadioStation>,radio radio_show local_radio_station local_radio radio_stations local_station local_radio_stations radio_station college_radio_station favorite_radio_station
+<http://dbpedia.org/ontology/Philosopher>,theologian philosopher mathematician
+<http://dbpedia.org/ontology/Fern>,fern
+<http://dbpedia.org/ontology/Boxer>,kickboxer boxer
+<http://dbpedia.org/ontology/WaterwayTunnel>,
+<http://dbpedia.org/ontology/Fish>,catfish fish only_fish snails shrimp crayfish fish_food most_fish other_fish trout shrimps
+<http://dbpedia.org/ontology/Band>,drummer bands frontman band vocalist first_band new_band metal_band bassist other_band guitarist
+<http://dbpedia.org/ontology/Brain>,brains sensory_input entire_brain nervous_system frontal_lobe brain/body neural_pathways own_brain whole_brain brain frontal_cortex
+<http://dbpedia.org/ontology/SpeedwayLeague>,
+<http://dbpedia.org/ontology/PowerStation>,nuclear_power_plant nuclear_plant wind_turbine power_stations power_station
+<http://dbpedia.org/ontology/Town>,small_town old_town few_towns little_town few_blocks city home_town a_few_miles town next_town neighboring_town
+<http://dbpedia.org/ontology/SpeedwayTeam>,
+<http://dbpedia.org/ontology/Park>,walking_trail small_park bike_trail park local_park hiking_trail walk camp_ground big_park campground nearby_park
+<http://dbpedia.org/ontology/SpaceShuttle>,rocket_engines space_shuttles space_station low_earth_orbit spacecraft service_module space_craft spaceplane space_plane 747 space_shuttle
+<http://dbpedia.org/ontology/FilmFestival>,local_theater film_festivals film_festival
+<http://dbpedia.org/ontology/IceHockeyPlayer>,
+<http://dbpedia.org/ontology/LunarCrater>,
+<http://dbpedia.org/ontology/Broadcaster>,broadcast broadcasts broadcaster broadcasting broadcasters
+<http://dbpedia.org/ontology/Organisation>,organisation organisations organization
+<http://dbpedia.org/ontology/OfficeHolder>,
+<http://dbpedia.org/ontology/ArchitecturalStructure>,
+<http://dbpedia.org/ontology/HistoricPlace>,
+<http://dbpedia.org/ontology/BodyOfWater>,
+<http://dbpedia.org/ontology/RugbyLeague>,football/soccer american_football rugby_union rugby gridiron football rugby_league soccer
+<http://dbpedia.org/ontology/TelevisionStation>,tv_station television_station
+<http://dbpedia.org/ontology/BaseballPlayer>,hockey_player baseball baseball_player
+<http://dbpedia.org/ontology/Infrastructure>,existing_infrastructure necessary_infrastructure transport_infrastructure infrastructure public_infrastructure infastructure local_infrastructure new_infrastructure transportation_infrastructure basic_infrastructure other_infrastructure
+<http://dbpedia.org/ontology/TennisLeague>,
+<http://dbpedia.org/ontology/ChemicalCompound>,chemical_structure other_chemicals trace_amounts benzene active_ingredient chemical_formula chemical chemicals chemical_compounds chemical_compound same_chemical
+<http://dbpedia.org/ontology/BaseballLeague>,baseball_league
+<http://dbpedia.org/ontology/GaelicGamesPlayer>,
+<http://dbpedia.org/ontology/AmericanFootballTeam>,
+<http://dbpedia.org/ontology/HistoricBuilding>,historic_building
+<http://dbpedia.org/ontology/OlympicResult>,
+<http://dbpedia.org/ontology/MartialArtist>,martial_artist skilled_fighter martial_art martial_arts martial_arts_master martial_arts_training kung_fu martial_artists
+<http://dbpedia.org/ontology/RailwayTunnel>,
+<http://dbpedia.org/ontology/RailwayLine>,rail_line railway_line railway
+<http://dbpedia.org/ontology/HandballLeague>,
+<http://dbpedia.org/ontology/RugbyPlayer>,rugby_player soccer_player football_player
+<http://dbpedia.org/ontology/ProgrammingLanguage>,higher_level_language programming_languages other_programming_languages scripting_language programming_language computer_language high_level_language functional_language c++ scripting_languages design_patterns
+<http://dbpedia.org/ontology/CanadianFootballLeague>,
+<http://dbpedia.org/ontology/RecordLabel>,record_label music_label indie_label major_labels major_record_label record_deal record_companies songwriters independent_label record_company record_labels
+<http://dbpedia.org/ontology/SnookerChamp>,
+<http://dbpedia.org/ontology/SnookerPlayer>,
+<http://dbpedia.org/ontology/GovernmentAgency>,regulatory_agency governmental_agency government_agency government_agencies government_entity other_agency government_department private_corporation federal_agency government_organization agencies
+<http://dbpedia.org/ontology/AcademicJournal>,scientific_paper academic_paper reputable_journal scientific_journal academic_journal research_paper
+<http://dbpedia.org/ontology/TennisPlayer>,tennis_player soccer_player
+<http://dbpedia.org/ontology/RoadJunction>,
+<http://dbpedia.org/ontology/TelevisionEpisode>,
+<http://dbpedia.org/ontology/FootballMatch>,soccer_match football_match sporting_event soccer_game cricket_match football_matches
+<http://dbpedia.org/ontology/PublicTransitSystem>,public_transit_system bus_system transit_systems mass_transit_system public_transportation public_transportation_system transportation_system bus_service transit_system mass_transit public_transit
+<http://dbpedia.org/ontology/AutomobileEngine>,
+<http://dbpedia.org/ontology/MilitaryPerson>,military_member military_person
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion>,
+<http://dbpedia.org/ontology/Province>,only_province entire_province other_province other_provinces provinces province
+<http://dbpedia.org/ontology/SportsSeason>,
+<http://dbpedia.org/ontology/MotorsportSeason>,
+<http://www.w3.org/2002/07/owl#Thing>,
+<http://dbpedia.org/ontology/TimePeriod>,time_period specific_time_period time_periods
+<http://dbpedia.org/ontology/Biomolecule>,
+<http://dbpedia.org/ontology/Enzyme>,lipids proteins certain_proteins enzymes glutamate dehydrogenase enzyme cell_membranes proteases amino_acid glucose
+<http://dbpedia.org/ontology/CyclingLeague>,
+<http://dbpedia.org/ontology/Territory>,whole_territory buffer_zone territories other_territory territory home_territory own_territory disputed_territory more_territory sovereign_territory borders
+<http://dbpedia.org/ontology/CurlingLeague>,
+<http://dbpedia.org/ontology/Tax>,federal_tax other_taxes taxed additional_tax income_tax tax taxable additional_taxes federal_taxes income_taxes tax_credit
+<http://dbpedia.org/ontology/RaceTrack>,road_course race_car race_track single_car drag_strip fast_car race_cars race_course rally_car racetrack drag_races
+<http://dbpedia.org/ontology/Racecourse>,racecourse
+<http://dbpedia.org/ontology/BloodType>,blood_types blood_type
+<http://dbpedia.org/ontology/GeneLocation>,
+<http://dbpedia.org/ontology/MouseGeneLocation>,
+<http://dbpedia.org/ontology/Prison>,sentenced maximum_security_prison prison_time sentencing death_row incarcerated federal_prison prison jail life_sentence prison_sentence
+<http://dbpedia.org/ontology/HandballPlayer>,
+<http://dbpedia.org/ontology/Religious>,
+<http://dbpedia.org/ontology/Installment>,instalment first_installment installment
+<http://dbpedia.org/ontology/Department>,department entire_department specific_department other_department supervisors whole_department superintendent departments own_department dept other_departments
+<http://dbpedia.org/ontology/Painter>,painter painting
+<http://dbpedia.org/ontology/LineOfFashion>,
+<http://dbpedia.org/ontology/CyclingTeam>,cycling_team
+<http://dbpedia.org/ontology/Jockey>,jockey
+<http://dbpedia.org/ontology/SportCompetitionResult>,
+<http://dbpedia.org/ontology/HumanGeneLocation>,
+<http://dbpedia.org/ontology/ChristianPatriarch>,
+<http://dbpedia.org/ontology/TopicalConcept>,
+<http://dbpedia.org/ontology/GovernmentType>,government_type
+<http://dbpedia.org/ontology/ReligiousBuilding>,religious_building
+<http://dbpedia.org/ontology/MotorcycleRider>,biker bike_rider pedestrian bicyclist car_driver motorcyclist motorcyclists motorist cyclist motorcycle_rider
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion>,
+<http://dbpedia.org/ontology/Engineer>,engineer electrical_engineer computer_engineer technologist mechanical_engineer
+<http://dbpedia.org/ontology/SumoWrestler>,sumo_wrestler
+<http://dbpedia.org/ontology/RacingDriver>,racing_driver
+<http://dbpedia.org/ontology/Sales>,overall_sales actual_sales most_sales retail_sales game_sales other_sales retailers increased_sales sales_numbers store_sales sales
+<http://dbpedia.org/ontology/ChristianDoctrine>,christian_doctrine
+<http://dbpedia.org/ontology/TeamMember>,team_member team_members other_team_members
+<http://dbpedia.org/ontology/Mill>,mill
+<http://dbpedia.org/ontology/Treadmill>,stationary_bike treadmill jogging exercise_bike recumbent_bike threadmill tread_mill elliptical elliptical_machine spin_bike stairmaster
+<http://dbpedia.org/ontology/ProtohistoricalPeriod>,
+<http://dbpedia.org/ontology/VolleyballCoach>,
+<http://dbpedia.org/ontology/Opera>,operas opera
+<http://dbpedia.org/ontology/LacrossePlayer>,lacrosse_player
+<http://dbpedia.org/ontology/Wine>,beer wine whisky cocktails hard_cider red_wine whiskey cheap_wine brandy scotch champagne
+<http://dbpedia.org/ontology/ControlledDesignationOfOriginWine>,
+<http://dbpedia.org/ontology/Camera>,cell_phone_camera camera normal_camera just_a_camera second_camera viewfinder video_camera camer phone_camera view_finder other_camera
+<http://dbpedia.org/ontology/DigitalCamera>,cell_phone_camera camera_phone film_camera real_camera digital_camera digital_cameras actual_camera dslr camcorder phone_camera cellphone_camera
+<http://dbpedia.org/ontology/Regency>,current_ruler current_heir female_heir heir new_heir regency_council regency
+<http://dbpedia.org/ontology/BullFighter>,
+<http://dbpedia.org/ontology/Locality>,locality particular_state
+<http://dbpedia.org/ontology/FrenchLocality>,
+<http://dbpedia.org/ontology/CelestialBody>,planetoid asteroid_belt solar_system gas_giant other_planet planetary_body celestial_body planetary_system orbiting asteroid celestial_object
+<http://dbpedia.org/ontology/Galaxy>,other_galaxies solar_system planet galaxy own_galaxy solar_systems entire_galaxy intergalactic_space other_galaxy galaxies planets
+<http://dbpedia.org/ontology/Comics>,other_comics actual_comics few_comics comic_books comicbooks comic comic_book many_comics comics graphic_novels comic_characters
+<http://dbpedia.org/ontology/Manhwa>,webtoon manhua wuxia manhwa manga anime_adaption anime/manga manwha light_novel
+<http://dbpedia.org/ontology/OrganisationMember>,
+<http://dbpedia.org/ontology/TelevisionSeason>,
+<http://dbpedia.org/ontology/UnitOfWork>,
+<http://dbpedia.org/ontology/Case>,case particular_case
+<http://dbpedia.org/ontology/LawFirm>,same_firm large_firm law_office big_law_firm consulting_firm big_firm paralegal law_firms accounting_firm law_firm small_firm
+<http://dbpedia.org/ontology/Fashion>,fashion fashions high_fashion fashion_trends
+<http://dbpedia.org/ontology/Swarm>,swarms swarm
+<http://dbpedia.org/ontology/Openswarm>,
+<http://dbpedia.org/ontology/SoapCharacter>,
+<http://dbpedia.org/ontology/Gene>,allele specific_genes genetic_mutation certain_genes same_gene genes alleles gene single_gene other_genes mutations
+<http://dbpedia.org/ontology/HumanGene>,
+<http://dbpedia.org/ontology/InformationAppliance>,
+<http://dbpedia.org/ontology/SportsManager>,
+<http://dbpedia.org/ontology/HotSpring>,hot_springs hot_spring
+<http://dbpedia.org/ontology/Chef>,chef sous_chef chefs head_chef professional_chef cook
+<http://dbpedia.org/ontology/SystemOfLaw>,
+<http://dbpedia.org/ontology/Church>,other_church congregation local_church other_churches church current_church mormon_church pastor church_members pastors parishioners
+<http://dbpedia.org/ontology/Ideology>,religious_ideology other_ideologies idealogy belief_system ideologies political_ideology ideology political_movement own_ideology particular_ideology other_ideology
+<http://dbpedia.org/ontology/Community>,larger_community community_members subreddit_community whole_community community online_community general_community reddit_community
+<http://dbpedia.org/ontology/Volcano>,active_volcano caldera volcano
+<http://dbpedia.org/ontology/TableTennisPlayer>,
+<http://dbpedia.org/ontology/Artwork>,artwork art_work cover_art original_art original_artwork artworks own_artwork actual_art other_artwork
+<http://dbpedia.org/ontology/VolleyballPlayer>,volleyball_player
+<http://dbpedia.org/ontology/Sea>,seas sea
+<http://dbpedia.org/ontology/BeautyQueen>,beauty_queen
+<http://dbpedia.org/ontology/Region>,region specific_region own_region other_regions regions
+<http://dbpedia.org/ontology/Novel>,novella original_novel novel first_novel whole_novel graphic_novel fantasy_novel short_stories novels book short_story
+<http://dbpedia.org/ontology/LightNovel>,light_novel manga_series original_manga light_novels anime anime_adaption web_novel other_manga anime_adaptation manga manga_adaptation
+<http://dbpedia.org/ontology/SiteOfSpecialScientificInterest>,
+<http://dbpedia.org/ontology/Presenter>,presenter
+<http://dbpedia.org/ontology/Watermill>,watermill
+<http://dbpedia.org/ontology/BaseballTeam>,sports_team college_team little_league_team baseball_team football_team minor_league_team soccer_team hockey_team basketball_team
+<http://dbpedia.org/ontology/Mineral>,mineral
+<http://dbpedia.org/ontology/SportsTeamSeason>,
+<http://dbpedia.org/ontology/SoccerClubSeason>,
+<http://dbpedia.org/ontology/Mosque>,mosque
+<http://dbpedia.org/ontology/Referee>,umpire linesman line_judge linesmen unsportsmanlike_conduct referee ref referees fourth_official
+<http://dbpedia.org/ontology/CanadianFootballPlayer>,
+<http://dbpedia.org/ontology/Flag>,flags flag
+<http://dbpedia.org/ontology/SportFacility>,
+<http://dbpedia.org/ontology/NationalSoccerClub>,
+<http://dbpedia.org/ontology/Pornstar>,chick stripper pornstar porn_actress porn_star milf
+<http://dbpedia.org/ontology/Manga>,manga_series original_anime original_manga light_novels manga anime mangas whole_manga other_manga anime_adaptation light_novel
+<http://dbpedia.org/ontology/Instrument>,instrument violin piano bass_guitar guitar musical_instrument classical_guitar other_instrument electric_guitar real_instrument cello
+<http://dbpedia.org/ontology/Guitar>,piano violin bass_guitar guitar acoustic_guitar ukulele electric_guitar harmonica double_bass acoustic cello
+<http://dbpedia.org/ontology/Swimmer>,gymnast competitive_swimmer triathlete swimmer
+<http://dbpedia.org/ontology/Factory>,production_line factory
+<http://dbpedia.org/ontology/Venue>,venues venue private_event
+<http://dbpedia.org/ontology/RadioProgram>,radio_program public_radio radio_show
+<http://dbpedia.org/ontology/Royalty>,royalty
+<http://dbpedia.org/ontology/Deputy>,deputies police_chief deputy sheriff police_commissioner
+<http://dbpedia.org/ontology/Agent>,agent
+<http://dbpedia.org/ontology/Family>,family _family extended_family immediate_family other_relatives other_family whole_family close_family entire_family own_family relatives
+<http://dbpedia.org/ontology/Shrine>,shrine tomb shrines
+<http://dbpedia.org/ontology/PublicService>,private_sector public_sector public_service government_service
+<http://dbpedia.org/ontology/PublicServiceOutput>,
+<http://dbpedia.org/ontology/Drama>,little_drama unnecessary_drama good_drama bullshit_drama personal_drama pointless_drama other_drama drama petty_drama real_drama
+<http://dbpedia.org/ontology/PenaltyShootOut>,
+<http://dbpedia.org/ontology/cidoccrm:E4_Period>,
+<http://dbpedia.org/ontology/Genre>,genre genres
+<http://dbpedia.org/ontology/Year>,one_year the_year _year year year- whole_year year*. every_year
+<http://dbpedia.org/ontology/Priest>,preist priest priests other_priests
+<http://dbpedia.org/ontology/SambaSchool>,
+<http://dbpedia.org/ontology/FashionDesigner>,fashion_designer
+<http://dbpedia.org/ontology/Ligament>,tendon meniscus labrum ligament femur calf_muscle left_knee patella cartilage rotator_cuff ligaments
+<http://dbpedia.org/ontology/CityDistrict>,
+<http://dbpedia.org/ontology/VoiceActor>,different_voice_actor same_voice voice_actor voice_actors new_voice_actor voice_work same_voice_actor voice_actress
+<http://dbpedia.org/ontology/PrehistoricalPeriod>,
+<http://dbpedia.org/ontology/ComedyGroup>,comedy_group
+<http://dbpedia.org/ontology/Sculpture>,sculptures oil_painting sculpture painting
+<http://dbpedia.org/ontology/SubMunicipality>,
+<http://dbpedia.org/ontology/Deanery>,
+<http://dbpedia.org/ontology/MountainPass>,mountain_pass
+<http://dbpedia.org/ontology/Blazon>,blazon
+<http://dbpedia.org/ontology/Aristocrat>,aristocrat
+<http://dbpedia.org/ontology/BowlingLeague>,bowling_league
+<http://dbpedia.org/ontology/PublicServiceInput>,
+<http://dbpedia.org/ontology/HistoricalPeriod>,historical_period
+<http://dbpedia.org/ontology/SquashPlayer>,
+<http://dbpedia.org/ontology/Cartoon>,cartoonist cartoon cartoonists depicting cartoons satirical_cartoon offensive_cartoon satirical_cartoons fucking_cartoon depiction
+<http://dbpedia.org/ontology/Anime>,original_anime anime_series anime animes anime/manga good_anime manga/anime other_anime shonen manga other_animes
+<http://dbpedia.org/ontology/GeologicalPeriod>,
+<http://dbpedia.org/ontology/OldTerritory>,old_territory
+<http://dbpedia.org/ontology/CollectionOfValuables>,
+<http://dbpedia.org/ontology/Diocese>,dioceses local_parish congregation diocese presbytery church parish other_churches parishes archdiocese
+<http://dbpedia.org/ontology/MovieGenre>,
+<http://dbpedia.org/ontology/CareerStation>,
+<http://dbpedia.org/ontology/Skyscraper>,skyscrapers skyscraper tall_building sky_scraper empire_state_building
+<http://dbpedia.org/ontology/Group>,group own_group large_group first_group small_group _group groups different_group whole_group larger_group random_group
+<http://dbpedia.org/ontology/ClericalOrder>,
+<http://dbpedia.org/ontology/WindMotor>,
+<http://dbpedia.org/ontology/NoteworthyPartOfBuilding>,
+<http://dbpedia.org/ontology/Train>,train bus train_station tram trains commuter_train
+<http://dbpedia.org/ontology/Windmill>,windmill
+<http://dbpedia.org/ontology/BoardGame>,card_games board_games boardgames tabletop_game card_game board_game boardgame other_board_games tabletop_games
+<http://dbpedia.org/ontology/ChessPlayer>,chess_player
+<http://dbpedia.org/ontology/DartsPlayer>,
+<http://dbpedia.org/ontology/Globularswarm>,
+<http://dbpedia.org/ontology/Dog>,chihuahua pup other_dog little_dog own_dog husky kitten puppy ferret dog cat
+<http://dbpedia.org/ontology/Atoll>,atoll
+<http://dbpedia.org/ontology/NetballPlayer>,
+<http://dbpedia.org/ontology/Prefecture>,prefectures prefecture
+<http://dbpedia.org/ontology/CyclingCompetition>,
+<http://dbpedia.org/ontology/Monastery>,monastery
+<http://dbpedia.org/ontology/ChemicalElement>,chemical_element
+<http://dbpedia.org/ontology/TennisTournament>,tennis_tournament
+<http://dbpedia.org/ontology/Synagogue>,synagogue synagogues local_mosque
+<http://dbpedia.org/ontology/FootballLeagueSeason>,
+<http://dbpedia.org/ontology/HollywoodCartoon>,
+<http://dbpedia.org/ontology/BeachVolleyballPlayer>,
+<http://dbpedia.org/ontology/NCAATeamSeason>,
+<http://dbpedia.org/ontology/Star>,stars star
+<http://dbpedia.org/ontology/Parish>,local_parish congregation diocese local_church church parish parish_priest parishes parishioners
+<http://dbpedia.org/ontology/AmateurBoxer>,amateur_boxer
+<http://dbpedia.org/ontology/Economist>,economist economists political_scientist economics_professor
+<http://dbpedia.org/ontology/SpeedwayRider>,
+<http://dbpedia.org/ontology/Gymnast>,ballet_dancer bodybuilder swimmer weightlifter gymnast powerlifter
+<http://dbpedia.org/ontology/Painting>,art_work painter painting actual_painting oil_painting still_life watercolor drawing sculpture
+<http://dbpedia.org/ontology/SportsTeamMember>,
+<http://dbpedia.org/ontology/AnimangaCharacter>,
+<http://dbpedia.org/ontology/SoccerTournament>,soccer_tournament
+<http://dbpedia.org/ontology/HorseTrainer>,horse_trainer
+<http://dbpedia.org/ontology/Imdb>,imdb
+<http://dbpedia.org/ontology/GeopoliticalOrganisation>,
+<http://dbpedia.org/ontology/MouseGene>,
+<http://dbpedia.org/ontology/Skater>,skater
+<http://dbpedia.org/ontology/Curler>,curler eyelash_curler
+<http://dbpedia.org/ontology/Professor>,prof department_chair faculty_member professors math_teacher student lecturer professor college_professor teacher math_department
+<http://dbpedia.org/ontology/VicePresident>,first_lady vice_president chairman executive president treasurer current_president vice-president former_president senator secretary
+<http://dbpedia.org/ontology/Constellation>,constellation
+<http://dbpedia.org/ontology/Skier>,climber snowboard skiers skiier ski snowboarder skier
+<http://dbpedia.org/ontology/PaintballLeague>,
+<http://dbpedia.org/ontology/OlympicEvent>,olympic_event
+<http://dbpedia.org/ontology/ArtistDiscography>,
+<http://dbpedia.org/ontology/Abbey>,abbey
+<http://dbpedia.org/ontology/FormulaOneRacing>,
+<http://dbpedia.org/ontology/Sculptor>,sculptor
+<http://dbpedia.org/ontology/Pope>,religious_leader current_pope christian catholics pope vatican new_pope catholic_church
+<http://dbpedia.org/ontology/Beer>,drink beers beer more_beer wine bud_light liquor cheap_beer good_beer whiskey scotch
+<http://dbpedia.org/ontology/PeriodOfArtisticStyle>,
+<http://dbpedia.org/ontology/OverseasDepartment>,
+<http://dbpedia.org/ontology/Intercommunality>,
+<http://dbpedia.org/ontology/Comic>,comic
+<http://dbpedia.org/ontology/Murderer>,innocent_man murder_victim murder accomplice child_molester innocent_person murderer rapist serial_rapist serial_killer convicted_murderer
+<http://dbpedia.org/ontology/Decoration>,decoration other_decorations decorations decorative
+<http://dbpedia.org/ontology/Municipality>,county municipal_government many_municipalities municipality local_municipality county_government other_municipalities local_government local_authority municipalities city/county
+<http://dbpedia.org/ontology/District>,county districts school_district school_board other_districts school_districts district most_districts entire_district
+<http://dbpedia.org/ontology/List>,whole_list actual_list lists small_list big_list short_list own_list list
+<http://dbpedia.org/ontology/TrackList>,entire_album actual_album whole_album last_track other_songs tracklist tracklisting setlist track_list full_album soundcloud_page
+<http://dbpedia.org/ontology/Arena>,arenas arena
+<http://dbpedia.org/ontology/SoccerLeagueSeason>,
+<http://dbpedia.org/ontology/Surname>,given_name surnames last_name middle_name last_names first_name family_name second_name surname maiden_name birth_name
+<http://dbpedia.org/ontology/BoxingLeague>,
+<http://dbpedia.org/ontology/DistrictWaterBoard>,
+<http://dbpedia.org/ontology/RadioControlledRacingLeague>,
+<http://dbpedia.org/ontology/State>,county states federal_government other_state other_states particular_state state- only_state stat state_government state
+<http://dbpedia.org/ontology/Listen>,whole_album good_listen few_songs quick_listen few_listens more_listens proper_listen full_listen great_album listen
+<http://dbpedia.org/ontology/Temple>,altar temple chapel
+<http://dbpedia.org/ontology/Cheese>,sausage cream_cheese bread little_cheese cheese mashed_potatoes cheddar_cheese cheese_sauce bacon american_cheese bacon_bits
+<http://dbpedia.org/ontology/Unknown>,unknown
+<http://dbpedia.org/ontology/Publisher>,most_publishers game_publisher original_publisher major_publisher publisher publishers publishing_company big_publisher publisher/developer
+<http://dbpedia.org/ontology/MultiVolumePublication>,
+<http://dbpedia.org/ontology/OntologyClass:Foaf:Document>,
+<http://dbpedia.org/ontology/Resume>,work_history cover_letters resume current_resume cover_letter resumé. prospective_employers potential_employers resumé résumé good_resume
+<http://dbpedia.org/ontology/SkiResort>,ski_area ski_town golf_course beach_town ski_resort ski_hill state_park
+<http://dbpedia.org/ontology/IranSettlement>,
+<http://dbpedia.org/ontology/Memorial>,memorials monument memorial_service memorial
+<http://dbpedia.org/ontology/Medician>,
+<http://dbpedia.org/ontology/NaturalRegion>,
+<http://dbpedia.org/ontology/NationalFootballLeagueSeason>,
+<http://dbpedia.org/ontology/CultivatedVariety>,
+<http://dbpedia.org/ontology/Castle>,city_walls own_castle fortress big_castle palace castle castles throne_room village encampment
+<http://dbpedia.org/ontology/VicePrimeMinister>,
+<http://schema.org/Product>,new_product products single_product certain_product specific_product own_product actual_product good_product product particular_product said_product
+<http://dbpedia.org/ontology/RugbyLeague>,football/soccer american_football rugby_union rugby gridiron football rugby_league soccer
+<http://dbpedia.org/ontology/Asteroid>,large_asteroid astroid solar_orbit space_station gas_giant orbit asteroids asteroid earth_orbit space_debris asteroid_belt
+<http://dbpedia.org/ontology/Polyhedron>,polyhedron
+<http://dbpedia.org/ontology/Lieutenant>,commanding_officer admiral lieutenant lieutenants sergeant chief second-in-command colonel
+<http://dbpedia.org/ontology/Host>,other_hosts hosts host
+<http://dbpedia.org/ontology/Celebrity>,celebrity celebrities famous_people other_celebrities famous_person movie_star celebs celeb other_celebrity
+<http://dbpedia.org/ontology/Letter>,formal_letter letter real_letter own_letter letters many_letters second_letter actual_letter
+<http://dbpedia.org/ontology/Noble>,
+<http://dbpedia.org/ontology/Deity>,supernatural_being divine_being deities creator_god particular_god divinity deity diety particular_deity higher_being christian_god
+<http://dbpedia.org/ontology/RailwayStation>,city_centre shopping_centre railway_station town_centre train_station central_station tram metro_station bus_station bus_terminal subway_station
+<http://dbpedia.org/ontology/TelevisionHost>,
+<http://dbpedia.org/ontology/Manhua>,webtoon manhua manhwa
+<http://dbpedia.org/ontology/WaterTower>,water_towers water_tower
+<http://dbpedia.org/ontology/PolishKing>,
+<http://dbpedia.org/ontology/Bodybuilder>,bodybuilder body_builder body_building fitness_model bodybuilding professional_bodybuilder weightlifter body_builders powerlifter weight_lifter power_lifter
+<http://dbpedia.org/ontology/Casino>,casino casinos
+<http://dbpedia.org/ontology/RaceHorse>,racehorse race_horse
+<http://dbpedia.org/ontology/RadioHost>,radio_host radio_personality talk_show talk_show_host comedian radio_show
+<http://dbpedia.org/ontology/MilitaryStructure>,military_structure command_structure
+<http://dbpedia.org/ontology/RugbyClub>,rugby_club
+<http://dbpedia.org/ontology/shuttle>,return_trip shuttles shuttle
+<http://dbpedia.org/ontology/massif>,s’est gauchiste obtenu massif possiblement territoire bâtiment minoritaire quartier d'imposition xénophobe
+<http://dbpedia.org/ontology/britishComedyAwards>,
+<http://dbpedia.org/ontology/sourceConfluenceCountry>,
+<http://dbpedia.org/ontology/largestMetro>,
+<http://dbpedia.org/ontology/firstOwner>,previous_owner first_owner
+<http://dbpedia.org/ontology/managementRegion>,
+<http://dbpedia.org/ontology/senator>,vice_president state_senator congressman senators president legislator governor lawmaker state_representative presidential_candidate senator
+<http://dbpedia.org/ontology/attorneyGeneral>,federal_judge federal_officials government_official federal_court attorney_general state_attorney_general legislator justice_department governor executive_branch federal_agency
+<http://dbpedia.org/ontology/raceTrack>,road_course race_car race_track single_car drag_strip fast_car race_cars race_course rally_car racetrack drag_races
+<http://dbpedia.org/ontology/mother>,own_mother mother stepmother step-father step_mother father mom daughter sister step-mom stepfather
+<http://dbpedia.org/ontology/bronzeMedalist>,
+<http://dbpedia.org/ontology/lessPopulousCountry>,
+<http://dbpedia.org/ontology/alpsSubgroup>,
+<http://dbpedia.org/ontology/construction>,construction_projects construction construction_project construction_work
+<http://dbpedia.org/ontology/organisation>,organisation organisations organization
+<http://dbpedia.org/ontology/museumType>,
+<http://dbpedia.org/ontology/opponents>,opponents opponent oponents other_opponents oponent most_opponents
+<http://dbpedia.org/ontology/listItemOf>,
+<http://dbpedia.org/ontology/mentor>,mentor
+<http://dbpedia.org/ontology/populationTotalReference>,
+<http://dbpedia.org/ontology/geminiAward>,
+<http://dbpedia.org/ontology/wikiPageInterLanguageLink>,
+<http://dbpedia.org/ontology/trainerClub>,
+<http://dbpedia.org/ontology/complexion>,skintone freckles natural_color skin_tone hair_texture hair_color natural_skin pale_skin complexion natural_hair_color fair_skin
+<http://dbpedia.org/ontology/silverMedalist>,
+<http://dbpedia.org/ontology/causedBy>,
+<http://dbpedia.org/ontology/founder>,co-founder founder
+<http://dbpedia.org/ontology/hairColor>,hair_colour skin_tone hair_texture hair_color eye_color complexion facial_structure hair_style natural_hair_color eye_colour hair_colors
+<http://dbpedia.org/ontology/prefecture>,prefectures prefecture
+<http://dbpedia.org/ontology/relatedFunctions>,related_functions
+<http://dbpedia.org/ontology/dam>,dam
+<http://dbpedia.org/ontology/show>,actual_show show tv_show particular_episode only_show entire_show few_episodes first_episode other_shows other_show whole_show
+<http://dbpedia.org/ontology/musicians>,other_musicians composers artists singers other_artists professional_musicians famous_musicians talented_musicians musicians songwriters great_musicians
+<http://dbpedia.org/ontology/student>,high_school_student university_student university teaching_assistant graduate_student student undergraduate grad_student professor teacher school
+<http://dbpedia.org/ontology/explorer>,explorer
+<http://dbpedia.org/ontology/viceLeaderParty>,
+<http://dbpedia.org/ontology/soccerLeagueWinner>,
+<http://dbpedia.org/ontology/makeupArtist>,makeup_artist professional_makeup_artist makeup_artists own_makeup make-up_artist hair_stylist make_up_artist hairstylist stylist
+<http://dbpedia.org/ontology/alpsSection>,
+<http://dbpedia.org/ontology/laurenceOlivierAward>,
+<http://dbpedia.org/ontology/championInSingle>,
+<http://dbpedia.org/ontology/aircraftUser>,
+<http://dbpedia.org/ontology/animator>,animator animators concept_artist
+<http://dbpedia.org/ontology/mostPopulousCountry>,largest_economy most_populous_country biggest_economy
+<http://dbpedia.org/ontology/enshrinedDeity>,
+<http://dbpedia.org/ontology/unesco>,
+<http://dbpedia.org/ontology/lake>,creek pier lake huge_lake shoreline river dunes small_lake big_lake canyon shore
+<http://dbpedia.org/ontology/belgiumPoliticalMajority>,
+<http://dbpedia.org/ontology/championInDoubleFemale>,
+<http://dbpedia.org/ontology/pictureDescription>,
+<http://dbpedia.org/ontology/diocese>,dioceses local_parish congregation diocese presbytery church parish other_churches parishes archdiocese
+<http://dbpedia.org/ontology/damsire>,
+<http://dbpedia.org/ontology/elementAbove>,
+<http://dbpedia.org/ontology/disciple>,disciple apostle
+<http://dbpedia.org/ontology/olivierAward>,
+<http://dbpedia.org/ontology/alpsGroup>,
+<http://dbpedia.org/ontology/tonyAward>,
+<http://dbpedia.org/ontology/sea>,seas sea
+<http://dbpedia.org/ontology/aspectRatio>,4:3 16x9 correct_aspect_ratio different_aspect_ratio widescreen black_bars aspect_ratios aspect_ration aspect_ratio 16:9 same_aspect_ratio
+<http://dbpedia.org/ontology/cesarAward>,
+<http://dbpedia.org/ontology/follows>,follows
+<http://dbpedia.org/ontology/termPeriod>,
+<http://dbpedia.org/ontology/soccerLeaguePromoted>,
+<http://dbpedia.org/ontology/uses>,other_uses uses many_uses
+<http://dbpedia.org/ontology/touristicSite>,
+<http://dbpedia.org/ontology/shipCrew>,
+<http://dbpedia.org/ontology/olympicOathSwornByAthlete>,
+<http://dbpedia.org/ontology/jockey>,jockey
+<http://dbpedia.org/ontology/majorLake>,
+<http://dbpedia.org/ontology/sharingOutName>,
+<http://dbpedia.org/ontology/institution>,other_institution higher_learning institutions religious_organization educational_institution institution
+<http://dbpedia.org/ontology/club>,clubs club different_club other_clubs same_club new_club many_clubs other_club only_club football_club favorite_club
+<http://dbpedia.org/ontology/previousEntity>,
+<http://dbpedia.org/ontology/features>,other_features many_features key_features basic_features functionality additional_features few_features useful_features most_features features functionalities
+<http://dbpedia.org/ontology/painter>,painter painting
+<http://dbpedia.org/ontology/youthClub>,youth_club
+<http://dbpedia.org/ontology/oldProvince>,
+<http://dbpedia.org/ontology/alpsMajorSector>,
+<http://dbpedia.org/ontology/soccerTournamentMostSteady>,
+<http://dbpedia.org/ontology/commandant>,commandant
+<http://dbpedia.org/ontology/poorestCountry>,richest_countries largest_country poorest_country
+<http://dbpedia.org/ontology/belgiumReffBourgmestre>,
+<http://dbpedia.org/ontology/productionCompany>,film_company production_studio movie_company production_company film_studio movie_studio production_companies producer production_house
+<http://dbpedia.org/ontology/movie>,whole_movie other_movie terrible_movie good_movie whole_film movie entire_movie first_movie actual_movie great_movie last_movie
+<http://dbpedia.org/ontology/currentTeamMember>,
+<http://dbpedia.org/ontology/localizationThumbnail>,
+<http://dbpedia.org/ontology/provides>,provides
+<http://dbpedia.org/ontology/administrator>,administrator admin
+<http://dbpedia.org/ontology/presidentGeneralCouncil>,
+<http://dbpedia.org/ontology/polishFilmAward>,
+<http://dbpedia.org/ontology/entourage>,entourage
+<http://dbpedia.org/ontology/languageCode>,
+<http://dbpedia.org/ontology/currentWorldChampion>,
+<http://dbpedia.org/ontology/careerStation>,
+<http://dbpedia.org/ontology/soccerTournamentClosingSeason>,
+<http://dbpedia.org/ontology/humanDevelopmentIndexRankingCategory>,
+<http://dbpedia.org/ontology/regency>,current_ruler current_heir female_heir heir new_heir regency_council regency
+<http://dbpedia.org/ontology/judge>,judge juror defendant jury prosecutor defense_attorney magistrate court first_judge jury_trial prosecuting_attorney
+<http://dbpedia.org/ontology/dfE>,
+<http://dbpedia.org/ontology/bigestCity>,
+<http://dbpedia.org/ontology/politicGovernmentDepartment>,
+<http://dbpedia.org/ontology/linkedTo>,
+<http://dbpedia.org/ontology/soccerTournamentOpeningSeason>,
+<http://dbpedia.org/ontology/provinceLink>,
+<http://dbpedia.org/ontology/subprefecture>,
+<http://dbpedia.org/ontology/executiveHeadteacher>,
+<http://dbpedia.org/ontology/dubber>,
+<http://dbpedia.org/ontology/sovereignCountry>,sovereign_country annexing neighboring_country legitimate_government foreign_power sovereign_nations sovereign_countries sovereign_nation sovereign_territory sovereign_state international_community
+<http://dbpedia.org/ontology/magazine>,magazines magazine same_magazine
+<http://dbpedia.org/ontology/geolocDepartment>,
+<http://dbpedia.org/ontology/goldenRaspberryAward>,
+<http://dbpedia.org/ontology/capitalDistrict>,
+<http://dbpedia.org/ontology/achievement>,acheivement achivement accomplishment achievment achievements achievement
+<http://dbpedia.org/ontology/comic>,comic
+<http://dbpedia.org/ontology/musicType>,
+<http://dbpedia.org/ontology/wikiPageWikiLink>,
+<http://dbpedia.org/ontology/setDesigner>,set_designer
+<http://dbpedia.org/ontology/volumes>,volumes
+<http://dbpedia.org/ontology/handedness>,handedness
+<http://dbpedia.org/ontology/iftaAward>,
+<http://dbpedia.org/ontology/soccerLeagueRelegated>,
+<http://dbpedia.org/ontology/smallestCountry>,smallest_country
+<http://dbpedia.org/ontology/gaudiAward>,
+<http://dbpedia.org/ontology/meetingBuilding>,
+<http://dbpedia.org/ontology/continent>,continents whole_continent landmass continent own_continent other_continents entire_continent
+<http://dbpedia.org/ontology/raceHorse>,racehorse race_horse
+<http://dbpedia.org/ontology/soccerTournamentThisSeason>,
+<http://dbpedia.org/ontology/meetingCity>,
+<http://dbpedia.org/ontology/museum>,museum local_museum history_museum natural_history_museum museums science_center art_museum art_gallery
+<http://dbpedia.org/ontology/buriedPlace>,
+<http://dbpedia.org/ontology/firstOlympicEvent>,
+<http://dbpedia.org/ontology/championInSingleFemale>,
+<http://dbpedia.org/ontology/architectualBureau>,
+<http://dbpedia.org/ontology/viceLeader>,
+<http://dbpedia.org/ontology/delegateMayor>,
+<http://dbpedia.org/ontology/oldDistrict>,old_district
+<http://dbpedia.org/ontology/cluster>,clusters cluster
+<http://dbpedia.org/ontology/lunarRover>,lunar_rover
+<http://dbpedia.org/ontology/alpsSupergroup>,
+<http://dbpedia.org/ontology/richestCountry>,richest_nation wealthiest_country wealthiest_nations richest_countries developed_country best_country wealthiest_countries rich_country poorest_countries richest_country greatest_country
+<http://dbpedia.org/ontology/religiousOrder>,religious_order
+<http://dbpedia.org/ontology/cultivatedVariety>,
+<http://dbpedia.org/ontology/drama>,little_drama unnecessary_drama good_drama bullshit_drama personal_drama pointless_drama other_drama drama petty_drama real_drama
+<http://dbpedia.org/ontology/settlementAttached>,
+<http://dbpedia.org/ontology/playerInTeam>,
+<http://dbpedia.org/ontology/playRole>,
+<http://dbpedia.org/ontology/enemy>,enemy_players entire_enemy_team enemie ennemy easy_kill enemy_player low_health ennemies enemys enemies enemy
+<http://dbpedia.org/ontology/climate>,climate_changes climates climate_patterns global_climate_change climate_change climate global_climate weather_patterns global_warming human_activity
+<http://dbpedia.org/ontology/otherAppearances>,other_appearances
+<http://dbpedia.org/ontology/presidentRegionalCouncil>,
+<http://dbpedia.org/ontology/largestCountry>,small_country largest_economies largest_country biggest_country most_powerful_nation biggest_economy tiny_country second_largest_economy largest_economy most_powerful_country strongest_military
+<http://dbpedia.org/ontology/championInMixedDouble>,
+<http://dbpedia.org/ontology/alpsMainPart>,
+<http://dbpedia.org/ontology/foresterDistrict>,
+<http://dbpedia.org/ontology/deanery>,
+<http://dbpedia.org/ontology/sourceDistrict>,
+<http://dbpedia.org/ontology/terytCode>,
+<http://dbpedia.org/ontology/sales>,overall_sales actual_sales most_sales retail_sales game_sales other_sales retailers increased_sales sales_numbers store_sales sales
+<http://dbpedia.org/ontology/subdivisionName>,
+<http://dbpedia.org/ontology/areaOfSearch>,
+<http://dbpedia.org/ontology/specialEffects>,set_design cgi practical_effects modern_movies real_actors visual_effects action_scenes cinematography production_design action_sequences special_effects
+<http://dbpedia.org/ontology/winsAtLAGT>,
+<http://dbpedia.org/ontology/patronSaint>,patron_saint
+<http://dbpedia.org/ontology/majorVolcano>,
+<http://dbpedia.org/ontology/grandsire>,
+<http://dbpedia.org/ontology/soccerTournamentLastChampion>,
+<http://dbpedia.org/ontology/wilaya>,
+<http://dbpedia.org/ontology/adjacentSettlement>,
+<http://dbpedia.org/ontology/father>,other_son step_father mother step-father granddaughter father own_father daughter half-brother grandson stepfather
+<http://dbpedia.org/ontology/associateStar>,
+<http://dbpedia.org/ontology/race>,only_one_race races single_race race
+<http://dbpedia.org/ontology/silCode>,
+<http://dbpedia.org/ontology/daira>,
+<http://dbpedia.org/ontology/alongside>,
+<http://dbpedia.org/ontology/televisionSeries>,film_series feature_film mini_series animated_show mini-series movie_series television_series miniseries tv_series television_show comic_book_series
+<http://dbpedia.org/ontology/deFactoLanguage>,most_common_language dominant_language international_language lingua_franca de_facto_language
+<http://dbpedia.org/ontology/produces>,produces
+<http://dbpedia.org/ontology/hybrid>,hybrid
+<http://dbpedia.org/ontology/bourgmestre>,
+<http://dbpedia.org/ontology/nisCode>,
+<http://dbpedia.org/ontology/nextEvent>,next_event
+<http://dbpedia.org/ontology/alpsSubsection>,
+<http://dbpedia.org/ontology/collectionSize>,
+<http://dbpedia.org/ontology/systemOfLaw>,
+<http://dbpedia.org/ontology/goldenGlobeAward>,
+<http://dbpedia.org/ontology/belgiumMergedSettlement>,
+<http://dbpedia.org/ontology/officialOpenedBy>,
+<http://dbpedia.org/ontology/heritageRegister>,
+<http://dbpedia.org/ontology/goyaAward>,
+<http://dbpedia.org/ontology/managementCountry>,
+<http://dbpedia.org/ontology/medalist>,medalist
+<http://dbpedia.org/ontology/discipline>,dicipline self_discipline discipline self-discipline determination
+<http://dbpedia.org/ontology/contractor>,property_management general_contractor private_contractor construction_company contractor staffing_agency sub_contractor contractors subcontractor independent_contractor contracting_company
+<http://dbpedia.org/ontology/constellation>,constellation
+<http://dbpedia.org/ontology/apcPresident>,
+<http://dbpedia.org/ontology/breeder>,responsible_breeder breeder reputable_breeder shelter_dog rescue_dog good_breeder breeders breed purebred backyard_breeder puppy_mill
+<http://dbpedia.org/ontology/artPatron>,
+<http://dbpedia.org/ontology/sourceState>,
+<http://dbpedia.org/ontology/skills>,basic_skills various_skills actual_skills skills key_skills more_skills many_skills certain_skills specific_skills skill other_skills
+<http://dbpedia.org/ontology/baftaAward>,
+<http://dbpedia.org/ontology/mostPopulatedCountry>,
+<http://dbpedia.org/ontology/hasChannel>,
+<http://dbpedia.org/ontology/solicitorGeneral>,
+<http://dbpedia.org/ontology/sportSpecialty>,
+<http://dbpedia.org/ontology/spurType>,
+<http://dbpedia.org/ontology/grammyAward>,
+<http://dbpedia.org/ontology/nextEntity>,
+<http://dbpedia.org/ontology/commune>,communes commune
+<http://dbpedia.org/ontology/shape>,general_shape overall_shape shape roundness actual_shape
+<http://dbpedia.org/ontology/highestPoint>,highest_point
+<http://dbpedia.org/ontology/champion>,good_champion only_champions champs champ great_champion single_champion only_champion champion champions new_champion other_champ
+<http://dbpedia.org/ontology/orthologousGene>,
+<http://dbpedia.org/ontology/organisationMember>,
+<http://dbpedia.org/ontology/sibling>,biological_mother mother younger_sibling siblings grandchild mother/father parent only_child older_sibling sibling other_family_member
+<http://dbpedia.org/ontology/stadium>,new_stadium old_stadium football_stadium current_stadium soccer_stadium stadium full_stadium other_stadiums baseball_stadium stadiums own_stadium
+<http://dbpedia.org/ontology/competition>,real_competition competion other_competition competiton other_competitors competition more_competition compete actual_competition little_competition competitors
+<http://dbpedia.org/ontology/astrologicalSign>,astrological_sign
+<http://dbpedia.org/ontology/tradeMark>,trademark trade_mark trademarks
+<http://dbpedia.org/ontology/championInSingleMale>,
+<http://dbpedia.org/ontology/taoiseach>,
+<http://dbpedia.org/ontology/chiefPlace>,
+<http://dbpedia.org/ontology/nationalFilmAward>,
+<http://dbpedia.org/ontology/academyAward>,emmy best_visual_effects best_actor best_supporting_actor best_picture academy_awards best_screenplay best_actress academy_award best_director best_original_screenplay
+<http://dbpedia.org/ontology/naacpImageAward>,
+<http://dbpedia.org/ontology/screenActorsGuildAward>,
+<http://dbpedia.org/ontology/hasInput>,
+<http://dbpedia.org/ontology/championInDoubleMale>,
+<http://dbpedia.org/ontology/goldMedalist>,gold_medalist
+<http://dbpedia.org/ontology/olympicOathSwornBy>,
+<http://dbpedia.org/ontology/mouthState>,
+<http://dbpedia.org/ontology/novel>,novella original_novel novel first_novel whole_novel graphic_novel fantasy_novel short_stories novels book short_story
+<http://dbpedia.org/ontology/geneLocation>,
+<http://dbpedia.org/ontology/soccerLeagueSeason>,
+<http://dbpedia.org/ontology/soccerTournamentTopScorer>,
+<http://dbpedia.org/ontology/giniCoefficientCategory>,
+<http://dbpedia.org/ontology/lessPopulatedCountry>,
+<http://dbpedia.org/ontology/administrativeCenter>,
+<http://dbpedia.org/ontology/landeshauptmann>,
+<http://dbpedia.org/ontology/sportDiscipline>,
+<http://dbpedia.org/ontology/winsAtKLPGA>,
+<http://dbpedia.org/ontology/settlement>,settlement
+<http://dbpedia.org/ontology/soccerTournamentMostSuccesfull>,
+<http://dbpedia.org/ontology/sexualOrientation>,sexual_identity based_discrimination sexuality gender_expression gender_identity sexual_preferences gender_identification sexual_orientation gender_orientation sexual_preference sex/gender
+<http://dbpedia.org/ontology/mouthDistrict>,
+<http://dbpedia.org/ontology/prefect>,prefect
+<http://dbpedia.org/ontology/arielAward>,
+<http://dbpedia.org/ontology/nationalTeam>,club_football national_team national_squad premier_league world_cup national_side world_football national_teams international_football youth_level youth_teams
+<http://dbpedia.org/ontology/coExecutiveProducer>,
+<http://dbpedia.org/ontology/eyeColor>,hair_colour skin_tone nose_shape hair_color eye_color eye_colors hair_texture facial_structure facial_features eye_colour hair_colors
+<http://dbpedia.org/ontology/championInDouble>,
+<http://dbpedia.org/ontology/sire>,sire
+<http://dbpedia.org/ontology/autonomy>,self_governance own_autonomy personal_autonomy self-determination autonomy self-governance sovereignty self_determination
+<http://dbpedia.org/ontology/mostDownPoint>,
+<http://dbpedia.org/ontology/goldenCalfAward>,
+<http://dbpedia.org/ontology/placeOfWorship>,
+<http://dbpedia.org/ontology/actingHeadteacher>,
+<http://dbpedia.org/ontology/millType>,
+<http://dbpedia.org/ontology/peabodyAward>,
+<http://dbpedia.org/ontology/buildingType>,building_type
+<http://dbpedia.org/ontology/costumeDesigner>,costume_designer
+<http://dbpedia.org/ontology/footedness>,
+<http://dbpedia.org/ontology/patent>,patents patent_rights new_patent original_patent patent prior_art patented patent_protection patent_holder
+<http://dbpedia.org/ontology/performer>,performer performers
+<http://dbpedia.org/ontology/winsAtSun>,
+<http://dbpedia.org/ontology/uRN>,
+<http://dbpedia.org/ontology/simcCode>,
+<http://dbpedia.org/ontology/afiAward>,
+<http://dbpedia.org/ontology/jureLanguage>,
+<http://dbpedia.org/ontology/olympicOathSwornByJudge>,
+<http://dbpedia.org/ontology/americanComedyAward>,
+<http://dbpedia.org/ontology/relatedPlaces>,
+<http://dbpedia.org/ontology/classis>,
+<http://dbpedia.org/ontology/coProducer>,
+<http://dbpedia.org/ontology/tvShow>,show tv_show single_episode episode few_episodes movie pilot_episode tv_series television_show other_show sitcom
+<http://dbpedia.org/ontology/listItemOf>,
+<http://dbpedia.org/ontology/wikiPageInterLanguageLink>,
+<http://dbpedia.org/ontology/founder>,co-founder founder
+<http://dbpedia.org/ontology/pictureDescription>,
+<http://dbpedia.org/ontology/follows>,follows
+<http://dbpedia.org/ontology/uses>,other_uses uses many_uses
+<http://dbpedia.org/ontology/provides>,provides
+<http://dbpedia.org/ontology/wikiPageWikiLink>,
+<http://dbpedia.org/ontology/playRole>,
+<http://dbpedia.org/ontology/produces>,produces
+<http://dbpedia.org/ontology/collectionSize>,
+<http://dbpedia.org/ontology/belgiumMergedSettlement>,
+<http://dbpedia.org/ontology/skills>,basic_skills various_skills actual_skills skills key_skills more_skills many_skills certain_skills specific_skills skill other_skills
+<http://dbpedia.org/ontology/hasChannel>,
+<http://dbpedia.org/ontology/tradeMark>,trademark trade_mark trademarks
+<http://dbpedia.org/ontology/hasInput>,
+<http://dbpedia.org/ontology/autonomy>,self_governance own_autonomy personal_autonomy self-determination autonomy self-governance sovereignty self_determination
+<http://dbpedia.org/ontology/listItemOf>,
+<http://dbpedia.org/ontology/wikiPageInterLanguageLink>,
+<http://dbpedia.org/ontology/founder>,co-founder founder
+<http://dbpedia.org/ontology/pictureDescription>,
+<http://dbpedia.org/ontology/follows>,follows
+<http://dbpedia.org/ontology/uses>,other_uses uses many_uses
+<http://dbpedia.org/ontology/provides>,provides
+<http://dbpedia.org/ontology/listItemOf>,
+<http://dbpedia.org/ontology/wikiPageInterLanguageLink>,
+<http://dbpedia.org/ontology/founder>,co-founder founder
+<http://dbpedia.org/ontology/pictureDescription>,
+<http://dbpedia.org/ontology/follows>,follows
+<http://dbpedia.org/ontology/uses>,other_uses uses many_uses
+<http://dbpedia.org/ontology/provides>,provides
+<http://dbpedia.org/ontology/listItemOf>,
+<http://dbpedia.org/ontology/wikiPageInterLanguageLink>,
+<http://dbpedia.org/ontology/founder>,co-founder founder
+<http://dbpedia.org/ontology/pictureDescription>,
+<http://dbpedia.org/ontology/follows>,follows
+<http://dbpedia.org/ontology/uses>,other_uses uses many_uses
+<http://dbpedia.org/ontology/provides>,provides
+<http://dbpedia.org/ontology/wikiPageWikiLink>,
+<http://dbpedia.org/ontology/playRole>,
+<http://dbpedia.org/ontology/produces>,produces
+<http://dbpedia.org/ontology/collectionSize>,
+<http://dbpedia.org/ontology/belgiumMergedSettlement>,
+<http://dbpedia.org/ontology/skills>,basic_skills various_skills actual_skills skills key_skills more_skills many_skills certain_skills specific_skills skill other_skills
+<http://dbpedia.org/ontology/hasChannel>,
+<http://dbpedia.org/ontology/tradeMark>,trademark trade_mark trademarks
+<http://dbpedia.org/ontology/hasInput>,
+<http://dbpedia.org/ontology/autonomy>,self_governance own_autonomy personal_autonomy self-determination autonomy self-governance sovereignty self_determination
