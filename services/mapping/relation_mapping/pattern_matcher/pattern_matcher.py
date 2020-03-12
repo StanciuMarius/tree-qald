@@ -10,7 +10,8 @@ sys.path.insert(0, os.getcwd())
 
 from services.tasks import run_task, Task
 import services.mapping.constants as constants
-
+DBPEDIA_ONTOLOGY_PREFIX = r'http://dbpedia.org/ontology/'
+DBPEDIA_PROPERTY_PREFIX = r'http://dbpedia.org/property/'
 class PattyPatternTrie:
     class Node:    
         def __init__(self):
@@ -106,7 +107,7 @@ class RelationPatternMatcher:
             text_between_end = subject_begin
             is_reversed = True
 
-        info = run_task(Task.SPACY_PROCESS, question_text)
+        info = run_task(Task.SPACY_PROCESS, text)
         tokens = info['tokens']
         idx = info['idx']
         pos = info['pos']
@@ -119,15 +120,33 @@ class RelationPatternMatcher:
         
         between_text = ' '.join(between_tokens)
 
+        candidates = self.pattern_trie.get_value(between_tokens, between_pos)
+        ontology_candidates = [DBPEDIA_ONTOLOGY_PREFIX + candidate for candidate in candidates]
+        property_candidates = [DBPEDIA_PROPERTY_PREFIX + candidate for candidate in candidates]
+        candidates = ontology_candidates + property_candidates
+        candidates_vs_confidence = [(candidate, 2/len(candidates)) for candidate in candidates]
 
-        # try:
-        candidate = self.pattern_trie.get_value(between_tokens, between_pos)
-        # except:
-            # candidate = None
-        
-        return (candidate, between_text)
+        return candidates_vs_confidence
     
     
     def __tokens_in_range(self, tokens, lower_bound, upper_bound, idx):
         return [i for i in range(len(tokens)) if idx[i] >= lower_bound and idx[i] < upper_bound]
 
+# matcher = RelationPatternMatcher()
+# text = "Was John was succeeded by Marry?"
+# subject = "John"
+# object = "Marry"
+# subject_index = text.find(subject)
+# object_index = text.find(object)
+
+# candidates = matcher(text, subject_index, subject_index + len(subject), object_index, object_index + len(object))
+# print(candidates)
+
+
+# relations = set()
+# for line in tqdm(lines, desc='Loading PATTY pattern trie'):
+#     relation, _ = line.split('\t')
+#     relation = DBPEDIA_ONTOLOGY_PREFIX + relation
+#     if not resolver(relation):
+#         relations.add(relation)
+# print(relations)
