@@ -18,7 +18,8 @@ TASKS = {
     'map_entity': 'MAPPING',
     'map_type': 'MAPPING',
     'retrieve_relations': 'KNOWLEDGE_BASE',
-    'run_sparql_query': 'KNOWLEDGE_BASE'
+    'run_sparql_query': 'KNOWLEDGE_BASE',
+    'generate_query': 'QUERY_GENERATOR'
 }
 
 URL_ROOT = 'http://localhost'

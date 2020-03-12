@@ -7,27 +7,20 @@ from common.query_tree import QueryTree, NodeType
 from services.tasks import Task, run_task
 # from services.answer.utils import map_relations
 
+TREES_TO_CONSIDER = 3
 def answer(question_text: str) -> List[str]:
-    # Parse the query to obtain a query tree. TODO consider more candidates (atm [0])
-    tree_dicts = run_task(Task.PARSE, question_text)
-    trees = list(map(lambda tree_dict: QueryTree.from_dict(tree_dict), tree_dicts))
+    # Parse the query to obtain a query tree.
+    trees = run_task(Task.PARSE, question_text)
     
-    for tree in trees:
-        # Map the entities
-        entities: List[QueryTree.Node] = tree.root.collect({NodeType.ENTITY})
-        for entity in entities:
-            entity_begin, entity_end = tree.offset_for_node(entity)
-            entity.kb_resources = run_task(Task.MAP_ENTITY, {'text': question_text, 'entity_begin': entity_begin, 'entity_end': entity_end })
+    for tree in trees[:TREES_TO_CONSIDER]:
+        query_tree = QueryTree.from_dict(tree)
+        query_tree.pretty_print()
 
-        # Map the types
-        types: List[QueryTree.Node] = tree.root.collect({NodeType.TYPE})
-        for type in types:
-            type_begin, type_end = tree.offset_for_node(type)
-            type.kb_resources = run_task(Task.MAP_TYPE, {'text': question_text, 'type_begin': type_begin, 'type_end': type_end })
-        tree.pretty_print()
-
-        # Map the relations
-        # map_relations(tree)
-
+        query = run_task(Task.GENERATE_QUERY, tree)
+        answer = run_task(Task.RUN_SPARQL_QUERY, **query)
+        if answer:
+            return answer
+    
+    raise "Could not generate answer"
 
 answer("Who is the oldest child of Barack Obama?")

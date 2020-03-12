@@ -20,11 +20,15 @@ query_generator_service.config['CORS_HEADERS'] = 'Content-Type'
 @cross_origin()
 def generate_query():
     query_tree_dict = request.args.get('input')
-    if query_text:
-        query: str = internal_generate_query(query_tree_dict)
-        return jsonify(query)
-    else:
-        return 'No query given', 400
+    try:
+        query, answer_variable = internal_generate_query(query_tree_dict)
+        response = {
+            "query": query,
+            "answer_variable": answer_variable
+        }
+        return jsonify(response)
+    except:
+        return 'Bad query', 400
 
 def run_query_generator_service():
     query_generator_service.run(host='0.0.0.0', port=PORTS['QUERY_GENERATOR'])

@@ -10,8 +10,8 @@ from services.constants import PORTS
 
 answer_service = Flask(__name__)
 
-@query_app.route('/answer', methods=['GET'])
-def parse():
+@answer_service.route('/answer', methods=['GET'])
+def answer():
     query_text = request.args.get('input')
     if query_text:
         answer = internal_answer(query_text)
@@ -21,8 +21,8 @@ def parse():
 
 
 def run_query_service():
-    query_service.run(host='0.0.0.0', port=PORTS['ANSWER'])
+    answer_service.run(host='0.0.0.0', port=PORTS['ANSWER'])
 
 
 if __name__ == '__main__':
-    run_query_service()
+    run_answer_service()

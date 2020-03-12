@@ -20,6 +20,7 @@ class Task(Enum):
     MAP_TYPE = 'map_type'
     RETRIEVE_RELATIONS = 'retrieve_relations'
     RUN_SPARQL_QUERY = 'run_sparql_query'
+    GENERATE_QUERY = 'generate_query'
 
 
 def run_task(task: Task, input):

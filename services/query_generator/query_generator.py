@@ -56,7 +56,7 @@ class QueryGenerator(object):
         return_variable = self.node_vs_reference[self.tree.root.id]
         query: str = self.__generate_query_from_current_state(return_variable)
 
-        return query
+        return return_variable, query
 
     def __generate_query_from_current_state(self, return_variable: str) -> str:
         # Preprocess value 
@@ -174,12 +174,12 @@ def generate_query(query_tree_dict: dict):
     return generator(QueryTree.from_dict(query_tree_dict))
 
 
-INPUT_FILE_PATH = 'datasets\parsing\data\constituency_annotated_questions.json'
-with open(INPUT_FILE_PATH, 'r', encoding='utf-8') as input_file:
-    questions = json.load(input_file)
-    tree = questions[59]
-    QueryTree.from_dict(tree).pretty_print()
+# INPUT_FILE_PATH = 'datasets\parsing\data\constituency_annotated_questions.json'
+# with open(INPUT_FILE_PATH, 'r', encoding='utf-8') as input_file:
+#     questions = json.load(input_file)
+#     tree = questions[59]
+#     QueryTree.from_dict(tree).pretty_print()
 
-    query = generate_query(tree)
+#     query = generate_query(tree)
 
 
