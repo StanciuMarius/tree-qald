@@ -2,11 +2,15 @@ import json
 import numpy as np
 from typing import List
 import torch
+import os
+import sys
+sys.path.insert(0, os.getcwd())
 
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 from common.syntax_checker import SyntaxChecker
 from common.constants import GRAMMAR_FILE_PATH
 from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentRelationResolver
+import services.mapping.relation_mapping.relation_classifier.constants as constants
 import common.knowledge_base as knowledge_base
 UNKNOWN_LABEL = 'UNKNOWN'
 SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
@@ -17,7 +21,7 @@ class NormalizeRelationUriTransofrm(object):
         relation_uri = sample['relation']
 
         relation_uri = relation_uri.replace('www.', '')
-        if not relation_uri.startswith('http://') and 'tacred:' not in relation_uri and 'qald:' not in relation_uri:
+        if not relation_uri.startswith('http://') and 'tacred:' not in relation_uri and 'qald:' not in relation_uri and relation_uri != 'NA':
             relation_uri = 'http://' + relation_uri
         relation_uri = relation_uri.replace('http://rdf.freebase.com/ns/', 'http://freebase.com/').replace('https', 'http')
         sample['relation'] = relation_uri
@@ -73,12 +77,33 @@ def has_unknown_relation(example):
 def has_na_relation(example):
     return example['relation'] == 'NA'
 
-def has_valid_bert_sequence(example):
+def is_valid_bert_sequence(example):
     text = example['text']
-    return '[E1]' in text and '[/E1]' in text and '[E2]' in text and '[/E2]' in text and len(text.split(' ')) < 450   
+    return '[E1]' in text and '[/E1]' in text and '[E2]' in text and '[/E2]' in text 
 
-def validate(example):
-    return not has_unknown_relation(example) and not has_na_relation(example) and has_valid_bert_sequence(example)
+def has_less_than_n_tokens(example):
+    return len(example['text'].split(' ')) < constants.MAX_SEQUENCE_LENGTH   
+
+def validate(example, statistics=None):
+    unknown_relation = has_unknown_relation(example)
+    na_relation = has_na_relation(example)
+    invalid_bert_sequence = not is_valid_bert_sequence(example)
+    has_more_than_n_tokens = not has_less_than_n_tokens(example)
+    is_valid = not unknown_relation and not na_relation and not invalid_bert_sequence and not has_more_than_n_tokens
+    if statistics is not None:
+        if 'unknown_relation' not in statistics: statistics['unknown_relation'] = 0
+        if 'na_relation' not in statistics: statistics['na_relation'] = 0
+        if 'invalid_bert_sequence' not in statistics: statistics['invalid_bert_sequence'] = 0
+        if 'has_more_than_n_tokens' not in statistics: statistics['has_more_than_n_tokens'] = 0
+        if 'is_valid' not in statistics: statistics['is_valid'] = 0
+
+        if unknown_relation: statistics['unknown_relation'] += 1
+        if na_relation: statistics['na_relation'] += 1
+        if invalid_bert_sequence: statistics['invalid_bert_sequence'] += 1
+        if has_more_than_n_tokens: statistics['has_more_than_n_tokens'] += 1
+        if is_valid: statistics['is_valid'] += 1
+
+    return is_valid
     
 def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):  
     # TODO this code does kind of the same thing as the query generation handlers. Make it dry  
@@ -166,7 +191,8 @@ def parse_trees_to_relation_extraction_format(parse_trees_file_path, output_file
     for tree in trees:
         relation_nodes = tree.root.collect(RELATION_NODE_TYPES)
         for node in relation_nodes:
-            sequences.append(generate_relation_extraction_sequence(tree))
+            if node.kb_resources:
+                sequences.append(generate_relation_extraction_sequence(tree, node))
         
     with open(output_file_path, 'w', encoding='utf-8') as output_file:
         json.dump(sequences, output_file)

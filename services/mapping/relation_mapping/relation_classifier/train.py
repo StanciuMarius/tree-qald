@@ -16,9 +16,13 @@ from torchvision import transforms
 
 RELATION_EXTRACTION_DATASET_PATHS = [
     r'datasets\relation_extraction\fewrel\data\train_normalized.json',
+    r'datasets\relation_extraction\fewrel\data\val_normalized.json',
     r'datasets\relation_extraction\NYT10\data\train_normalized.json',
+    r'datasets\relation_extraction\NYT10\data\test_normalized.json',
     r'datasets\relation_extraction\simple_questions\data\simple_normalized_train.json',
+    r'datasets\relation_extraction\simple_questions\data\simple_normalized_test_val.json',
     r'datasets\relation_extraction\tacred\data\train_normalized.json',
+    r'datasets\relation_extraction\tacred\data\test_normalized.json'
 ]
 
 PARSE_TREES_DATASET_PATH = r'datasets\parsing\data\constituency_annotated_questions.json'
@@ -29,18 +33,18 @@ def train():
     '''
     preprocessing.parse_trees_to_relation_extraction_format(PARSE_TREES_DATASET_PATH, constants.TEMP_PARSE_TREES_RELATION_EXTRACTION_DATASET_PATH)
     paths = RELATION_EXTRACTION_DATASET_PATHS + [constants.TEMP_PARSE_TREES_RELATION_EXTRACTION_DATASET_PATH]
-
+    relation_transform = preprocessing.EquivalentRelationTransform(save_statistics=True)
     dataset = RelationExtractionDataset(paths, transform=transforms.Compose([
                                                             preprocessing.NormalizeRelationUriTransofrm(),
-                                                            preprocessing.EquivalentRelationTransform(),
+                                                            relation_transform,
                                                             preprocessing.BertRelationExtractionFormatTransform()]))
             
     
-    # train_size = int(constants.TRAIN_TEST_SPLIT_RATIO * len(dataset))
-    # validation_size = len(dataset) - train_size
-    # train_dataset, validation_dataset = torch.utils.data.random_split(dataset, [train_size, validation_size])
-
-    examples = list(filter(preprocessing.validate, [example for example in tqdm(dataset)]))
+    statistics = {}
+    examples = list(filter(lambda x: preprocessing.validate(x, statistics=statistics), [example for example in tqdm(dataset)]))
+    top_unknown_relations = sorted(list(relation_transform.unknown_relations.items()), key=lambda x: x[1], reverse=True)[:10]
+    for relation, count in top_unknown_relations: print(relation, ' ', count)
+    for statistic, count in statistics.items(): print(statistic, ' ', count)
     shuffle(examples)
 
     num_classes = len(set([example['relation'] for example in examples]))
