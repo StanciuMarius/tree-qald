@@ -173,7 +173,8 @@
                 "http://wikidata.org/entity/P166",
                 "http://wikidata.org/entity/P4444",
                 "http://wikidata.org/entity/P1346",
-                "http://wikidata.org/entity/P1411"
+                "http://wikidata.org/entity/P1411",
+                "_http://wikidata.org/entity/P991"
             ]
         },
         {
@@ -1813,7 +1814,8 @@
             "freebase": [
                 "http://freebase.com/education/educational_institution/subsidiary_or_constituent_schools",
                 "_http://freebase.com/education/educational_institution/parent_institution",
-                "_http://freebase.com/base/aareas/schema/administrative_area/administrative_parent"
+                "_http://freebase.com/base/aareas/schema/administrative_area/administrative_parent",
+                "http://freebase.com/location/country/administrative_divisions"
             ],
             "label": "subsidiary",
             "tacred": [
@@ -2542,6 +2544,15 @@
             ],
             "wikidata": [
                 "http://wikidata.org/entity/P31"
+            ]
+        },
+        {
+            "label": "heritageStatus",
+            "dbpedia": [
+                "http://dbpedia.org/property/designation"
+            ],
+            "wikidata": [
+                "http://wikidata.org/entity/P1435"
             ]
         }
     ],
