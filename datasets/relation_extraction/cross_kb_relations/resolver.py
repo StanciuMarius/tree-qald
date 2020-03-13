@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.insert(0, os.getcwd())
 import json
 import common.knowledge_base as knowledge_base
 from typing import List
@@ -50,4 +53,8 @@ class EquivalentRelationResolver(object):
         return None
  
     def __reverse_relation(self, relation_uri: str):
-        reversed_relation_uri = relation_uri[1:] if '_' == relation_uri[0] else '_' + relation_uri
+        return relation_uri[1:] if '_' == relation_uri[0] else '_' + relation_uri
+
+
+# r = EquivalentRelationResolver()
+# print(r('http://freebase.com/location/location/contains'))
