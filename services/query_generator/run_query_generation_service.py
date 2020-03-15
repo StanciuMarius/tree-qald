@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import json
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
@@ -19,8 +20,8 @@ query_generator_service.config['CORS_HEADERS'] = 'Content-Type'
 @query_generator_service.route('/generate_query', methods=['GET'])
 @cross_origin()
 def generate_query():
-    query_tree_dict = request.args.get('input')
     try:
+        query_tree_dict = json.loads(request.args.get('input'))
         query, answer_variable = internal_generate_query(query_tree_dict)
         response = {
             "query": query,

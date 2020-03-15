@@ -1,4 +1,8 @@
-# A Statistical Constituency Parsing algorithm for Question Answering over Linked Data
-# Work in progress
+# Constituency Parsing for Question Answering over Linked Data
+## Work in progress
 
-![Application Architecture](https://i.ibb.co/3ksGTG0/pasted-image-0.png)
+You can find a general description of the system on this dedicated page:
+[stanciumarius.github.io](stanciumarius.github.io)
+
+
+![Application Architecture](https://stanciumarius.github.io/assets/oldest_actor_tree.png)

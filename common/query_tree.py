@@ -262,7 +262,7 @@ class QueryTree:
 
         root = node_from_dict(tree_dict['root'])
         sort_recursively(root)
-        example_id = tree_dict['id']
+        example_id = tree_dict['id'] if 'id' in tree_dict else '0'
         tree = QueryTree(root, tokens, example_id)
         # Aggregate unused tokens 
         if len(used_nodes) < len(token_nodes):

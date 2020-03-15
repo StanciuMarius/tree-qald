@@ -9,15 +9,14 @@ from services.constants import PORTS
 
 from services.mapping.relation_mapping.relation_mapping import RelationPatternMatcher, RelationRanker
 from services.mapping.entity_mapping.entity_mapping import EntityMapping
-from services.mapping.type_mapping.type_mapping import TypeMapping
+from services.mapping.type_mapping.type_mapping import TypeMapper
 from services.mapping.constants import PATTY_DBPEDIA_PARAPHRASES_FILE_PATH, ENTITY_LEXICON_PATH, TYPES_TRIE_PATH
 
 mapping_service = Flask(__name__)
 
-# RELATION_PATTERN_MATCHER = RelationPatternMatcher(PATTY_DBPEDIA_PARAPHRASES_FILE_PATH)
 RELATION_RANKER = RelationRanker()
 ENTITY_MAPPER = EntityMapping(ENTITY_LEXICON_PATH)
-TYPE_MAPPER = TypeMapping()
+TYPE_MAPPER = TypeMapper()
 
 @mapping_service.route('/rank_relations', methods=['GET'])
 def rank_relations():
@@ -60,7 +59,7 @@ def map_type():
         type_end = input['type_end']
         
         type_text = text[type_begin: type_end]
-        candidates = TYPE_MAPPER.get_best_types(type_text)
+        candidates = TYPE_MAPPER(type_text)
 
         return jsonify(candidates)
     else:
