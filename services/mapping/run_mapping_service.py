@@ -10,12 +10,12 @@ from services.constants import PORTS
 from services.mapping.relation_mapping.relation_mapping import RelationPatternMatcher, RelationRanker
 from services.mapping.entity_mapping.entity_mapping import EntityMapping
 from services.mapping.type_mapping.type_mapping import TypeMapper
-from services.mapping.constants import PATTY_DBPEDIA_PARAPHRASES_FILE_PATH, ENTITY_LEXICON_PATH, TYPES_TRIE_PATH
+from services.mapping.constants import PATTY_DBPEDIA_PARAPHRASES_FILE_PATH, TYPES_TRIE_PATH
 
 mapping_service = Flask(__name__)
 
 RELATION_RANKER = RelationRanker()
-ENTITY_MAPPER = EntityMapping(ENTITY_LEXICON_PATH)
+ENTITY_MAPPER = EntityMapping()
 TYPE_MAPPER = TypeMapper()
 
 @mapping_service.route('/rank_relations', methods=['GET'])
@@ -29,22 +29,18 @@ def rank_relations():
 
 @mapping_service.route('/map_entity', methods=['GET'])
 def map_entity():
-    def is_valid(input: dict):
-        return input and 'text' in input and 'entity_begin' in input and 'entity_end'
-    
-    input = json.loads(request.args.get('input'))
-    
-    if is_valid(input):
-        text = input['text']
-        entity_begin = input['entity_begin']
-        entity_end = input['entity_end']
+
+    input_obj = json.loads(request.args.get('input'))
+    try:    
+        text = input_obj['text']
+        entity_begin = input_obj['entity_begin']
+        entity_end = input_obj['entity_end']
 
         entity_text = text[entity_begin: entity_end]
-        candidates = ENTITY_MAPPER.map_entity(entity_text)
-        
+        candidates = ENTITY_MAPPER(entity_text)
         return jsonify(candidates)
-    else:
-        return 'No query given', 400
+    except:
+        return 'Bad query', 400
 
 @mapping_service.route('/map_type', methods=['GET'])
 def map_type():

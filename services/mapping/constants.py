@@ -6,6 +6,7 @@ TYPE_SIMILARITIES_PATH = "datasets/type_mapping/data/type_similarities.txt"
 TYPES_TRIE_PATH = "datasets/type_mapping/data/types_trie.pkl"
 SPACY_CACHE_PATH = "services/mapping/type_mapping/cache.dump"
 
+DBPEDIA_RESOURCE_PREFIX = r'http://dbpedia.org/resource/'
 TYPE_LEXICON_PATH = r'datasets\type_mapping\data\lexicon.tsv'
 LABELS_SPACY_DOCS_PATH = r'datasets\type_mapping\data\labels_spacy_docs.json'
 YAGO_TAXONOMY_PATH = r'datasets\type_mapping\data\yago_taxonomy.nt'

@@ -117,6 +117,7 @@ def _decode_labels(tokens):
 
 
 
-# candidates = parse("What is the largest city in Brazil?")
+# candidates = parse("Who is the oldest actor that stars in a movie directed by Quentin Tarantino?")
 # best = candidates[0]
-# print(best['tokens'])
+# tree = QueryTree.from_dict(best)
+# tree.pretty_print()
