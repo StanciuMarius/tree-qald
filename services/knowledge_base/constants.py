@@ -28,11 +28,6 @@ RELATION_RETRIVAL_SPARQL_TEMPLATE_PATHS = {
     (ResourceType.ENTITY,    ResourceType.ENTITY):   r'services\knowledge_base\static\ENTITY_ENTITY.template.sparql',
 }
 
-LITERAL_FILTERS = {
-    ResourceType.DATE: 'FILTER(datatype(?object) = xsd:date || datatype(?object) = xsd:gYear || datatype(?object) = xsd:gMonth || datatype(?object) = xsd:gYearMonth || datatype(?object) = xsd:gMonthDay || datatype(?object) = xsd:gDay).',
-    ResourceType.NUMERAL: 'FILTER(datatype(?object) = xsd:integer || datatype(?object) = xsd:decimal || datatype(?object) = xsd:int || datatype(?object) = xsd:double || datatype(?object) = xsd:float || datatype(?object) = xsd:short).',
-    ResourceType.STRING: 'FILTER(datatype(?object) = xsd:string).'
-}
 
 RESULT_BLACKLIST = {
     'http://dbpedia.org/ontology/wikiPageWikiLink',
