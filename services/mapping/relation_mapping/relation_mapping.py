@@ -44,5 +44,32 @@ class RelationRanker(object):
             classifier_score = classifier_scores[relation] if relation in classifier_scores else 0.0
             return self.classifier_weight * classifier_score + self.patty_weight * patty_score / (self.classifier_weight + self.patty_weight)
 
-        candidates = sorted(candidates, key=score, reverse=True) # TODO Implement the sorting key
+        candidates = sorted(candidates, key=score, reverse=True)
         return candidates
+
+    def __test__(self):
+        text = "Who is the oldest actor that stars in a movie directed by Quentin Tarantino?"
+        subject = "movie"
+        object = "Quentin Tarantino"
+        subject_begin = text.find(subject)
+        subject_end = subject_begin + len(subject)
+
+        object_begin = text.find(object)
+        object_end = object_begin + len(object)
+        candidates = [
+        "http://dbpedia.org/ontology/director",
+        "http://dbpedia.org/ontology/editor",
+        "http://dbpedia.org/ontology/writer",
+        "http://dbpedia.org/ontology/producer",
+        "http://dbpedia.org/ontology/narrator",
+        "http://dbpedia.org/ontology/basedOn",
+        "http://dbpedia.org/ontology/story",
+        "http://dbpedia.org/ontology/cinematography",
+        "http://dbpedia.org/ontology/starring"
+        ]
+        sorted_candidates = self(text, subject_begin, subject_end, object_begin, object_end, candidates)
+        assert sorted_candidates[0] == "http://dbpedia.org/ontology/director"
+
+if __name__ == '__main__':
+    ranker = RelationRanker()
+    ranker.__test__()
