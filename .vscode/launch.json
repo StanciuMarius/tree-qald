@@ -31,10 +31,25 @@
         {
             "type": "python",
             "request": "launch",
+            "name": "Launch Query Generator service",
+            "program": "${workspaceFolder}\\services\\query_generator\\run_query_generator_serivce.py",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "Launch Knowledge Base service",
+            "program": "${workspaceFolder}\\services\\knowledge_base\\run_knowledge_base_serivce.py",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "python",
+            "request": "launch",
             "name": "Launch Mapping service",
             "program": "${workspaceFolder}\\services\\mapping\\run_mapping_service.py",
             "cwd": "${workspaceFolder}"
         }
+        
     ],
     "compounds": [
         {
@@ -42,7 +57,9 @@
             "configurations": [
                 "Launch NLP service",
                 "Launch Parser service",
-                "Launch Mapping service"
+                "Launch Mapping service",
+                "Launch Query Generator service",
+                "Launch Knowledge Base service"
             ]
         }
     ]
