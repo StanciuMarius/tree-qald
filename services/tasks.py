@@ -26,9 +26,11 @@ class Task(Enum):
 def run_task(task: Task, input):
     json_input = input if type(input) == str  else json.dumps(input)
     service = TASKS[task.value]
-    URL = URL_ROOT + ':' + str(PORTS[service]) + '/' + task.value + '?input=' + json_input
+    URL = URL_ROOT + ':' + str(PORTS[service]) + '/' + task.value 
+    request = requests.Request('GET', URL, params = {'input': json_input}).prepare()
     try:
-        response = requests.get(URL)
+        session = requests.Session()
+        response = session.send(request)
     except requests.exceptions.RequestException as e:
         print('Could not establish connection to the {} service. Try starting it with \'python services/{}/run_{}_service.py\''.format(service, service.lower(), service.lower()))
         sys.exit(1)
