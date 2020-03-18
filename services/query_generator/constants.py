@@ -1,4 +1,6 @@
 from common.query_tree import NodeType
+from common.knowledge_base import ResourceType
+
 QUERY_TEMPLATE_FILE_PATH                        = r'services\query_generator\static_files\query_template.sparql'
 ARGFUNC_SUBQUERY_TEMPLATE_FILE_PATH             = r'services\query_generator\static_files\argfunc_subquery_template.sparql'
 COUNT_SUBQUERY_TEMPLATE_FILE_PATH               = r'services\query_generator\static_files\count_subquery_template.sparql'
@@ -14,3 +16,6 @@ VALUE_BINDING_PATTERN = 'VALUES {} {{ {} }}'
 ARGMAX_PATTERN = 'ORDER BY DESC({}) LIMIT {}.\n'
 ARGMIN_PATTERN = 'ORDER BY ASC({}) LIMIT 1.\n'
 ARGNTH_PATTERN = 'ORDER BY ASC({}) OFFSET {} LIMIT 1.\n'
+DATATYPE_FILTER_ELEMENT   = 'datatype({VARIABLE}) = <{TYPE}>'
+DATATYPE_FILTER_SEPARATOR = ' || '
+DATATYPE_FILTER_WRAPPER = 'FILTER({CONSTRAINTS}).'

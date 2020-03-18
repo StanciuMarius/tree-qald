@@ -2,11 +2,12 @@ import json
 import os
 import sys
 from copy import deepcopy
-from typing import Tuple
+from typing import Tuple, List
 sys.path.insert(0, os.getcwd())
+
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 from services.tasks import run_task, Task
-from services.query_generator.constants import QUERY_TEMPLATE_FILE_PATH, EXISTS_TEMPLATE_FILE_PATH, TYPE_RELATION, ENTITY_SETS, RELATION_EXTRACTION_VARIABLE, VALUE_BINDING_PATTERN
+import services.query_generator.constants as constants
 from services.query_generator.node_handlers.argfunc import handle_ARGMAX, handle_ARGMIN, handle_ARGNTH, handle_TOPN
 from services.query_generator.node_handlers.misc import handle_ROOT, handle_PROPERTY, handle_PROPERTYCONTAINS, handle_ENTITY, handle_SAMPLE
 from services.query_generator.node_handlers.count import handle_ARGMAXCOUNT, handle_ARGMINCOUNT, handle_COUNT
@@ -56,7 +57,7 @@ class QueryGenerator(object):
         return_variable = self.node_vs_reference[self.tree.root.id]
         query: str = self.__generate_query_from_current_state(return_variable)
 
-        return return_variable, query
+        return query, return_variable
 
     def __generate_query_from_current_state(self, return_variable: str) -> str:
         # Preprocess value 
@@ -67,10 +68,10 @@ class QueryGenerator(object):
 
         prefixes = ''
         triples  = ''.join([TRIPLE_PATTERN.format(*triple) for triple in self.triples])
-        bindings = '\n'.join([VALUE_BINDING_PATTERN.format(variable, ' '.join(values)) for variable, values in self.bindings.items()])
-        filters  = bindings + '\n'.join(self.filters)
+        bindings = '\n'.join([constants.VALUE_BINDING_PATTERN.format(variable, ' '.join(values)) for variable, values in self.bindings.items()])
+        filters  = bindings + '\n' + '\n'.join(self.filters)
 
-        template_file_path = EXISTS_TEMPLATE_FILE_PATH if self.is_exists else QUERY_TEMPLATE_FILE_PATH
+        template_file_path = constants.EXISTS_TEMPLATE_FILE_PATH if self.is_exists else constants.QUERY_TEMPLATE_FILE_PATH
         with open(template_file_path, 'r', encoding='utf-8') as query_template_file:
             template = query_template_file.read()
 
@@ -113,15 +114,15 @@ class QueryGenerator(object):
         node_copy = deepcopy(node)
         gen = deepcopy(self)
         NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=False)
-        in_order_query  = gen.__generate_query_from_current_state(RELATION_EXTRACTION_VARIABLE)
-        in_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': in_order_query, 'return_variable': RELATION_EXTRACTION_VARIABLE.replace('?', '')})
+        in_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
+        in_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': in_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
         
         # We also don't know the order yet (in terms of subject-object) of the triple yet, so we need the relation candidates for the revese order as well.
         node_copy = deepcopy(node)
         gen = deepcopy(self)
         NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=True)
-        reverse_order_query  = gen.__generate_query_from_current_state(RELATION_EXTRACTION_VARIABLE)
-        reverse_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': in_order_query, 'return_variable': RELATION_EXTRACTION_VARIABLE.replace('?', '')})
+        reverse_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
+        reverse_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': reverse_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
         reverse_order_candidates = ['_' + candidate for candidate in reverse_order_candidates] # '_' prefix means reverse order for the mapping service TODO make this more visible
 
         # Rank the obtained candidates
@@ -145,12 +146,23 @@ class QueryGenerator(object):
         
 
     def add_type_restrictions(self, node: QueryTree.Node) -> None:
+        '''
+            Expands type children nodes of the given node and adds "?node_var a <type>" triples
+        '''
         variable = self.node_vs_reference[node.id]
         type_nodes = list(filter(lambda child: child.type == NodeType.TYPE, node.children))
         for type_node in type_nodes:
             type_variable = self.generate_variable_name()
             self.bindings[type_variable] = type_node.kb_resources
-            self.triples.append((variable, TYPE_RELATION, type_variable))
+            self.triples.append((variable, constants.TYPE_RELATION, type_variable))
+    
+    def add_datatype_restrictions(self, variable: str, datatypes: List[str]):
+        '''
+            Datatype constraints are types for literals. Added via FILTER(datatype(?var) == <datatype> || etc..) statement
+        '''
+        constraints = constants.DATATYPE_FILTER_SEPARATOR.join([constants.DATATYPE_FILTER_ELEMENT.format(VARIABLE=variable, TYPE=datatype) for datatype in datatypes])
+        statement = constants.DATATYPE_FILTER_WRAPPER.format(CONSTRAINTS=constraints)
+        self.filters.append(statement)
     
     def generate_variable_name(self) -> str:
         if not self.__variables:
