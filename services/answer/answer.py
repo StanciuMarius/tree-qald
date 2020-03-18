@@ -17,10 +17,11 @@ def answer(question_text: str) -> List[str]:
         query_tree.pretty_print()
 
         query = run_task(Task.GENERATE_QUERY, tree)
-        answer = run_task(Task.RUN_SPARQL_QUERY, **query)
+        answer = run_task(Task.RUN_SPARQL_QUERY, query)
         if answer:
-            return answer
+            return query['query'], answer
     
     raise "Could not generate answer"
 
-answer("Who is the oldest child of Barack Obama?")
+result = answer("Who is the oldest actor that stars in a movie directed by Quentin Tarantino?")
+print(result)
