@@ -1,0 +1,2 @@
+ - Add sample weights to the relation classifier; make the questions trainining samples more important than tacred and others.
+ - Make better use of the Simpledbpediaqa dataset. Use it to generate parser training examples.
