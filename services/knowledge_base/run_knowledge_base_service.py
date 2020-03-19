@@ -18,22 +18,6 @@ knowledge_base_service = Flask(__name__)
 cors = CORS(knowledge_base_service)
 knowledge_base_service.config['CORS_HEADERS'] = 'Content-Type'
 
-@knowledge_base_service.route('/retrieve_relations', methods=['GET'])
-@cross_origin()
-def retrieve_relations():
-    # try:
-    input_json_object = json.loads(request.args.get('input'))
-    subject = input_json_object['subject']
-    object_ = input_json_object['object']
-    if subject:
-        subject[0] = ResourceType[subject[0]]
-    if object_:
-        object_[0] = ResourceType[object_[0]]
-
-    relations: List[str] = KB_OPERATOR.retrieve_relations(subject, object_)
-    return jsonify(relations)
-
-
 @knowledge_base_service.route('/run_sparql_query', methods=['GET'])
 @cross_origin()
 def run_sparql_query():
