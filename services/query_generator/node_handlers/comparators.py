@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, os.getcwd())
 from common.query_tree import QueryTree, NodeType
 from services.query_generator.constants import RELATION_EXTRACTION_VARIABLE, ENTITY_SETS, COMPARATOR_COUNT_SUBQUERY_TEMPLATE_FILE_PATH, TRIPLE_PATTERN, RELATION_EXTRACTION_VARIABLE
-
+from services.query_generator.literals import parse_number
 
 
 def handle_GREATERCOUNT(gen, node: QueryTree.Node, reverse_relation=False):
@@ -21,7 +21,10 @@ def handle_ISGREATER(gen, node: QueryTree.Node, reverse_relation=False):
 
 def handle_comparatorCOUNT(gen, node:QueryTree.Node, comparator, reverse_relation=False):
     entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
-    literal = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))[0].kb_resources[0]
+    
+    literal = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))[0]
+    literal = parse_number(gen.tree.text_for_node(literal))
+
     relation = gen.generate_variable_name()
     gen.bindings[relation] = node.kb_resources
     
@@ -92,7 +95,8 @@ def handle_IScomparator(gen, node: QueryTree.Node, comparator, reverse_relation=
 def handle_comparator(gen, node: QueryTree.Node, comparator, reverse_relation=False):
     entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
     literal = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))[0].kb_resources[0]
-    
+    literal = parse_number(gen.tree.text_for_node(literal))
+
     if node.kb_resources:
         relation = gen.generate_variable_name()
         gen.bindings[relation] = node.kb_resources

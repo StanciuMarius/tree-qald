@@ -5,6 +5,7 @@ sys.path.insert(0, os.getcwd())
 
 from common.query_tree import QueryTree, NodeType
 from services.query_generator.constants import ENTITY_SETS, TRIPLE_PATTERN, RELATION_EXTRACTION_VARIABLE
+from services.query_generator.literals import parse_number
 
 def handle_EXISTS(gen, node: QueryTree.Node):
     gen.is_exists = True
@@ -20,7 +21,10 @@ def handle_EXISTS(gen, node: QueryTree.Node):
 def handle_EXISTSRELATION(gen, node: QueryTree.Node, reverse_relation=False):
     gen.is_exists = True
     entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
+    
     literals = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))
+    literal = parse_number(gen.tree.text_for_node(literal))
+
     gen.node_vs_reference[node.id] = None
     if node.kb_resources:
         relation = gen.generate_variable_name()
@@ -34,7 +38,9 @@ def handle_EXISTSRELATION(gen, node: QueryTree.Node, reverse_relation=False):
 
 
     elif len(entity_sets) == 1 and len(literals) == 1:
-        literal = literals[0].kb_resources[0]
+        literal = literals[0]
+        literal = parse_number(gen.tree.text_for_node(literal))
+
         triple = (gen.node_vs_reference[entity_sets[0].id], relation, literal)
         gen.triples.append(reversed(triple) if reverse_relation else triple)
 

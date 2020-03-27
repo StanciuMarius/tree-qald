@@ -2,13 +2,14 @@ from common.query_tree import QueryTree, NodeType
 from common.knowledge_base import COMPARABLE_DATATYPES
 from services.query_generator.constants import ENTITY_SETS
 import services.query_generator.constants as constants 
+from services.query_generator.literals import parse_number
 
 def handle_ARGMAX(gen, node: QueryTree.Node, **kwargs):
     return handle_topn_helper(gen, node, 1)
 
 def handle_TOPN(gen, node: QueryTree.Node, **kwargs):
-    # literal = list(filter(lambda child: child.type = NodeType.LITERAL, node.children))[0]\
-    literal = 4
+    literal = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))[0]
+    literal = parse_number(gen.tree.text_for_node(literal))
     return handle_topn_helper(gen, node, literal)
 
 def handle_ARGMIN(gen, node: QueryTree.Node, **kwargs):
@@ -36,7 +37,9 @@ def handle_ARGMIN(gen, node: QueryTree.Node, **kwargs):
 
 def handle_ARGNTH(gen, node: QueryTree.Node, **kwargs):
     entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
-    literal = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))[0].kb_resources[0]
+    literal = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))[0]
+    literal = parse_number(gen.tree.text_for_node(literal))
+
 
     if node.kb_resources:
         relation = gen.generate_variable_name()
