@@ -1,5 +1,6 @@
 import os
 import sys
+import traceback
 import time
 import json
 
@@ -24,11 +25,12 @@ def generate_query():
         query_tree_dict = json.loads(request.args.get('input'))
         query, answer_variable = internal_generate_query(query_tree_dict)
         response = {
-            "query": query,
-            "answer_variable": answer_variable
+            "query_body": query,
+            "return_variable": answer_variable
         }
         return jsonify(response)
     except:
+        traceback.print_exc(file=sys.stdout)
         return 'Bad query', 400
 
 def run_query_generator_service():

@@ -5,8 +5,8 @@ import os
 def run_services():
     services = []
     
-    services.append(subprocess.Popen(['python', r'services\parser\run_parser_service.py']))
     services.append(subprocess.Popen(['python', r'services\nlp\run_nlp_serivce.py']))
+    services.append(subprocess.Popen(['python', r'services\parser\run_parser_service.py']))
     services.append(subprocess.Popen(['python', r'services\mapping\run_mapping_service.py']))
     services.append(subprocess.Popen(['python', r'services\query_generator\run_query_generation_service.py']))
     services.append(subprocess.Popen(['python', r'services\knowledge_base\run_knowledge_base_service.py']))

@@ -34,11 +34,13 @@ def run_task(task: Task, input):
     except requests.exceptions.RequestException as e:
         print('Could not establish connection to the {} service. Try starting it with \'python services/{}/run_{}_service.py\''.format(service, service.lower(), service.lower()))
         sys.exit(1)
+    if response.status_code == 200:
+        output_text = response.text
+        output = json.loads(output_text)
+        return output
+    else:
+        return None
 
-    output_text = response.text
-    output = json.loads(output_text)
-
-    return output
 
 # Example of running a task from Task enum
 # print(run_task(Task.TOKENIZE, "hello world"))

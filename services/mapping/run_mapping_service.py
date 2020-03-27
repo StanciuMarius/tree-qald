@@ -1,5 +1,6 @@
 import os
 import sys
+import traceback
 import time
 import json
 
@@ -22,9 +23,12 @@ TYPE_MAPPER = TypeMapper()
 def rank_relations():
     try:
         input = json.loads(request.args.get('input'))    
-        candidates = RELATION_RANKER(**input)       
+        candidates = RELATION_RANKER(**input)
+
         return jsonify(candidates)
+
     except:
+        traceback.print_exc(file=sys.stdout)
         return 'Bad query', 400
 
 @mapping_service.route('/map_entity', methods=['GET'])
@@ -40,6 +44,7 @@ def map_entity():
         candidates = ENTITY_MAPPER(entity_text)
         return jsonify(candidates)
     except:
+        traceback.print_exc(file=sys.stdout)
         return 'Bad query', 400
 
 @mapping_service.route('/map_type', methods=['GET'])

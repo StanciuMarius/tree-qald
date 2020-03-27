@@ -219,12 +219,20 @@ class QueryTree:
         print(' '.join(self.tokens))
         print_tree(self.root, childattr='children')
 
+
     def offset_for_node(self, node: Node):
         tokens = [token.id for token in node.collect({NodeType.TOKEN})]
         begin_offset, end_offset = self._index_to_offset(tokens)
 
         return begin_offset, end_offset
+    
 
+    def text_for_node(self, node: Node) -> str:
+        begin, end = self.offset_for_node(node)
+        text = ' '.join(self.tokens)
+
+        return text[begin:end]
+        
     @classmethod
     def from_dict(cls, tree_dict: dict):
         tokens = tree_dict['tokens']
