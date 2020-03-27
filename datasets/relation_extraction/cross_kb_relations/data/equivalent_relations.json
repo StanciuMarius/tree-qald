@@ -627,7 +627,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/developer"
+                "http://dbpedia.org/ontology/developer",
+                "http://dbpedia.org/property/developer"
             ],
             "freebase": [
                 "http://freebase.com/computer/software/developer",
@@ -641,7 +642,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/director"
+                "http://dbpedia.org/ontology/director",
+                "http://dbpedia.org/property/director"
             ],
             "freebase": [
                 "http://freebase.com/film/film/film_art_direction_by",

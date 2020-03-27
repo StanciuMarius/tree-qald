@@ -161,7 +161,10 @@ def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):
             e1_begin, e1_end, e2_begin, e2_end = offset + e1_begin, offset + e1_end, 0, offset
     else: 
         e2_begin, e2_end = offset_for_node_union(tree, e2_nodes)
-
+    
+    if e2_begin < e1_begin: # TODO: Convention subject is first in the sentence
+        e1_begin, e1_end, e2_begin, e2_end = e2_begin, e2_end, e1_begin, e1_end
+    
     result = {
         'text': sequence,
         'id': '{}${}'.format(tree.id, node.id),

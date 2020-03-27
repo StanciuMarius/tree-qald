@@ -13,9 +13,15 @@ RELATION_EXTRACTION_VARIABLE = '?relation'
 TRIPLE_PATTERN = '\t{} {} {}.\n'
 BIND_PATTERN   = '\tBIND(IF({} {} {}, {}, {}) AS {})\n'
 VALUE_BINDING_PATTERN = 'VALUES {} {{ {} }}'
-ARGMAX_PATTERN = 'ORDER BY DESC({}) LIMIT {}.\n'
-ARGMIN_PATTERN = 'ORDER BY ASC({}) LIMIT 1.\n'
-ARGNTH_PATTERN = 'ORDER BY ASC({}) OFFSET {} LIMIT 1.\n'
+ARGMAX_PATTERN = 'ORDER BY DESC({}) LIMIT {}\n'
+ARGMIN_PATTERN = 'ORDER BY ASC({}) LIMIT 1\n'
+ARGNTH_PATTERN = 'ORDER BY ASC({}) OFFSET {} LIMIT 1\n'
 DATATYPE_FILTER_ELEMENT   = 'datatype({VARIABLE}) = <{TYPE}>'
 DATATYPE_FILTER_SEPARATOR = ' || '
 DATATYPE_FILTER_WRAPPER = 'FILTER({CONSTRAINTS}).'
+
+
+RELATION_MAPPING_BLACKLIST = set([
+    'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
+    'http://dbpedia.org/ontology/wikiPageWikiLink'
+    ])

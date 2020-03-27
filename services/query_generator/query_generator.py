@@ -57,7 +57,7 @@ class QueryGenerator(object):
         return_variable = self.node_vs_reference[self.tree.root.id]
         query: str = self.__generate_query_from_current_state(return_variable)
 
-        return query, return_variable
+        return query, return_variable.replace('?', '')
 
     def __generate_query_from_current_state(self, return_variable: str) -> str:
         # Preprocess value 
@@ -116,13 +116,15 @@ class QueryGenerator(object):
         NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=False)
         in_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
         in_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': in_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
-        
+        in_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, in_order_candidates))
+
         # We also don't know the order yet (in terms of subject-object) of the triple yet, so we need the relation candidates for the revese order as well.
         node_copy = deepcopy(node)
         gen = deepcopy(self)
         NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=True)
         reverse_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
         reverse_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': reverse_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
+        reverse_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, reverse_order_candidates))
         reverse_order_candidates = ['_' + candidate for candidate in reverse_order_candidates] # '_' prefix means reverse order for the mapping service TODO make this more visible
 
         # Rank the obtained candidates
@@ -132,9 +134,9 @@ class QueryGenerator(object):
         relation_candidates = run_task(Task.RANK_RELATIONS, relation_ranking_input)
         
         if not relation_candidates:
-            # We continue query generation but it won't have any answers...(this is due to a bad previous step, or KB inconsistencies)
+            # This is probably due to bad previous step or the whole parse tree is bad.
             # TODO we could backtrack?
-            pass
+            raise Exception('No relation could be found')
         else:
             # Pick the top candidate
             best_candidate = relation_candidates[0]

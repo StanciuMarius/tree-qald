@@ -6,6 +6,8 @@ import json
 sys.path.insert(0, os.getcwd())
 
 import services.mapping.constants as constants
+from typing import List
+
 from services.mapping.relation_mapping.pattern_matcher.pattern_matcher import RelationPatternMatcher
 from services.mapping.relation_mapping.relation_classifier.preprocessing import generate_relation_extraction_sequence
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
@@ -26,7 +28,7 @@ class RelationRanker(object):
         self.classifier = RelationClassifier()
         self.resolver = EquivalentRelationResolver()
 
-    def __call__(self, text, subject_begin, subject_end, object_begin, object_end, candidates, **kwargs):
+    def __call__(self, text: str, subject_begin: int, subject_end: int, object_begin: int, object_end: int, candidates: List[str], **kwargs) -> List[str]:
         patty_scores      = self.patty(text, subject_begin, subject_end, object_begin, object_end, **kwargs)
         classifier_scores = self.classifier(text, subject_begin, subject_end, object_begin, object_end, **kwargs)
         
@@ -43,6 +45,9 @@ class RelationRanker(object):
             patty_score = patty_scores[relation] if relation in patty_scores else 0.0
             classifier_score = classifier_scores[relation] if relation in classifier_scores else 0.0
             return self.classifier_weight * classifier_score + self.patty_weight * patty_score / (self.classifier_weight + self.patty_weight)
+
+        debug_list = ['({}, {})'.format(candidate, score(candidate)) for candidate in candidates]
+        print('Ranked relations: ',  '\n'.join(debug_list))
 
         candidates = sorted(candidates, key=score, reverse=True)
         return candidates

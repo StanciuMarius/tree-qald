@@ -5,7 +5,7 @@ NCRFPP_REPOSITORY_PATH          = r'services\parser\tree2labels\NCRFpp'
 TREE_CANDIDATES_N_BEST          = 10
 
 # Train dataset
-TRAIN_TEST_RATIO = 0.9
+TRAIN_TEST_RATIO = 0.95
 QUESTION_SET_FILE_PATH          = r'datasets\parsing\data\constituency_annotated_questions.json'
 NCRFPP_TRAIN_CONFIG_FILE_PATH   = r'services\parser\static_files\crf-bilstm.config'
 
