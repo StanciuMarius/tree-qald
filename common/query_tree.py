@@ -61,10 +61,10 @@ class NodeType(Enum):
     # Filters the entities with a cardinal of property (to be extracted) less than a given literal
     LESSCOUNT = 'LESSCOUNT'
 
-    # PROPERTY is the a term of an RDF triple (the subject or object, not known yet)
+    # PROPERTY is the object of an RDF triple
     PROPERTY = 'PROPERTY'
 
-    # Filters ENTITYSET by property containing the child entity or literal
+    # Filters ENTITYSET by object containing the child entity or literal
     PROPERTYCONTAINS = 'PROPERTYCONTAINS'
 
     # Tokens that represent knowledge base TYPE+. E.g. "comonauts" "writer" 

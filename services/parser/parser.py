@@ -114,10 +114,3 @@ def _decode_labels(tokens):
         candidates.append(query_tree)
 
     return candidates
-
-
-
-# candidates = parse("Who is the oldest actor that stars in a movie directed by Quentin Tarantino?")
-# best = candidates[0]
-# tree = QueryTree.from_dict(best)
-# tree.pretty_print()
