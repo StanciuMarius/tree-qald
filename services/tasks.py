@@ -15,7 +15,7 @@ class Task(Enum):
     SPACY_PROCESS = 'spacy_process'
     REMOVE_PUNCTUATION = 'remove_punctuation'
     PARSE = 'parse'
-    RANK_RELATIONS = 'rank_relations'
+    MAP_RELATIONS = 'map_relations'
     MAP_ENTITY = 'map_entity'
     MAP_TYPE = 'map_type'
     RETRIEVE_RELATIONS = 'retrieve_relations'
@@ -45,4 +45,10 @@ def run_task(task: Task, input):
 # Example of running a task from Task enum
 # print(run_task(Task.TOKENIZE, "hello world"))
 # print(run_task(Task.PARSE, "hello world"))
+# print(run_task(Task.MAP_ENTITY, {
+#     'text': 'U.S. president Lincoln ',
+#     'entity_begin': 0,
+#     'entity_end': len('U.S. president Lincoln')
+# }))
+
 # test_1 = kb.retrieve_relation(, (ResourceType.ENTITY, "http://dbpedia.org/resource/Michelle_Obama")) == ['http://dbpedia.org/ontology/spouse']

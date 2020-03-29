@@ -17,9 +17,13 @@ from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentR
 
 
 
-class RelationRanker(object):
+class RelationMapper(object):
     '''
-    Ranks candidate knowledge base relations for a node using an ensamble of models.
+    An ensamble model based on a neural model and a pattern-matching model for relation extraction.
+
+    It finds the knowledge-base relation correspondent to a text subject-object pair.
+    Prior candidates can be given to reduce the search space. In case no candidates are given,
+    all the relations are considered.
     '''
     def __init__(self, patty_weight=0.3, classifier_weight=0.7):
         self.patty_weight = patty_weight
@@ -41,18 +45,33 @@ class RelationRanker(object):
         patty_scores      = {candidate: score for candidate, score in patty_scores}
         classifier_scores = {candidate: score for candidate, score in classifier_dbpedia_scores}
         
-        def score(relation: str) -> float:
+        def compute_score(relation: str) -> float:
+            reverse_relation = '_' + relation if '_' not in relation else relation.replace('_', '')
+
             patty_score = patty_scores[relation] if relation in patty_scores else 0.0
             classifier_score = classifier_scores[relation] if relation in classifier_scores else 0.0
+            if relation in classifier_scores:
+                classifier_score = classifier_scores[relation]
+            elif reverse_relation in classifier_scores:
+                classifier_score = classifier_scores[reverse_relation]
+            else: 
+                classifier_score = 0.0
+        
             return self.classifier_weight * classifier_score + self.patty_weight * patty_score / (self.classifier_weight + self.patty_weight)
 
-        debug_list = ['({}, {})'.format(candidate, score(candidate)) for candidate in candidates]
-        print('Ranked relations: ',  '\n'.join(debug_list))
+        if not candidates:
+            # If no prior candidates are provided, we consider all kb relations
+            candidates = list(set(list(classifier_scores.keys()) + list(patty_scores.keys()))) # All possible relations
 
-        candidates = sorted(candidates, key=score, reverse=True)
-        return candidates
+        # We pick the highest ranked candidates (multiple candidates if they all have the same score)
+        candidates = [(candidate, compute_score(candidate)) for candidate in candidates]
+        candidates = sorted(candidates, key=lambda x: x[1], reverse=True)
+        result = [candidate[0] for candidate in candidates if candidate[1] == candidates[0][1]]
+        print('Picked {}\n from {}'.format('\n'.join(result), '\n'.join(str(candidate) for candidate in candidates)))
 
-    def __test__(self):
+        return result
+
+    def __test1__(self):
         text = "Who is the oldest actor that stars in a movie directed by Quentin Tarantino?"
         subject = "movie"
         object = "Quentin Tarantino"
@@ -72,9 +91,23 @@ class RelationRanker(object):
         "http://dbpedia.org/ontology/cinematography",
         "http://dbpedia.org/ontology/starring"
         ]
-        sorted_candidates = self(text, subject_begin, subject_end, object_begin, object_end, candidates)
-        assert sorted_candidates[0] == "http://dbpedia.org/ontology/director"
+        kb_relations = self(text, subject_begin, subject_end, object_begin, object_end, candidates)
+        assert kb_relations[0] == "http://dbpedia.org/ontology/director"
+
+    def __test2__(self):
+        text = "Are Barack Obama and Michelle Obama married?"
+        subject = "Barack Obama"
+        object = "Michelle Obama"
+        subject_begin = text.find(subject)
+        subject_end = subject_begin + len(subject)
+
+        object_begin = text.find(object)
+        object_end = object_begin + len(object)
+        candidates = [] # This is a typical EXISTS_RELATION case so we give no candidates
+        kb_relations = self(text, subject_begin, subject_end, object_begin, object_end, candidates)
+        assert "http://dbpedia.org/ontology/spouse" in kb_relations
 
 if __name__ == '__main__':
-    ranker = RelationRanker()
-    ranker.__test__()
+    ranker = RelationMapper()
+    ranker.__test1__()
+    ranker.__test2__()

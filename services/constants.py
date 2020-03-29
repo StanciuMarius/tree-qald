@@ -14,7 +14,7 @@ TASKS = {
     'pos_tag': 'NLP',
     'spacy_process': 'NLP',
     'parse' : 'PARSER',
-    'rank_relations': 'MAPPING',
+    'map_relations': 'MAPPING',
     'map_entity': 'MAPPING',
     'map_type': 'MAPPING',
     'retrieve_relations': 'KNOWLEDGE_BASE',

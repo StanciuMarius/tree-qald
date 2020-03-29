@@ -8,14 +8,14 @@ from flask import Flask, request, jsonify
 sys.path.insert(0, os.getcwd())
 from services.constants import PORTS
 
-from services.mapping.relation_mapping.relation_mapping import RelationPatternMatcher, RelationRanker
+from services.mapping.relation_mapping.relation_mapping import RelationMapper
 from services.mapping.entity_mapping.entity_mapping import EntityMapping
 from services.mapping.type_mapping.type_mapping import TypeMapper
 from services.mapping.constants import PATTY_DBPEDIA_PARAPHRASES_FILE_PATH, TYPES_TRIE_PATH
 
 mapping_service = Flask(__name__)
 
-RELATION_RANKER = RelationRanker()
+RELATION_MAPPER = RelationMapper()
 ENTITY_MAPPER = EntityMapping()
 TYPE_MAPPER = TypeMapper()
 
@@ -23,7 +23,7 @@ TYPE_MAPPER = TypeMapper()
 def rank_relations():
     try:
         input = json.loads(request.args.get('input'))    
-        candidates = RELATION_RANKER(**input)
+        candidates = RELATION_MAPPER(**input)
 
         return jsonify(candidates)
 
@@ -42,6 +42,7 @@ def map_entity():
 
         entity_text = text[entity_begin: entity_end]
         candidates = ENTITY_MAPPER(entity_text)
+        # candidates = ["http://dbpedia.org/resource/" + entity_text]
         return jsonify(candidates)
     except:
         traceback.print_exc(file=sys.stdout)
