@@ -628,7 +628,8 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/developer",
-                "http://dbpedia.org/property/developer"
+                "http://dbpedia.org/property/developer",
+                "http://freebase.com/cvg/game_version/developer"
             ],
             "freebase": [
                 "http://freebase.com/computer/software/developer",
@@ -1578,7 +1579,6 @@
                 "http://freebase.com/film/film/production_companies",
                 "_http://freebase.com/film/production_company/films",
                 "_http://freebase.com/theater/theater_producer/plays_produced",
-                "http://freebase.com/cvg/game_version/developer",
                 "http://freebase.com/music/recording/producer",
                 "_http://freebase.com/medicine/drug_manufacturer/drugs_manufactured",
                 "_http://freebase.com/film/producer/films_executive_produced",
@@ -1697,7 +1697,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/seatingCapacity"
+                "http://dbpedia.org/ontology/seatingCapacity",
+                "http://dbpedia.org/property/capacity"
             ],
             "label": "seatingCapacity",
             "wikidata": [

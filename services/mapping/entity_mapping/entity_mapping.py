@@ -5,6 +5,8 @@ import sys
 import os
 sys.path.insert(0, os.getcwd())
 import services.mapping.constants as constants
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 
 '''
     Class that finds knowledge base resources corresponding to small texts.
@@ -35,23 +37,40 @@ class EntityMapping:
                         importance = int(candidate[1])
                         bestCandidate = candidate[0]
                 
-                self.text_vs_resources[tokens[0]] = bestCandidate
+                self.text_vs_resources[tokens[0].lower()] = bestCandidate
            
         print("Finished loading entity lexicon!")
 
     def __call__(self, entity_text: str):
-        # Do some preprocessing
-        no_spaces = entity_text.replace(" ", "")
-        no_spaces_lower = no_spaces.lower()
+        # Preprocess the entity text in various ways, resulting in more versions to try to find in the lexicon
+        entity_text = entity_text.lower()
+        versions = [entity_text]
+
+        # No stopwords
+        tokens = word_tokenize(entity_text)
+        no_stopwords_tokens = [word for word in tokens if not word in stopwords.words()]
+        no_stopwords = ''.join(no_stopwords_tokens)
+        versions.append(no_stopwords)
+
+        # Inversions
+        no_stopwords_reversed = ''.join(reversed(no_stopwords_tokens))
+        versions.append(no_stopwords_reversed)
+
+        # Extra word
+        for index in range(len(tokens)):
+            removed_word = ''.join(tokens[:index] + tokens[index + 1:])
+            versions.append(removed_word)
+
 
         result = []
-
-        if no_spaces in self.text_vs_resources:
-            result.append(self.text_vs_resources[no_spaces])
-        elif no_spaces_lower in self.text_vs_resources:
-            result.append(self.text_vs_resources[no_spaces_lower])
+        print("Trying to map: " + '|'.join(versions))
+        for version in versions:
+            if version in self.text_vs_resources:
+                result.append(self.text_vs_resources[version])
+                break
         
         result = [constants.DBPEDIA_RESOURCE_PREFIX + entity for entity in result]
+        print("Result: " + ' '.join(result))
     
         return result
 
