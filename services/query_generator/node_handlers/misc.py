@@ -26,16 +26,18 @@ def handle_PROPERTY(gen, node: QueryTree.Node, reverse_relation=False):
 
 
 def handle_PROPERTYCONTAINS(gen, node: QueryTree.Node, reverse_relation=False):
-    gen.node_vs_reference[node.id] = gen.generate_variable_name()
     if node.kb_resources:
         relation = gen.generate_variable_name()
         gen.bindings[relation] = node.kb_resources
     else:
         relation = RELATION_EXTRACTION_VARIABLE
 
-    gen.add_type_restrictions(node)
     entity_set = list(filter(lambda child: child.type in ENTITY_SETS and child.type != NodeType.ENTITY, node.children))
     entity = list(filter(lambda child: child.type == NodeType.ENTITY, node.children))
+
+    gen.node_vs_reference[node.id] = gen.node_vs_reference[entity_set[0].id]
+    gen.add_type_restrictions(node)
+
     triple = (gen.node_vs_reference[entity_set[0].id], relation, gen.node_vs_reference[entity[0].id])
     gen.triples.append(reversed(triple) if reverse_relation else triple)
 
