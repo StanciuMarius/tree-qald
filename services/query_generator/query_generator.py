@@ -51,13 +51,16 @@ class QueryGenerator(object):
             self.__map_type(type)
 
         # Aggregate triples and constraints recursively (save them in the internal state)
-        self.__handle_node(self.tree.root)
+        try:
+            self.__handle_node(self.tree.root)
 
         # Generate the actual string of the SPARQL query from the internal state
-        return_variable = self.node_vs_reference[self.tree.root.id]
-        query: str = self.__generate_query_from_current_state(return_variable)
+            return_variable = self.node_vs_reference[self.tree.root.id]
+            query: str = self.__generate_query_from_current_state(return_variable)
+        except:
+            return None, None, self.tree
 
-        return query, return_variable.replace('?', '')
+        return query, return_variable.replace('?', ''), self.tree
 
     def __generate_query_from_current_state(self, return_variable: str) -> str:
         # Preprocess value 
@@ -109,7 +112,7 @@ class QueryGenerator(object):
         
         # We use the accumulated constraints so far to generate a query that retrieves all possible relations for this node.
         node.kb_resources = [] # TODO: remove this
-
+    
         # Make copies so we don't break the current state
         node_copy = deepcopy(node)
         gen = deepcopy(self)
@@ -132,7 +135,8 @@ class QueryGenerator(object):
         relation_ranking_input = generate_relation_extraction_sequence(self.tree, node_copy)
         relation_ranking_input['candidates'] = relation_candidates
         relation_candidates = run_task(Task.RANK_RELATIONS, relation_ranking_input)
-        
+
+   
         if not relation_candidates:
             # This is probably due to bad previous step or the whole parse tree is bad.
             # TODO we could backtrack?

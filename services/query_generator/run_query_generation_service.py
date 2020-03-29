@@ -23,10 +23,11 @@ query_generator_service.config['CORS_HEADERS'] = 'Content-Type'
 def generate_query():
     try:
         query_tree_dict = json.loads(request.args.get('input'))
-        query, answer_variable = internal_generate_query(query_tree_dict)
+        query, answer_variable, tree = internal_generate_query(query_tree_dict)
         response = {
             "query_body": query,
-            "return_variable": answer_variable
+            "return_variable": answer_variable,
+            "tree": tree.to_serializable(SerializationFormat.HIERARCHICAL_DICT) # Also send the mapped tree for debugging purposes
         }
         return jsonify(response)
     except:
