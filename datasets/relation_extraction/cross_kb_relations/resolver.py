@@ -41,10 +41,10 @@ class EquivalentRelationResolver(object):
                 equivalent_relations = list(self.generic_vs_kb_relations[relation_uri][kb.value])
 
             if is_reversed:
-                equivalent_relations = [self.__reverse_relation(relation) for relation in equivalent_relations]
+                equivalent_relations = [self.reverse_relation(relation) for relation in equivalent_relations]
             return equivalent_relations
         else:
-            reversed_relation_uri = self.__reverse_relation(relation_uri) 
+            reversed_relation_uri = self.reverse_relation(relation_uri) 
             if relation_uri in self.kb_vs_generic_relations:
                 return self.kb_vs_generic_relations[relation_uri]
             elif reversed_relation_uri in self.kb_vs_generic_relations:
@@ -52,7 +52,7 @@ class EquivalentRelationResolver(object):
 
         return None
  
-    def __reverse_relation(self, relation_uri: str):
+    def reverse_relation(self, relation_uri: str):
         return relation_uri[1:] if '_' == relation_uri[0] else '_' + relation_uri
 
 

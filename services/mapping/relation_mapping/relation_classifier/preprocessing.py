@@ -142,7 +142,7 @@ def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):
         e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.LITERAL, node.children))
         if len(e1_nodes) == 0: e1_nodes = list(filter(lambda x: x.type != NodeType.LITERAL, node.children))
     elif node.type in {NodeType.ISLESS, NodeType.ISGREATER}:
-        # Technically there are 2 identical relations for each child entity. We can only extract for one of them.
+        # Technically there are 2 identical relations for each child entity. We only have to extract for one of them.
         e1_nodes = [node.children[0]]
     
     e1_begin, e1_end = offset_for_node_union(tree, e1_nodes)
@@ -154,24 +154,22 @@ def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):
             e2_begin = 0
             e2_end = len(tree.tokens[0])
         else:
-            # We only have one entity, so we add a dummy token at the beginning of the sequence to consider as E2
+            # We only have one entity, so we add a dummy token before the e1 tokens
             new_token = ' [{}] '.format(node.type.value)
+            # sequence = sequence[:e1_begin] + new_token + sequence[e1_begin:]
+            # e2_begin, e2_end = e1_begin, e1_begin + len(new_token)
+            # e1_begin, e1_end = e1_begin + len(new_token), e1_end + len(new_token)
             sequence = new_token + sequence
-            offset = len(new_token)
-            e1_begin, e1_end, e2_begin, e2_end = offset + e1_begin, offset + e1_end, 0, offset
+            e2_begin, e2_end = 0, len(new_token)
+            e1_begin, e1_end = e1_begin + len(new_token), e1_end + len(new_token)
     else: 
         e2_begin, e2_end = offset_for_node_union(tree, e2_nodes)
-    
-    if e2_begin < e1_begin: # TODO: Convention subject is first in the sentence
-        e1_begin, e1_end, e2_begin, e2_end = e2_begin, e2_end, e1_begin, e1_end
-    
+
     result = {
         'text': sequence,
         'id': '{}${}'.format(tree.id, node.id),
-        'subject': text[e1_begin:e1_end],
-        'object':text[e2_begin:e2_end],
-        # 'subject_node_ids': [node.id for node in e1_nodes],
-        # 'object_node_ids': [node.id for node in e2_nodes] if e2_nodes else [],
+        'subject': sequence[e1_begin:e1_end],
+        'object':sequence[e2_begin:e2_end],
         'subject_begin': e1_begin,
         'subject_end': e1_end,
         'object_begin': e2_begin,
@@ -179,7 +177,7 @@ def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):
     }
 
     if len(node.kb_resources) > 0:
-        result['relation'] = node.kb_resources[0] # TODO Consider others 
+        result['relation'] = node.kb_resources[0]
 
     return result
 
@@ -199,26 +197,4 @@ def parse_trees_to_relation_extraction_format(parse_trees_file_path, output_file
         
     with open(output_file_path, 'w', encoding='utf-8') as output_file:
         json.dump(sequences, output_file)
-
-
-# class BertFormatTransform(object):
-#     def __init__(self, max_sequence_length: int):
-#         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
-#         self.max_sequence_length = max_sequence_length
-
-#     def __call__(self, sample):
-#         text = sample['text']
-#         label = sample['label']
-
-#         subject_text = sample['text'][sample['subject_begin']:sample['subject_end']]
-#         object_text = sample['text'][sample['object_begin']:sample['object_end']]
-
-#         tokens = ['[CLS]'] + self.tokenizer.tokenize(text) + ['[SEP]'] + self.tokenizer.tokenize(subject_text) + ['[SEP]'] + self.tokenizer.tokenize(object_text) + ['[SEP]']
-
-#         token_ids = self.tokenizer.convert_tokens_to_ids(tokens)
-#         token_ids = pad_sequences([token_ids], maxlen=self.max_sequence_length, dtype="long", value=0, truncating="post", padding="post")[0]
-#         attention_mask = np.array([int(token_id > 0) for token_id in token_ids]).reshape(token_ids.shape)
-
-#         return {'token_ids': torch.LongTensor(token_ids), 'attention_mask': torch.Tensor(attention_mask), 'label': label}
-
 

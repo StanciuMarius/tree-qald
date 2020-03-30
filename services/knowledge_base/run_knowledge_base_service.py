@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import json
+import traceback
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
@@ -29,6 +30,7 @@ def run_sparql_query():
         values: List[str] = KB_OPERATOR.run_query(query_body, return_variable)
         return jsonify(values)
     except:
+        traceback.print_exc(file=sys.stdout)
         return 'Bad input', 400
     
 def run_knowledge_base_service():

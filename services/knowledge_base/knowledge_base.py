@@ -16,23 +16,26 @@ class KnowledgeBaseOperator(object):
         self.cache = {}
 
     def run_query(self, query: str, return_variable: str):
-
         cache_key = query + "|" + return_variable
-        if cache_key in self.cache:
-            return self.cache[cache_key]
+        if return_variable:
+            if cache_key in self.cache:
+                return self.cache[cache_key]
         
         with open(constants.QUERY_FILE_PATH, 'w', encoding='ascii', newline='\n') as file:
             file.write(query)
 
-        result = []
         os.system(constants.JENA_COMMAND)
         with open(constants.RESULTS_FILE_PATH, 'r', encoding='utf-8') as data_file:
             content = json.load(data_file)
+        if return_variable:
+            result = []
+            for element in content['results']['bindings']:
+                value = element[return_variable]['value']
+                if value not in constants.RESULT_BLACKLIST:
+                    result.append(value)
+        else:
+            result = content['boolean']
 
-        for element in content['results']['bindings']:
-            value = element[return_variable]['value']
-            if value not in constants.RESULT_BLACKLIST:
-                result.append(value)
         self.cache[cache_key] = result
         return result
 

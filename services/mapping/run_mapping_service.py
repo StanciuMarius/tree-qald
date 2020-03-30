@@ -19,8 +19,8 @@ RELATION_MAPPER = RelationMapper()
 ENTITY_MAPPER = EntityMapping()
 TYPE_MAPPER = TypeMapper()
 
-@mapping_service.route('/rank_relations', methods=['GET'])
-def rank_relations():
+@mapping_service.route('/map_relations', methods=['GET'])
+def map_relations():
     try:
         input = json.loads(request.args.get('input'))    
         candidates = RELATION_MAPPER(**input)
