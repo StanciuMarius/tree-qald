@@ -157,7 +157,9 @@ class QueryTree:
             else: 
                 pretty_string = self.type.value + '#{}'.format(abs(self.id))
             if self.kb_resources:
-                pretty_string += '[' + self.kb_resources[0].split('/')[-1].replace('>', '') + ']'
+                kb_resources_text = ','.join([resource.split('/')[-1].replace('>', '') for resource in self.kb_resources])
+                kb_resources_text = (kb_resources_text[:50] + '..') if len(kb_resources_text) > 50 else kb_resources_text 
+                pretty_string += '[' + kb_resources_text + ']'
             return pretty_string 
 
     def __init__(self, root: Node, tokens: List[str], id: str = 'default'):
@@ -284,6 +286,18 @@ class QueryTree:
                     # unused_container_node.children.append(node)
         
         return tree
+    
+    def find_parent(self, node: Node) -> Node:
+        # TODO make this more efficient
+        def find_parent_recursive(current_node, target_node):
+            if target_node in current_node.children: return current_node
+            
+            for child in current_node.children:
+                parent = find_parent_recursive(child, target_node)
+                if parent: return parent
+            
+            return None
+        return find_parent_recursive(self.root, node)
         
     def remove_children_of_type(self, node_type: NodeType):
         def remove_children_of_type_recursive(node, node_type):
