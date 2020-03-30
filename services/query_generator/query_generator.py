@@ -1,10 +1,11 @@
 import json
 import os
 import sys
-from copy import deepcopy
+import traceback
+from copy import deepcopy, copy
 from typing import Tuple, List
 sys.path.insert(0, os.getcwd())
-
+from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentRelationResolver
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 from services.tasks import run_task, Task
 import services.query_generator.constants as constants
@@ -14,8 +15,13 @@ from services.query_generator.node_handlers.count import handle_ARGMAXCOUNT, han
 from services.query_generator.node_handlers.exists import handle_EXISTS, handle_EXISTSRELATION, handle_ISA
 from services.query_generator.node_handlers.comparators import handle_GREATER, handle_LESS, handle_ISGREATER, handle_ISLESS, handle_GREATERCOUNT, handle_LESSCOUNT
 from services.mapping.relation_mapping.relation_classifier.preprocessing import generate_relation_extraction_sequence
+from services.query_generator.node_handlers.complex_types import handle_complex_types
 
-TRIPLE_PATTERN = '\t{} {} {}.\n'
+INORDER_TRIPLE_PATTERN = '\t{SUBJECT} {RELATION} {OBJECT}.\n'
+REVERSE_ORDER_TRIPLE_PATTERN = '\t{OBJECT} {RELATION} {SUBJECT}.\n'
+COMBINED_ORDER_TRIPLE_PATTERN = ('\t{{ {SUBJECT} {RELATION} {OBJECT}. VALUES {RELATION} {{ {IN_ORDER_RELATIONS} }} }} UNION \n' +
+                                 '\t{{ {OBJECT} {RELATION} {SUBJECT}. VALUES {RELATION} {{ {REVERSE_ORDER_RELATIONS} }} }} \n')
+
 NODE_HANDLERS = {
     NodeType.ROOT: handle_ROOT,
     NodeType.ARGMAX: handle_ARGMAX,
@@ -58,31 +64,58 @@ class QueryGenerator(object):
             return_variable = self.node_vs_reference[self.tree.root.id]
             query: str = self.__generate_query_from_current_state(return_variable)
         except:
+            traceback.print_exc(file=sys.stdout)
             return None, None, self.tree
 
-        return query, return_variable.replace('?', ''), self.tree
+        return_variable_name = return_variable.replace('?', '') if not self.is_exists else '' # No return variable for ASK queries
+        return query, return_variable_name, self.tree
 
     def __generate_query_from_current_state(self, return_variable: str) -> str:
+       
         # Preprocess value 
         for variable, values in self.bindings.items():
             for index, value in enumerate(values):
                 if '/' in value and '<' not in value: # if it's an uri we wrap it with angle brackets
                     values[index] = '<' + value + '>'
+        
+        unprocessed_bindings = copy(self.bindings)
 
-        prefixes = ''
-        triples  = ''.join([TRIPLE_PATTERN.format(*triple) for triple in self.triples])
-        bindings = '\n'.join([constants.VALUE_BINDING_PATTERN.format(variable, ' '.join(values)) for variable, values in self.bindings.items()])
-        filters  = bindings + '\n' + '\n'.join(self.filters)
+        triples_text = ''
+        for triple in self.triples:
+            subject_variable, relation_variable, object_variable = triple
+            relation_values = unprocessed_bindings[relation_variable] if relation_variable in self.bindings else []
+            in_order_relation_values = [relation for relation in relation_values if relation[0:2] != '<_']
+            reverse_order_relation_values = [relation.replace('<_', '<') for relation in relation_values if relation[0:2] == '<_']
+            
+            if in_order_relation_values and reverse_order_relation_values:
+                triples_text += COMBINED_ORDER_TRIPLE_PATTERN.format(
+                    SUBJECT=subject_variable,
+                    RELATION=relation_variable,
+                    OBJECT=object_variable,
+                    IN_ORDER_RELATIONS=' '.join(in_order_relation_values),
+                    REVERSE_ORDER_RELATIONS=' '.join(reverse_order_relation_values))
+                # We added value bindings for the relation in this subquery (see COMBINED_ORDER_TRIPLE_PATTERN) so we can ommit them later
+                unprocessed_bindings.pop(relation_variable)
+            elif reverse_order_relation_values:
+                unprocessed_bindings[relation_variable] = reverse_order_relation_values # Remove the '_'s
+                triples_text += REVERSE_ORDER_TRIPLE_PATTERN.format(SUBJECT=subject_variable, RELATION=relation_variable, OBJECT=object_variable)
+            else:
+                triples_text += INORDER_TRIPLE_PATTERN.format(SUBJECT=subject_variable, RELATION=relation_variable, OBJECT=object_variable)
+
+        bindings_text = '\n'.join([constants.VALUE_BINDING_PATTERN.format(variable, ' '.join(values)) for variable, values in unprocessed_bindings.items()])
+        filters_text  = bindings_text + '\n' + '\n'.join(self.filters)
+        prefixes_text = '' # Try to avoid using prefixes
 
         template_file_path = constants.EXISTS_TEMPLATE_FILE_PATH if self.is_exists else constants.QUERY_TEMPLATE_FILE_PATH
         with open(template_file_path, 'r', encoding='utf-8') as query_template_file:
             template = query_template_file.read()
 
         post_processing = '\n'.join(self.post_processing)
+
         if self.is_exists:
-            final_query = template.format(TRIPLES=triples, PREFIXES=prefixes, FILTERS=filters, POST_PROCESS=post_processing)
+            final_query = template.format(TRIPLES=triples_text, PREFIXES=prefixes_text, FILTERS=filters_text, POST_PROCESS=post_processing)
         else:
-            final_query = template.format(ROOT_VARIABLE=return_variable, PREFIXES=prefixes, TRIPLES=triples, FILTERS=filters, POST_PROCESS=post_processing)
+            final_query = template.format(ROOT_VARIABLE=return_variable, PREFIXES=prefixes_text, TRIPLES=triples_text, FILTERS=filters_text, POST_PROCESS=post_processing)
 
         return final_query
 
@@ -99,57 +132,54 @@ class QueryGenerator(object):
                 NODE_HANDLERS[node.type](self, node)
 
     def __map_entity(self, node: QueryTree.Node) -> None:
+        node.children = list(filter(lambda x: x.type == NodeType.TOKEN, node.children)) # TODO: handle type constraints for entities
         entity_begin, entity_end = self.tree.offset_for_node(node)
         node.kb_resources = run_task(Task.MAP_ENTITY, {'text': self.question_text, 'entity_begin': entity_begin, 'entity_end': entity_end })
-        # node.kb_resources = '<yoyster entity>'
 
     def __map_type(self, node: QueryTree.Node) -> None:
         type_begin, type_end = self.tree.offset_for_node(node)
         node.kb_resources = run_task(Task.MAP_TYPE, {'text': self.question_text, 'type_begin': type_begin, 'type_end': type_end })
-        # node.kb_resources = '<yoyster type>'
 
     def __map_relation(self, node: QueryTree.Node) -> bool:
-        
-        # We use the accumulated constraints so far to generate a query that retrieves all possible relations for this node.
-        node.kb_resources = [] # TODO: remove this
-    
-        # Make copies so we don't break the current state
-        node_copy = deepcopy(node)
-        gen = deepcopy(self)
-        NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=False)
-        in_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
-        in_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': in_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
-        in_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, in_order_candidates))
-
-        # We also don't know the order yet (in terms of subject-object) of the triple yet, so we need the relation candidates for the revese order as well.
-        node_copy = deepcopy(node)
-        gen = deepcopy(self)
-        NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=True)
-        reverse_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
-        reverse_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': reverse_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
-        reverse_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, reverse_order_candidates))
-        reverse_order_candidates = ['_' + candidate for candidate in reverse_order_candidates] # '_' prefix means reverse order for the mapping service TODO make this more visible
-
-        # Rank the obtained candidates
-        relation_candidates = in_order_candidates + reverse_order_candidates
-        relation_ranking_input = generate_relation_extraction_sequence(self.tree, node_copy)
-        relation_ranking_input['candidates'] = relation_candidates
-        relation_candidates = run_task(Task.RANK_RELATIONS, relation_ranking_input)
-
-   
-        if not relation_candidates:
-            # This is probably due to bad previous step or the whole parse tree is bad.
-            # TODO we could backtrack?
-            raise Exception('No relation could be found')
+        parent_node = self.tree.find_parent(node)
+        if node.type == NodeType.EXISTSRELATION or parent_node.type == NodeType.EXISTS:
+            # In case of EXISTS we can't consider prior candidates because mapping implies picking the most probable from
+            # them. In this case EXISTS would always yield true. Instead, the strategy is to get the most probable relation from all relation search space.
+            prior_candidates = []
         else:
-            # Pick the top candidate
-            best_candidate = relation_candidates[0]
-            is_reversed = best_candidate and best_candidate[0] == '_'
-            if is_reversed:best_candidate = best_candidate[1:]
-            node.kb_resources = [best_candidate]
+            # We use the accumulated constraints so far to generate a query that retrieves all possible relations for this node.
+            # Make copies so we don't break the current state
+            node_copy = deepcopy(node)
+            gen = deepcopy(self)
+            NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=False)
+            in_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
+            in_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': in_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
+            in_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, in_order_candidates))
 
-        return is_reversed
-        
+            # We also don't know the order yet (in terms of subject-object) of the triple yet, so we need the relation candidates for the revese order as well.
+            node_copy = deepcopy(node)
+            gen = deepcopy(self)
+            NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=True)
+            reverse_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
+            reverse_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': reverse_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
+            reverse_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, reverse_order_candidates))
+            reverse_order_candidates = [self.resolver.reverse_relation(candidate) for candidate in reverse_order_candidates]
+
+            prior_candidates = in_order_candidates + reverse_order_candidates
+
+            # Remove any candidates that already mapped  in reverse to a child node so as to avoid cycles
+            child_relation_nodes = node.collect(RELATION_NODE_TYPES)
+            child_relations = []
+            for child in child_relation_nodes: child_relations.extend(child.kb_resources)
+            reversed_child_relations = set([self.resolver.reverse_relation(relation) for relation in child_relations])
+            prior_candidates = list(filter(lambda relation: relation not in reversed_child_relations, prior_candidates))
+
+
+        relation_mapping_input = generate_relation_extraction_sequence(self.tree, node)
+        relation_mapping_input['candidates'] = prior_candidates
+        relations = run_task(Task.MAP_RELATIONS, relation_mapping_input)
+
+        node.kb_resources = relations
 
     def add_type_restrictions(self, node: QueryTree.Node) -> None:
         '''
@@ -161,7 +191,7 @@ class QueryGenerator(object):
             type_variable = self.generate_variable_name()
             self.bindings[type_variable] = type_node.kb_resources
             self.triples.append((variable, constants.TYPE_RELATION, type_variable))
-    
+        
     def add_datatype_restrictions(self, variable: str, datatypes: List[str]):
         '''
             Datatype constraints are types for literals. Added via FILTER(datatype(?var) == <datatype> || etc..) statement
@@ -186,6 +216,7 @@ class QueryGenerator(object):
         self.post_processing = []
         self.tree = None
         self.bindings = {}
+        self.resolver = EquivalentRelationResolver()
 
 def generate_query(query_tree_dict: dict):
     generator = QueryGenerator()
