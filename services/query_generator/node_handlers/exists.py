@@ -23,7 +23,6 @@ def handle_EXISTSRELATION(gen, node: QueryTree.Node, reverse_relation=False):
     entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
     
     literals = list(filter(lambda child: child.type == NodeType.LITERAL, node.children))
-    literal = parse_number(gen.tree.text_for_node(literal))
 
     gen.node_vs_reference[node.id] = None
     if node.kb_resources:

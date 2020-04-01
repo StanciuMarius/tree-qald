@@ -11,7 +11,7 @@ sys.path.insert(0, os.getcwd())
 import services.mapping.constants as constants 
 import spacy
 from spacy.tokens import Doc
-
+from common.knowledge_base import LITERAL_DATATYPES, ResourceType
 class TypeMapper(object):
     '''
     Class that finds knowledge base types (classes) corresponding to small texts.
@@ -85,6 +85,13 @@ class TypeMapper(object):
         def label_from_dbpedia_url(url: str) -> str:
             return re.sub("([a-z])([A-Z])","\g<1> \g<2>", url.replace('<http://dbpedia.org/ontology/', '').replace('>', '').replace('<', '')).lower()
         
+        
+        # Adding hardcoded types for question words: "who" -> person, "when" -> datetime, "where" -> place, "how many" -> number
+        self.label_vs_classes['who'] = IndexedSet(['http://dbpedia.org/ontology/Person', 'http://dbpedia.org/ontology/Organisation'])
+        self.label_vs_classes['where'] = IndexedSet(['http://dbpedia.org/ontology/Place'])
+        self.label_vs_classes['when'] = IndexedSet(LITERAL_DATATYPES[ResourceType.DATE])
+        self.label_vs_classes['how many'] = IndexedSet(LITERAL_DATATYPES[ResourceType.NUMERAL])
+        
         # Reading type labels from DBPedia type instances dataset
         with open(constants.DBPEDIA_TYPE_INSTANCES_PATH, 'r', encoding='utf-8') as infile:
             for line in tqdm(infile, desc="Loading DBPedia types:"):
@@ -130,7 +137,7 @@ class TypeMapper(object):
                             self.label_vs_classes[label].add(url)
                 except:
                     pass
-
+        
         # Dumping the lexicon
         with open(constants.TYPE_LEXICON_PATH, 'w', encoding='utf-8') as file:
             for label, uris in self.label_vs_classes.items():

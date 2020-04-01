@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.insert(0, os.getcwd())
 
-from common.query_tree import QueryTree
+from common.query_tree import QueryTree, NodeType
 from common.query_tree import SerializationFormat
 from common.constants import GRAMMAR_FILE_PATH
 from common.syntax_checker import SyntaxChecker
@@ -106,10 +106,22 @@ def _decode_labels(tokens):
 
         tree = tree.strip()
         nltk_tree: Tree = Tree.fromstring(tree, remove_empty_top_bracketing=True)
+        root = tree2dict(nltk_tree)
         dict_tree = {
-            'root':  tree2dict(nltk_tree),
+            'root':  root,
             'tokens': tokens   
         }
+        
+        # If first tokens are 'who', 'where', 'when' or 'how many" add it as a type to the answer node.
+        try:
+            if tokens[0].lower() in {'who', 'where', 'when'}:
+                type_node = {'type': NodeType.TYPE.value, 'children': [{'type': NodeType.TOKEN.value, 'id': 0}]}
+                root['children'][0]['children'].append(type_node)
+            if (tokens[0].lower(), tokens[1].lower()) == ('how', 'many') and root['children'][0]['type'] != NodeType.COUNT.value:
+                type_node = {'type': NodeType.TYPE.value, 'children': [{'type': NodeType.TOKEN.value, 'id': 0}, {'type': NodeType.TOKEN.value, 'id': 1}]}
+                root['children'][0]['children'].append(type_node)
+        except:
+            pass # Tree is probabily invalid
         query_tree = QueryTree.from_dict(dict_tree)
         candidates.append(query_tree)
 

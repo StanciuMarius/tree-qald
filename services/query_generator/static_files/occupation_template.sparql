@@ -1,0 +1,30 @@
+
+# ==== {OCCUPATION} occupation constraints for {VARIABLE} =========
+{{
+    {VARIABLE} a ?type.
+    VALUES ?type {{ {TYPES} }}
+}}
+UNION {{
+    {VARIABLE}  <http://dbpedia.org/ontology/occupation> ?function.
+    ?function a <http://dbpedia.org/ontology/PersonFunction>.
+    ?function   <http://dbpedia.org/ontology/title> ?title.
+    FILTER CONTAINS(lcase(str(?title)), "{OCCUPATION}") 
+}}
+UNION {{
+    {VARIABLE} <http://dbpedia.org/ontology/occupation> ?occupation.
+    FILTER CONTAINS(lcase(str(?occupation)), "{OCCUPATION}")
+}}
+UNION {{
+    {VARIABLE} <http://dbpedia.org/ontology/office> ?office.
+    FILTER CONTAINS(lcase(str(?office)), "{OCCUPATION}")
+}}
+UNION {{
+    {VARIABLE} <http://dbpedia.org/ontology/title> ?title.
+    FILTER CONTAINS(lcase(str(?title)), "{OCCUPATION}")
+}}
+UNION {{
+    {VARIABLE} <http://dbpedia.org/ontology/profession> ?profession.
+    FILTER CONTAINS(lcase(str(?profession)), "{OCCUPATION}")
+}}
+# ==================================================================
+

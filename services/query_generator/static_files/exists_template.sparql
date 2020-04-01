@@ -2,7 +2,6 @@
 
 ASK
 {{
-{TRIPLES}
-{FILTERS}
+{BODY}
 }}
 {POST_PROCESS}

@@ -6,7 +6,9 @@ from copy import deepcopy, copy
 from typing import Tuple, List
 sys.path.insert(0, os.getcwd())
 from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentRelationResolver
+from datasets.knowledge_base.dbpedia.parser.dbpedia_occupations import DBPediaOccupationsDataset
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
+from common.knowledge_base import COMPARABLE_DATATYPES
 from services.tasks import run_task, Task
 import services.query_generator.constants as constants
 from services.query_generator.node_handlers.argfunc import handle_ARGMAX, handle_ARGMIN, handle_ARGNTH, handle_TOPN
@@ -15,8 +17,6 @@ from services.query_generator.node_handlers.count import handle_ARGMAXCOUNT, han
 from services.query_generator.node_handlers.exists import handle_EXISTS, handle_EXISTSRELATION, handle_ISA
 from services.query_generator.node_handlers.comparators import handle_GREATER, handle_LESS, handle_ISGREATER, handle_ISLESS, handle_GREATERCOUNT, handle_LESSCOUNT
 from services.mapping.relation_mapping.relation_classifier.preprocessing import generate_relation_extraction_sequence
-from services.query_generator.node_handlers.complex_types import handle_complex_types
-
 INORDER_TRIPLE_PATTERN = '\t{SUBJECT} {RELATION} {OBJECT}.\n'
 REVERSE_ORDER_TRIPLE_PATTERN = '\t{OBJECT} {RELATION} {SUBJECT}.\n'
 COMBINED_ORDER_TRIPLE_PATTERN = ('\t{{ {SUBJECT} {RELATION} {OBJECT}. VALUES {RELATION} {{ {IN_ORDER_RELATIONS} }} }} UNION \n' +
@@ -62,7 +62,7 @@ class QueryGenerator(object):
 
         # Generate the actual string of the SPARQL query from the internal state
             return_variable = self.node_vs_reference[self.tree.root.id]
-            query: str = self.__generate_query_from_current_state(return_variable)
+            query: str = self.generate_query_from_current_state(return_variable)
         except:
             traceback.print_exc(file=sys.stdout)
             return None, None, self.tree
@@ -70,8 +70,7 @@ class QueryGenerator(object):
         return_variable_name = return_variable.replace('?', '') if not self.is_exists else '' # No return variable for ASK queries
         return query, return_variable_name, self.tree
 
-    def __generate_query_from_current_state(self, return_variable: str) -> str:
-       
+    def generate_query_from_current_state(self, return_variable: str, alias: str = None) -> str:
         # Preprocess value 
         for variable, values in self.bindings.items():
             for index, value in enumerate(values):
@@ -103,19 +102,20 @@ class QueryGenerator(object):
                 triples_text += INORDER_TRIPLE_PATTERN.format(SUBJECT=subject_variable, RELATION=relation_variable, OBJECT=object_variable)
 
         bindings_text = '\n'.join([constants.VALUE_BINDING_PATTERN.format(variable, ' '.join(values)) for variable, values in unprocessed_bindings.items()])
-        filters_text  = bindings_text + '\n' + '\n'.join(self.filters)
+        filters_text = '\n'.join(self.filters)
+        body_text = '\n'.join([triples_text, filters_text, bindings_text])
         prefixes_text = '' # Try to avoid using prefixes
+        post_processing_text = '\n'.join(self.post_processing)
 
-        template_file_path = constants.EXISTS_TEMPLATE_FILE_PATH if self.is_exists else constants.QUERY_TEMPLATE_FILE_PATH
-        with open(template_file_path, 'r', encoding='utf-8') as query_template_file:
-            template = query_template_file.read()
-
-        post_processing = '\n'.join(self.post_processing)
-
-        if self.is_exists:
-            final_query = template.format(TRIPLES=triples_text, PREFIXES=prefixes_text, FILTERS=filters_text, POST_PROCESS=post_processing)
+        if alias: 
+            with open(constants.SUBQUERY_TEMPLATE_FILE_PATH, 'r', encoding='utf-8') as query_template_file: template = query_template_file.read()
+            final_query = template.format(BODY=body_text, PREFIXES=prefixes_text, POST_PROCESS=post_processing_text, VARIABLE=return_variable, ALIAS=alias)
+        elif self.is_exists:
+            with open(constants.EXISTS_TEMPLATE_FILE_PATH, 'r', encoding='utf-8') as query_template_file: template = query_template_file.read()
+            final_query = template.format(BODY=body_text, PREFIXES=prefixes_text, POST_PROCESS=post_processing_text)
         else:
-            final_query = template.format(ROOT_VARIABLE=return_variable, PREFIXES=prefixes_text, TRIPLES=triples_text, FILTERS=filters_text, POST_PROCESS=post_processing)
+            with open(constants.QUERY_TEMPLATE_FILE_PATH, 'r', encoding='utf-8') as query_template_file: template = query_template_file.read()
+            final_query = template.format(BODY=body_text, PREFIXES=prefixes_text, POST_PROCESS=post_processing_text, VARIABLE=return_variable)
 
         return final_query
 
@@ -126,8 +126,8 @@ class QueryGenerator(object):
                 self.__handle_node(child)
 
             if node.type in RELATION_NODE_TYPES:
-                is_reversed = self.__map_relation(node)
-                NODE_HANDLERS[node.type](gen=self, node=node, reverse_relation=is_reversed)
+                self.__map_relation(node)
+                NODE_HANDLERS[node.type](gen=self, node=node, reverse_relation=False)
             else:
                 NODE_HANDLERS[node.type](self, node)
 
@@ -152,20 +152,22 @@ class QueryGenerator(object):
             node_copy = deepcopy(node)
             gen = deepcopy(self)
             NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=False)
-            in_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
+            in_order_query  = gen.generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
             in_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': in_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
             in_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, in_order_candidates))
-
+            
+            prior_candidates = in_order_candidates
+            
             # We also don't know the order yet (in terms of subject-object) of the triple yet, so we need the relation candidates for the revese order as well.
-            node_copy = deepcopy(node)
-            gen = deepcopy(self)
-            NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=True)
-            reverse_order_query  = gen.__generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
-            reverse_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': reverse_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
-            reverse_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, reverse_order_candidates))
-            reverse_order_candidates = [self.resolver.reverse_relation(candidate) for candidate in reverse_order_candidates]
-
-            prior_candidates = in_order_candidates + reverse_order_candidates
+            if node.type not in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.TOPN}: # Can't reverse these
+                node_copy = deepcopy(node)
+                gen = deepcopy(self)
+                NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=True)
+                reverse_order_query  = gen.generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
+                reverse_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': reverse_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
+                reverse_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, reverse_order_candidates))
+                reverse_order_candidates = [self.resolver.reverse_relation(candidate) for candidate in reverse_order_candidates]
+                prior_candidates.extend(reverse_order_candidates)
 
             # Remove any candidates that already mapped  in reverse to a child node so as to avoid cycles
             child_relation_nodes = node.collect(RELATION_NODE_TYPES)
@@ -179,18 +181,46 @@ class QueryGenerator(object):
         relation_mapping_input['candidates'] = prior_candidates
         relations = run_task(Task.MAP_RELATIONS, relation_mapping_input)
 
+        if node.type == NodeType.EXISTSRELATION or parent_node.type == NodeType.EXISTS:
+            # In case of existence checking, consider both directions
+            relations.extend([self.resolver.reverse_relation(relation) for relation in relations])
+
         node.kb_resources = relations
 
     def add_type_restrictions(self, node: QueryTree.Node) -> None:
         '''
             Expands type children nodes of the given node and adds "?node_var a <type>" triples
         '''
-        variable = self.node_vs_reference[node.id]
         type_nodes = list(filter(lambda child: child.type == NodeType.TYPE, node.children))
-        for type_node in type_nodes:
-            type_variable = self.generate_variable_name()
-            self.bindings[type_variable] = type_node.kb_resources
-            self.triples.append((variable, constants.TYPE_RELATION, type_variable))
+        variable = self.node_vs_reference[node.id]
+        
+        def handle_complex_types(node):
+            # Person occupations (e.g. jobs, titles) are not necessarily linked via rdf:type, so they are treated differently
+            type_texts = set([self.tree.text_for_node(node) for node in type_nodes])
+            occupations = list(type_texts.intersection(self.occupations.occupations))
+            
+            if not occupations: return False
+
+            type_uris = ' '.join([' '.join('<' + kb_resource + '>' for kb_resource in node.kb_resources) for node in type_nodes])
+        
+            occupation_filter = constants.OCCUPATION_FILTER_TEMPLATE.format(
+                VARIABLE=variable,
+                TYPES=type_uris,
+                OCCUPATION=occupations[0]) # TODO consider all of them. Works with regex but it's too slow.
+            
+            self.filters.append(occupation_filter)
+            return True
+        
+        if handle_complex_types(node): return
+
+        for type_node in type_nodes:            
+            if not type_node.kb_resources: continue # This shouldn't happen
+            if type_node.kb_resources[0] in COMPARABLE_DATATYPES:
+                self.add_datatype_restrictions(variable, type_node.kb_resources)
+            else:
+                type_variable = self.generate_variable_name()
+                self.bindings[type_variable] = type_node.kb_resources
+                self.triples.append((variable, constants.TYPE_RELATION, type_variable))
         
     def add_datatype_restrictions(self, variable: str, datatypes: List[str]):
         '''
@@ -207,6 +237,12 @@ class QueryGenerator(object):
             self.__variables.append('?' + str(chr(ord(self.__variables[-1][-1]) + 1)))
         return self.__variables[-1]
 
+    def clear(self):
+        self.triples = []
+        self.filters = []
+        self.post_processing = []
+        self.bindings = {}
+
     def __init__(self):
         self.node_vs_reference = {}
         self.__variables = []
@@ -217,6 +253,7 @@ class QueryGenerator(object):
         self.tree = None
         self.bindings = {}
         self.resolver = EquivalentRelationResolver()
+        self.occupations = DBPediaOccupationsDataset()
 
 def generate_query(query_tree_dict: dict):
     generator = QueryGenerator()

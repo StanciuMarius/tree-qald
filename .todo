@@ -1,2 +1,4 @@
  - Add sample weights to the relation classifier; make the questions trainining samples more important than tacred and others.
  - Make better use of the Simpledbpediaqa dataset. Use it to generate parser training examples.
+ - consider jobs as entities with a property (?city dbo:mayor ?mayor_person)
+ - Final tree should be highest overall confidence

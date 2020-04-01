@@ -1,0 +1,8 @@
+    {{
+        SELECT ({VARIABLE} AS {ALIAS})
+        WHERE
+        {{
+        {BODY}
+        }}
+        {POST_PROCESS}
+    }}

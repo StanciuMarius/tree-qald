@@ -39,7 +39,8 @@ def run_task(task: Task, input):
         output = json.loads(output_text)
         return output
     else:
-        return None
+        print('Failed to run task {}'.format(task.value))
+        sys.exit(1)
 
 
 # Example of running a task from Task enum
