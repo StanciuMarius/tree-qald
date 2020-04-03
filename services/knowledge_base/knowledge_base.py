@@ -26,13 +26,19 @@ class KnowledgeBaseOperator(object):
 
         os.system(constants.JENA_COMMAND)
         with open(constants.RESULTS_FILE_PATH, 'r', encoding='utf-8') as data_file:
-            content = json.load(data_file)
+            try:
+                content = json.load(data_file)
+            except:
+                raise Exception("Error parsing: {}")
         if return_variable:
             result = []
             for element in content['results']['bindings']:
-                value = element[return_variable]['value']
-                if value not in constants.RESULT_BLACKLIST:
-                    result.append(value)
+                try:
+                    value = element[return_variable]['value']
+                    if value not in constants.RESULT_BLACKLIST:
+                        result.append(value)
+                except:
+                    pass
         else:
             result = content['boolean']
 

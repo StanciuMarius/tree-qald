@@ -26,7 +26,8 @@ def run_sparql_query():
         input_json_object = json.loads(request.args.get('input'))
         query_body = input_json_object['query_body']
         return_variable = input_json_object['return_variable']
-
+        if not query_body: raise Exception()
+        
         values: List[str] = KB_OPERATOR.run_query(query_body, return_variable)
         return jsonify(values)
     except:

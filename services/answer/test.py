@@ -21,33 +21,39 @@ for question in tqdm(questions):
     except:
         golden_answer = question['answers'][0]['boolean']
 
-    predicted_answer, query, tree = internal_answer(text)
-
-    if isinstance(golden_answer, bool):
-        if  isinstance(predicted_answer, bool) and golden_answer == predicted_answer:
-            precision, recall, f1 = 1.0, 1.0, 1.0
-        else:
-            precision, recall, f1 = 0.0, 0.0, 0.0
-    elif predicted_answer == None or isinstance(predicted_answer, bool):
-        precision, recall, f1 = 0.0, 0.0, 0.0
-    else:
-        TP, FP, FN = 0, 0, 0
-        golden_answer_set = set(golden_answer)
-
-        for uri in predicted_answer:
-            if uri in golden_answer_set:
-                TP += 1.0
+    # QALD is not consistent in answer type
+    if golden_answer == ['true']: golden_answer = True
+    if golden_answer == ['false']: golden_answer = False
+    
+    try:
+        predicted_answer, query, tree = internal_answer(text)
+        if isinstance(golden_answer, bool):
+            if  isinstance(predicted_answer, bool) and golden_answer == predicted_answer:
+                precision, recall, f1 = 1.0, 1.0, 1.0
             else:
-                FP += 1.0
-        
-        FN = len(golden_answer) - TP
-        
-        precision = TP / (TP + FP + 0.00001)
-        recall    = TP / (TP + FN + 0.00001)
-        if recall + precision < 0.00001:
-            f1 = 0.0
+                precision, recall, f1 = 0.0, 0.0, 0.0
+        elif predicted_answer == None or isinstance(predicted_answer, bool):
+            precision, recall, f1 = 0.0, 0.0, 0.0
         else:
-            f1 = 2 * (recall * precision) / (recall + precision + 0.00001)
+            TP, FP, FN = 0, 0, 0
+            golden_answer_set = set(golden_answer)
+
+            for uri in predicted_answer:
+                if uri in golden_answer_set:
+                    TP += 1.0
+                else:
+                    FP += 1.0
+            
+            FN = len(golden_answer) - TP
+            
+            precision = TP / (TP + FP + 0.00001)
+            recall    = TP / (TP + FN + 0.00001)
+            if recall + precision < 0.00001:
+                f1 = 0.0
+            else:
+                f1 = 2 * (recall * precision) / (recall + precision + 0.00001)
+    except:
+        precision, recall, f1 = 0.0, 0.0, 0.0
 
     f1_sum += f1
     tree_log.append({
