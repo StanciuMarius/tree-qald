@@ -135,6 +135,9 @@ class QueryGenerator(object):
         node.children = list(filter(lambda x: x.type == NodeType.TOKEN, node.children)) # TODO: handle type constraints for entities
         entity_begin, entity_end = self.tree.offset_for_node(node)
         node.kb_resources = run_task(Task.MAP_ENTITY, {'text': self.question_text, 'entity_begin': entity_begin, 'entity_end': entity_end })
+        
+        if not node.kb_resources:
+            node.type = NodeType.LITERAL
 
     def __map_type(self, node: QueryTree.Node) -> None:
         type_begin, type_end = self.tree.offset_for_node(node)

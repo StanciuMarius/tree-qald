@@ -60,8 +60,8 @@ def handle_GREATER(gen, node: QueryTree.Node, reverse_relation=False):
 
 def handle_IScomparator(gen, node: QueryTree.Node, comparator, reverse_relation=False):
     entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
-    e1_offset, _ = gen.query_tree.offset_for_node(entity_sets[0])
-    e2_offset, _ = gen.query_tree.offset_for_node(entity_sets[1])
+    e1_offset, _ = gen.tree.offset_for_node(entity_sets[0])
+    e2_offset, _ = gen.tree.offset_for_node(entity_sets[1])
     
     if node.kb_resources:
         relation = gen.generate_variable_name()

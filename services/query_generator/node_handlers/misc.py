@@ -19,9 +19,18 @@ def handle_PROPERTY(gen, node: QueryTree.Node, reverse_relation=False):
         relation = RELATION_EXTRACTION_VARIABLE
     gen.add_type_restrictions(node)
     entity_sets = list(filter(lambda child: child.type in ENTITY_SETS, node.children))
+    literals = list(filter(lambda child: child.type in {NodeType.LITERAL}, node.children))
+
     for other_node in entity_sets:
         reference = gen.node_vs_reference[other_node.id]
         triple = (gen.node_vs_reference[node.id], relation, reference)
+        gen.triples.append(reversed(triple) if reverse_relation else triple)
+
+    if literals:
+        literal_variable = gen.generate_variable_name()
+        literal_text = gen.tree.text_for_node(literals[0])
+        triple = (gen.node_vs_reference[node.id], relation, literal_variable)
+        gen.bindings[literal_variable] = ["\"{}\"".format(literal_text)]
         gen.triples.append(reversed(triple) if reverse_relation else triple)
 
 
