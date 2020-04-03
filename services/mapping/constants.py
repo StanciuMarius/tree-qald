@@ -1,5 +1,7 @@
 PATTY_DBPEDIA_PARAPHRASES_FILE_PATH = 'datasets/relation_extraction/patty/data/dbpedia-relation-paraphrases.txt'
 ENTITY_LEXICON_PATH = 'datasets/entity_mapping/data/entity_lexicon.tsv'
+ENTITY_DISAMBIGUATIONS_DATASET_PATH = r'datasets\entity_mapping\data\disambiguations_lang=en.ttl'
+ENTITY_REDIRECTS_DATASET_PATH = r'datasets\entity_mapping\data\redirects_lang=en.ttl'
 TYPE_IMPORTANCE_PATH = "datasets/type_mapping/data/type_importance.json"
 TYPE_SYNONYMS_PATH = "datasets/type_mapping/data/type_synonyms.txt"
 TYPE_SIMILARITIES_PATH = "datasets/type_mapping/data/type_similarities.txt"

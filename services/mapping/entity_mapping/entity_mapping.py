@@ -58,7 +58,12 @@ class EntityMapping:
                     try:
                         label, _, entity, _ = line.split(' ')
                         label = label.split('/')[-1].replace('>', '').replace('(disambiguation)', '').replace('_', ' ').strip().lower()
+                        label_from_entity = entity.split('/')[-1].replace('>', '').replace('_', ' ').strip().lower()
                         entity = entity[29:-1] # get rid of '<http://dbpedia.org/resource/' and '>'
+                        if label_from_entity in self.label_vs_entity:
+                            self.label_vs_entity[label_from_entity].insert(0, entity) # The label generated from the entity itself has priority
+                        else:
+                            self.label_vs_entity[label_from_entity] = [entity]
                         if label in self.label_vs_entity:
                             self.label_vs_entity[label].append(entity)
                         else:
@@ -93,7 +98,8 @@ class EntityMapping:
         # Extra word
         for index in range(len(tokens)):
             removed_word = ' '.join(tokens[:index] + tokens[index + 1:])
-            versions.append(removed_word)
+            if removed_word:
+                versions.append(removed_word)
 
 
         result = []
@@ -108,7 +114,7 @@ class EntityMapping:
     
         return result
 
-    def __test(self):
+    def __test__(self):
         assert self('Hotel California') == ['http://dbpedia.org/resource/Hotel_California']
         assert self('Ceres') == ['http://dbpedia.org/resource/Ceres']
         assert self('Obama') == ['http://dbpedia.org/resource/Barack_Obama']
