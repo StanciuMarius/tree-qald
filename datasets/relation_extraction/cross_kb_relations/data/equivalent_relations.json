@@ -1171,7 +1171,8 @@
                 "http://dbpedia.org/ontology/originalLanguage",
                 "http://dbpedia.org/ontology/officialLanguage",
                 "http://dbpedia.org/property/officialLanguages",
-                "http://dbpedia.org/ontology/language"
+                "http://dbpedia.org/ontology/language",
+                "_http://dbpedia.org/ontology/spokenIn"
             ],
             "description": "The language used or spoken by someone or in a work.",
             "freebase": [
