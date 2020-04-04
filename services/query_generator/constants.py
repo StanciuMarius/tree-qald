@@ -25,7 +25,13 @@ DATATYPE_FILTER_WRAPPER = 'FILTER({CONSTRAINTS}).'
 
 with open(OCCUPATION_TEMPLATE_FILE_PATH, 'r', encoding='utf-8') as file: OCCUPATION_FILTER_TEMPLATE = file.read()
 
+OCCUPATION_SUPERCLASSES = set([
+    'http://dbpedia.org/class/yago/Person106326797',
+    'http://dbpedia.org/class/yago/Person100007846'
+])
+
 RELATION_MAPPING_BLACKLIST = set([
     'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
-    'http://dbpedia.org/ontology/wikiPageWikiLink'
+    'http://dbpedia.org/ontology/wikiPageWikiLink',
+    'http://dbpedia.org/ontology/wikiPageID'
     ])

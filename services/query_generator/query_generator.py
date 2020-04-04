@@ -6,7 +6,7 @@ from copy import deepcopy, copy
 from typing import Tuple, List
 sys.path.insert(0, os.getcwd())
 from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentRelationResolver
-from datasets.knowledge_base.dbpedia.parser.dbpedia_occupations import DBPediaOccupationsDataset
+from datasets.knowledge_base.yago.parser.yago_taxonomy_dataset import YagoTaxonomyDataset
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 from common.knowledge_base import COMPARABLE_DATATYPES
 from services.tasks import run_task, Task
@@ -103,7 +103,7 @@ class QueryGenerator(object):
 
         bindings_text = '\n'.join([constants.VALUE_BINDING_PATTERN.format(variable, ' '.join(values)) for variable, values in unprocessed_bindings.items()])
         filters_text = '\n'.join(self.filters)
-        body_text = '\n'.join([triples_text, filters_text, bindings_text])
+        body_text = '\n'.join([triples_text, bindings_text, filters_text])
         prefixes_text = '' # Try to avoid using prefixes
         post_processing_text = '\n'.join(self.post_processing)
 
@@ -198,18 +198,26 @@ class QueryGenerator(object):
         variable = self.node_vs_reference[node.id]
         
         def handle_complex_types(node):
-            # Person occupations (e.g. jobs, titles) are not necessarily linked via rdf:type, so they are treated differently
-            type_texts = set([self.tree.text_for_node(node) for node in type_nodes])
-            occupations = list(type_texts.intersection(self.occupations.occupations))
-            
-            if not occupations: return False
+            # Person occupations (e.g. jobs, titles) can also be linked via other properties (not rdf:type) so they are handled separately
 
-            type_uris = ' '.join([' '.join('<' + kb_resource + '>' for kb_resource in node.kb_resources) for node in type_nodes])
-        
+            is_occupation = False
+            for node in type_nodes:
+                for url in node.kb_resources:
+                    for superclass in constants.OCCUPATION_SUPERCLASSES:
+                        if self.yago.is_subclass(url, superclass):
+                            is_occupation = True
+                            occupation_label = self.yago.label_for_class(url)          
+                            break
+                    if is_occupation: break
+                if is_occupation: break
+            if not is_occupation: return False
+
+            type_texts = set([self.tree.text_for_node(node) for node in type_nodes])
+            type_uris = ' '.join([' '.join('<' + kb_resource + '>' for kb_resource in node.kb_resources) for node in type_nodes])        
             occupation_filter = constants.OCCUPATION_FILTER_TEMPLATE.format(
                 VARIABLE=variable,
                 TYPES=type_uris,
-                OCCUPATION=occupations[0]) # TODO consider all of them. Works with regex but it's too slow.
+                OCCUPATION=occupation_label) # TODO consider all of them. Works with regex but it's too slow.
             
             self.filters.append(occupation_filter)
             return True
@@ -256,7 +264,7 @@ class QueryGenerator(object):
         self.tree = None
         self.bindings = {}
         self.resolver = EquivalentRelationResolver()
-        self.occupations = DBPediaOccupationsDataset()
+        self.yago = YagoTaxonomyDataset()
 
 def generate_query(query_tree_dict: dict):
     generator = QueryGenerator()
