@@ -48,27 +48,34 @@ class TypeMapper(object):
 
     
     def __call__(self, type_string: str):
+        versions = [type_string]
+    
+        lemmatized = ' '.join([self.lemmatizer.lemmatize(word) for word in type_string.split()]).strip()
+        versions.append(lemmatized)
+
+        no_stop_words = ' '.join([word for word in type_string.split() if word not in constants.STOP_WORDS]).strip()
+        no_stop_words_lemmatized = ' '.join([word for word in lemmatized.split() if word not in constants.STOP_WORDS]).strip()
+        versions.append(no_stop_words)
+        versions.append(no_stop_words_lemmatized)
+        
+        # Try each version in order and return first match
+        for version in versions:
+            if version in self.label_vs_classes:
+                return list(self.label_vs_classes[version])
+        
+        '''
+        String not found in the lexicon, we pick the best constants.TOP_N_SIMILAR_TYPES types by semantic similarity
+        We pick more than one because similarity is not such a reliable metric, so it should be more relaxed => more possible types
+        '''
         best_types = []
-
-        lemmatized = ' '.join([self.lemmatizer.lemmatize(word) for word in type_string.split()])
-
-        if type_string in self.label_vs_classes:
-            return list(self.label_vs_classes[type_string])
-        elif lemmatized in self.label_vs_classes:
-            return list(self.label_vs_classes[lemmatized])
-        else: 
-            '''
-            String not found in the lexicon, we pick the best constants.TOP_N_SIMILAR_TYPES types by semantic similarity
-            We pick more than one because similarity is not such a reliable metric, so it should be more relaxed => more possible types
-            '''
-            type_string_doc = self.spacy(type_string)
-            if not type_string_doc.vector_norm:
-                # Can't compute vector for the type string
-                return []
-            similarities = [(label, label_doc.similarity(type_string_doc)) for label, label_doc in self.label_vs_doc.items() if label_doc.vector_norm]
-            similarities = sorted(similarities, key=lambda x: x[1], reverse=True)
-            for i in range(constants.TOP_N_SIMILAR_TYPES):
-                best_types.extend(self.label_vs_classes[similarities[i][0]])
+        type_string_doc = self.spacy(type_string)
+        if not type_string_doc.vector_norm:
+            # Can't compute vector for the type string
+            return []
+        similarities = [(label, label_doc.similarity(type_string_doc)) for label, label_doc in self.label_vs_doc.items() if label_doc.vector_norm]
+        similarities = sorted(similarities, key=lambda x: x[1], reverse=True)
+        for i in range(constants.TOP_N_SIMILAR_TYPES):
+            best_types.extend(self.label_vs_classes[similarities[i][0]])
 
         return best_types
 
