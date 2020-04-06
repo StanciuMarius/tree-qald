@@ -1,0 +1,193 @@
+[
+    {
+        "name": "qald-9",
+        "links": [
+            "https://github.com/ag-sc/QALD/blob/master/9/data/qald-9-train-multilingual.json",
+            "https://github.com/ag-sc/QALD/blob/master/9/data/qald-9-test-multilingual.json"
+        ],
+        "download-path": "datasets/questions/qald9/data/",
+        "files": {
+            "train": "datasets/questions/qald9/data/qald-9-train-multilingual.json",
+            "test": "datasets/questions/qald9/data/qald-9-test-multilingual.json"
+        },
+        "description": "Factoid questions with answers over DBpedia and annotated keywords."
+    },
+    {
+        "name": "qald-8",
+        "links": [
+            "https://github.com/ag-sc/QALD/blob/master/8/data/qald-8-train-multilingual.json",
+            "https://github.com/ag-sc/QALD/blob/master/8/data/qald-8-test-multilingual.json"
+        ],
+        "download-path": "datasets/questions/qald8/data/",
+        "files": {
+            "train": "datasets/questions/qald8/data/qald-8-train-multilingual.json",
+            "test": "datasets/questions/qald8/data/qald-8-test-multilingual.json"
+        },
+        "description": "Factoid questions with answers over DBpedia and annotated keywords."
+    },
+    {
+        "name": "freebaseqa",
+        "links": [
+            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-train.json",
+            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-test.json",
+            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-dev.json",
+            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-partial.json"
+        ],
+        "download-path": "datasets/questions/freebaseqa/data/",
+        "files": {
+            "train": "datasets/questions/freebaseqa/data/FreebaseQA-train.json",
+            "test": "datasets/questions/freebaseqa/data/FreebaseQA-test.json",
+            "dev": "datasets/questions/freebaseqa/data/FreebaseQA-dev.json",
+            "partial": "datasets/questions/freebaseqa/data/FreebaseQA-partial.json"
+        },
+        "description": "Factoid questions with answers over Freebase with annotated inferrential chains."
+    },
+    {
+        "name": "comqa",
+        "links": [
+            "https://qa.mpi-inf.mpg.de/comqa/comqa_train.json",
+            "https://qa.mpi-inf.mpg.de/comqa/comqa_test.json",
+            "https://qa.mpi-inf.mpg.de/comqa/comqa_dev.json"
+        ],
+        "download-path": "datasets/questions/comqa/data/",
+        "files": {
+            "train": "datasets/questions/comqa/data/comqa_train.json",
+            "test": "datasets/questions/comqa/data/comqa_test.json",
+            "dev": "datasets/questions/comqa/data/comqa_dev.json"
+        },
+        "description": "Complex questions with answers over wikidata"
+    },
+    {
+        "name": "simplequestions",
+        "links": [
+            "https://www.dropbox.com/s/tohrsllcfy7rch4/SimpleQuestions_v2.tgz?dl=1"
+        ],
+        "download-path": "datasets/simplequestions/comqa/data/",
+        "files": {
+            "train": "datasets/questions/simplequestions/data/SimpleQuestions_v2/annotated_fb_data_train.txt",
+            "test": "datasets/questions/simplequestions/data/SimpleQuestions_v2/annotated_fb_data_test.txt",
+            "val": "datasets/questions/simplequestions/data/SimpleQuestions_v2/annotated_fb_data_valid.txt"
+        },
+        "description": "Simple questions with answers and annotated entities and relations over Freebase."
+    },
+    {
+        "name": "fewrel",
+        "links": [
+            "https://github.com/thunlp/FewRel/blob/master/data/train_wiki.json",
+            "https://github.com/thunlp/FewRel/blob/master/data/val_wiki.json"
+        ],
+        "download-path": "datasets/relation_extraction/fewrel/data/",
+        "files": {
+            "train": "datasets/relation_extraction/fewrel/data/train_wiki.json",
+            "val": "datasets/relation_extraction/fewrel/data/val_wiki.json"
+        },
+        "description": "Tokenized sentences with annotated subject, object and the wikidata relation between them."
+    },
+    {
+        "name": "nyt10",
+        "links": [
+            "https://github.com/thunlp/NRE/blob/master/data.zip"
+        ],
+        "download-path": "datasets/relation_extraction/NYT10/data/",
+        "files": {
+            "train": "datasets/relation_extraction/NYT10/data/RE/train.txt",
+            "test": "datasets/relation_extraction/NYT10/data/RE/train.txt",
+            "vocab": "datasets/relation_extraction/NYT10/data/RE/relation2id.txt"
+        },
+        "description": "Questions with answers over Wikidata."
+    },
+    {
+        "name": "patty",
+        "links": [
+            "http://resources.mpi-inf.mpg.de/yago-naga/patty/data/patty-dataset.tar.gz"
+        ],
+        "download-path": "datasets/relation_extraction/patty/data/",
+        "files": {
+            "patterns": "datasets/relation_extraction/patty/data/patty-dataset/dbpedia-relation-paraphrases.txt"
+        },
+        "description": "Text patterns and the corresponding DBPedia relation between a subject and an object."
+    },
+    {
+        "name": "simpledbpediaqa",
+        "links": [
+            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/train.json",
+            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/test.json",
+            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/valid.json"
+        ],
+        "download-path": "datasets/relation_extraction/simpledbpediaqa/data/",
+        "files": {
+            "train": "datasets/relation_extraction/simpledbpediaqa/data/train.json",
+            "test": "datasets/relation_extraction/simpledbpediaqa/data/test.json",
+            "val": "datasets/relation_extraction/simpledbpediaqa/data/valid.json"
+        },
+        "description": "Same questions as SimpleQuestions dataset but mapped to DBPedia resources."
+    },
+    {
+        "name": "tacred",
+        "links": [
+            "https://catalog.ldc.upenn.edu/LDC2018T24"
+        ],
+        "download-path": "datasets/relation_extraction/tacred/data/",
+        "files": {
+            "train": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/train.json",
+            "test": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/test.json",
+            "dev": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/dev.json"
+        },
+        "description": "Relatively large texts with annotated subjects and objects and the relation between them following a custom taxonomy of relations. This dataset is not free."
+    },
+    {
+        "name": "dbpedia-instance-types",
+        "links": [
+            "https://downloads.dbpedia.org/repo/lts/mappings/instance-types/2019.08.30/instance-types_lang=en.ttl.bz2"
+        ],
+        "download-path": "datasets/type_mapping/data/",
+        "files": {
+            "types": "datasets/type_mapping/data/instance-types_lang=en.ttl"
+        },
+        "description": "DBPedia rdf:type triples."
+    },
+    {
+        "name": "dbpedia-disambiguations",
+        "links": [
+            "https://downloads.dbpedia.org/repo/lts/generic/disambiguations/2019.08.30/disambiguations_lang=en.ttl.bz2"
+        ],
+        "download-path": "datasets/entity_mapping/data/",
+        "files": {
+            "types": "datasets/entity_mapping/data/disambiguations_lang=en.ttl"
+        },
+        "description": "DBPedia <http://dbpedia.org/ontology/wikiPageDisambiguates> triples"
+    },
+    {
+        "name": "dbpedia-redirects",
+        "links": [
+            "https://downloads.dbpedia.org/repo/lts/generic/redirects/2019.08.30/redirects_lang=en.ttl.bz2"
+        ],
+        "download-path": "datasets/entity_mapping/data/",
+        "files": {
+            "types": "datasets/entity_mapping/data/redirects_lang=en.ttl"
+        },
+        "description": "DBPedia <http://dbpedia.org/ontology/wikiPageRedirects> triples"
+    },
+    {
+        "name": "yago-taxonomy",
+        "links": [
+            "http://downloads.dbpedia.org/2015-04/links/yago_taxonomy.nt.bz2"
+        ],
+        "download-path": "datasets/type_mapping/data/",
+        "files": {
+            "taxonomy": "datasets/type_mapping/data/yago_taxonomy.nt"
+        },
+        "description": "The Yago hierarchy of classes represented via rdf:subClassOf triples"
+    },
+    {
+        "name": "tree-qald",
+        "links": [
+            "https://github.com/StanciuMarius/tree-qald/blob/master/datasets/parsing/data/constituency_annotated_questions.json"
+        ],
+        "download-path": "datasets/parsing/data/constituency_annotated_questions.json",
+        "files": {
+            "train": "datasets/parsing/data/constituency_annotated_questions.json"
+        },
+        "description": "Questions from Qald, ComQA, Simplequestions annotated in tree form following the grammar at https://github.com/StanciuMarius/tree-qald/blob/master/common/grammar.cfg"
+    }
+]

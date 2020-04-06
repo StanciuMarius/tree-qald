@@ -1,5 +1,0 @@
-SELECT distinct ?title
-{
- ?person <http://dbpedia.org/ontology/occupation> ?pf.
- ?pf <http://dbpedia.org/ontology/title> ?title.
-}

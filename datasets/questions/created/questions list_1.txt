@@ -200,4 +200,3 @@
 200|Do more people live in Berlin than in London?
 201|What is the largest company with headquarters in Moscow?
 202|How many continents does Russia span in?
-203|
