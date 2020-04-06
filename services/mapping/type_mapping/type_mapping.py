@@ -4,14 +4,17 @@ import codecs
 from tqdm import tqdm
 from boltons.setutils import IndexedSet
 import nltk
+from spacy.tokens import Doc
+import spacy
 
 import sys
 import os
 sys.path.insert(0, os.getcwd())
+
 import services.mapping.constants as constants 
-import spacy
-from spacy.tokens import Doc
 from common.knowledge_base import LITERAL_DATATYPES, ResourceType
+from datasets.datasets import DatasetResolver
+
 class TypeMapper(object):
     '''
     Class that finds knowledge base types (classes) corresponding to small texts.
@@ -98,9 +101,10 @@ class TypeMapper(object):
         self.label_vs_classes['where'] = IndexedSet(['http://dbpedia.org/ontology/Place'])
         self.label_vs_classes['when'] = IndexedSet(LITERAL_DATATYPES[ResourceType.DATE])
         self.label_vs_classes['how many'] = IndexedSet(LITERAL_DATATYPES[ResourceType.NUMERAL])
-        
+        self.dataset_resolver = DatasetResolver()
+
         # Reading type labels from DBPedia type instances dataset
-        with open(constants.DBPEDIA_TYPE_INSTANCES_PATH, 'r', encoding='utf-8') as infile:
+        with open(dataset_resolver('dbpedia-instance-types', 'types'), 'r', encoding='utf-8') as infile:
             for line in tqdm(infile, desc="Loading DBPedia types:"):
                 try:
                     _, _, o, _ = line.split(' ')
@@ -115,7 +119,7 @@ class TypeMapper(object):
                     pass
 
         # Reading type labels from YAGO taxonomy dataset
-        with open(constants.YAGO_TAXONOMY_PATH, 'r', encoding='utf-8') as infile:
+        with open(dataset_resolver('yago-taxonomy', 'taxonomy'), 'r', encoding='utf-8') as infile:
             for line in tqdm(infile, desc="Loading YAGO types"):
                 try:
                     _, _, o, _ = line.split(' ')
@@ -129,7 +133,7 @@ class TypeMapper(object):
                     pass
 
         # Reading type labels from wordnet synonyms dataset
-        with open(constants.DBPEDIA_TYPE_SYNSETS_PATH, 'r', encoding='utf-8') as file:
+        with open(dataset_resolver('dbpedia-synsets', 'synsets'), 'r', encoding='utf-8') as file:
             for line in tqdm(file):
                 try:
                     url, synset = line.split(',')

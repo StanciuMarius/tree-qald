@@ -1,20 +1,19 @@
 import json
+import os
+from tqdm import tqdm
 
-train = r'datasets\relation_extraction\tacred\data\train.json'
-test = r'datasets\relation_extraction\tacred\data\test.json'
-dev = r'datasets\relation_extraction\tacred\data\dev.json'
-output_train = r'datasets\relation_extraction\tacred\data\train_normalized.json'
-output_test = r'datasets\relation_extraction\tacred\data\test_normalized.json'
-output_dev = r'datasets\relation_extraction\tacred\data\dev_normalized.json'
-
-def normalize_tacred(source_path, destination_path, dataset_name):
+def normalize_tacred(source_path):
+    file_name = os.path.basename(source_path)
+    file_name = file_name.split('.')[0]
+    output_path = os.path.join(r'datasets\relation_extraction\tacred\data', file_name + '_normalized.json')
+    if os.path.exists(output_path): return output_path
 
     normalized_examples = []
     bad_examples = 0
-    with open(source_path, 'r', encoding='utf-8') as input_file, open(destination_path, 'w', encoding='utf-8') as destination_file:
+    with open(source_path, 'r', encoding='utf-8') as input_file, open(output_path, 'w', encoding='utf-8') as file:
         examples = json.load(input_file)
 
-        for example in examples:
+        for example in tqdm(examples, desc='Normalizing {}'.format(source_path)):
             
             tokens = example['token']
             text = ' '.join(tokens)
@@ -29,12 +28,11 @@ def normalize_tacred(source_path, destination_path, dataset_name):
             tail_end = tail_begin + len(tail_text)
 
             if head_begin == -1 or tail_begin == -1:
-                print("bad question: ", bad_examples)
                 bad_examples += 1
                 continue
 
             normalized_examples.append({
-                'dataset': dataset_name,
+                'dataset': source_path,
                 'id': example['id'],
                 'subject_begin': head_begin,
                 'subject_end': head_end,
@@ -45,8 +43,8 @@ def normalize_tacred(source_path, destination_path, dataset_name):
                 'relation':  'tacred:' + relation,
                 'text': text
             })
-        json.dump(normalized_examples, destination_file, indent=4)
+        json.dump(normalized_examples, file, indent=4)
+    
+    print("{} had {} un-normalizable examples: ".format(source_path, bad_examples))
 
-# normalize_tacred(dev, output_dev, 'tacred_dev')
-# normalize_tacred(test, output_test, 'tacred_test')
-normalize_tacred(train, output_train, 'tacred_train')
+    return output_path

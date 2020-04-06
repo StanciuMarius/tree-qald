@@ -4,9 +4,11 @@ from tqdm import tqdm
 import sys
 import os
 sys.path.insert(0, os.getcwd())
-import services.mapping.constants as constants
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+
+import services.mapping.constants as constants
+from datasets.datasets import DatasetResolver
 
 '''
     Class that finds knowledge base resources corresponding to small texts.
@@ -21,7 +23,7 @@ from nltk.tokenize import word_tokenize
 class EntityMapping:
     def __init__(self):
         self.label_vs_entity = {}
-
+        self.dataset_resolver = DatasetResolver()
         if not os.path.exists(constants.ENTITY_LEXICON_PATH):
             print("No entity lexicon was found. Generating it at {}".format(constants.ENTITY_LEXICON_PATH))
             self.__generate_lexicon()
@@ -33,23 +35,6 @@ class EntityMapping:
                 label, entities = line.split('\t')
                 self.label_vs_entity[label] = entities.split(' ')
             print("Finished loading entity lexicon!")
-
-        # with open(constants.ENTITY_LEXICON_PATH, 'r', encoding='utf-8') as r:
-        #     lines = r.readlines()
-        #     for line in tqdm(lines, desc='Loading entity lexicon'):
-        #         tokens = line.rstrip('\t\n').split('\t')
-
-        #         firstCandidate = tokens[1].split(' ')
-        #         bestCandidate = firstCandidate[0]
-        #         importance = int(firstCandidate[1])
-        #         for tok in tokens[2:]:
-        #             candidate = tok.lstrip(' ').split(' ')
-        #             if int(candidate[1]) > importance:
-        #                 importance = int(candidate[1])
-        #                 bestCandidate = candidate[0]
-                
-        #         self.text_vs_resources[tokens[0].lower()] = bestCandidate
-           
 
     def __generate_lexicon(self):
         def process_ttl(path):
@@ -71,9 +56,9 @@ class EntityMapping:
                     except:
                         print("Error parsing line: " + line)
                         continue
-
-        process_ttl(constants.ENTITY_REDIRECTS_DATASET_PATH)
-        process_ttl(constants.ENTITY_DISAMBIGUATIONS_DATASET_PATH)
+            
+        process_ttl(self.dataset_resolver(dataset_name='dbpedia-redirects', file_name='redirects'))
+        process_ttl(self.dataset_resolver(dataset_name='dbpedia-disambiguations', file_name='disambiguations'))
 
         with open(constants.ENTITY_LEXICON_PATH, 'w', encoding='utf-8') as file:
             for label, entities in self.label_vs_entity.items():

@@ -1,16 +1,18 @@
 import json
+import os
+from tqdm import tqdm
 
-train = r'datasets\relation_extraction\fewrel\train.json'
-val = r'datasets\relation_extraction\fewrel\val.json'
-output_train = r'datasets\relation_extraction\fewrel\train_normalized.json'
-output_val = r'datasets\relation_extraction\fewrel\val_normalized.json'
-
-
-def normalize_fewrel(source_path, destination_path, dataset_name):
+def normalize_fewrel(source_path):
+    file_name = os.path.basename(source_path)
+    file_name = file_name.split('.')[0]
+    output_path = os.path.join(r'datasets\relation_extraction\fewrel\data', file_name + '_normalized.json')
+    if os.path.exists(output_path): return output_path
+    
+    bad_examples = 0
     normalized_examples = []
-    with open(source_path, 'r', encoding='utf-8') as input_file, open(destination_path, 'w', encoding='utf-8') as output_file:
+    with open(source_path, 'r', encoding='utf-8') as input_file, open(output_path, 'w', encoding='utf-8') as output_file:
         input_json = json.load(input_file)
-        for relation, examples in input_json.items():
+        for relation, examples in tqdm(input_json.items(), desc='Normalizing {}'.format(source_path)):
 
             for id, example in enumerate(examples):
                 text = ' '.join(example['tokens'])
@@ -27,11 +29,11 @@ def normalize_fewrel(source_path, destination_path, dataset_name):
                 tail_end = tail_begin + len(tail_text)
                 
                 if head_begin == -1 or tail_begin == -1:
-                    print("bad question")
+                    bad_examples += 1
                     continue
 
                 normalized_examples.append({
-                    'dataset': dataset_name,
+                    'dataset': source_path,
                     'id': relation + str(id),
                     'subject_begin': head_begin,
                     'subject_end': head_end,
@@ -43,7 +45,5 @@ def normalize_fewrel(source_path, destination_path, dataset_name):
                     'text': text
                 })
         json.dump(normalized_examples, output_file, indent=4)
-
-        
-# normalize_fewrel(val, output_val, 'fewrel_val')
-normalize_fewrel(train, output_train, 'fewrel_train')
+    print("{} had {} un-normalizable examples: ".format(source_path, bad_examples))
+    return output_path

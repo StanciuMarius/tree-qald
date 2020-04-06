@@ -3,7 +3,8 @@ import os
 from tqdl import download
 from tqdm import tqdm
 import bz2
-import tarfile, zipfile
+import tarfile
+from zipfile import ZipFile 
 
 DATASET_METADATA_FILE_PATH = r'datasets\datasets.json'
 
@@ -39,19 +40,19 @@ class DatasetResolver(object):
     def __download_dataset(self, dataset_name: str):
         if dataset_name == 'tacred':
             link_to_download_manually = self.metadata[dataset_name]['links'][0]
-            file_to_download_manually = self.metadata[dataset_name]['archives'].items()[0][1]
+            file_to_download_manually = list(self.metadata[dataset_name]['archives'].items())[0][1]
             path_to_place_download = self.metadata[dataset_name]['download-path']
             raise Exception('Tacred does not have a public download link. You have to buy it and donwload it from this link {}. \
                 After you are done, place the {} file in {}'.format(link_to_download_manually, file_to_download_manually, path_to_place_download))
         for link in self.metadata[dataset_name]['links']:
-            file_name = link.split('/')[-1].replace('?dl=1', '')
+            file_name = link.split('/')[-1].replace('?dl=1', '').replace('?raw=true', '')
             path = os.path.join(self.metadata[dataset_name]['download-path'], file_name)
-            print("Downloading {}...".format(file_name))
-            # download(link, path)
+            print("Downloading {}:{}...".format(dataset_name, file_name))
+            download(link, path)
 
     def __extract_archives(self, dataset_name: str):
         def extract_with_progress(archive_file, destination_path: str):
-            for member in tqdm(iterable=archive_file.getmembers(), total=len(archive_file.getmembers())):
+            for member in tqdm(iterable=archive_file.namelist(), total=len(archive_file.namelist())):
                 archive_file.extract(member=member, path=destination_path)           
 
         # Nothing to extract
@@ -63,7 +64,7 @@ class DatasetResolver(object):
                 archive_file = tarfile.open(path)
                 extract_with_progress(archive_file, self.metadata[dataset_name]['download-path'])
             elif format in {'zip'}:
-                archive_file = zipfile.open(path)
+                archive_file = ZipFile(path, 'r')
                 extract_with_progress(archive_file, self.metadata[dataset_name]['download-path'])
             elif format in {'bz2'}:
                 archive_file = bz2.open(path, "rb")

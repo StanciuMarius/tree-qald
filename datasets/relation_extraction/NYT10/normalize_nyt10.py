@@ -1,19 +1,19 @@
 import json
+import os
+from tqdm import tqdm
 
-train = r'datasets\relation_extraction\NYT10\train.txt'
-test = r'datasets\relation_extraction\NYT10\test.txt'
-output_train = r'datasets\relation_extraction\NYT10\train_normalized.json'
-output_test = r'datasets\relation_extraction\NYT10\test_normalized.json'
-
-
-def normalize_nyt10(source_path, destination_path, dataset_name):
+def normalize_nyt10(source_path):
+    file_name = os.path.basename(source_path)
+    file_name = file_name.split('.')[0]
+    output_path = os.path.join(r'datasets\relation_extraction\nyt10\data', file_name + '_normalized.json')
+    if os.path.exists(output_path): return output_path
 
     normalized_examples = []
     bad_examples = 0
-    with open(source_path, 'r', encoding='utf-8') as input_file, open(destination_path, 'w', encoding='utf-8') as destination_file:
+    with open(source_path, 'r', encoding='utf-8') as input_file, open(output_path, 'w', encoding='utf-8') as file:
         lines = input_file.readlines()
 
-        for id, line in enumerate(lines):
+        for id, line in tqdm(enumerate(lines), desc='Normalizing {}'.format(source_path)):
             example = line.split('\t')
             
             text = example[5]
@@ -31,12 +31,11 @@ def normalize_nyt10(source_path, destination_path, dataset_name):
             tail_begin = text.find(tail_text)
             tail_end = tail_begin + len(tail_text)
             if head_begin == -1 or tail_begin == -1:
-                print("bad question: ", bad_examples)
                 bad_examples += 1
                 continue
 
             normalized_examples.append({
-                'dataset': dataset_name,
+                'dataset': source_path,
                 'id': str(id),
                 'subject_begin': head_begin,
                 'subject_end': head_end,
@@ -47,7 +46,7 @@ def normalize_nyt10(source_path, destination_path, dataset_name):
                 'relation':  relation,
                 'text': text.replace('_', ' ')
             })
-        json.dump(normalized_examples, destination_file, indent=4)
+        json.dump(normalized_examples, file, indent=4)
 
-normalize_nyt10(test, output_test, 'nyt10_test')
-#normalize_nyt10(train, output_train, 'nyt10_train')
+    print("{} had {} un-normalizable examples: ".format(source_path, bad_examples))
+    return output_path

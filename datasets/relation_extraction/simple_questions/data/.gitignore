@@ -1,2 +1,5 @@
 *
 !.gitignore
+!annotated_fb_data_train_normalized.json
+!annotated_fb_data_test_normalized.json
+!annotated_fb_data_valid_normalized.json

@@ -1,5 +1,4 @@
 
-EQUIVALENT_RELATIONS_DATASET_PATH =                     r'datasets\relation_extraction\cross_kb_relations\data\equivalent_relations.json'
 TEMP_FOLDER_FOR_SUBMODULE_PATH =                        r'services\mapping\relation_mapping\relation_classifier\temp'
 TEMP_TRAINSET_FOR_SUBMODULE_PATH =                      r'services\mapping\relation_mapping\relation_classifier\temp\re_train.json'
 TEMP_TESTSET_FOR_SUBMODULE_PATH =                       r'services\mapping\relation_mapping\relation_classifier\temp\re_test.json'

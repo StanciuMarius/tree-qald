@@ -2,8 +2,8 @@
     {
         "name": "qald-9",
         "links": [
-            "https://github.com/ag-sc/QALD/blob/master/9/data/qald-9-train-multilingual.json",
-            "https://github.com/ag-sc/QALD/blob/master/9/data/qald-9-test-multilingual.json"
+            "https://github.com/ag-sc/QALD/blob/master/9/data/qald-9-train-multilingual.json?raw=true",
+            "https://github.com/ag-sc/QALD/blob/master/9/data/qald-9-test-multilingual.json?raw=true"
         ],
         "download-path": "datasets/questions/qald9/data/",
         "files": {
@@ -15,8 +15,8 @@
     {
         "name": "qald-8",
         "links": [
-            "https://github.com/ag-sc/QALD/blob/master/8/data/qald-8-train-multilingual.json",
-            "https://github.com/ag-sc/QALD/blob/master/8/data/qald-8-test-multilingual.json"
+            "https://github.com/ag-sc/QALD/blob/master/8/data/qald-8-train-multilingual.json?raw=true",
+            "https://github.com/ag-sc/QALD/blob/master/8/data/qald-8-test-multilingual.json?raw=true"
         ],
         "download-path": "datasets/questions/qald8/data/",
         "files": {
@@ -28,10 +28,10 @@
     {
         "name": "freebaseqa",
         "links": [
-            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-train.json",
-            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-test.json",
-            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-dev.json",
-            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-partial.json"
+            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-train.json?raw=true",
+            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-test.json?raw=true",
+            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-dev.json?raw=true",
+            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-partial.json?raw=true"
         ],
         "download-path": "datasets/questions/freebaseqa/data/",
         "files": {
@@ -76,8 +76,8 @@
     {
         "name": "fewrel",
         "links": [
-            "https://github.com/thunlp/FewRel/blob/master/data/train_wiki.json",
-            "https://github.com/thunlp/FewRel/blob/master/data/val_wiki.json"
+            "https://github.com/thunlp/FewRel/blob/master/data/train_wiki.json?raw=true?raw=true",
+            "https://github.com/thunlp/FewRel/blob/master/data/val_wiki.json?raw=true?raw=true"
         ],
         "download-path": "datasets/relation_extraction/fewrel/data/",
         "files": {
@@ -89,7 +89,7 @@
     {
         "name": "nyt10",
         "links": [
-            "https://github.com/thunlp/NRE/blob/master/data.zip"
+            "https://github.com/thunlp/NRE/blob/master/data.zip?raw=true?raw=true"
         ],
         "archives": {
             "zip": "datasets/relation_extraction/NYT10/data/data.zip"
@@ -119,9 +119,9 @@
     {
         "name": "simpledbpediaqa",
         "links": [
-            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/train.json",
-            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/test.json",
-            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/valid.json"
+            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/train.json?raw=true",
+            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/test.json?raw=true",
+            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/valid.json?raw=true"
         ],
         "download-path": "datasets/relation_extraction/simpledbpediaqa/data/",
         "files": {
@@ -141,11 +141,22 @@
         },
         "download-path": "datasets/relation_extraction/tacred/data/",
         "files": {
-            "train": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/train.json",
-            "test": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/test.json",
-            "development": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/dev.json"
+            "train": "datasets/relation_extraction/tacred/data/json/train.json",
+            "test": "datasets/relation_extraction/tacred/data/json/test.json",
+            "development": "datasets/relation_extraction/tacred/data/json/dev.json"
         },
         "description": "Relatively large texts with annotated subjects and objects and the relation between them following a custom taxonomy of relations. This dataset is not free."
+    },
+    {
+        "name": "equivalent-relations",
+        "links": [
+            "https://github.com/StanciuMarius/tree-qald/blob/master/datasets/relation_extraction/cross_kb_relations/data/equivalent_relations.json?raw=true"
+        ],
+        "download-path": "datasets/relation_extraction/cross_kb_relations/data/",
+        "files": {
+            "relations": "datasets/relation_extraction/cross_kb_relations/data/equivalent_relations.json"
+        },
+        "description": "Cross-Knowledge-Base relation mappings"
     },
     {
         "name": "dbpedia-instance-types",
@@ -171,7 +182,7 @@
         },
         "download-path": "datasets/entity_mapping/data/",
         "files": {
-            "types": "datasets/entity_mapping/data/disambiguations_lang=en.ttl"
+            "disambiguations": "datasets/entity_mapping/data/disambiguations_lang=en.ttl"
         },
         "description": "DBPedia <http://dbpedia.org/ontology/wikiPageDisambiguates> triples"
     },
@@ -185,7 +196,7 @@
         },
         "download-path": "datasets/entity_mapping/data/",
         "files": {
-            "types": "datasets/entity_mapping/data/redirects_lang=en.ttl"
+            "redirects": "datasets/entity_mapping/data/redirects_lang=en.ttl"
         },
         "description": "DBPedia <http://dbpedia.org/ontology/wikiPageRedirects> triples"
     },
@@ -204,13 +215,24 @@
         "description": "The Yago hierarchy of classes represented via rdf:subClassOf triples"
     },
     {
+        "name": "dbpedia-type-synsets",
+        "links": [
+            "https://github.com/StanciuMarius/tree-qald/blob/master/datasets/type_mapping/data/type_synonyms.csv?raw=true"
+        ],
+        "download-path": "datasets/type_mapping/data/",
+        "files": {
+            "synsets": "datasets/type_mapping/data/type_synonyms.csv"
+        },
+        "description": "DBpedia types and the associated Wordnet synset for their label"
+    },
+    {
         "name": "tree-qald",
         "links": [
-            "https://github.com/StanciuMarius/tree-qald/blob/master/datasets/parsing/data/constituency_annotated_questions.json"
+            "https://github.com/StanciuMarius/tree-qald/blob/master/datasets/parsing/data/constituency_annotated_questions.json?raw=true"
         ],
         "download-path": "datasets/parsing/data/constituency_annotated_questions.json",
         "files": {
-            "train": "datasets/parsing/data/constituency_annotated_questions.json"
+            "trees": "datasets/parsing/data/constituency_annotated_questions.json"
         },
         "description": "Questions from Qald, ComQA, Simplequestions annotated in tree form following the grammar at https://github.com/StanciuMarius/tree-qald/blob/master/common/grammar.cfg"
     }

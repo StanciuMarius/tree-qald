@@ -1,19 +1,19 @@
+import json
+from typing import List
+
 import sys
 import os
 sys.path.insert(0, os.getcwd())
-import json
+
 import common.knowledge_base as knowledge_base
-from typing import List
-
-EQUIVALENT_RELATIONS_DATASET_PATH = r'datasets\relation_extraction\cross_kb_relations\data\equivalent_relations.json'
-
-
+from datasets.datasets import DatasetResolver
 
 class EquivalentRelationResolver(object):
     def __init__(self):
+        self.dataset_resolver = DatasetResolver()
         self.kb_vs_generic_relations = {}
         self.generic_vs_kb_relations = {}
-        with open(EQUIVALENT_RELATIONS_DATASET_PATH, 'r', encoding='utf-8') as file:
+        with open(self.dataset_resolver('equivalent-relations', 'relations'), 'r', encoding='utf-8') as file:
             relation_sets = json.load(file)['dataset']
             for relation_set in  relation_sets:
                 label = relation_set['label']
@@ -48,13 +48,32 @@ class EquivalentRelationResolver(object):
             if relation_uri in self.kb_vs_generic_relations:
                 return self.kb_vs_generic_relations[relation_uri]
             elif reversed_relation_uri in self.kb_vs_generic_relations:
-                return self.kb_vs_generic_relations[reversed_relation_uri]
+                return self.reverse_relation(self.kb_vs_generic_relations[reversed_relation_uri])
 
         return None
  
     def reverse_relation(self, relation_uri: str):
         return relation_uri[1:] if '_' == relation_uri[0] else '_' + relation_uri
 
+    def __test__(self):
+        relation = self('http://freebase.com/location/location/contains')
+        assert relation == '_location'
 
-# r = EquivalentRelationResolver()
-# print(r('http://freebase.com/location/location/contains'))
+        relation = self('tacred:per:country_of_birth')
+        assert relation == 'originPlace'
+
+        relation = self('http://wikidata.org/entity/P1340')
+        assert relation == 'color'
+
+        relation = self('_http://dbpedia.org/ontology/birthDate')
+        assert relation == '_birthDate'
+
+        relation = self.reverse_relation("_http://dbpedia.org/ontology/birthPlace")
+        assert relation == 'http://dbpedia.org/ontology/birthPlace'
+
+        relation = self.reverse_relation("http://dbpedia.org/ontology/birthPlace")
+        assert relation == '_http://dbpedia.org/ontology/birthPlace'
+
+if __name__ == '__main__':
+    resolver = EquivalentRelationResolver()
+    resolver.__test__()

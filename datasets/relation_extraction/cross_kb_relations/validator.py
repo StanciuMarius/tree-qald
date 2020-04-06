@@ -1,10 +1,17 @@
 import json
+import sys
+import os
+sys.path.insert(0, os.getcwd())
+
+from datasets.datasets import DatasetResolver
 
 
 valid = True
 duplicates = []
 invalid_keys = []
-with open(r'datasets\relation_extraction\cross_kb_relations\data\equivalent_relations.json', 'r', encoding='utf-8') as file:
+dataset_resolver = DatasetResolver()
+
+with open(dataset_resolver('equivalent-relations', 'relations'), 'r', encoding='utf-8') as file:
     dataset = json.load(file)
     dataset['dataset'] = sorted(dataset['dataset'], key=lambda x: x['label'])
     labels = set()

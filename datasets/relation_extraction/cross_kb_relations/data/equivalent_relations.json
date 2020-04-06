@@ -1379,6 +1379,7 @@
                 "_tacred:org:members"
             ],
             "wikidata": [
+                "http://wikidata.org/entity/P463",
                 "http://wikidata.org/entity/P108",
                 "http://wikidata.org/entity/P1029",
                 "http://wikidata.org/entity/P937"

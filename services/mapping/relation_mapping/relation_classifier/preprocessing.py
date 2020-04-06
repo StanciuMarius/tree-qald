@@ -7,14 +7,11 @@ import sys
 sys.path.insert(0, os.getcwd())
 
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
-from common.syntax_checker import SyntaxChecker
-from common.constants import GRAMMAR_FILE_PATH
 from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentRelationResolver
 import services.mapping.relation_mapping.relation_classifier.constants as constants
 import common.knowledge_base as knowledge_base
+
 UNKNOWN_LABEL = 'UNKNOWN'
-SYNTAX_CHECKER = SyntaxChecker(GRAMMAR_FILE_PATH)
-QUESTION_WORDS = {'who', 'when', 'what', 'how', 'which'}
 
 class NormalizeRelationUriTransofrm(object):
     def __call__(self, sample):
@@ -104,97 +101,3 @@ def validate(example, statistics=None):
         if is_valid: statistics['is_valid'] += 1
 
     return is_valid
-    
-def generate_relation_extraction_sequence(tree: QueryTree, node: QueryTree):  
-    # TODO this code does kind of the same thing as the query generation handlers. Make it dry  
-    def offset_for_node_union(tree: QueryTree, nodes):
-        union_begin, union_end = tree.offset_for_node(nodes[0])
-        for node in nodes[1:]:
-            node_begin, node_end = tree.offset_for_node(node)
-            union_begin = min(union_begin, node_begin)
-            union_end = max(union_end, node_end)
-        return union_begin, union_end
-        
-    text = ' '.join(tree.tokens)
-
-    # Generate one sequence for each relation node
-    sequence = text
-
-    e1_nodes = []
-    e2_nodes = []
-
-    if node.type in {NodeType.EXISTSRELATION}:
-        # Relation is between 2 entities/literal
-        e1_nodes = [node.children[0]]
-        e2_nodes = [node.children[1]]
-    elif node.type in {NodeType.GREATER, NodeType.LESS}:
-        e1_nodes = list(filter(lambda x: x.type != NodeType.LITERAL, node.children))
-        e2_nodes = list(filter(lambda x: x.type in {NodeType.LITERAL}, node.children))
-    elif node.type in {NodeType.PROPERTY}:
-        e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE, node.children))
-        # We can consider a type as a substitute for entities
-        # e.g. Give me all [E1] songs [/E1] by [E2] Bruce Springsteen [/E2].
-        e2_nodes = list(filter(lambda x: x.type in {NodeType.TYPE}, node.children))[:1] # TODO: currently only consider first type
-    elif node.type in {NodeType.PROPERTYCONTAINS}:
-        e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.ENTITY and x.type != NodeType.LITERAL, node.children))
-        e2_nodes = list(filter(lambda x: x.type == NodeType.ENTITY or x.type == NodeType.LITERAL, node.children))
-    elif node.type in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.ARGMAXCOUNT, NodeType.ARGMINCOUNT, NodeType.TOPN, NodeType.GREATERCOUNT}:
-        e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.LITERAL, node.children))
-        if len(e1_nodes) == 0: e1_nodes = list(filter(lambda x: x.type != NodeType.LITERAL, node.children))
-    elif node.type in {NodeType.ISLESS, NodeType.ISGREATER}:
-        # Technically there are 2 identical relations for each child entity. We only have to extract for one of them.
-        e1_nodes = [node.children[0]]
-    
-    e1_begin, e1_end = offset_for_node_union(tree, e1_nodes)
-
-    if len(e2_nodes) == 0:
-        if node.type == NodeType.PROPERTY and tree.tokens[0].lower() in QUESTION_WORDS and node in tree.root.children:
-            # We can consider the question word as one of the entities for the direct child of a root
-            # e.g. [E1] Who [/E1] is the wife of [E2] Barack Obama [/E2] ?
-            e2_begin = 0
-            e2_end = len(tree.tokens[0])
-        else:
-            # We only have one entity, so we add a dummy token before the e1 tokens
-            new_token = ' [{}] '.format(node.type.value)
-            # sequence = sequence[:e1_begin] + new_token + sequence[e1_begin:]
-            # e2_begin, e2_end = e1_begin, e1_begin + len(new_token)
-            # e1_begin, e1_end = e1_begin + len(new_token), e1_end + len(new_token)
-            sequence = new_token + sequence
-            e2_begin, e2_end = 0, len(new_token)
-            e1_begin, e1_end = e1_begin + len(new_token), e1_end + len(new_token)
-    else: 
-        e2_begin, e2_end = offset_for_node_union(tree, e2_nodes)
-
-    result = {
-        'text': sequence,
-        'id': '{}${}'.format(tree.id, node.id),
-        'subject': sequence[e1_begin:e1_end],
-        'object':sequence[e2_begin:e2_end],
-        'subject_begin': e1_begin,
-        'subject_end': e1_end,
-        'object_begin': e2_begin,
-        'object_end': e2_end,
-    }
-
-    if len(node.kb_resources) > 0:
-        result['relation'] = node.kb_resources[0]
-
-    return result
-
-def parse_trees_to_relation_extraction_format(parse_trees_file_path, output_file_path):
-    with open(parse_trees_file_path, 'r', encoding='utf-8') as input_file:
-        trees = json.load(input_file)
-        trees = [question for question in trees if 'root' in question and question['root']]
-        trees = list(map(lambda question: QueryTree.from_dict(question), trees))
-        trees = list(filter(lambda x: SYNTAX_CHECKER.validate(x), trees))
-    
-    sequences = []
-    for tree in trees:
-        relation_nodes = tree.root.collect(RELATION_NODE_TYPES)
-        for node in relation_nodes:
-            if node.kb_resources:
-                sequences.append(generate_relation_extraction_sequence(tree, node))
-        
-    with open(output_file_path, 'w', encoding='utf-8') as output_file:
-        json.dump(sequences, output_file)
-

@@ -7,3 +7,4 @@ __pycache__/*
 *.cache
 venv/*
 .vscode/settings.json
+services/answer/test_log.json

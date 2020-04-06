@@ -298,13 +298,96 @@ class QueryTree:
             
             return None
         return find_parent_recursive(self.root, node)
-        
+    
     def remove_children_of_type(self, node_type: NodeType):
         def remove_children_of_type_recursive(node, node_type):
             node.children = list(filter(lambda node: node.type != node_type, node.children))
             for child in node.children:
                 remove_children_of_type_recursive(child, node_type)
         remove_children_of_type_recursive(self.root, node_type)
+
+    def generate_relation_extraction_sequence(self, node: Node):
+        '''
+        Generate a relation extraction sequence for a relation node in the tree.
+        '''
+        # TODO this code does kind of the same thing as the query generation handlers. Make it dry
+        # Also this is not the best place for this since it's grammar specific
+        
+        QUESTION_WORDS = {'who', 'when', 'what', 'how', 'which'}
+        
+        def offset_for_node_union(tree: QueryTree, nodes):
+            union_begin, union_end = tree.offset_for_node(nodes[0])
+            for node in nodes[1:]:
+                node_begin, node_end = tree.offset_for_node(node)
+                union_begin = min(union_begin, node_begin)
+                union_end = max(union_end, node_end)
+            return union_begin, union_end
+            
+        text = ' '.join(self.tokens)
+
+        # Generate one sequence for each relation node
+        sequence = text
+
+        e1_nodes = []
+        e2_nodes = []
+
+        if node.type in {NodeType.EXISTSRELATION}:
+            # Relation is between 2 entities/literal
+            e1_nodes = [node.children[0]]
+            e2_nodes = [node.children[1]]
+        elif node.type in {NodeType.GREATER, NodeType.LESS}:
+            e1_nodes = list(filter(lambda x: x.type != NodeType.LITERAL, node.children))
+            e2_nodes = list(filter(lambda x: x.type in {NodeType.LITERAL}, node.children))
+        elif node.type in {NodeType.PROPERTY}:
+            e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE, node.children))
+            # We can consider a type as a substitute for entities
+            # e.g. Give me all [E1] songs [/E1] by [E2] Bruce Springsteen [/E2].
+            e2_nodes = list(filter(lambda x: x.type in {NodeType.TYPE}, node.children))[:1] # TODO: currently only consider first type
+        elif node.type in {NodeType.PROPERTYCONTAINS}:
+            e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.ENTITY and x.type != NodeType.LITERAL, node.children))
+            e2_nodes = list(filter(lambda x: x.type == NodeType.ENTITY or x.type == NodeType.LITERAL, node.children))
+        elif node.type in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.ARGMAXCOUNT, NodeType.ARGMINCOUNT, NodeType.TOPN, NodeType.GREATERCOUNT}:
+            e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.LITERAL, node.children))
+            if len(e1_nodes) == 0: e1_nodes = list(filter(lambda x: x.type != NodeType.LITERAL, node.children))
+        elif node.type in {NodeType.ISLESS, NodeType.ISGREATER}:
+            # Technically there are 2 identical relations for each child entity. We only have to extract for one of them.
+            e1_nodes = [node.children[0]]
+        
+        e1_begin, e1_end = offset_for_node_union(self, e1_nodes)
+
+        if len(e2_nodes) == 0:
+            if node.type == NodeType.PROPERTY and self.tokens[0].lower() in QUESTION_WORDS and node in self.root.children:
+                # We can consider the question word as one of the entities for the direct child of a root
+                # e.g. [E1] Who [/E1] is the wife of [E2] Barack Obama [/E2] ?
+                e2_begin = 0
+                e2_end = len(self.tokens[0])
+            else:
+                # We only have one entity, so we add a dummy token before the e1 tokens
+                new_token = ' [{}] '.format(node.type.value)
+                # sequence = sequence[:e1_begin] + new_token + sequence[e1_begin:]
+                # e2_begin, e2_end = e1_begin, e1_begin + len(new_token)
+                # e1_begin, e1_end = e1_begin + len(new_token), e1_end + len(new_token)
+                sequence = new_token + sequence
+                e2_begin, e2_end = 0, len(new_token)
+                e1_begin, e1_end = e1_begin + len(new_token), e1_end + len(new_token)
+        else: 
+            e2_begin, e2_end = offset_for_node_union(self, e2_nodes)
+
+        result = {
+            'text': sequence,
+            'id': '{}${}'.format(self.id, node.id),
+            'subject': sequence[e1_begin:e1_end],
+            'object':sequence[e2_begin:e2_end],
+            'subject_begin': e1_begin,
+            'subject_end': e1_end,
+            'object_begin': e2_begin,
+            'object_end': e2_end,
+        }
+
+        if len(node.kb_resources) > 0:
+            result['relation'] = node.kb_resources[0]
+
+        return result
 
     def _index_to_offset(self, token_indexes: List[int]) -> (int, int):
         '''
