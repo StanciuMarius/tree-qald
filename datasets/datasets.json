@@ -37,7 +37,7 @@
         "files": {
             "train": "datasets/questions/freebaseqa/data/FreebaseQA-train.json",
             "test": "datasets/questions/freebaseqa/data/FreebaseQA-test.json",
-            "dev": "datasets/questions/freebaseqa/data/FreebaseQA-dev.json",
+            "development": "datasets/questions/freebaseqa/data/FreebaseQA-dev.json",
             "partial": "datasets/questions/freebaseqa/data/FreebaseQA-partial.json"
         },
         "description": "Factoid questions with answers over Freebase with annotated inferrential chains."
@@ -53,7 +53,7 @@
         "files": {
             "train": "datasets/questions/comqa/data/comqa_train.json",
             "test": "datasets/questions/comqa/data/comqa_test.json",
-            "dev": "datasets/questions/comqa/data/comqa_dev.json"
+            "development": "datasets/questions/comqa/data/comqa_dev.json"
         },
         "description": "Complex questions with answers over wikidata"
     },
@@ -62,11 +62,14 @@
         "links": [
             "https://www.dropbox.com/s/tohrsllcfy7rch4/SimpleQuestions_v2.tgz?dl=1"
         ],
-        "download-path": "datasets/simplequestions/comqa/data/",
+        "archives": {
+            "tgz": "datasets/questions/simplequestions/data/SimpleQuestions_v2.tgz"
+        },
+        "download-path": "datasets/questions/simplequestions/data/",
         "files": {
             "train": "datasets/questions/simplequestions/data/SimpleQuestions_v2/annotated_fb_data_train.txt",
             "test": "datasets/questions/simplequestions/data/SimpleQuestions_v2/annotated_fb_data_test.txt",
-            "val": "datasets/questions/simplequestions/data/SimpleQuestions_v2/annotated_fb_data_valid.txt"
+            "validation": "datasets/questions/simplequestions/data/SimpleQuestions_v2/annotated_fb_data_valid.txt"
         },
         "description": "Simple questions with answers and annotated entities and relations over Freebase."
     },
@@ -79,7 +82,7 @@
         "download-path": "datasets/relation_extraction/fewrel/data/",
         "files": {
             "train": "datasets/relation_extraction/fewrel/data/train_wiki.json",
-            "val": "datasets/relation_extraction/fewrel/data/val_wiki.json"
+            "validation": "datasets/relation_extraction/fewrel/data/val_wiki.json"
         },
         "description": "Tokenized sentences with annotated subject, object and the wikidata relation between them."
     },
@@ -88,6 +91,9 @@
         "links": [
             "https://github.com/thunlp/NRE/blob/master/data.zip"
         ],
+        "archives": {
+            "zip": "datasets/relation_extraction/NYT10/data/data.zip"
+        },
         "download-path": "datasets/relation_extraction/NYT10/data/",
         "files": {
             "train": "datasets/relation_extraction/NYT10/data/RE/train.txt",
@@ -101,6 +107,9 @@
         "links": [
             "http://resources.mpi-inf.mpg.de/yago-naga/patty/data/patty-dataset.tar.gz"
         ],
+        "archives": {
+            "tar.gz": "datasets/relation_extraction/patty/data/patty-dataset.tar.gz"
+        },
         "download-path": "datasets/relation_extraction/patty/data/",
         "files": {
             "patterns": "datasets/relation_extraction/patty/data/patty-dataset/dbpedia-relation-paraphrases.txt"
@@ -118,7 +127,7 @@
         "files": {
             "train": "datasets/relation_extraction/simpledbpediaqa/data/train.json",
             "test": "datasets/relation_extraction/simpledbpediaqa/data/test.json",
-            "val": "datasets/relation_extraction/simpledbpediaqa/data/valid.json"
+            "validation": "datasets/relation_extraction/simpledbpediaqa/data/valid.json"
         },
         "description": "Same questions as SimpleQuestions dataset but mapped to DBPedia resources."
     },
@@ -127,11 +136,14 @@
         "links": [
             "https://catalog.ldc.upenn.edu/LDC2018T24"
         ],
+        "archives": {
+            "tgz": "datasets/relation_extraction/tacred/data/tacred_LDC2018T24.tgz"
+        },
         "download-path": "datasets/relation_extraction/tacred/data/",
         "files": {
             "train": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/train.json",
             "test": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/test.json",
-            "dev": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/dev.json"
+            "development": "datasets/relation_extraction/simpledbpediaqa/data/tacred/data/json/dev.json"
         },
         "description": "Relatively large texts with annotated subjects and objects and the relation between them following a custom taxonomy of relations. This dataset is not free."
     },
@@ -140,6 +152,9 @@
         "links": [
             "https://downloads.dbpedia.org/repo/lts/mappings/instance-types/2019.08.30/instance-types_lang=en.ttl.bz2"
         ],
+        "archives": {
+            "bz2": "datasets/type_mapping/data/instance-types_lang=en.ttl.bz2"
+        },
         "download-path": "datasets/type_mapping/data/",
         "files": {
             "types": "datasets/type_mapping/data/instance-types_lang=en.ttl"
@@ -151,6 +166,9 @@
         "links": [
             "https://downloads.dbpedia.org/repo/lts/generic/disambiguations/2019.08.30/disambiguations_lang=en.ttl.bz2"
         ],
+        "archives": {
+            "bz2": "datasets/entity_mapping/datadisambiguations_lang=en.ttl.bz2"
+        },
         "download-path": "datasets/entity_mapping/data/",
         "files": {
             "types": "datasets/entity_mapping/data/disambiguations_lang=en.ttl"
@@ -162,6 +180,9 @@
         "links": [
             "https://downloads.dbpedia.org/repo/lts/generic/redirects/2019.08.30/redirects_lang=en.ttl.bz2"
         ],
+        "archives": {
+            "bz2": "datasets/entity_mapping/data/redirects_lang=en.ttl.bz2"
+        },
         "download-path": "datasets/entity_mapping/data/",
         "files": {
             "types": "datasets/entity_mapping/data/redirects_lang=en.ttl"
@@ -173,6 +194,9 @@
         "links": [
             "http://downloads.dbpedia.org/2015-04/links/yago_taxonomy.nt.bz2"
         ],
+        "archives": {
+            "bz2": "datasets/type_mapping/data/yago_taxonomy.nt.bz2"
+        },
         "download-path": "datasets/type_mapping/data/",
         "files": {
             "taxonomy": "datasets/type_mapping/data/yago_taxonomy.nt"
