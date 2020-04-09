@@ -1,6 +1,5 @@
 import Graph from 'vis-react';
 import React from 'react';
-import Modal from 'react-bootstrap/Modal';
 
 var utils = require('../utils/tree_preprocessing');
 
@@ -24,6 +23,10 @@ var options = {
           nodeDistance: 1
         }
     },
+    shadow: {
+        enabled: true,
+        size: 20
+    },
     nodes: {
         shape: 'box'
     },
@@ -44,7 +47,7 @@ var events = {
     }
 }
 
-class TreeRenderer extends React.PureComponent {
+class Tree extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {tree: utils.tree_converter(props.tree)};
@@ -60,6 +63,7 @@ class TreeRenderer extends React.PureComponent {
 
     render() {
         const {tree} = this.state;
+        if (tree == null) return null;
         return (
             <div id="tree-container">
                     <Graph  graph={tree}
@@ -71,4 +75,4 @@ class TreeRenderer extends React.PureComponent {
     }
 }
 
-export default TreeRenderer;
+export default Tree;

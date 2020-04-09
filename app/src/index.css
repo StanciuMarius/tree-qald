@@ -63,9 +63,17 @@ input {
 .modal-dialog-large {
   max-width: 80%;
   margin-left: 10%;
+  margin-top: 3%;
   /* transition:width 300ms ease-in-out, height 300ms ease-in-out; */
 }
 
 .noni {
   padding: 500px;
+}
+
+.close {display: none;}
+
+.answer-container {
+  margin: 30px;
+  background-color: #EEEEEE;
 }
