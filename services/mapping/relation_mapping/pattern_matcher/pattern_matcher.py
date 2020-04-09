@@ -10,6 +10,8 @@ sys.path.insert(0, os.getcwd())
 
 from services.tasks import run_task, Task
 import services.mapping.constants as constants
+from datasets.datasets import DatasetResolver
+
 DBPEDIA_ONTOLOGY_PREFIX = r'http://dbpedia.org/ontology/'
 DBPEDIA_PROPERTY_PREFIX = r'http://dbpedia.org/property/'
 class PattyPatternTrie:
@@ -94,8 +96,9 @@ class PattyPatternTrie:
             
 class RelationPatternMatcher:
 
-    def __init__(self, pattern_file_path: str = constants.PATTY_DBPEDIA_PARAPHRASES_FILE_PATH):
-        self.pattern_trie = PattyPatternTrie(pattern_file_path)
+    def __init__(self):
+        self.dataset_resolver = DatasetResolver()
+        self.pattern_trie = PattyPatternTrie(self.dataset_resolver('patty', 'patterns'))
     
     def __call__(self, text, subject_begin, subject_end, object_begin, object_end, **kwargs):
         if subject_begin < object_begin:

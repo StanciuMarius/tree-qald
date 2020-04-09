@@ -1,13 +1,17 @@
 
 import json
 import re
+import os
+import sys
+sys.path.insert(0, os.getcwd())
 
-YAGO_TAXONOMY_PATH = r'datasets\knowledge_base\yago\data\yago_taxonomy.nt'
+from datasets.datasets import DatasetResolver
 
 class YagoTaxonomyDataset(object):
     def __init__(self):
         self.parents = {}
-        with open(YAGO_TAXONOMY_PATH, 'r', encoding='utf-8') as file:
+        self.dataset_resolver = DatasetResolver()
+        with open(self.dataset_resolver('yago-taxonomy', 'taxonomy'), 'r', encoding='utf-8') as file:
             max_parents = 1
             for line in file: 
                 try:

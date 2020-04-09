@@ -9,7 +9,6 @@ import services.mapping.constants as constants
 from typing import List
 
 from services.mapping.relation_mapping.pattern_matcher.pattern_matcher import RelationPatternMatcher
-from services.mapping.relation_mapping.relation_classifier.preprocessing import generate_relation_extraction_sequence
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 from common.knowledge_base import KnowledgeBase
 from services.mapping.relation_mapping.relation_classifier.relation_classifier import RelationClassifier

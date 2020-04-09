@@ -11,7 +11,6 @@ from services.constants import PORTS
 from services.mapping.relation_mapping.relation_mapping import RelationMapper
 from services.mapping.entity_mapping.entity_mapping import EntityMapping
 from services.mapping.type_mapping.type_mapping import TypeMapper
-from services.mapping.constants import PATTY_DBPEDIA_PARAPHRASES_FILE_PATH, TYPES_TRIE_PATH
 
 mapping_service = Flask(__name__)
 
