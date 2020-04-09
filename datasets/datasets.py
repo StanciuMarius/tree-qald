@@ -52,8 +52,14 @@ class DatasetResolver(object):
 
     def __extract_archives(self, dataset_name: str):
         def extract_with_progress(archive_file, destination_path: str):
-            for member in tqdm(iterable=archive_file.namelist(), total=len(archive_file.namelist())):
+            try:
+                members = archive_file.namelist()
+            except:
+                members = archive_file.getmembers()
+
+            for member in tqdm(iterable=members, total=len(members)):
                 archive_file.extract(member=member, path=destination_path)           
+
 
         # Nothing to extract
         if 'archives' not in self.metadata[dataset_name]: return
