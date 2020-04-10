@@ -159,6 +159,17 @@
         "description": "Cross-Knowledge-Base relation mappings"
     },
     {
+        "name": "country-denonyms",
+        "links": [
+            "https://github.com/StanciuMarius/tree-qald/tree/master/datasets/entity_mapping/data/country_denonyms.json?raw=true"
+        ],
+        "download-path": "datasets/relation_extraction/cross_kb_relations/data/",
+        "files": {
+            "relations": "datasets/relation_extraction/cross_kb_relations/data/country_denonyms.json"
+        },
+        "description": "Mappings between a country entities and their denonym. E.g. French vs France"
+    },
+    {
         "name": "dbpedia-instance-types",
         "links": [
             "https://downloads.dbpedia.org/repo/lts/mappings/instance-types/2019.08.30/instance-types_lang=en.ttl.bz2"
