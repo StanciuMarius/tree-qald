@@ -57,7 +57,8 @@
             "dbpedia": [
                 "http://dbpedia.org/ontology/alias",
                 "http://dbpedia.org/property/nickname",
-                "http://dbpedia.org/property/alterEgo"
+                "http://dbpedia.org/property/alterEgo",
+                "http://xmlns.com/foaf/0.1/nick"
             ],
             "description": "Alternate name of a thing.",
             "label": "alias",
@@ -115,10 +116,12 @@
             "dbpedia": [
                 "http://dbpedia.org/ontology/composer",
                 "http://dbpedia.org/ontology/musicComposer",
+                "http://dbpedia.org/property/composer(s)_",
                 "http://dbpedia.org/ontology/creator",
                 "http://dbpedia.org/ontology/author",
                 "http://dbpedia.org/property/artist",
                 "http://dbpedia.org/ontology/musicBy",
+                "http://dbpedia.org/property/music",
                 "http://dbpedia.org/ontology/writer",
                 "http://dbpedia.org/property/writer",
                 "http://dbpedia.org/property/author"
@@ -209,7 +212,9 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/birthYear",
+                "http://dbpedia.org/property/birthYear",
                 "http://dbpedia.org/ontology/birthDate",
+                "http://dbpedia.org/property/birthDate",
                 "http://dbpedia.org/ontology/age"
             ],
             "description": "The date a person was born in.",
@@ -369,15 +374,6 @@
             "label": "citizenship",
             "wikidata": [
                 "http://wikidata.org/entity/P27"
-            ]
-        },
-        {
-            "dbpedia": [
-                "http://dbpedia.org/ontology/classis"
-            ],
-            "label": "classis",
-            "wikidata": [
-                "http://wikidata.org/entity/P77"
             ]
         },
         {
@@ -558,7 +554,8 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/causeOfDeath",
-                "http://dbpedia.org/ontology/deathCause"
+                "http://dbpedia.org/ontology/deathCause",
+                "http://dbpedia.org/property/deathCause"
             ],
             "description": "Cause of death of a person.",
             "freebase": [
@@ -577,7 +574,9 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/deathYear",
-                "http://dbpedia.org/ontology/deathDate"
+                "http://dbpedia.org/ontology/deathDate",
+                "http://dbpedia.org/property/deathDate"
+                
             ],
             "description": "The Date a person died on.",
             "label": "deathDate",
@@ -590,7 +589,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/deathPlace"
+                "http://dbpedia.org/ontology/deathPlace",
+                "http://dbpedia.org/property/deathPlace"
             ],
             "description": "The place a person died in.",
             "freebase": [
@@ -1332,7 +1332,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/property/lyricist"
+                "http://dbpedia.org/property/lyricist",
+                "http://dbpedia.org/property/lyrics"
             ],
             "freebase": [
                 "http://freebase.com/music/composition/lyricist",
@@ -1387,7 +1388,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/Name"
+                "http://dbpedia.org/ontology/Name",
+                "http://xmlns.com/foaf/0.1/name"
             ],
             "label": "name",
             "wikidata": [
@@ -1422,7 +1424,8 @@
             "dbpedia": [
                 "http://dbpedia.org/ontology/numberOfEmployees",
                 "http://dbpedia.org/property/numEmployees",
-                "http://dbpedia.org/property/employees"
+                "http://dbpedia.org/property/employees",
+                "http://dbpedia.org/ontology/numberOfStudents"
             ],
             "description": "The number of employees or members of an organization.",
             "label": "numberOfEmployees",
@@ -1466,7 +1469,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/owner"
+                "http://dbpedia.org/ontology/owner",
+                "http://dbpedia.org/property/owner"
             ],
             "description": "Owner of a product/organization.",
             "freebase": [
@@ -1607,6 +1611,7 @@
             "dbpedia": [
                 "http://w3.org/1999/02/22-rdf-syntax-ns#type",
                 "http://dbpedia.org/ontology/occupation",
+                "http://dbpedia.org/property/occupation",
                 "http://dbpedia.org/ontology/discipline",
                 "http://dbpedia.org/ontology/profession",
                 "http://dbpedia.org/ontology/field"
@@ -1670,7 +1675,8 @@
         {
             "dbpedia": [
                 "http://dbpedia.org/ontology/family",
-                "http://dbpedia.org/ontology/relative"
+                "http://dbpedia.org/ontology/relative",
+                "http://dbpedia.org/property/relatives"
             ],
             "description": "Relatives of a person.",
             "freebase": [
@@ -1732,7 +1738,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/signature"
+                "http://dbpedia.org/ontology/signature",
+                "http://dbpedia.org/property/signature"
             ],
             "label": "signature",
             "wikidata": [
@@ -1758,7 +1765,8 @@
             "dbpedia": [
                 "http://dbpedia.org/ontology/musicalArtist",
                 "http://dbpedia.org/ontology/artist",
-                "http://dbpedia.org/ontology/starring"
+                "http://dbpedia.org/ontology/starring",
+                "http://dbpedia.org/property/guestStar"
             ],
             "description": "The artists an artwork is featuring. (e.g. actors part of a movie)",
             "freebase": [
@@ -1934,7 +1942,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/influencedBy"
+                "http://dbpedia.org/ontology/influencedBy",
+                "http://dbpedia.org/property/influences"
             ],
             "freebase": [
                 "_http://freebase.com/influence/influence_node/influenced",
@@ -2087,7 +2096,8 @@
         },
         {
             "dbpedia": [
-                "http://dbpedia.org/ontology/class"
+                "http://dbpedia.org/ontology/class",
+                "http://dbpedia.org/property/taxon"
             ],
             "freebase": [
                 "http://freebase.com/automotive/model/automotive_class"
@@ -2508,15 +2518,6 @@
             ],
             "wikidata": [
                 "http://wikidata.org/entity/P306"
-            ]
-        },
-        {
-            "label": "sameAs",
-            "dbpedia": [
-                "http://www.w3.org/2002/07/owl#sameAs"
-            ],
-            "wikidata": [
-                "http://wikidata.org/entity/P460"
             ]
         },
         {

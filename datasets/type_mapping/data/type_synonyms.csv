@@ -176,12 +176,12 @@
 <http://dbpedia.org/ontology/BritishRoyalty>,
 <http://dbpedia.org/ontology/Place>,where place location
 <http://dbpedia.org/ontology/MemberOfParliament>,
-<http://dbpedia.org/ontology/Lake>,creek pier lake huge_lake shoreline river dunes small_lake big_lake canyon shore
+<http://dbpedia.org/ontology/Lake>,creek pier lake huge_lake shoreline dunes small_lake big_lake canyon shore
 <http://dbpedia.org/ontology/Race>,only_one_race races single_race race
 <http://dbpedia.org/ontology/Mayor>,mayor
 <http://dbpedia.org/ontology/ChemicalSubstance>,substances chemical_substance
 <http://dbpedia.org/ontology/FictionalCharacter>,fictional_characters fictional_person comic_book_character fictional_character real_person real_life_person fictional fictional_story
-<http://dbpedia.org/ontology/River>,creek river_bank big_river lake shoreline river small_river downriver shore riverbed
+<http://dbpedia.org/ontology/River>,creek river_bank big_river shoreline river small_river downriver shore riverbed
 <http://dbpedia.org/ontology/Moss>,moss wisteria mosses ferns leaves
 <http://dbpedia.org/ontology/Event>,actual_event major_event other_event other_events first_event such_event specific_event event
 <http://dbpedia.org/ontology/Name>,first_name full_name name _name actual_name real_name
