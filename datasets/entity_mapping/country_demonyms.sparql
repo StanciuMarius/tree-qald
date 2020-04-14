@@ -1,0 +1,4 @@
+select distinct ?country, ?demonym
+{
+    ?country <http://dbpedia.org/ontology/demonym> ?demonym.
+}
