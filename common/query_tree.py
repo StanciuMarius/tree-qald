@@ -313,8 +313,9 @@ class QueryTree:
         # TODO this code does kind of the same thing as the query generation handlers. Make it dry
         # Also this is not the best place for this since it's grammar specific
         
-        QUESTION_WORDS = {'who', 'when', 'what', 'how', 'which'}
-        
+        QUESTION_WORDS = {'who', 'when', 'what', 'how', 'which', 'list'}
+        QUESTION_WORD_PAIRS = {'give me'}
+
         def offset_for_node_union(tree: QueryTree, nodes):
             union_begin, union_end = tree.offset_for_node(nodes[0])
             for node in nodes[1:]:
@@ -341,7 +342,7 @@ class QueryTree:
         elif node.type in {NodeType.PROPERTY}:
             e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE, node.children))
             # We can consider a type as a substitute for entities
-            # e.g. Give me all [E1] songs [/E1] by [E2] Bruce Springsteen [/E2].
+            # e.g. Give me all [ENTITY] songs [/ENTITY] by [ENTITY] Bruce Springsteen [/ENTITY].
             e2_nodes = list(filter(lambda x: x.type in {NodeType.TYPE}, node.children))[:1] # TODO: currently only consider first type
         elif node.type in {NodeType.PROPERTYCONTAINS}:
             e1_nodes = list(filter(lambda x: x.type != NodeType.TYPE and x.type != NodeType.ENTITY and x.type != NodeType.LITERAL, node.children))
@@ -356,20 +357,25 @@ class QueryTree:
         e1_begin, e1_end = offset_for_node_union(self, e1_nodes)
 
         if len(e2_nodes) == 0:
-            if node.type == NodeType.PROPERTY and self.tokens[0].lower() in QUESTION_WORDS and node in self.root.children:
+            first_word = self.tokens[0].lower()
+            first_bigram = ' '.join(self.tokens[:2]).lower()
+            if node.type == NodeType.PROPERTY and node in self.root.children and first_bigram in QUESTION_WORD_PAIRS:
                 # We can consider the question word as one of the entities for the direct child of a root
-                # e.g. [E1] Who [/E1] is the wife of [E2] Barack Obama [/E2] ?
+                # e.g. [ENTITY] Who [/ENTITY] is the wife of [ENTITY] Barack Obama [/ENTITY] ?
                 e2_begin = 0
-                e2_end = len(self.tokens[0])
+                e2_end = len(first_bigram)
+            elif node.type == NodeType.PROPERTY and node in self.root.children and first_word in QUESTION_WORDS:
+                e2_begin = 0
+                e2_end = len(first_word)
             else:
                 # We only have one entity, so we add a dummy token before the e1 tokens
                 new_token = ' [{}] '.format(node.type.value)
-                # sequence = sequence[:e1_begin] + new_token + sequence[e1_begin:]
-                # e2_begin, e2_end = e1_begin, e1_begin + len(new_token)
-                # e1_begin, e1_end = e1_begin + len(new_token), e1_end + len(new_token)
-                sequence = new_token + sequence
-                e2_begin, e2_end = 0, len(new_token)
+                sequence = sequence[:e1_begin] + new_token + sequence[e1_begin:]
+                e2_begin, e2_end = e1_begin, e1_begin + len(new_token)
                 e1_begin, e1_end = e1_begin + len(new_token), e1_end + len(new_token)
+                # sequence = new_token + sequence
+                # e2_begin, e2_end = 0, len(new_token)
+                # e1_begin, e1_end = e1_begin + len(new_token), e1_end + len(new_token)
         else: 
             e2_begin, e2_end = offset_for_node_union(self, e2_nodes)
 

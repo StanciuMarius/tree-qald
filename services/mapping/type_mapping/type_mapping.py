@@ -51,6 +51,7 @@ class TypeMapper(object):
 
     
     def __call__(self, type_string: str):
+        type_string = type_string.strip().lower()
         versions = [type_string]
     
         lemmatized = ' '.join([self.lemmatizer.lemmatize(word) for word in type_string.split()]).strip()
@@ -62,10 +63,13 @@ class TypeMapper(object):
         versions.append(no_stop_words_lemmatized)
         
         # Try each version in order and return first match
+        print ("Type version types: " + '|'.join(versions))
         for version in versions:
             if version in self.label_vs_classes:
+                print("Found for " + version)
                 return list(self.label_vs_classes[version])
-        
+        print("No exact match found, ranking by similarity")
+
         '''
         String not found in the lexicon, we pick the best constants.TOP_N_SIMILAR_TYPES types by semantic similarity
         We pick more than one because similarity is not such a reliable metric, so it should be more relaxed => more possible types
@@ -79,6 +83,7 @@ class TypeMapper(object):
         similarities = sorted(similarities, key=lambda x: x[1], reverse=True)
         for i in range(constants.TOP_N_SIMILAR_TYPES):
             best_types.extend(self.label_vs_classes[similarities[i][0]])
+        print("No exact match found, ranking by similarity produced: " + ' '.join(best_types))
 
         return best_types
 

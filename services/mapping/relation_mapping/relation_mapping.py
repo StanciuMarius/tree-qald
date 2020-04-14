@@ -72,6 +72,7 @@ class RelationMapper(object):
         print("text: " + text)
         print("subject: " + text[subject_begin:subject_end])
         print("object: " + text[object_begin:object_end])
+        print("most probable prediction (disregarding candidates): " + str(max(classifier_scores.items(), key=lambda x: x[1])))
         print('Picked {}\n from \n{}\n'.format('\n'.join(result), '\n'.join(str(candidate) for candidate in candidates[:min(len(candidates), 20)])))
         print('='*20)
 

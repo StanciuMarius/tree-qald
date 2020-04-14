@@ -7,7 +7,11 @@ from typing import List
 sys.path.insert(0, os.getcwd())
 
 from services.answer.answer import answer as internal_answer
-with open('datasets\questions\qald8\data\qald8.json', 'r', encoding='utf-8') as file:
+from datasets.datasets import DatasetResolver
+
+resolver = DatasetResolver()
+
+with open(resolver('qald-9', 'test'), 'r', encoding='utf-8') as file:
     content = json.load(file)
 questions = content['questions']
 
@@ -15,17 +19,26 @@ f1_sum = 0
 tree_log = []
 questions = questions
 for question in tqdm(questions):
-    text = [question_text['string'] for question_text in question['question'] if question_text['language'] == 'en'][0]
     try:
-        golden_answer = [list(binding.values())[0]['value'] for binding in question['answers'][0]['results']['bindings']]
-    except:
-        golden_answer = question['answers'][0]['boolean']
+        tree = None
+        query = None
+        text = None
+        predicted_answer = None
+        golden_answer = None
+        precision = None
+        recall = None
+        f = None
+        
+        text = [question_text['string'] for question_text in question['question'] if question_text['language'] == 'en'][0]
+        try:
+            golden_answer = [list(binding.values())[0]['value'] for binding in question['answers'][0]['results']['bindings']]
+        except:
+            golden_answer = question['answers'][0]['boolean']
 
-    # QALD is not consistent in answer type
-    if golden_answer == ['true']: golden_answer = True
-    if golden_answer == ['false']: golden_answer = False
+        # QALD is not consistent in answer type
+        if golden_answer == ['true']: golden_answer = True
+        if golden_answer == ['false']: golden_answer = False
     
-    try:
         predicted_answer, query, tree = internal_answer(text)
         if isinstance(golden_answer, bool):
             if  isinstance(predicted_answer, bool) and golden_answer == predicted_answer:

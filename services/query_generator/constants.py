@@ -33,5 +33,6 @@ OCCUPATION_SUPERCLASSES = set([
 RELATION_MAPPING_BLACKLIST = set([
     'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
     'http://dbpedia.org/ontology/wikiPageWikiLink',
-    'http://dbpedia.org/ontology/wikiPageID'
+    'http://dbpedia.org/ontology/wikiPageID',
+    'http://www.w3.org/2002/07/owl#sameAs'
     ])

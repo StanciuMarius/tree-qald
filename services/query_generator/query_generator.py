@@ -6,7 +6,7 @@ from copy import deepcopy, copy
 from typing import Tuple, List
 sys.path.insert(0, os.getcwd())
 from datasets.relation_extraction.cross_kb_relations.resolver import EquivalentRelationResolver
-from datasets.knowledge_base.yago.parser.yago_taxonomy_dataset import YagoTaxonomyDataset
+from datasets.type_mapping.yago_taxonomy_dataset import YagoTaxonomyDataset
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
 from common.knowledge_base import COMPARABLE_DATATYPES
 from services.tasks import run_task, Task
@@ -16,7 +16,6 @@ from services.query_generator.node_handlers.misc import handle_ROOT, handle_PROP
 from services.query_generator.node_handlers.count import handle_ARGMAXCOUNT, handle_ARGMINCOUNT, handle_COUNT
 from services.query_generator.node_handlers.exists import handle_EXISTS, handle_EXISTSRELATION, handle_ISA
 from services.query_generator.node_handlers.comparators import handle_GREATER, handle_LESS, handle_ISGREATER, handle_ISLESS, handle_GREATERCOUNT, handle_LESSCOUNT
-from services.mapping.relation_mapping.relation_classifier.preprocessing import generate_relation_extraction_sequence
 INORDER_TRIPLE_PATTERN = '\t{SUBJECT} {RELATION} {OBJECT}.\n'
 REVERSE_ORDER_TRIPLE_PATTERN = '\t{OBJECT} {RELATION} {SUBJECT}.\n'
 COMBINED_ORDER_TRIPLE_PATTERN = ('\t{{ {SUBJECT} {RELATION} {OBJECT}. VALUES {RELATION} {{ {IN_ORDER_RELATIONS} }} }} UNION \n' +
@@ -45,6 +44,10 @@ NODE_HANDLERS = {
     NodeType.LESSCOUNT: handle_LESSCOUNT,
     NodeType.ISA: handle_ISA,
 }
+
+EQUIVALENT_RELATION_RESOLVER = EquivalentRelationResolver()
+YAGO_TAXONOMY = YagoTaxonomyDataset()
+
 class QueryGenerator(object):
     def __call__(self, tree: QueryTree):
         self.tree = tree
@@ -144,16 +147,13 @@ class QueryGenerator(object):
         node.kb_resources = run_task(Task.MAP_TYPE, {'text': self.question_text, 'type_begin': type_begin, 'type_end': type_end })
 
     def __map_relation(self, node: QueryTree.Node) -> bool:
-        parent_node = self.tree.find_parent(node)
-        if node.type == NodeType.EXISTSRELATION or parent_node.type == NodeType.EXISTS:
-            # In case of EXISTS we can't consider prior candidates because mapping implies picking the most probable from
-            # them. In this case EXISTS would always yield true. Instead, the strategy is to get the most probable relation from all relation search space.
-            prior_candidates = []
-        else:
+        
+        def generate_prior_candidates(generator, node: QueryTree.Node):
             # We use the accumulated constraints so far to generate a query that retrieves all possible relations for this node.
             # Make copies so we don't break the current state
             node_copy = deepcopy(node)
-            gen = deepcopy(self)
+            gen = deepcopy(generator)
+
             NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=False)
             in_order_query  = gen.generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
             in_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': in_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
@@ -164,29 +164,43 @@ class QueryGenerator(object):
             # We also don't know the order yet (in terms of subject-object) of the triple yet, so we need the relation candidates for the revese order as well.
             if node.type not in {NodeType.ARGMAX, NodeType.ARGMIN, NodeType.ARGNTH, NodeType.TOPN}: # Can't reverse these
                 node_copy = deepcopy(node)
-                gen = deepcopy(self)
+                gen = deepcopy(generator)
                 NODE_HANDLERS[node.type](gen=gen, node=node_copy, reverse_relation=True)
                 reverse_order_query  = gen.generate_query_from_current_state(constants.RELATION_EXTRACTION_VARIABLE)
                 reverse_order_candidates = run_task(Task.RUN_SPARQL_QUERY, {'query_body': reverse_order_query, 'return_variable': constants.RELATION_EXTRACTION_VARIABLE.replace('?', '')})
                 reverse_order_candidates = list(filter(lambda x: x not in constants.RELATION_MAPPING_BLACKLIST, reverse_order_candidates))
-                reverse_order_candidates = [self.resolver.reverse_relation(candidate) for candidate in reverse_order_candidates]
+                reverse_order_candidates = [EQUIVALENT_RELATION_RESOLVER.reverse_relation(candidate) for candidate in reverse_order_candidates]
                 prior_candidates.extend(reverse_order_candidates)
 
             # Remove any candidates that already mapped  in reverse to a child node so as to avoid cycles
             child_relation_nodes = node.collect(RELATION_NODE_TYPES)
             child_relations = []
             for child in child_relation_nodes: child_relations.extend(child.kb_resources)
-            reversed_child_relations = set([self.resolver.reverse_relation(relation) for relation in child_relations])
+            reversed_child_relations = set([EQUIVALENT_RELATION_RESOLVER.reverse_relation(relation) for relation in child_relations])
             prior_candidates = list(filter(lambda relation: relation not in reversed_child_relations, prior_candidates))
 
+            return prior_candidates
+        
 
-        relation_mapping_input = generate_relation_extraction_sequence(self.tree, node)
+        parent_node = self.tree.find_parent(node)
+        if node.type == NodeType.EXISTSRELATION or parent_node.type == NodeType.EXISTS:
+            # In case of EXISTS we can't consider prior candidates because mapping implies picking the most probable from
+            # them. In this case EXISTS would always yield true. Instead, the strategy is to get the most probable relation from all relation search space.
+            prior_candidates = []
+        else:
+            prior_candidates = generate_prior_candidates(self, node)
+            if not prior_candidates:
+                # Relax types in case they yield not results (KB might be inconsistent, answer might be a string etc.)
+                node.children = list(filter(lambda x: x.type != NodeType.TYPE, node.children))
+                prior_candidates = generate_prior_candidates(self, node)
+
+        relation_mapping_input = self.tree.generate_relation_extraction_sequence(node)
         relation_mapping_input['candidates'] = prior_candidates
         relations = run_task(Task.MAP_RELATIONS, relation_mapping_input)
 
         if node.type == NodeType.EXISTSRELATION or parent_node.type == NodeType.EXISTS:
             # In case of existence checking, consider both directions
-            relations.extend([self.resolver.reverse_relation(relation) for relation in relations])
+            relations.extend([EQUIVALENT_RELATION_RESOLVER.reverse_relation(relation) for relation in relations])
 
         node.kb_resources = relations
 
@@ -194,26 +208,22 @@ class QueryGenerator(object):
         '''
             Expands type children nodes of the given node and adds "?node_var a <type>" triples
         '''
-        type_nodes = list(filter(lambda child: child.type == NodeType.TYPE, node.children))
-        variable = self.node_vs_reference[node.id]
-        
-        def handle_complex_types(node):
-            # Person occupations (e.g. jobs, titles) can also be linked via other properties (not rdf:type) so they are handled separately
 
+        def handle_complex_types(type_node):
+            # Person occupations (e.g. jobs, titles) can also be linked via other properties (not rdf:type) so they are handled separately
             is_occupation = False
-            for node in type_nodes:
-                for url in node.kb_resources:
-                    for superclass in constants.OCCUPATION_SUPERCLASSES:
-                        if self.yago.is_subclass(url, superclass):
-                            is_occupation = True
-                            occupation_label = self.yago.label_for_class(url)          
-                            break
-                    if is_occupation: break
+            for url in type_node.kb_resources:
+                for superclass in constants.OCCUPATION_SUPERCLASSES:
+                    if YAGO_TAXONOMY.is_subclass(url, superclass):
+                        is_occupation = True
+                        occupation_label = YAGO_TAXONOMY.label_for_class(url)          
+                        break
                 if is_occupation: break
+
             if not is_occupation: return False
 
-            type_texts = set([self.tree.text_for_node(node) for node in type_nodes])
-            type_uris = ' '.join([' '.join('<' + kb_resource + '>' for kb_resource in node.kb_resources) for node in type_nodes])        
+            type_text = self.tree.text_for_node(type_node)
+            type_uris = ' '.join(['<' + kb_resource + '>' for kb_resource in type_node.kb_resources])        
             occupation_filter = constants.OCCUPATION_FILTER_TEMPLATE.format(
                 VARIABLE=variable,
                 TYPES=type_uris,
@@ -222,17 +232,19 @@ class QueryGenerator(object):
             self.filters.append(occupation_filter)
             return True
         
-        if handle_complex_types(node): return
-
+        type_nodes = list(filter(lambda child: child.type == NodeType.TYPE, node.children))
+        variable = self.node_vs_reference[node.id]
+        
         for type_node in type_nodes:            
             if not type_node.kb_resources: continue # This shouldn't happen
+            if handle_complex_types(type_node): continue
             if type_node.kb_resources[0] in COMPARABLE_DATATYPES:
                 self.add_datatype_restrictions(variable, type_node.kb_resources)
             else:
                 type_variable = self.generate_variable_name()
                 self.bindings[type_variable] = type_node.kb_resources
                 self.triples.append((variable, constants.TYPE_RELATION, type_variable))
-        
+
     def add_datatype_restrictions(self, variable: str, datatypes: List[str]):
         '''
             Datatype constraints are types for literals. Added via FILTER(datatype(?var) == <datatype> || etc..) statement
@@ -263,8 +275,7 @@ class QueryGenerator(object):
         self.post_processing = []
         self.tree = None
         self.bindings = {}
-        self.resolver = EquivalentRelationResolver()
-        self.yago = YagoTaxonomyDataset()
+
 
 def generate_query(query_tree_dict: dict):
     generator = QueryGenerator()
