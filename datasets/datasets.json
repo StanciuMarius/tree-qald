@@ -2,8 +2,8 @@
     {
         "name": "qald-9",
         "links": [
-            "https://github.com/ag-sc/QALD/blob/master/9/data/qald-9-train-multilingual.json?raw=true",
-            "https://github.com/ag-sc/QALD/blob/master/9/data/qald-9-test-multilingual.json?raw=true"
+            "https://raw.githubusercontent.com/ag-sc/QALD/master/9/data/qald-9-train-multilingual.json",
+            "https://raw.githubusercontent.com/ag-sc/QALD/master/9/data/qald-9-test-multilingual.json"
         ],
         "download-path": "datasets/questions/qald9/data/",
         "files": {
@@ -15,8 +15,8 @@
     {
         "name": "qald-8",
         "links": [
-            "https://github.com/ag-sc/QALD/blob/master/8/data/qald-8-train-multilingual.json?raw=true",
-            "https://github.com/ag-sc/QALD/blob/master/8/data/qald-8-test-multilingual.json?raw=true"
+            "https://raw.githubusercontent.com/ag-sc/QALD/master/8/data/qald-8-train-multilingual.json",
+            "https://raw.githubusercontent.com/ag-sc/QALD/master/8/data/qald-8-test-multilingual.json"
         ],
         "download-path": "datasets/questions/qald8/data/",
         "files": {
@@ -28,10 +28,10 @@
     {
         "name": "freebaseqa",
         "links": [
-            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-train.json?raw=true",
-            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-test.json?raw=true",
-            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-dev.json?raw=true",
-            "https://github.com/kelvin-jiang/FreebaseQA/blob/master/FreebaseQA-partial.json?raw=true"
+            "https://raw.githubusercontent.com/kelvin-jiang/FreebaseQA/master/FreebaseQA-train.json",
+            "https://raw.githubusercontent.com/kelvin-jiang/FreebaseQA/master/FreebaseQA-test.json",
+            "https://raw.githubusercontent.com/kelvin-jiang/FreebaseQA/master/FreebaseQA-dev.json",
+            "https://raw.githubusercontent.com/kelvin-jiang/FreebaseQA/master/FreebaseQA-partial.json"
         ],
         "download-path": "datasets/questions/freebaseqa/data/",
         "files": {
@@ -76,8 +76,8 @@
     {
         "name": "fewrel",
         "links": [
-            "https://github.com/thunlp/FewRel/blob/master/data/train_wiki.json?raw=true?raw=true",
-            "https://github.com/thunlp/FewRel/blob/master/data/val_wiki.json?raw=true?raw=true"
+            "https://raw.githubusercontent.com/thunlp/FewRel/master/data/train_wiki.json",
+            "https://raw.githubusercontent.com/thunlp/FewRel/master/data/val_wiki.json"
         ],
         "download-path": "datasets/relation_extraction/fewrel/data/",
         "files": {
@@ -89,7 +89,7 @@
     {
         "name": "nyt10",
         "links": [
-            "https://github.com/thunlp/NRE/blob/master/data.zip?raw=true?raw=true"
+            "https://raw.githubusercontent.com/thunlp/NRE/master/data.zip"
         ],
         "archives": {
             "zip": "datasets/relation_extraction/NYT10/data/data.zip"
@@ -119,9 +119,9 @@
     {
         "name": "simpledbpediaqa",
         "links": [
-            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/train.json?raw=true",
-            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/test.json?raw=true",
-            "https://github.com/castorini/SimpleDBpediaQA/blob/master/V1/valid.json?raw=true"
+            "https://raw.githubusercontent.com/castorini/SimpleDBpediaQA/master/V1/train.json",
+            "https://raw.githubusercontent.com/castorini/SimpleDBpediaQA/master/V1/test.json",
+            "https://raw.githubusercontent.com/castorini/SimpleDBpediaQA/master/V1/valid.json"
         ],
         "download-path": "datasets/relation_extraction/simpledbpediaqa/data/",
         "files": {
@@ -150,7 +150,7 @@
     {
         "name": "equivalent-relations",
         "links": [
-            "https://github.com/StanciuMarius/tree-qald/blob/master/datasets/relation_extraction/cross_kb_relations/data/equivalent_relations.json?raw=true"
+            "https://raw.githubusercontent.com/StanciuMarius/tree-qald/master/datasets/relation_extraction/cross_kb_relations/data/equivalent_relations.json"
         ],
         "download-path": "datasets/relation_extraction/cross_kb_relations/data/",
         "files": {
@@ -161,13 +161,13 @@
     {
         "name": "country-denonyms",
         "links": [
-            "https://github.com/StanciuMarius/tree-qald/tree/master/datasets/entity_mapping/data/country_denonyms.json?raw=true"
+            "https://raw.githubusercontent.com/StanciuMarius/tree-qald/master/datasets/entity_mapping/data/country_denonyms.json"
         ],
         "download-path": "datasets/relation_extraction/cross_kb_relations/data/",
         "files": {
-            "relations": "datasets/relation_extraction/cross_kb_relations/data/country_denonyms.json"
+            "country-denonyms": "datasets/entity_mapping/data/country_denonyms.json"
         },
-        "description": "Mappings between a country entities and their denonym. E.g. French vs France"
+        "description": "Mappings between country entities and their demonym. E.g. French vs France"
     },
     {
         "name": "dbpedia-instance-types",
@@ -228,7 +228,7 @@
     {
         "name": "dbpedia-type-synsets",
         "links": [
-            "https://github.com/StanciuMarius/tree-qald/blob/master/datasets/type_mapping/data/type_synonyms.csv?raw=true"
+            "https://raw.githubusercontent.com/StanciuMarius/tree-qald/master/datasets/type_mapping/data/type_synonyms.csv"
         ],
         "download-path": "datasets/type_mapping/data/",
         "files": {
@@ -239,7 +239,7 @@
     {
         "name": "tree-qald",
         "links": [
-            "https://github.com/StanciuMarius/tree-qald/blob/master/datasets/parsing/data/constituency_annotated_questions.json?raw=true"
+            "https://raw.githubusercontent.com/StanciuMarius/tree-qald/master/datasets/parsing/data/constituency_annotated_questions.json"
         ],
         "download-path": "datasets/parsing/data/constituency_annotated_questions.json",
         "files": {
