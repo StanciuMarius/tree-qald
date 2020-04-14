@@ -4,6 +4,8 @@ from typing import List
 import torch
 import os
 import sys
+import re
+
 sys.path.insert(0, os.getcwd())
 
 from common.query_tree import QueryTree, NodeType, RELATION_NODE_TYPES
@@ -27,12 +29,22 @@ class NormalizeRelationUriTransofrm(object):
 class BertRelationExtractionFormatTransform(object):
     def __call__(self, sample):
         text = sample['text']
-        new_token_indices = [
-            ('[E1]', sample['subject_begin']),
-            ('[/E1]', sample['subject_end']),
-            ('[E2]', sample['object_begin']),
-            ('[/E2]', sample['object_end']),
-        ]
+        subject_begin = sample['subject_begin']
+        subject_end = sample['subject_end']
+        object_begin = sample['object_begin']
+        object_end = sample['object_end']
+
+        if subject_begin >= 0 and subject_end <= len(text) and subject_begin <= subject_end:
+            new_token_indices = [
+                ('[ENTITY]', subject_begin),
+                ('[/ENTITY]', subject_end),
+            ]
+        if object_begin >= 0 and object_end <= len(text) and object_begin <= object_end:
+            new_token_indices.extend([
+                ('[ENTITY]', object_begin),
+                ('[/ENTITY]', object_end)
+            ])
+        
         new_token_indices = sorted(new_token_indices, key=lambda x: x[1])
         accumulated_offset = 0
         for token, old_index in new_token_indices:
@@ -56,6 +68,10 @@ class EquivalentRelationTransform(object):
     def __call__(self, sample, kb: knowledge_base.KnowledgeBase=None):
         relation = sample['relation']
         generic_relation = self.resolver(relation, kb)
+
+        # Undirectional classification so we remove reverse relation labels
+        if generic_relation and generic_relation[0] == '_': generic_relation = generic_relation[1:]
+
         if generic_relation:
             sample['label'] = generic_relation
         else:
@@ -76,7 +92,9 @@ def has_na_relation(example):
 
 def is_valid_bert_sequence(example):
     text = example['text']
-    return '[E1]' in text and '[/E1]' in text and '[E2]' in text and '[/E2]' in text 
+    starts = len(list(re.finditer('\[ENTITY\]', text)))
+    ends = len(list(re.finditer('\[/ENTITY\]', text)))
+    return  starts == 2 and ends == 2
 
 def has_less_than_n_tokens(example):
     return len(example['text'].split(' ')) < constants.MAX_SEQUENCE_LENGTH   

@@ -24,17 +24,6 @@ class RelationClassifier(object):
         }
         sequence = self.preprocessor(sample)['text']
         probabilities = self.inferrer.infer_one_sentence(sequence, return_probabilities=True)
-
-        reverse_sample = {
-            'subject_begin': object_begin,
-            'subject_end': object_end,
-            'object_begin': subject_begin,
-            'object_end': subject_end,
-            'text': text
-        }
-        reverse_sequence = self.preprocessor(sample)['text']
-        reverse_probabilities = self.inferrer.infer_one_sentence(reverse_sequence, return_probabilities=True)
-
-        final_probabilities = [(relation, (score + reverse_score) / 2) for (relation, score), (_, reverse_score) in zip(probabilities, reverse_probabilities)]
-        return final_probabilities
+        
+        return probabilities
         

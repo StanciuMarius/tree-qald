@@ -47,30 +47,30 @@ def train():
 
     num_classes = len(set([example['relation'] for example in examples]))
     print("There are {}/{} valid examples with {} distinct classes.".format(len(examples), len(dataset), num_classes))
-    # # We have to store the number of classes in a file because it's needed to load the model for later inference
-    # with open(constants.NUM_CLASSES_FILE_PATH, 'w', encoding='utf-8') as file:
-    #     file.write(str(num_classes))
+    # We have to store the number of classes in a file because it's needed to load the model for later inference
+    with open(constants.NUM_CLASSES_FILE_PATH, 'w', encoding='utf-8') as file:
+        file.write(str(num_classes))
 
-    # train_size = int(constants.TRAIN_TEST_SPLIT_RATIO * len(examples))
-    # train_examples, validation_examples = examples[:train_size], examples[train_size:]
+    train_size = int(constants.TRAIN_TEST_SPLIT_RATIO * len(examples))
+    train_examples, validation_examples = examples[:train_size], examples[train_size:]
 
-    # with open(constants.TEMP_TESTSET_FOR_SUBMODULE_PATH, 'w') as file:
-    #     json.dump(validation_examples, file)
+    with open(constants.TEMP_TESTSET_FOR_SUBMODULE_PATH, 'w') as file:
+        json.dump(validation_examples, file)
 
-    # with open(constants.TEMP_TRAINSET_FOR_SUBMODULE_PATH, 'w') as file:
-    #     json.dump(train_examples, file)
+    with open(constants.TEMP_TRAINSET_FOR_SUBMODULE_PATH, 'w') as file:
+        json.dump(train_examples, file)
 
-    # # print(eq_transform.unknown_relation_count, '/', len(dataset))
-    # train_args = ["--test_data", constants.TEMP_TESTSET_FOR_SUBMODULE_PATH,
-    #               "--train_data", constants.TEMP_TRAINSET_FOR_SUBMODULE_PATH,
-    #               "--additional_tokens_path", constants.ADDITIONAL_TOKENS_FILE_PATH,
-    #               "--temp_folder_path", constants.TEMP_FOLDER_FOR_SUBMODULE_PATH,
-    #               "--num_classes", str(num_classes),
-    #               "--num_epochs", str(constants.BERT_TRAIN_EPOCHS),
-    #               "--batch_size", str(constants.BERT_BATCH_SIZE),
-    #               "--infer", str(0),
-    #               "--train", str(1)]
-    # # pretrain(['--pretrain_data', r'services\mapping\relation_mapping\temp\cnn.txt'])
-    # task(train_args)
+    # print(eq_transform.unknown_relation_count, '/', len(dataset))
+    train_args = ["--test_data", constants.TEMP_TESTSET_FOR_SUBMODULE_PATH,
+                  "--train_data", constants.TEMP_TRAINSET_FOR_SUBMODULE_PATH,
+                  "--additional_tokens_path", constants.ADDITIONAL_TOKENS_FILE_PATH,
+                  "--temp_folder_path", constants.TEMP_FOLDER_FOR_SUBMODULE_PATH,
+                  "--num_classes", str(num_classes),
+                  "--num_epochs", str(constants.BERT_TRAIN_EPOCHS),
+                  "--batch_size", str(constants.BERT_BATCH_SIZE),
+                  "--infer", str(0),
+                  "--train", str(1)]
+    # pretrain(['--pretrain_data', r'services\mapping\relation_mapping\temp\cnn.txt'])
+    task(train_args)
 
 train()
